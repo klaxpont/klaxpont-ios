@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01F972FC1491580100D763EA /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01F972FB1491580100D763EA /* MediaPlayer.framework */; };
 		01F9FB761480FB6300745398 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01F9FB751480FB6300745398 /* UIKit.framework */; };
 		01F9FB781480FB6300745398 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01F9FB771480FB6300745398 /* Foundation.framework */; };
 		01F9FB7A1480FB6300745398 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01F9FB791480FB6300745398 /* CoreGraphics.framework */; };
@@ -15,22 +16,28 @@
 		01F9FB861480FB6300745398 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F9FB851480FB6300745398 /* AppDelegate.m */; };
 		01F9FB891480FB6300745398 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01F9FB871480FB6300745398 /* MainStoryboard.storyboard */; };
 		01F9FB8C1480FB6300745398 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F9FB8B1480FB6300745398 /* ViewController.m */; };
+		01F9FB94148102B400745398 /* VideoPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F9FB93148102B400745398 /* VideoPickerController.m */; };
+		01F9FB961481039300745398 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01F9FB951481039300745398 /* MobileCoreServices.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		01F972FB1491580100D763EA /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		01F9FB711480FB6300745398 /* klaxpont.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = klaxpont.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01F9FB751480FB6300745398 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		01F9FB771480FB6300745398 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		01F9FB791480FB6300745398 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		01F9FB7D1480FB6300745398 /* klaxpont-Info.plist */ = {isa = PBXFileReference; path = "klaxpont-Info.plist"; sourceTree = "<group>"; };
+		01F9FB7D1480FB6300745398 /* klaxpont-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "klaxpont-Info.plist"; sourceTree = "<group>"; };
 		01F9FB7F1480FB6300745398 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		01F9FB811480FB6300745398 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		01F9FB831480FB6300745398 /* klaxpont-Prefix.pch */ = {isa = PBXFileReference; path = "klaxpont-Prefix.pch"; sourceTree = "<group>"; };
-		01F9FB841480FB6300745398 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		01F9FB831480FB6300745398 /* klaxpont-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "klaxpont-Prefix.pch"; sourceTree = "<group>"; };
+		01F9FB841480FB6300745398 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		01F9FB851480FB6300745398 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		01F9FB881480FB6300745398 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		01F9FB8A1480FB6300745398 /* ViewController.h */ = {isa = PBXFileReference; path = ViewController.h; sourceTree = "<group>"; };
+		01F9FB8A1480FB6300745398 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		01F9FB8B1480FB6300745398 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		01F9FB92148102B400745398 /* VideoPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoPickerController.h; sourceTree = "<group>"; };
+		01F9FB93148102B400745398 /* VideoPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoPickerController.m; sourceTree = "<group>"; };
+		01F9FB951481039300745398 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +45,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01F972FC1491580100D763EA /* MediaPlayer.framework in Frameworks */,
+				01F9FB961481039300745398 /* MobileCoreServices.framework in Frameworks */,
 				01F9FB761480FB6300745398 /* UIKit.framework in Frameworks */,
 				01F9FB781480FB6300745398 /* Foundation.framework in Frameworks */,
 				01F9FB7A1480FB6300745398 /* CoreGraphics.framework in Frameworks */,
@@ -67,6 +76,8 @@
 		01F9FB741480FB6300745398 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				01F972FB1491580100D763EA /* MediaPlayer.framework */,
+				01F9FB951481039300745398 /* MobileCoreServices.framework */,
 				01F9FB751480FB6300745398 /* UIKit.framework */,
 				01F9FB771480FB6300745398 /* Foundation.framework */,
 				01F9FB791480FB6300745398 /* CoreGraphics.framework */,
@@ -80,8 +91,7 @@
 				01F9FB841480FB6300745398 /* AppDelegate.h */,
 				01F9FB851480FB6300745398 /* AppDelegate.m */,
 				01F9FB871480FB6300745398 /* MainStoryboard.storyboard */,
-				01F9FB8A1480FB6300745398 /* ViewController.h */,
-				01F9FB8B1480FB6300745398 /* ViewController.m */,
+				01F9FB97148104E100745398 /* Classes */,
 				01F9FB7C1480FB6300745398 /* Supporting Files */,
 			);
 			path = klaxpont;
@@ -96,6 +106,17 @@
 				01F9FB831480FB6300745398 /* klaxpont-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		01F9FB97148104E100745398 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				01F9FB8A1480FB6300745398 /* ViewController.h */,
+				01F9FB8B1480FB6300745398 /* ViewController.m */,
+				01F9FB92148102B400745398 /* VideoPickerController.h */,
+				01F9FB93148102B400745398 /* VideoPickerController.m */,
+			);
+			name = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,6 +184,7 @@
 				01F9FB821480FB6300745398 /* main.m in Sources */,
 				01F9FB861480FB6300745398 /* AppDelegate.m in Sources */,
 				01F9FB8C1480FB6300745398 /* ViewController.m in Sources */,
+				01F9FB94148102B400745398 /* VideoPickerController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +296,7 @@
 				01F9FB911480FB6300745398 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
