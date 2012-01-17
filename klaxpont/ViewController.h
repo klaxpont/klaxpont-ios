@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import <MediaPlayer/MediaPlayer.h>
+#import "Dailymotion.h"
 
-@interface ViewController : UIViewController<UIImagePickerControllerDelegate, UINavigationControllerDelegate>{
+@interface ViewController : UIViewController<UIImagePickerControllerDelegate, UINavigationControllerDelegate, DailymotionDelegate>{
     MPMoviePlayerController *_moviePlayer;
 }
 

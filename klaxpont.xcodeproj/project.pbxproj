@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		015CBEBD14C613780007A2FD /* libDailymotion.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 015CBEA114C613240007A2FD /* libDailymotion.a */; };
 		01F972FC1491580100D763EA /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01F972FB1491580100D763EA /* MediaPlayer.framework */; };
 		01F9FB761480FB6300745398 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01F9FB751480FB6300745398 /* UIKit.framework */; };
 		01F9FB781480FB6300745398 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01F9FB771480FB6300745398 /* Foundation.framework */; };
@@ -20,7 +21,32 @@
 		01F9FB961481039300745398 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01F9FB951481039300745398 /* MobileCoreServices.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		015CBEA014C613240007A2FD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 015CBE9814C613240007A2FD /* iOS.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D;
+			remoteInfo = Dailymotion;
+		};
+		015CBEA214C613240007A2FD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 015CBE9814C613240007A2FD /* iOS.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 53E273561265BD1C00B541BE;
+			remoteInfo = DailymotionTests;
+		};
+		015CBEBB14C6136F0007A2FD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 015CBE9814C613240007A2FD /* iOS.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
+			remoteInfo = Dailymotion;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		015CBE9814C613240007A2FD /* iOS.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = iOS.xcodeproj; sourceTree = "<group>"; };
 		01F972FB1491580100D763EA /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		01F9FB711480FB6300745398 /* klaxpont.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = klaxpont.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01F9FB751480FB6300745398 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -45,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				015CBEBD14C613780007A2FD /* libDailymotion.a in Frameworks */,
 				01F972FC1491580100D763EA /* MediaPlayer.framework in Frameworks */,
 				01F9FB961481039300745398 /* MobileCoreServices.framework in Frameworks */,
 				01F9FB761480FB6300745398 /* UIKit.framework in Frameworks */,
@@ -56,9 +83,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		014F3CB614B90488001ED2E9 /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				015CBE9814C613240007A2FD /* iOS.xcodeproj */,
+			);
+			path = libs;
+			sourceTree = "<group>";
+		};
+		015CBE9914C613240007A2FD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				015CBEA114C613240007A2FD /* libDailymotion.a */,
+				015CBEA314C613240007A2FD /* Tests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		01F9FB661480FB6300745398 = {
 			isa = PBXGroup;
 			children = (
+				014F3CB614B90488001ED2E9 /* libs */,
 				01F9FB7B1480FB6300745398 /* klaxpont */,
 				01F9FB741480FB6300745398 /* Frameworks */,
 				01F9FB721480FB6300745398 /* Products */,
@@ -133,6 +178,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				015CBEBC14C6136F0007A2FD /* PBXTargetDependency */,
 			);
 			name = klaxpont;
 			productName = klaxpont;
@@ -157,12 +203,35 @@
 			mainGroup = 01F9FB661480FB6300745398;
 			productRefGroup = 01F9FB721480FB6300745398 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 015CBE9914C613240007A2FD /* Products */;
+					ProjectRef = 015CBE9814C613240007A2FD /* iOS.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				01F9FB701480FB6300745398 /* klaxpont */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		015CBEA114C613240007A2FD /* libDailymotion.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libDailymotion.a;
+			remoteRef = 015CBEA014C613240007A2FD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		015CBEA314C613240007A2FD /* Tests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = Tests.octest;
+			remoteRef = 015CBEA214C613240007A2FD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		01F9FB6F1480FB6300745398 /* Resources */ = {
@@ -189,6 +258,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		015CBEBC14C6136F0007A2FD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Dailymotion;
+			targetProxy = 015CBEBB14C6136F0007A2FD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		01F9FB7E1480FB6300745398 /* InfoPlist.strings */ = {
@@ -260,8 +337,18 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "klaxpont/klaxpont-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"/Users/netbe/code/dailymotion-sdk-objc/build",
+					"\"$(SRCROOT)/libs\"",
+				);
 				INFOPLIST_FILE = "klaxpont/klaxpont-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"/Users/netbe/code/dailymotion-sdk-objc/build",
+					"$(inherited)",
+					"\"$(SRCROOT)/libs\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "\"$(BUILT_PRODUCTS_DIR)\"";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -271,8 +358,18 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "klaxpont/klaxpont-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"/Users/netbe/code/dailymotion-sdk-objc/build",
+					"\"$(SRCROOT)/libs\"",
+				);
 				INFOPLIST_FILE = "klaxpont/klaxpont-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"/Users/netbe/code/dailymotion-sdk-objc/build",
+					"$(inherited)",
+					"\"$(SRCROOT)/libs\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "\"$(BUILT_PRODUCTS_DIR)\"";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
