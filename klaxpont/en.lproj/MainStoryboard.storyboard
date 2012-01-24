@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.0" toolsVersion="1938" systemVersion="11C74" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.0" toolsVersion="1938" systemVersion="11C74" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="BUr-Er-oO3">
     <dependencies>
         <development defaultVersion="4200" identifier="xcode"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="933"/>
@@ -10,11 +10,11 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
                 <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="411"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" id="h1o-Ha-a4p">
-                                <rect key="frame" x="274" y="262" width="29" height="31"/>
+                                <rect key="frame" x="274" y="207" width="29" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" size="button"/>
                                 <state key="normal">
@@ -29,7 +29,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="C9O-qg-cBC">
-                                <rect key="frame" x="20" y="353" width="280" height="37"/>
+                                <rect key="frame" x="20" y="311" width="280" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Choose a video">
@@ -44,12 +44,12 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" id="TpW-AS-YZr">
-                                <rect key="frame" x="0.0" y="80" width="320" height="178"/>
+                                <rect key="frame" x="0.0" y="25" width="320" height="178"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="WXv-Th-gUs">
-                                <rect key="frame" x="20" y="398" width="280" height="37"/>
+                                <rect key="frame" x="20" y="356" width="280" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Record a video">
@@ -64,7 +64,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="RPM-Rg-iW5">
-                                <rect key="frame" x="20" y="308" width="280" height="37"/>
+                                <rect key="frame" x="20" y="257" width="280" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Upload selected video">
@@ -81,13 +81,47 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Record" id="fcf-Po-xem"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackOpaque"/>
                     <connections>
                         <outlet property="preview" destination="TpW-AS-YZr" id="eQQ-dY-bVC"/>
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="-223" y="233"/>
+            <point key="canvasLocation" x="-215" y="141"/>
+        </scene>
+        <scene sceneID="Sfz-SB-EOu">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rg1-kp-zIQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="Lev-X8-iT8" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SJv-ox-coX">
+                        <rect key="frame" x="0.0" y="20" width="320" height="411"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Videos" id="ZbH-AN-Y5Y"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="-215" y="723"/>
+        </scene>
+        <scene sceneID="9ep-4o-riW">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aqU-sZ-S46" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tabBarController definesPresentationContext="YES" id="BUr-Er-oO3" sceneMemberID="viewController">
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackOpaque"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="7pQ-mo-OTR">
+                        <rect key="frame" x="129" y="330" width="163" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="2" kind="relationship" relationship="viewControllers" id="NmS-Bo-6Sb"/>
+                        <segue destination="Lev-X8-iT8" kind="relationship" relationship="viewControllers" id="TNK-8Q-b7F"/>
+                    </connections>
+                </tabBarController>
+            </objects>
+            <point key="canvasLocation" x="-756" y="141"/>
         </scene>
         <scene sceneID="qHH-6X-5KD">
             <objects>
@@ -102,7 +136,7 @@
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackOpaque"/>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="331" y="233"/>
+            <point key="canvasLocation" x="249" y="141"/>
         </scene>
     </scenes>
     <classes>
@@ -122,6 +156,6 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Rwh-3x-7kK"/>
+        <segue reference="WDM-Wd-kfj"/>
     </inferredMetricsTieBreakers>
 </document>

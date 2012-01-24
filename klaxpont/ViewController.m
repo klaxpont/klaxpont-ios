@@ -127,20 +127,22 @@
         return;
     }
     Dailymotion *dailymotion = [[Dailymotion alloc] init];
-    NSDictionary *info = [NSDictionary dictionaryWithObjectsAndKeys:
-                          @"klaxpont", @"username",@"tutut" , @"password", nil];
-//    [dailymotion setUsername:@"klaxpont" password:@"tutut"];
-    [dailymotion setGrantType:DailymotionGrantTypePassword
-                   withAPIKey:@"5e84738d89f7af8e6d48" secret:@"2e7775f9e16cc345f6618a55a9e2a59d35fe5dea" scope:@"manage_videos"
-                         ];  
+//    A session is an NSDictionary which can contain any of the following keys:
+//    * - ``access_token``: a token which can be used to access the API
+//    * - ``expires``: an ``NSDate`` which indicates until when the ``access_token`` remains valid
+//    * - ``refresh_token``: a token used to request a new valid ``access_token`` without having to ask the end-user again and again
+//    * - ``scope``: an indication on the permission scope granted by the end-user for this session
 
-//    [dailymotion setGrantType:DailymotionGrantTypeClientCredentials
-//                   withAPIKey:@"5e84738d89f7af8e6d48" secret:@"2e7775f9e16cc345f6618a55a9e2a59d35fe5dea" scope:@"manage_videos"];
+    NSDictionary *session = [NSDictionary dictionaryWithObjectsAndKeys:@"bHhWQhFCVAZaX05eCBIaAEgSAhwVGFk",@"access_token",
+                             [NSDate dateWithTimeIntervalSinceNow:36000],@"expires",
+                             @"ad8dc6ef7fa4f4c163f19a00077268ed4846d623", @"refresh_token",
+                             @"scope", @"manage_videos",
+                             nil];
+    
+    [dailymotion setSession:session];
     //upload
     NSLog(@"movie path : %@", [_moviePlayer.contentURL path]);
     [dailymotion uploadFile:[_moviePlayer.contentURL path] delegate:self];
-    //read
-//   [dailymotion request:@"/user/klaxpont/videos" withArguments:nil delegate:self];
 }
 
 #pragma mark - Daylimotion Delegate methods
@@ -161,13 +163,14 @@
  * @param userInfo The dictionnary provided to the ``request:withArguments:delegate:userInfo:`` method.
  */
 - (void)dailymotion:(Dailymotion *)dailymotion didReturnError:(NSError *)error userInfo:(NSDictionary *)userInfo{
-
-
+    UIAlertView *alert= [[UIAlertView alloc] initWithTitle:@"Error" message:[error localizedDescription]  delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    [alert show];
 }
 
 - (void)dailymotion:(Dailymotion *)dailymotion didUploadFileAtURL:(NSString *)URL;
 {
-    [dailymotion request:@"POST /klaxpont/videos"
+    
+    [dailymotion request:@"POST /me/videos"
            withArguments:[NSDictionary dictionaryWithObject:URL forKey:@"url"]
                 delegate:self];
 }
