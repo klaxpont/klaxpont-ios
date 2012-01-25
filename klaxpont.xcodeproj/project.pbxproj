@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		01045B6214CF7AD100970E6C /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 01045B5914CF7ABC00970E6C /* MBProgressHUD.m */; };
-		01045B6514CF7AF100970E6C /* libDailymotion.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 01045B3D14CF7A9B00970E6C /* libDailymotion.a */; };
 		01045B8214CF90DB00970E6C /* Settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 01045B8114CF90DB00970E6C /* Settings.plist */; };
+		017E42EB14CF9B2F00B47B4C /* libDailymotion.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 017E42E614CF9B1C00B47B4C /* libDailymotion.a */; };
 		01F972FC1491580100D763EA /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01F972FB1491580100D763EA /* MediaPlayer.framework */; };
 		01F9FB761480FB6300745398 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01F9FB751480FB6300745398 /* UIKit.framework */; };
 		01F9FB781480FB6300745398 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01F9FB771480FB6300745398 /* Foundation.framework */; };
@@ -24,21 +24,21 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		01045B3C14CF7A9B00970E6C /* PBXContainerItemProxy */ = {
+		017E42E514CF9B1C00B47B4C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 01045B3414CF7A9B00970E6C /* iOS.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = D2AAC07E0554694100DB518D;
 			remoteInfo = Dailymotion;
 		};
-		01045B3E14CF7A9B00970E6C /* PBXContainerItemProxy */ = {
+		017E42E714CF9B1C00B47B4C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 01045B3414CF7A9B00970E6C /* iOS.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 53E273561265BD1C00B541BE;
 			remoteInfo = DailymotionTests;
 		};
-		01045B6314CF7AE900970E6C /* PBXContainerItemProxy */ = {
+		017E42E914CF9B2800B47B4C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 01045B3414CF7A9B00970E6C /* iOS.xcodeproj */;
 			proxyType = 1;
@@ -77,7 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01045B6514CF7AF100970E6C /* libDailymotion.a in Frameworks */,
+				017E42EB14CF9B2F00B47B4C /* libDailymotion.a in Frameworks */,
 				01F972FC1491580100D763EA /* MediaPlayer.framework in Frameworks */,
 				01F9FB961481039300745398 /* MobileCoreServices.framework in Frameworks */,
 				01F9FB761480FB6300745398 /* UIKit.framework in Frameworks */,
@@ -89,15 +89,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		01045B3514CF7A9B00970E6C /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				01045B3D14CF7A9B00970E6C /* libDailymotion.a */,
-				01045B3F14CF7A9B00970E6C /* Tests.octest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		01045B4014CF7ABC00970E6C /* MBProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
@@ -105,22 +96,24 @@
 				01045B5914CF7ABC00970E6C /* MBProgressHUD.m */,
 				01045B5A14CF7ABC00970E6C /* README.mdown */,
 			);
-			path = MBProgressHUD;
+			name = MBProgressHUD;
+			path = libs/MBProgressHUD;
 			sourceTree = "<group>";
 		};
-		014F3CB614B90488001ED2E9 /* libs */ = {
+		017E42E114CF9B1C00B47B4C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				01045B4014CF7ABC00970E6C /* MBProgressHUD */,
-				01045B3414CF7A9B00970E6C /* iOS.xcodeproj */,
+				017E42E614CF9B1C00B47B4C /* libDailymotion.a */,
+				017E42E814CF9B1C00B47B4C /* Tests.octest */,
 			);
-			path = libs;
+			name = Products;
 			sourceTree = "<group>";
 		};
 		01F9FB661480FB6300745398 = {
 			isa = PBXGroup;
 			children = (
-				014F3CB614B90488001ED2E9 /* libs */,
+				01045B3414CF7A9B00970E6C /* iOS.xcodeproj */,
+				01045B4014CF7ABC00970E6C /* MBProgressHUD */,
 				01F9FB7B1480FB6300745398 /* klaxpont */,
 				01F9FB741480FB6300745398 /* Frameworks */,
 				01F9FB721480FB6300745398 /* Products */,
@@ -196,7 +189,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				01045B6414CF7AE900970E6C /* PBXTargetDependency */,
+				017E42EA14CF9B2800B47B4C /* PBXTargetDependency */,
 			);
 			name = klaxpont;
 			productName = klaxpont;
@@ -223,7 +216,7 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 01045B3514CF7A9B00970E6C /* Products */;
+					ProductGroup = 017E42E114CF9B1C00B47B4C /* Products */;
 					ProjectRef = 01045B3414CF7A9B00970E6C /* iOS.xcodeproj */;
 				},
 			);
@@ -235,18 +228,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		01045B3D14CF7A9B00970E6C /* libDailymotion.a */ = {
+		017E42E614CF9B1C00B47B4C /* libDailymotion.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libDailymotion.a;
-			remoteRef = 01045B3C14CF7A9B00970E6C /* PBXContainerItemProxy */;
+			remoteRef = 017E42E514CF9B1C00B47B4C /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		01045B3F14CF7A9B00970E6C /* Tests.octest */ = {
+		017E42E814CF9B1C00B47B4C /* Tests.octest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = Tests.octest;
-			remoteRef = 01045B3E14CF7A9B00970E6C /* PBXContainerItemProxy */;
+			remoteRef = 017E42E714CF9B1C00B47B4C /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -280,10 +273,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		01045B6414CF7AE900970E6C /* PBXTargetDependency */ = {
+		017E42EA14CF9B2800B47B4C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Dailymotion;
-			targetProxy = 01045B6314CF7AE900970E6C /* PBXContainerItemProxy */;
+			targetProxy = 017E42E914CF9B2800B47B4C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

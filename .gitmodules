@@ -1,0 +1,6 @@
+[submodule "dailymotion"]
+	path = dailymotion
+	url = git://github.com/dailymotion/dailymotion-sdk-objc.git
+[submodule "MBProgressHUD"]
+	path = MBProgressHUD
+	url = git://github.com/jdg/MBProgressHUD.git
