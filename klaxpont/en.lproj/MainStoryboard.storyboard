@@ -14,7 +14,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" id="h1o-Ha-a4p">
-                                <rect key="frame" x="274" y="207" width="29" height="31"/>
+                                <rect key="frame" x="290" y="112" width="29" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" size="button"/>
                                 <state key="normal">
@@ -29,7 +29,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="C9O-qg-cBC">
-                                <rect key="frame" x="20" y="311" width="280" height="37"/>
+                                <rect key="frame" x="20" y="300" width="280" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Choose a video">
@@ -44,12 +44,12 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" id="TpW-AS-YZr">
-                                <rect key="frame" x="0.0" y="25" width="320" height="178"/>
+                                <rect key="frame" x="179" y="15" width="137" height="93"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="WXv-Th-gUs">
-                                <rect key="frame" x="20" y="356" width="280" height="37"/>
+                                <rect key="frame" x="20" y="345" width="280" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Record a video">
@@ -64,7 +64,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="RPM-Rg-iW5">
-                                <rect key="frame" x="20" y="257" width="280" height="37"/>
+                                <rect key="frame" x="20" y="255" width="280" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Upload selected video">
@@ -78,13 +78,34 @@
                                     <action selector="upload:" destination="2" eventType="touchUpInside" id="8yi-pZ-O6v"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Default Description" id="0KI-GG-7Z4">
+                                <rect key="frame" x="7" y="54" width="165" height="117"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardAppearance="alert" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="2" id="4NB-Lz-MsV"/>
+                                </connections>
+                            </textView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Default title" borderStyle="roundedRect" placeholder="title of my video" minimumFontSize="17" clearButtonMode="whileEditing" id="7Kp-eJ-4Cs">
+                                <rect key="frame" x="7" y="15" width="165" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                <connections>
+                                    <outlet property="delegate" destination="2" id="jrg-eJ-0Yl"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Record" id="fcf-Po-xem"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackOpaque"/>
                     <connections>
+                        <outlet property="descriptionField" destination="0KI-GG-7Z4" id="2Kj-50-OUn"/>
                         <outlet property="preview" destination="TpW-AS-YZr" id="eQQ-dY-bVC"/>
+                        <outlet property="titleField" destination="7Kp-eJ-4Cs" id="HjG-PZ-8hH"/>
                     </connections>
                 </viewController>
             </objects>
@@ -146,7 +167,9 @@
         <class className="ViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
             <relationships>
+                <relationship kind="outlet" name="descriptionField" candidateClass="UITextView"/>
                 <relationship kind="outlet" name="preview" candidateClass="UIView"/>
+                <relationship kind="outlet" name="titleField" candidateClass="UITextField"/>
             </relationships>
         </class>
     </classes>
