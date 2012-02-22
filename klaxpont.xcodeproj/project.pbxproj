@@ -8,8 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		01045B8214CF90DB00970E6C /* Settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 01045B8114CF90DB00970E6C /* Settings.plist */; };
+		015EF8C114F0781D00693359 /* VideosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 015EF8C014F0781D00693359 /* VideosViewController.m */; };
 		017E42EB14CF9B2F00B47B4C /* libDailymotion.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 017E42E614CF9B1C00B47B4C /* libDailymotion.a */; };
 		01953F9A14D0A4120001169D /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 01953F9914D0A4120001169D /* MBProgressHUD.m */; };
+		01A73E6C14F1AF94000E7531 /* default_thumbnail.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 01A73E6B14F1AF94000E7531 /* default_thumbnail.jpg */; };
 		01F972FC1491580100D763EA /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01F972FB1491580100D763EA /* MediaPlayer.framework */; };
 		01F9FB761480FB6300745398 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01F9FB751480FB6300745398 /* UIKit.framework */; };
 		01F9FB781480FB6300745398 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01F9FB771480FB6300745398 /* Foundation.framework */; };
@@ -50,8 +52,11 @@
 /* Begin PBXFileReference section */
 		01045B3414CF7A9B00970E6C /* iOS.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = iOS.xcodeproj; path = dailymotion/iOS.xcodeproj; sourceTree = "<group>"; };
 		01045B8114CF90DB00970E6C /* Settings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Settings.plist; sourceTree = "<group>"; };
+		015EF8BF14F0781D00693359 /* VideosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideosViewController.h; sourceTree = "<group>"; };
+		015EF8C014F0781D00693359 /* VideosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideosViewController.m; sourceTree = "<group>"; };
 		01953F9814D0A4120001169D /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBProgressHUD.h; path = MBProgressHUD/MBProgressHUD.h; sourceTree = SOURCE_ROOT; };
 		01953F9914D0A4120001169D /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBProgressHUD.m; path = MBProgressHUD/MBProgressHUD.m; sourceTree = SOURCE_ROOT; };
+		01A73E6B14F1AF94000E7531 /* default_thumbnail.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = default_thumbnail.jpg; sourceTree = "<group>"; };
 		01F972FB1491580100D763EA /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		01F9FB711480FB6300745398 /* klaxpont.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = klaxpont.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01F9FB751480FB6300745398 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -107,6 +112,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		01A73E6A14F1AF94000E7531 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				01A73E6B14F1AF94000E7531 /* default_thumbnail.jpg */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
 		01F9FB661480FB6300745398 = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +154,7 @@
 		01F9FB7B1480FB6300745398 /* klaxpont */ = {
 			isa = PBXGroup;
 			children = (
+				01A73E6A14F1AF94000E7531 /* images */,
 				01F9FB841480FB6300745398 /* AppDelegate.h */,
 				01F9FB851480FB6300745398 /* AppDelegate.m */,
 				01F9FB871480FB6300745398 /* MainStoryboard.storyboard */,
@@ -169,6 +183,8 @@
 				01F9FB8B1480FB6300745398 /* ViewController.m */,
 				01F9FB92148102B400745398 /* VideoPickerController.h */,
 				01F9FB93148102B400745398 /* VideoPickerController.m */,
+				015EF8BF14F0781D00693359 /* VideosViewController.h */,
+				015EF8C014F0781D00693359 /* VideosViewController.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -250,6 +266,7 @@
 				01F9FB801480FB6300745398 /* InfoPlist.strings in Resources */,
 				01F9FB891480FB6300745398 /* MainStoryboard.storyboard in Resources */,
 				01045B8214CF90DB00970E6C /* Settings.plist in Resources */,
+				01A73E6C14F1AF94000E7531 /* default_thumbnail.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,6 +282,7 @@
 				01F9FB8C1480FB6300745398 /* ViewController.m in Sources */,
 				01F9FB94148102B400745398 /* VideoPickerController.m in Sources */,
 				01953F9A14D0A4120001169D /* MBProgressHUD.m in Sources */,
+				015EF8C114F0781D00693359 /* VideosViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
