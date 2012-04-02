@@ -7,17 +7,14 @@
 
 # Documentation #
 
-The project's documentation can be generated (docset) via appledoc http://gentlebytes.com/appledoc/
+The project's documentation can be generated (docset) via appledoc (http://gentlebytes.com/appledoc/). Just type the following command on your console, under the project directory.
+
 ```appledoc .```
+ 
+# Notes #
+
+* Upload video only works on device
 
 # TODO #
 
-* Retrieve active session from server, _see_ feature/token-from-server, to review
-* List all videos from klaxpont, _see_ feature/list-videos
-* Add validations on title and description of video before uploading, _see_ feature/token-from-server, to review
-* Authentication: Facebook connect
-* Assign video to user
-* ...
- 
-# Notes #
-* Upload video only works on device
+View issues on github
