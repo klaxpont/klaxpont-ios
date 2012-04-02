@@ -10,6 +10,7 @@
 #import <MediaPlayer/MediaPlayer.h>
 #import "Dailymotion.h"
 #import "MBProgressHUD.h"
+#import "NSString+Additions.h"
 
 @interface ViewController : UIViewController<UIImagePickerControllerDelegate, UINavigationControllerDelegate, DailymotionDelegate, MBProgressHUDDelegate>{
     MPMoviePlayerController *_moviePlayer;
@@ -17,6 +18,7 @@
     __weak IBOutlet UITextView *descriptionField;
     __weak IBOutlet UITextField *titleField;
     NSString                *_videoTitle;
+    NSDictionary *dailymotionSession;
 }
 
 @property (weak, nonatomic) IBOutlet UIView *preview;
