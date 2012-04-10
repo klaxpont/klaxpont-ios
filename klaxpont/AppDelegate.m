@@ -7,14 +7,17 @@
 //
 
 #import "AppDelegate.h"
+#import "Settings.h"
 
 @implementation AppDelegate
 
 @synthesize window = _window;
+@synthesize facebook = _facebook;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    [self initFacebook];
     return YES;
 }
 							
@@ -56,5 +59,32 @@
      See also applicationDidEnterBackground:.
      */
 }
+
+#pragma mark Facebook
+
+// For iOS 4.2+ support
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    return [_facebook handleOpenURL:url]; 
+}
+
+- (void) initFacebook
+{
+    _facebook = [[Facebook alloc] initWithAppId:[Settings facebookApiKey] andDelegate:self];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    if ([defaults objectForKey:@"FBAccessTokenKey"] 
+        && [defaults objectForKey:@"FBExpirationDateKey"]) {
+        _facebook.accessToken = [defaults objectForKey:@"FBAccessTokenKey"];
+        _facebook.expirationDate = [defaults objectForKey:@"FBExpirationDateKey"];
+    }
+}
+
+- (void)fbDidLogin {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:[_facebook accessToken] forKey:@"FBAccessTokenKey"];
+    [defaults setObject:[_facebook expirationDate] forKey:@"FBExpirationDateKey"];
+    [defaults synchronize];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"facebookDidLogin" object:nil];    
+}
+
 
 @end

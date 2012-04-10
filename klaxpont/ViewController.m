@@ -8,8 +8,9 @@
 
 #import "ViewController.h"
 #import "VideoPickerController.h"
-
-
+#import "LoginViewController.h"
+#import "AccountViewController.h"
+#import "User.h"
 @interface ViewController()
 - (void) uploading;
 - (void) showSpinner;
@@ -142,6 +143,13 @@
 }
 
 - (IBAction)upload:(id)sender{
+    //test if user is logged in
+    if ([User facebookId] == nil){
+        AccountViewController *accountViewController = [[[self tabBarController] viewControllers] objectAtIndex:2];
+        [[self tabBarController] setSelectedViewController:accountViewController];
+        return;
+    }
+
     if (_moviePlayer.contentURL == nil) {
         [[[UIAlertView alloc] initWithTitle:@"Error"
                                     message:@"Choose a file to upload first"
