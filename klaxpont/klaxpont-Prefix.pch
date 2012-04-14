@@ -12,3 +12,8 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
 #endif
+
+#define SERVER_BASE_URL @"http://klaxpont.herokuapp.com"
+#define DAILYMOTION_API_TOKEN_PATH @"api/dailymotion/token"
+
+#define SERVER_URL_FOR(relativeURL) [NSString stringWithFormat:@"%@/%@",SERVER_BASE_URL, relativeURL]

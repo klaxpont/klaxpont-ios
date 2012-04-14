@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>--exit-threshold</key>
+	<string>2</string>
+	<key>--keep-undocumented-members</key>
+	<true/>
+	<key>--project-name</key>
+	<string>Klaxpont</string>
+	<key>--project-company</key>
+	<string>klaxpont</string>
+	<key>--company-id</key>
+	<string></string>
+	<key>--verbose</key>
+	<integer>4</integer>
+	<key>--keep-undocumented-objects</key>
+	<true/>
+	<key>--use-single-star</key>
+	<true/>
+	<key>--logformat</key>
+	<string>xcode</string>
+	<key>--ignore</key>
+	<array>
+		<string>build</string>
+		<string>dailymotion</string>
+		<string>docset</string>
+		<string>JSONKit</string>
+		<string>MBProgressHUD</string>
+	</array>
+	<key>--search-undocumented-doc</key>
+	<true/>
+</dict>
+</plist>
