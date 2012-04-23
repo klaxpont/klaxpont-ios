@@ -8,7 +8,6 @@
 
 #import "ViewController.h"
 #import "VideoPickerController.h"
-#import "LoginViewController.h"
 #import "AccountViewController.h"
 #import "User.h"
 @interface ViewController()
@@ -144,7 +143,8 @@
 
 - (IBAction)upload:(id)sender{
     //test if user is logged in
-    if ([User facebookId] == nil){
+    User *user = User.new;
+    if (![user isRegistered]){
         AccountViewController *accountViewController = [[[self tabBarController] viewControllers] objectAtIndex:2];
         [[self tabBarController] setSelectedViewController:accountViewController];
         return;

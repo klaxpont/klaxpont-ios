@@ -14,3 +14,6 @@
 #endif
 
 #define APP_DELEGATE (AppDelegate*)[UIApplication sharedApplication].delegate
+//POST
+#define SERVER_REGISTER_USER_URL [NSURL URLWithString:@"http://klaxpont.herokuapp.com/api/users"] 
+#define SERVER_REGISTER_VIDEO_URL [NSURL URLWithString:@"http://klaxpont.herokuapp.com/api/videos"] 
