@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		01045B8214CF90DB00970E6C /* Settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 01045B8114CF90DB00970E6C /* Settings.plist */; };
 		010FF6E715325AA4007A9998 /* AccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 010FF6E615325AA4007A9998 /* AccountViewController.m */; };
+		016D0616152A5761001B7D30 /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 016D0615152A5761001B7D30 /* NSString+Additions.m */; };
 		017E42EB14CF9B2F00B47B4C /* libDailymotion.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 017E42E614CF9B1C00B47B4C /* libDailymotion.a */; };
 		01953F9A14D0A4120001169D /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 01953F9914D0A4120001169D /* MBProgressHUD.m */; };
 		019E021C1534C45A002BC4F2 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 019E021D1534C45A002BC4F2 /* MainStoryboard.storyboard */; };
@@ -70,6 +71,8 @@
 		01045B8114CF90DB00970E6C /* Settings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Settings.plist; sourceTree = "<group>"; };
 		010FF6E515325AA3007A9998 /* AccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountViewController.h; sourceTree = "<group>"; };
 		010FF6E615325AA4007A9998 /* AccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountViewController.m; sourceTree = "<group>"; };
+		016D0614152A5761001B7D30 /* NSString+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+Additions.h"; path = "helpers/NSString+Additions.h"; sourceTree = SOURCE_ROOT; };
+		016D0615152A5761001B7D30 /* NSString+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Additions.m"; path = "helpers/NSString+Additions.m"; sourceTree = SOURCE_ROOT; };
 		01953F9814D0A4120001169D /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBProgressHUD.h; path = MBProgressHUD/MBProgressHUD.h; sourceTree = SOURCE_ROOT; };
 		01953F9914D0A4120001169D /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBProgressHUD.m; path = MBProgressHUD/MBProgressHUD.m; sourceTree = SOURCE_ROOT; };
 		019E021D1534C45A002BC4F2 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
@@ -124,6 +127,16 @@
 			path = libs/MBProgressHUD;
 			sourceTree = "<group>";
 		};
+		016D0613152A5643001B7D30 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				016D0614152A5761001B7D30 /* NSString+Additions.h */,
+				016D0615152A5761001B7D30 /* NSString+Additions.m */,
+			);
+			name = Helpers;
+			path = klaxpont;
+			sourceTree = "<group>";
+		};
 		017E42E114CF9B1C00B47B4C /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -145,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				01A6F13C152BA1CF00C1778F /* facebook-ios-sdk.xcodeproj */,
+				016D0613152A5643001B7D30 /* Helpers */,
 				01045B3414CF7A9B00970E6C /* iOS.xcodeproj */,
 				01045B4014CF7ABC00970E6C /* MBProgressHUD */,
 				01F9FB7B1480FB6300745398 /* klaxpont */,
@@ -321,6 +335,7 @@
 				01A6F14A152BA57F00C1778F /* Settings.m in Sources */,
 				010FF6E715325AA4007A9998 /* AccountViewController.m in Sources */,
 				019E02221534CD95002BC4F2 /* User.m in Sources */,
+				016D0616152A5761001B7D30 /* NSString+Additions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -109,7 +109,7 @@
 }
 -(void)registerUser
 {
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:SERVER_REGISTER_USER_URL];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[[NSURL alloc] initWithString:SERVER_URL_FOR(USER_PATH)]];
     [request setHTTPMethod:@"POST"];
     [request addValue:[NSString stringWithFormat:@"%@",_user.facebookId]  forHTTPHeaderField:@"facebook_id"];
     [request setValue:@"application/json" forHTTPHeaderField:@"content-type"];

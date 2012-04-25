@@ -10,8 +10,6 @@
 #import "FBRequest.h"
 #import "User.h"
 
-#define FACEBOOK_PROFILE_PATH  @"me"
-#define FACEBOOK_PROFILE_PICTURE_PATH  @"me/picture"
 
 @interface AccountViewController : UIViewController<FBRequestDelegate>
 {

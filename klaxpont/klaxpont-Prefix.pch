@@ -13,7 +13,19 @@
     #import <Foundation/Foundation.h>
 #endif
 
+
+
+//helpers
 #define APP_DELEGATE (AppDelegate*)[UIApplication sharedApplication].delegate
-//POST
-#define SERVER_REGISTER_USER_URL [NSURL URLWithString:@"http://klaxpont.herokuapp.com/api/users"] 
-#define SERVER_REGISTER_VIDEO_URL [NSURL URLWithString:@"http://klaxpont.herokuapp.com/api/videos"] 
+#define SERVER_URL_FOR(relativeURL) [NSString stringWithFormat:@"%@/%@",SERVER_BASE_URL, relativeURL]
+
+//Klaxpont API
+#define SERVER_BASE_URL @"http://klaxpont.herokuapp.com"
+#define DAILYMOTION_API_TOKEN_PATH @"api/dailymotion/token"
+#define USER_PATH @"api/users"
+#define VIDEO_PATH @"api/videos"
+
+//Facebook API
+#define FACEBOOK_PROFILE_PATH  @"me"
+#define FACEBOOK_PROFILE_PICTURE_PATH  @"me/picture"
+
