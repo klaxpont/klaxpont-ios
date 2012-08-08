@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		01045B8214CF90DB00970E6C /* Settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 01045B8114CF90DB00970E6C /* Settings.plist */; };
 		010FF6E715325AA4007A9998 /* AccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 010FF6E615325AA4007A9998 /* AccountViewController.m */; };
+		014AF00015D2E66500F36146 /* default_thumbnail.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 014AEFFF15D2E66500F36146 /* default_thumbnail.jpg */; };
+		014AF00315D2E67300F36146 /* VideosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 014AF00215D2E67300F36146 /* VideosViewController.m */; };
 		016D0616152A5761001B7D30 /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 016D0615152A5761001B7D30 /* NSString+Additions.m */; };
 		017E42EB14CF9B2F00B47B4C /* libDailymotion.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 017E42E614CF9B1C00B47B4C /* libDailymotion.a */; };
 		01953F9A14D0A4120001169D /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 01953F9914D0A4120001169D /* MBProgressHUD.m */; };
@@ -71,6 +73,9 @@
 		01045B8114CF90DB00970E6C /* Settings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Settings.plist; sourceTree = "<group>"; };
 		010FF6E515325AA3007A9998 /* AccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountViewController.h; sourceTree = "<group>"; };
 		010FF6E615325AA4007A9998 /* AccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountViewController.m; sourceTree = "<group>"; };
+		014AEFFF15D2E66500F36146 /* default_thumbnail.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = default_thumbnail.jpg; sourceTree = "<group>"; };
+		014AF00115D2E67300F36146 /* VideosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideosViewController.h; sourceTree = "<group>"; };
+		014AF00215D2E67300F36146 /* VideosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideosViewController.m; sourceTree = "<group>"; };
 		016D0614152A5761001B7D30 /* NSString+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+Additions.h"; path = "helpers/NSString+Additions.h"; sourceTree = SOURCE_ROOT; };
 		016D0615152A5761001B7D30 /* NSString+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Additions.m"; path = "helpers/NSString+Additions.m"; sourceTree = SOURCE_ROOT; };
 		01953F9814D0A4120001169D /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBProgressHUD.h; path = MBProgressHUD/MBProgressHUD.h; sourceTree = SOURCE_ROOT; };
@@ -125,6 +130,14 @@
 			);
 			name = MBProgressHUD;
 			path = libs/MBProgressHUD;
+			sourceTree = "<group>";
+		};
+		014AEFFE15D2E66500F36146 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				014AEFFF15D2E66500F36146 /* default_thumbnail.jpg */,
+			);
+			path = images;
 			sourceTree = "<group>";
 		};
 		016D0613152A5643001B7D30 /* Helpers */ = {
@@ -190,6 +203,7 @@
 		01F9FB7B1480FB6300745398 /* klaxpont */ = {
 			isa = PBXGroup;
 			children = (
+				014AEFFE15D2E66500F36146 /* images */,
 				01F9FB841480FB6300745398 /* AppDelegate.h */,
 				01F9FB851480FB6300745398 /* AppDelegate.m */,
 				01F9FB97148104E100745398 /* Classes */,
@@ -215,6 +229,8 @@
 			isa = PBXGroup;
 			children = (
 				010FF6E515325AA3007A9998 /* AccountViewController.h */,
+				014AF00115D2E67300F36146 /* VideosViewController.h */,
+				014AF00215D2E67300F36146 /* VideosViewController.m */,
 				010FF6E615325AA4007A9998 /* AccountViewController.m */,
 				01F9FB8A1480FB6300745398 /* ViewController.h */,
 				01F9FB8B1480FB6300745398 /* ViewController.m */,
@@ -317,6 +333,7 @@
 				01045B8214CF90DB00970E6C /* Settings.plist in Resources */,
 				019E021E1534C461002BC4F2 /* InfoPlist.strings in Resources */,
 				019E021C1534C45A002BC4F2 /* MainStoryboard.storyboard in Resources */,
+				014AF00015D2E66500F36146 /* default_thumbnail.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,6 +353,7 @@
 				010FF6E715325AA4007A9998 /* AccountViewController.m in Sources */,
 				019E02221534CD95002BC4F2 /* User.m in Sources */,
 				016D0616152A5761001B7D30 /* NSString+Additions.m in Sources */,
+				014AF00315D2E67300F36146 /* VideosViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
