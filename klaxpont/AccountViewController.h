@@ -7,11 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "FBRequest.h"
 #import "User.h"
 
 
-@interface AccountViewController : UIViewController<FBRequestDelegate>
+@interface AccountViewController : UIViewController //<FBRequestDelegate>
 {
     User *_user;
     NSMutableData *_facebookImageData;

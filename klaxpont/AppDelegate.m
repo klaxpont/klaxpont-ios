@@ -12,15 +12,17 @@
 @implementation AppDelegate
 
 @synthesize window = _window;
-@synthesize facebook = _facebook;
+@synthesize fbSession = _fbSession;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    [self initFacebook];
+//    [self initFacebook];
     return YES;
 }
-							
+				
+
+
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     /*
@@ -49,6 +51,16 @@
     /*
      Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
      */
+    
+    // this means the user switched back to this app without completing a login in Safari/Facebook App
+    if (self.fbSession.state == FBSessionStateCreatedOpening) {
+        // BUG: for the iOS 6 preview we comment this line out to compensate for a race-condition in our
+        // state transition handling for integrated Facebook Login; production code should close a
+        // session in the opening state on transition back to the application; this line will again be
+        // active in the next production rev
+        //[self.session close]; // so we close our session and start over
+    }
+
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application
@@ -58,33 +70,34 @@
      Save data if appropriate.
      See also applicationDidEnterBackground:.
      */
+    [self.fbSession close];
 }
 
 #pragma mark Facebook
 
-// For iOS 4.2+ support
+
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
-    return [_facebook handleOpenURL:url]; 
+    return [self.fbSession handleOpenURL:url];
 }
 
-- (void) initFacebook
-{
-    _facebook = [[Facebook alloc] initWithAppId:[Settings facebookApiKey] andDelegate:self];
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    if ([defaults objectForKey:@"FBAccessTokenKey"] 
-        && [defaults objectForKey:@"FBExpirationDateKey"]) {
-        _facebook.accessToken = [defaults objectForKey:@"FBAccessTokenKey"];
-        _facebook.expirationDate = [defaults objectForKey:@"FBExpirationDateKey"];
-    }
-}
-
-- (void)fbDidLogin {
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setObject:[_facebook accessToken] forKey:@"FBAccessTokenKey"];
-    [defaults setObject:[_facebook expirationDate] forKey:@"FBExpirationDateKey"];
-    [defaults synchronize];
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"facebookDidLogin" object:nil];    
-}
-
-
+//- (void) initFacebook
+//{
+//    _facebook = [[Facebook alloc] initWithAppId:[Settings facebookApiKey] andDelegate:self];
+//    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+//    if ([defaults objectForKey:@"FBAccessTokenKey"] 
+//        && [defaults objectForKey:@"FBExpirationDateKey"]) {
+//        _facebook.accessToken = [defaults objectForKey:@"FBAccessTokenKey"];
+//        _facebook.expirationDate = [defaults objectForKey:@"FBExpirationDateKey"];
+//    }
+//}
+//
+//- (void)fbDidLogin {
+//    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+//    [defaults setObject:[_facebook accessToken] forKey:@"FBAccessTokenKey"];
+//    [defaults setObject:[_facebook expirationDate] forKey:@"FBExpirationDateKey"];
+//    [defaults synchronize];
+//    [[NSNotificationCenter defaultCenter] postNotificationName:@"facebookDidLogin" object:nil];    
+//}
+//
+//
 @end

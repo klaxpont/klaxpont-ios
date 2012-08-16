@@ -54,11 +54,11 @@
         [[self username] setText:nil];
     }
     
-    if ([[APP_DELEGATE facebook] isSessionValid]) {
-        [[self facebookButton] setTitle:@"Se déconnecter" forState:UIControlStateNormal];              
-    }else {
-        [[self facebookButton] setTitle:@"Se connecter" forState:UIControlStateNormal];
-    }
+//    if ([[APP_DELEGATE facebook] isSessionValid]) {
+//        [[self facebookButton] setTitle:@"Se déconnecter" forState:UIControlStateNormal];              
+//    }else {
+//        [[self facebookButton] setTitle:@"Se connecter" forState:UIControlStateNormal];
+//    }
 }
 
 - (void)viewDidUnload
@@ -80,33 +80,34 @@
 
 - (IBAction)connectFacebook:(id)sender {
 
-   if ([[APP_DELEGATE facebook] isSessionValid]) 
-       [self facebookLogout];
-   else
-       [self facebookLogin];
-    
-    
-    [self updateFacebookButton];
+//   if ([[APP_DELEGATE facebook] isSessionValid]) 
+//       [self facebookLogout];
+//   else
+//       [self facebookLogin];
+//    
+//    
+//    [self updateFacebookButton];
 }
 
 - (void)facebookLogin
 {
-  [[APP_DELEGATE facebook] authorize:nil];
+//  [[APP_DELEGATE facebook] authorize:nil];
 
 }
 
 - (void)facebookLogout
 {
-    [[APP_DELEGATE facebook] logout];
+//    [[APP_DELEGATE facebook] logout];
     
 }
 #pragma mark - Requests
 
 -(void)requestFacebookInfos{
     AppDelegate* appDelegate = (AppDelegate*) [UIApplication sharedApplication].delegate;
-    [appDelegate.facebook requestWithGraphPath:FACEBOOK_PROFILE_PATH andDelegate:self];
-    [appDelegate.facebook requestWithGraphPath:FACEBOOK_PROFILE_PICTURE_PATH andDelegate:self];
+//    [appDelegate.facebook requestWithGraphPath:FACEBOOK_PROFILE_PATH andDelegate:self];
+//    [appDelegate.facebook requestWithGraphPath:FACEBOOK_PROFILE_PICTURE_PATH andDelegate:self];
 }
+
 -(void)registerUser
 {
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[[NSURL alloc] initWithString:SERVER_URL_FOR(USER_PATH)]];
@@ -128,41 +129,41 @@
     //display loading
 }
 - (void) request:(FBRequest *)request didLoadRawResponse:(NSData *)data{
-    if([request.url hasSuffix:FACEBOOK_PROFILE_PICTURE_PATH])
-    {
-        NSLog(@"request %@", request.url );     
-        if(_user.facebookPicture == nil)
-        {
-            _user.facebookPicture = [[NSMutableData alloc] initWithData:data];
-        }else {
-            [_user.facebookPicture appendData:data];
-        }
-
-    }
+//    if([request.url hasSuffix:FACEBOOK_PROFILE_PICTURE_PATH])
+//    {
+//        NSLog(@"request %@", request.url );     
+//        if(_user.facebookPicture == nil)
+//        {
+//            _user.facebookPicture = [[NSMutableData alloc] initWithData:data];
+//        }else {
+//            [_user.facebookPicture appendData:data];
+//        }
+//
+//    }
 }
 - (void) request:(FBRequest *)request didLoad:(id)result
 {
-    if([request.url hasSuffix:FACEBOOK_PROFILE_PATH])
-    {
-        NSDictionary *identity = (NSDictionary*)result;
-        NSLog(@"response profile %@", identity); 
-
-        // save it to nsuserdefaults for now but should we use core data instead?
-        [_user setFirstName:[identity objectForKey:@"first_name"]];
-        [_user setLastName:[identity objectForKey:@"last_name"]];
-        [_user setFacebookId:[identity objectForKey:@"id"]];
-
-        [self updateFacebookButton];
-        
-        //register to klaxpont server
-        if (![_user isRegistered])
-            [self registerUser];
-    }
-    
-    else if([request.url hasSuffix:FACEBOOK_PROFILE_PICTURE_PATH])
-    {
-        [self updateFacebookPicture];
-    }   
+//    if([request.url hasSuffix:FACEBOOK_PROFILE_PATH])
+//    {
+//        NSDictionary *identity = (NSDictionary*)result;
+//        NSLog(@"response profile %@", identity); 
+//
+//        // save it to nsuserdefaults for now but should we use core data instead?
+//        [_user setFirstName:[identity objectForKey:@"first_name"]];
+//        [_user setLastName:[identity objectForKey:@"last_name"]];
+//        [_user setFacebookId:[identity objectForKey:@"id"]];
+//
+//        [self updateFacebookButton];
+//        
+//        //register to klaxpont server
+//        if (![_user isRegistered])
+//            [self registerUser];
+//    }
+//    
+//    else if([request.url hasSuffix:FACEBOOK_PROFILE_PICTURE_PATH])
+//    {
+//        [self updateFacebookPicture];
+//    }   
 }
 
 #pragma mark NSURLConnection delegate methods
