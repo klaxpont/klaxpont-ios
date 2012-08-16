@@ -92,6 +92,7 @@
 
 -(void) showRecorder
 {
+    // TODO recheck this condition if necessary
     if([VideoPickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]){
         if ([UIImagePickerController isSourceTypeAvailable:
              UIImagePickerControllerSourceTypeCamera])
@@ -100,9 +101,11 @@
         }
         
         [_videoPickerController setShowsCameraControls:YES];
+        [self presentModalViewController:_videoPickerController animated:YES];
     }else{
         // TODO display error message in case device has no camera video
     }
+
 }
 
 #pragma mark - Delegates

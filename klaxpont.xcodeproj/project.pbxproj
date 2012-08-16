@@ -20,6 +20,7 @@
 		01F9FB861480FB6300745398 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F9FB851480FB6300745398 /* AppDelegate.m */; };
 		01F9FB961481039300745398 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01F9FB951481039300745398 /* MobileCoreServices.framework */; };
 		093D00B515DD567B00518A9D /* VideoPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F9FB93148102B400745398 /* VideoPickerController.m */; };
+		093D00BC15DD611700518A9D /* klaxon.png in Resources */ = {isa = PBXBuildFile; fileRef = 093D00BB15DD611700518A9D /* klaxon.png */; };
 		0950760715DD3F3200D6299C /* DisclaimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0950760515DD3F3200D6299C /* DisclaimerViewController.m */; };
 		0950760815DD3F3200D6299C /* DisclaimerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0950760615DD3F3200D6299C /* DisclaimerViewController.xib */; };
 		09C2FCDD15DCFF9B00F01096 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09C2FCDC15DCFF9B00F01096 /* FacebookSDK.framework */; };
@@ -29,7 +30,6 @@
 		09C2FD5415DD316C00F01096 /* AccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 010FF6E615325AA4007A9998 /* AccountViewController.m */; };
 		09C2FD5515DD318200F01096 /* UserHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 019E02211534CD95002BC4F2 /* UserHelper.m */; };
 		09C2FD5615DD31B300F01096 /* AccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09C2FD0415DD240400F01096 /* AccountViewController.xib */; };
-		09C2FD5815DD361200F01096 /* klaxon.png in Resources */ = {isa = PBXBuildFile; fileRef = 09C2FD5715DD361200F01096 /* klaxon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +85,7 @@
 		01F9FB92148102B400745398 /* VideoPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoPickerController.h; sourceTree = "<group>"; };
 		01F9FB93148102B400745398 /* VideoPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoPickerController.m; sourceTree = "<group>"; };
 		01F9FB951481039300745398 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		093D00BB15DD611700518A9D /* klaxon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = klaxon.png; sourceTree = "<group>"; };
 		0950760415DD3F3200D6299C /* DisclaimerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisclaimerViewController.h; sourceTree = "<group>"; };
 		0950760515DD3F3200D6299C /* DisclaimerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisclaimerViewController.m; sourceTree = "<group>"; };
 		0950760615DD3F3200D6299C /* DisclaimerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DisclaimerViewController.xib; sourceTree = "<group>"; };
@@ -96,7 +97,6 @@
 		09C2FD4F15DD305700F01096 /* MyVideosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyVideosViewController.m; sourceTree = "<group>"; };
 		09C2FD5115DD308000F01096 /* TopVideosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopVideosViewController.h; sourceTree = "<group>"; };
 		09C2FD5215DD308000F01096 /* TopVideosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopVideosViewController.m; sourceTree = "<group>"; };
-		09C2FD5715DD361200F01096 /* klaxon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = klaxon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,7 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				016D0613152A5643001B7D30 /* Helpers */,
-				01045B3414CF7A9B00970E6C /* iOS.xcodeproj */,
+				093D00B715DD5FA700518A9D /* Dailymotion */,
 				01045B4014CF7ABC00970E6C /* MBProgressHUD */,
 				01F9FB7B1480FB6300745398 /* klaxpont */,
 				01F9FB741480FB6300745398 /* Frameworks */,
@@ -182,6 +182,9 @@
 		01F9FB7B1480FB6300745398 /* klaxpont */ = {
 			isa = PBXGroup;
 			children = (
+				093D00B915DD611700518A9D /* resources */,
+				09C2FD4D15DD2FBD00F01096 /* deprecated */,
+				093D00B815DD5FE400518A9D /* Helpers */,
 				01F9FB841480FB6300745398 /* AppDelegate.h */,
 				01F9FB851480FB6300745398 /* AppDelegate.m */,
 				01F9FB97148104E100745398 /* Classes */,
@@ -193,12 +196,10 @@
 		01F9FB7C1480FB6300745398 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				09C2FD5715DD361200F01096 /* klaxon.png */,
 				01F9FB7D1480FB6300745398 /* klaxpont-Info.plist */,
 				01F9FB811480FB6300745398 /* main.m */,
 				01F9FB831480FB6300745398 /* klaxpont-Prefix.pch */,
 				019E021F1534C461002BC4F2 /* InfoPlist.strings */,
-				09C2FD0415DD240400F01096 /* AccountViewController.xib */,
 				01045B8114CF90DB00970E6C /* Settings.plist */,
 			);
 			name = "Supporting Files";
@@ -207,13 +208,14 @@
 		01F9FB97148104E100745398 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				093D00B615DD569400518A9D /* Upload */,
+				01F9FB92148102B400745398 /* VideoPickerController.h */,
+				01F9FB93148102B400745398 /* VideoPickerController.m */,
 				0950760415DD3F3200D6299C /* DisclaimerViewController.h */,
 				0950760515DD3F3200D6299C /* DisclaimerViewController.m */,
 				0950760615DD3F3200D6299C /* DisclaimerViewController.xib */,
-				09C2FD4D15DD2FBD00F01096 /* deprecated */,
 				010FF6E515325AA3007A9998 /* AccountViewController.h */,
 				010FF6E615325AA4007A9998 /* AccountViewController.m */,
+				09C2FD0415DD240400F01096 /* AccountViewController.xib */,
 				09C2FD4A15DD2B7100F01096 /* RecordViewController.h */,
 				09C2FD4B15DD2B7100F01096 /* RecordViewController.m */,
 				09C2FD4E15DD305700F01096 /* MyVideosViewController.h */,
@@ -224,13 +226,37 @@
 			name = Classes;
 			sourceTree = "<group>";
 		};
-		093D00B615DD569400518A9D /* Upload */ = {
+		093D00B715DD5FA700518A9D /* Dailymotion */ = {
 			isa = PBXGroup;
 			children = (
-				01F9FB92148102B400745398 /* VideoPickerController.h */,
-				01F9FB93148102B400745398 /* VideoPickerController.m */,
+				01045B3414CF7A9B00970E6C /* iOS.xcodeproj */,
 			);
-			name = Upload;
+			name = Dailymotion;
+			sourceTree = "<group>";
+		};
+		093D00B815DD5FE400518A9D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				019E02201534CD95002BC4F2 /* UserHelper.h */,
+				019E02211534CD95002BC4F2 /* UserHelper.m */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		093D00B915DD611700518A9D /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				093D00BA15DD611700518A9D /* images */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
+		093D00BA15DD611700518A9D /* images */ = {
+			isa = PBXGroup;
+			children = (
+				093D00BB15DD611700518A9D /* klaxon.png */,
+			);
+			path = images;
 			sourceTree = "<group>";
 		};
 		09C2FD4D15DD2FBD00F01096 /* deprecated */ = {
@@ -240,8 +266,6 @@
 				01F9FB8B1480FB6300745398 /* ViewController.m */,
 				01A6F148152BA57F00C1778F /* Settings.h */,
 				01A6F149152BA57F00C1778F /* Settings.m */,
-				019E02201534CD95002BC4F2 /* UserHelper.h */,
-				019E02211534CD95002BC4F2 /* UserHelper.m */,
 			);
 			name = deprecated;
 			sourceTree = "<group>";
@@ -323,8 +347,8 @@
 				01045B8214CF90DB00970E6C /* Settings.plist in Resources */,
 				019E021E1534C461002BC4F2 /* InfoPlist.strings in Resources */,
 				09C2FD5615DD31B300F01096 /* AccountViewController.xib in Resources */,
-				09C2FD5815DD361200F01096 /* klaxon.png in Resources */,
 				0950760815DD3F3200D6299C /* DisclaimerViewController.xib in Resources */,
+				093D00BC15DD611700518A9D /* klaxon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
