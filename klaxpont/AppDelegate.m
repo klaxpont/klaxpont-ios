@@ -7,7 +7,13 @@
 //
 
 #import "AppDelegate.h"
-#import "Settings.h"
+//#import "Settings.h"
+
+// the four controllers
+#import "RecordViewController.h"
+#import "MyVideosViewController.h"
+#import "TopVideosViewController.h"
+#import "AccountViewController.h"
 
 @implementation AppDelegate
 
@@ -18,6 +24,22 @@
 {
     // Override point for customization after application launch.
 //    [self initFacebook];
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    UITabBarController *tabBarController = [[UITabBarController alloc] init];
+    self.window.rootViewController = tabBarController;
+    
+    // add ViewControllers
+    RecordViewController *recordViewController = RecordViewController.new;
+    MyVideosViewController *myVideosViewController = MyVideosViewController.new;
+    TopVideosViewController *topVideosViewController = TopVideosViewController.new;
+    AccountViewController *accountViewController = AccountViewController.new;
+    
+    tabBarController.viewControllers = @[recordViewController, myVideosViewController, topVideosViewController, accountViewController];
+
+
+    [[self window] addSubview:tabBarController.view];
+	[[self window] makeKeyAndVisible];
     return YES;
 }
 				

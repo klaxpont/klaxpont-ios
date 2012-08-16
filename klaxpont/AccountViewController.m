@@ -23,6 +23,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        self.title = @"Réglages";
     }
     return self;
 }
@@ -31,7 +32,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    _user = User.new;
+    _user = [UserHelper default];
     [self updateFacebookPicture];
 
 
