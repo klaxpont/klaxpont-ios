@@ -16,4 +16,9 @@
 @dynamic longitude;
 @dynamic localPath;
 
+
+- (UIImage*) thumbnail
+{
+    return [UIImage imageNamed:@"klaxpont.png"];
+}
 @end

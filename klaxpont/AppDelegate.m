@@ -37,6 +37,8 @@
     TopVideosViewController *topVideosViewController = TopVideosViewController.new;
     AccountViewController *accountViewController = AccountViewController.new;
     
+    myVideosViewController.managedObjectContext = [self managedObjectContext];
+    
     tabBarController.viewControllers = @[recordViewController, myVideosViewController, topVideosViewController, accountViewController];
 
 

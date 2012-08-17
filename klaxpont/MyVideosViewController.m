@@ -7,12 +7,18 @@
 //
 
 #import "MyVideosViewController.h"
+#import "Video.h"
 
 @interface MyVideosViewController ()
+
+@property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
+@property (nonatomic, strong) UIBarButtonItem *rightBarButtonItem;
 
 @end
 
 @implementation MyVideosViewController
+
+@synthesize fetchedResultsController=_fetchedResultsController, managedObjectContext=_managedObjectContext, rightBarButtonItem=_rightBarButtonItem;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -27,6 +33,20 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    // Set up the edit and add buttons.
+    self.navigationItem.leftBarButtonItem = self.editButtonItem;
+    
+    NSError *error;
+    if (![[self fetchedResultsController] performFetch:&error]) {
+        /*
+         Replace this implementation with code to handle the error appropriately.
+         
+         abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+         */
+        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+        abort();
+    }
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -40,6 +60,7 @@
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
+    [self.tableView reloadData];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -51,24 +72,36 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
+    return [[self.fetchedResultsController sections] count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+    id <NSFetchedResultsSectionInfo> sectionInfo = [[self.fetchedResultsController sections] objectAtIndex:section];
+    return [sectionInfo numberOfObjects];
 }
+
+- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
+{
+    Video *video = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    cell.textLabel.text = video.title;
+    [cell.imageView setImage:[video thumbnail]];
+    
+}
+
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
+    static NSString *CellIdentifier = @"VideoCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
-    // Configure the cell...
+    // have to do this because of not using storyboard or xib, or is it something else?
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    }
+    
+    // Configure the cell.
+    [self configureCell:cell atIndexPath:indexPath];
     
     return cell;
 }
@@ -123,6 +156,96 @@
      // Pass the selected object to the new view controller.
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
+}
+
+#pragma mark Fetched results controller
+
+/*
+ Returns the fetched results controller. Creates and configures the controller if necessary.
+ */
+- (NSFetchedResultsController *)fetchedResultsController
+{
+    if (_fetchedResultsController != nil) {
+        return _fetchedResultsController;
+    }
+    
+    // Create and configure a fetch request with the Book entity.
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Video" inManagedObjectContext:self.managedObjectContext];
+    [fetchRequest setEntity:entity];
+    
+    // Create the sort descriptors array.
+//    NSSortDescriptor *authorDescriptor = [[NSSortDescriptor alloc] initWithKey:@"author" ascending:YES];
+//    NSSortDescriptor *titleDescriptor = [[NSSortDescriptor alloc] initWithKey:@"title" ascending:YES];
+    NSArray *sortDescriptors = [[NSArray alloc] init];
+    [fetchRequest setSortDescriptors:sortDescriptors];
+    
+    // Create and initialize the fetch results controller.
+    _fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:nil cacheName:@"my_videos_cache"];
+    _fetchedResultsController.delegate = self;
+    
+    // Memory management.
+    
+    return _fetchedResultsController;
+}
+
+
+/*
+ NSFetchedResultsController delegate methods to respond to additions, removals and so on.
+ */
+
+- (void)controllerWillChangeContent:(NSFetchedResultsController *)controller
+{
+    // The fetch controller is about to start sending change notifications, so prepare the table view for updates.
+    [self.tableView beginUpdates];
+}
+
+
+- (void)controller:(NSFetchedResultsController *)controller didChangeObject:(id)anObject atIndexPath:(NSIndexPath *)indexPath forChangeType:(NSFetchedResultsChangeType)type newIndexPath:(NSIndexPath *)newIndexPath
+{
+    UITableView *tableView = self.tableView;
+    
+//    switch(type) {
+//            
+//        case NSFetchedResultsChangeInsert:
+//            [tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
+//            break;
+//            
+//        case NSFetchedResultsChangeDelete:
+//            [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+//            break;
+//            
+//        case NSFetchedResultsChangeUpdate:
+//            [self configureCell:[tableView cellForRowAtIndexPath:indexPath] atIndexPath:indexPath];
+//            break;
+//            
+//        case NSFetchedResultsChangeMove:
+//            [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+//            [tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
+//            break;
+//    }
+}
+
+
+- (void)controller:(NSFetchedResultsController *)controller didChangeSection:(id <NSFetchedResultsSectionInfo>)sectionInfo atIndex:(NSUInteger)sectionIndex forChangeType:(NSFetchedResultsChangeType)type
+{
+//    switch(type) {
+//            
+//        case NSFetchedResultsChangeInsert:
+//            [self.tableView insertSections:[NSIndexSet indexSetWithIndex:sectionIndex] withRowAnimation:UITableViewRowAnimationFade];
+//            break;
+//            
+//        case NSFetchedResultsChangeDelete:
+//            [self.tableView deleteSections:[NSIndexSet indexSetWithIndex:sectionIndex] withRowAnimation:UITableViewRowAnimationFade];
+//            break;
+//    }
+}
+
+
+- (void)controllerDidChangeContent:(NSFetchedResultsController *)controller
+{
+    // The fetch controller has sent all current change notifications, so tell the table view to process all updates.
+    [self.tableView endUpdates];
 }
 
 @end
