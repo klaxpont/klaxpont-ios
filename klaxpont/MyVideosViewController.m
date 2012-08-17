@@ -18,14 +18,16 @@
 
 @implementation MyVideosViewController
 
+
 @synthesize fetchedResultsController=_fetchedResultsController, managedObjectContext=_managedObjectContext, rightBarButtonItem=_rightBarButtonItem;
+
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
     if (self) {
         // Custom initialization
-        self.title = @"Mes Vidéos";
+        self.title = @"Mes Vidéos";       
     }
     return self;
 }
@@ -34,14 +36,17 @@
 {
     [super viewDidLoad];
     
+    // custom top bar
+    [[self navigationController].navigationBar setBarStyle:UIBarStyleBlack];
+    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addVideo)];
+    [[self navigationItem] setRightBarButtonItem:addButton];
+    
+    // custom table cell
     NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"VideoCell" owner:self options:nil];
     UITableViewCell *cell = [nib objectAtIndex:0];
     self.tableView.rowHeight = cell.frame.size.height;
-//    NSLog(@"%f", cell.frame.size.height);
-
-    // Set up the edit and add buttons.
-    self.navigationItem.leftBarButtonItem = self.editButtonItem;
     
+    // populate table
     NSError *error;
     if (![[self fetchedResultsController] performFetch:&error]) {
         /*
@@ -53,15 +58,11 @@
         abort();
     }
 
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)viewDidUnload
 {
+    [self setTableView:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -71,6 +72,13 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+#pragma mark - Actions
+
+- (void) addVideo
+{
+
 }
 
 #pragma mark - Table view data source
@@ -106,14 +114,14 @@
     return cell;
 }
 
-/*
+
 // Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
+//- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    // Return NO if you do not want the specified item to be editable.
+//    return YES;
+//}
+
 
 /*
 // Override to support editing the table view.
@@ -129,33 +137,13 @@
 }
 */
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
 
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
 
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+    // open Video
 }
 
 #pragma mark Fetched results controller

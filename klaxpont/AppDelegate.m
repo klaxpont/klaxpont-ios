@@ -38,9 +38,9 @@
     AccountViewController *accountViewController = AccountViewController.new;
     
     myVideosViewController.managedObjectContext = [self managedObjectContext];
-    
-    tabBarController.viewControllers = @[recordViewController, myVideosViewController, topVideosViewController, accountViewController];
-
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:myVideosViewController];
+    tabBarController.viewControllers = @[recordViewController, navController, topVideosViewController, accountViewController];
+//    tabBarController.viewControllers = @[recordViewController, myVideosViewController, topVideosViewController, accountViewController];
 
     [[self window] addSubview:tabBarController.view];
 	[[self window] makeKeyAndVisible];
