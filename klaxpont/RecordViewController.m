@@ -10,6 +10,7 @@
 #import "UserHelper.h"
 #import "DisclaimerViewController.h"
 #import "VideoPickerController.h"
+#import "DatabaseHelper.h"
 
 @interface RecordViewController ()
 {
@@ -129,10 +130,15 @@
         NSString *moviePath = [mediaUrl path];
         if (UIVideoAtPathIsCompatibleWithSavedPhotosAlbum (moviePath)) {
             UISaveVideoAtPathToSavedPhotosAlbum(moviePath, nil, nil, nil);
+            if ([DatabaseHelper saveLocalVideo:moviePath] != nil)
+                NSLog(@"Video successfully saved!");
+            else
+                NSLog(@"Video was not saved in db!");
         }
+        
     }
-    //TODO save to core data
 
+    
     
     
 }
