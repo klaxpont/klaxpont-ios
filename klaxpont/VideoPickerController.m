@@ -36,7 +36,6 @@
 {
     [super viewDidLoad];
     [self setMediaTypes:[NSArray arrayWithObject:(NSString *)kUTTypeMovie]];
-
 }
 
 

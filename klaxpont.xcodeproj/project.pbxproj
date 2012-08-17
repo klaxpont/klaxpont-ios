@@ -25,6 +25,9 @@
 		093D00C215DD62B900518A9D /* Video.m in Sources */ = {isa = PBXBuildFile; fileRef = 093D00C115DD62B900518A9D /* Video.m */; };
 		0950760715DD3F3200D6299C /* DisclaimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0950760515DD3F3200D6299C /* DisclaimerViewController.m */; };
 		0950760815DD3F3200D6299C /* DisclaimerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0950760615DD3F3200D6299C /* DisclaimerViewController.xib */; };
+		09619F5315DEF58200865DCA /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09619F5215DEF58200865DCA /* AVFoundation.framework */; };
+		09619F5515DEF69600865DCA /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09619F5415DEF69600865DCA /* CoreVideo.framework */; };
+		09619F5715DEF6A500865DCA /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09619F5615DEF6A500865DCA /* CoreMedia.framework */; };
 		09C2FCDD15DCFF9B00F01096 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09C2FCDC15DCFF9B00F01096 /* FacebookSDK.framework */; };
 		09C2FD4C15DD2B7100F01096 /* RecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C2FD4B15DD2B7100F01096 /* RecordViewController.m */; };
 		09C2FD5015DD305700F01096 /* MyVideosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C2FD4F15DD305700F01096 /* MyVideosViewController.m */; };
@@ -98,6 +101,9 @@
 		0950760415DD3F3200D6299C /* DisclaimerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisclaimerViewController.h; sourceTree = "<group>"; };
 		0950760515DD3F3200D6299C /* DisclaimerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisclaimerViewController.m; sourceTree = "<group>"; };
 		0950760615DD3F3200D6299C /* DisclaimerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DisclaimerViewController.xib; sourceTree = "<group>"; };
+		09619F5215DEF58200865DCA /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		09619F5415DEF69600865DCA /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		09619F5615DEF6A500865DCA /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		09C2FCDC15DCFF9B00F01096 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		09C2FD0415DD240400F01096 /* AccountViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccountViewController.xib; sourceTree = "<group>"; };
 		09C2FD4A15DD2B7100F01096 /* RecordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordViewController.h; sourceTree = "<group>"; };
@@ -120,6 +126,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09619F5715DEF6A500865DCA /* CoreMedia.framework in Frameworks */,
+				09619F5515DEF69600865DCA /* CoreVideo.framework in Frameworks */,
+				09619F5315DEF58200865DCA /* AVFoundation.framework in Frameworks */,
 				09F2850715DE713100F8E7E8 /* CoreData.framework in Frameworks */,
 				017E42EB14CF9B2F00B47B4C /* libDailymotion.a in Frameworks */,
 				01F972FC1491580100D763EA /* MediaPlayer.framework in Frameworks */,
@@ -186,6 +195,9 @@
 		01F9FB741480FB6300745398 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				09619F5615DEF6A500865DCA /* CoreMedia.framework */,
+				09619F5415DEF69600865DCA /* CoreVideo.framework */,
+				09619F5215DEF58200865DCA /* AVFoundation.framework */,
 				09F2850615DE713100F8E7E8 /* CoreData.framework */,
 				09C2FCDC15DCFF9B00F01096 /* FacebookSDK.framework */,
 				01F972FB1491580100D763EA /* MediaPlayer.framework */,
