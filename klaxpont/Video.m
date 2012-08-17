@@ -8,12 +8,12 @@
 
 #import "Video.h"
 
-
 @implementation Video
 
 @dynamic videoId;
 @dynamic title;
 @dynamic latitude;
 @dynamic longitude;
+@dynamic localPath;
 
 @end
