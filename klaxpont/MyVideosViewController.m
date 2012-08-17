@@ -8,7 +8,7 @@
 
 #import "MyVideosViewController.h"
 #import "Video.h"
-
+#import "VideoCell.h"
 @interface MyVideosViewController ()
 
 @property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
@@ -34,6 +34,11 @@
 {
     [super viewDidLoad];
     
+    NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"VideoCell" owner:self options:nil];
+    UITableViewCell *cell = [nib objectAtIndex:0];
+    self.tableView.rowHeight = cell.frame.size.height;
+//    NSLog(@"%f", cell.frame.size.height);
+
     // Set up the edit and add buttons.
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
     
@@ -81,27 +86,22 @@
     return [sectionInfo numberOfObjects];
 }
 
-- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
-{
-    Video *video = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    cell.textLabel.text = video.title;
-    [cell.imageView setImage:[video thumbnail]];
-    
-}
-
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"VideoCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    static NSString *CellIdentifier = @"VideoCellIdentifier";
+    VideoCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     // have to do this because of not using storyboard or xib, or is it something else?
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"VideoCell" owner:self options:nil];
+        cell = [nib objectAtIndex:0];
     }
     
     // Configure the cell.
-    [self configureCell:cell atIndexPath:indexPath];
+    Video *video = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    [cell.titleLabel setText:video.title];
+    [cell.thumbnailView setImage:[video thumbnail]];
     
     return cell;
 }

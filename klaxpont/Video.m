@@ -19,6 +19,6 @@
 
 - (UIImage*) thumbnail
 {
-    return [UIImage imageNamed:@"klaxpont.png"];
+    return [UIImage imageNamed:@"klaxon.png"];
 }
 @end

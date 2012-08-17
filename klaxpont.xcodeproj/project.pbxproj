@@ -34,6 +34,8 @@
 		09C2FD5615DD31B300F01096 /* AccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09C2FD0415DD240400F01096 /* AccountViewController.xib */; };
 		09F2850715DE713100F8E7E8 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09F2850615DE713100F8E7E8 /* CoreData.framework */; };
 		09F2850B15DE7ACC00F8E7E8 /* DatabaseHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F2850A15DE7ACC00F8E7E8 /* DatabaseHelper.m */; };
+		09F2851115DE92CB00F8E7E8 /* VideoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09F2851015DE92CA00F8E7E8 /* VideoCell.xib */; };
+		09F2851515DE94A000F8E7E8 /* VideoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F2851415DE94A000F8E7E8 /* VideoCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,9 +107,12 @@
 		09C2FD5115DD308000F01096 /* TopVideosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopVideosViewController.h; sourceTree = "<group>"; };
 		09C2FD5215DD308000F01096 /* TopVideosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopVideosViewController.m; sourceTree = "<group>"; };
 		09F2850615DE713100F8E7E8 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		09F2850815DE780C00F8E7E8 /* adding localPath to Video.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = file; path = "adding localPath to Video.xcdatamodel"; sourceTree = "<group>"; };
+		09F2850815DE780C00F8E7E8 /* adding localPath to Video.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "adding localPath to Video.xcdatamodel"; sourceTree = "<group>"; };
 		09F2850915DE7ACC00F8E7E8 /* DatabaseHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseHelper.h; sourceTree = "<group>"; };
 		09F2850A15DE7ACC00F8E7E8 /* DatabaseHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseHelper.m; sourceTree = "<group>"; };
+		09F2851015DE92CA00F8E7E8 /* VideoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VideoCell.xib; sourceTree = "<group>"; };
+		09F2851315DE94A000F8E7E8 /* VideoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoCell.h; sourceTree = "<group>"; };
+		09F2851415DE94A000F8E7E8 /* VideoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,6 +227,7 @@
 		01F9FB97148104E100745398 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				09F2851215DE92D200F8E7E8 /* View */,
 				093D00C315DD62BF00518A9D /* Model */,
 				093D00C415DD62D000518A9D /* ViewController */,
 			);
@@ -304,6 +310,16 @@
 			name = deprecated;
 			sourceTree = "<group>";
 		};
+		09F2851215DE92D200F8E7E8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				09F2851015DE92CA00F8E7E8 /* VideoCell.xib */,
+				09F2851315DE94A000F8E7E8 /* VideoCell.h */,
+				09F2851415DE94A000F8E7E8 /* VideoCell.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -383,6 +399,7 @@
 				09C2FD5615DD31B300F01096 /* AccountViewController.xib in Resources */,
 				0950760815DD3F3200D6299C /* DisclaimerViewController.xib in Resources */,
 				093D00BC15DD611700518A9D /* klaxon.png in Resources */,
+				09F2851115DE92CB00F8E7E8 /* VideoCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,6 +424,7 @@
 				093D00BF15DD621A00518A9D /* Model.xcdatamodeld in Sources */,
 				093D00C215DD62B900518A9D /* Video.m in Sources */,
 				09F2850B15DE7ACC00F8E7E8 /* DatabaseHelper.m in Sources */,
+				09F2851515DE94A000F8E7E8 /* VideoCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
