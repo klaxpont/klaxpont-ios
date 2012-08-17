@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
-@interface MyVideosViewController : UITableViewController<NSFetchedResultsControllerDelegate>
+@interface MyVideosViewController : UITableViewController<NSFetchedResultsControllerDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
 @property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
 @end

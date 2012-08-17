@@ -9,18 +9,22 @@
 #import "MyVideosViewController.h"
 #import "Video.h"
 #import "VideoCell.h"
+#import "VideoPickerController.h"
+#import "DatabaseHelper.h"
+
 @interface MyVideosViewController ()
+{
+    VideoPickerController *_videoPickerController;
+}
 
 @property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
-@property (nonatomic, strong) UIBarButtonItem *rightBarButtonItem;
 
+-(void) configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
 @end
 
 @implementation MyVideosViewController
 
-
-@synthesize fetchedResultsController=_fetchedResultsController, managedObjectContext=_managedObjectContext, rightBarButtonItem=_rightBarButtonItem;
-
+@synthesize fetchedResultsController=_fetchedResultsController, managedObjectContext=_managedObjectContext;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -41,6 +45,11 @@
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addVideo)];
     [[self navigationItem] setRightBarButtonItem:addButton];
     
+    
+    // 
+    _videoPickerController = [[VideoPickerController alloc] init];
+    [_videoPickerController setDelegate:self];
+
     // custom table cell
     NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"VideoCell" owner:self options:nil];
     UITableViewCell *cell = [nib objectAtIndex:0];
@@ -64,8 +73,7 @@
 {
     [self setTableView:nil];
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
+    [_videoPickerController setDelegate:nil];
     [self.tableView reloadData];
 }
 
@@ -78,10 +86,34 @@
 
 - (void) addVideo
 {
+    [self presentModalViewController:_videoPickerController animated:YES];
 
 }
+#pragma mark - Delegates
 
-#pragma mark - Table view data source
+#pragma mark VideoPickerController
+
+- (void) imagePickerControllerDidCancel:(UIImagePickerController *)picker{
+    
+    [picker setDelegate:nil];
+    [picker dismissModalViewControllerAnimated:YES];
+    
+}
+
+- (void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
+    [picker dismissModalViewControllerAnimated:YES];
+    [picker setDelegate:nil];
+    NSLog(@"infos from dictionary : %@", info);
+    
+    NSURL *mediaUrl = [info objectForKey:UIImagePickerControllerMediaURL];
+    NSString *moviePath = [mediaUrl path];
+    if ([DatabaseHelper saveLocalVideo:moviePath] != nil)
+        NSLog(@"Video successfully saved!");
+    else
+        NSLog(@"Video was not saved in db!");
+}
+
+#pragma mark Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -94,6 +126,12 @@
     return [sectionInfo numberOfObjects];
 }
 
+-(void) configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
+{
+    Video *video = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    [[(VideoCell*)cell titleLabel] setText:video.title];
+    [[(VideoCell*)cell thumbnailView] setImage:[video thumbnail]];
+}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -107,46 +145,19 @@
     }
     
     // Configure the cell.
-    Video *video = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    [cell.titleLabel setText:video.title];
-    [cell.thumbnailView setImage:[video thumbnail]];
-    
+    [self configureCell:cell atIndexPath:indexPath];
     return cell;
 }
 
 
-// Override to support conditional editing of the table view.
-//- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    // Return NO if you do not want the specified item to be editable.
-//    return YES;
-//}
-
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-
-
-#pragma mark - Table view delegate
+#pragma mark Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // open Video
 }
 
-#pragma mark Fetched results controller
+#pragma mark NSFetchedResults Controller delegate
 
 /*
  Returns the fetched results controller. Creates and configures the controller if necessary.
@@ -193,40 +204,40 @@
 {
     UITableView *tableView = self.tableView;
     
-//    switch(type) {
-//            
-//        case NSFetchedResultsChangeInsert:
-//            [tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
-//            break;
-//            
-//        case NSFetchedResultsChangeDelete:
-//            [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
-//            break;
-//            
-//        case NSFetchedResultsChangeUpdate:
-//            [self configureCell:[tableView cellForRowAtIndexPath:indexPath] atIndexPath:indexPath];
-//            break;
-//            
-//        case NSFetchedResultsChangeMove:
-//            [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
-//            [tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
-//            break;
-//    }
+    switch(type) {
+            
+        case NSFetchedResultsChangeInsert:
+            [tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
+            break;
+            
+        case NSFetchedResultsChangeDelete:
+            [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+            break;
+            
+        case NSFetchedResultsChangeUpdate:
+            [self configureCell:[tableView cellForRowAtIndexPath:indexPath] atIndexPath:indexPath];
+            break;
+            
+        case NSFetchedResultsChangeMove:
+            [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+            [tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
+            break;
+    }
 }
 
 
 - (void)controller:(NSFetchedResultsController *)controller didChangeSection:(id <NSFetchedResultsSectionInfo>)sectionInfo atIndex:(NSUInteger)sectionIndex forChangeType:(NSFetchedResultsChangeType)type
 {
-//    switch(type) {
-//            
-//        case NSFetchedResultsChangeInsert:
-//            [self.tableView insertSections:[NSIndexSet indexSetWithIndex:sectionIndex] withRowAnimation:UITableViewRowAnimationFade];
-//            break;
-//            
-//        case NSFetchedResultsChangeDelete:
-//            [self.tableView deleteSections:[NSIndexSet indexSetWithIndex:sectionIndex] withRowAnimation:UITableViewRowAnimationFade];
-//            break;
-//    }
+    switch(type) {
+            
+        case NSFetchedResultsChangeInsert:
+            [self.tableView insertSections:[NSIndexSet indexSetWithIndex:sectionIndex] withRowAnimation:UITableViewRowAnimationFade];
+            break;
+            
+        case NSFetchedResultsChangeDelete:
+            [self.tableView deleteSections:[NSIndexSet indexSetWithIndex:sectionIndex] withRowAnimation:UITableViewRowAnimationFade];
+            break;
+    }
 }
 
 

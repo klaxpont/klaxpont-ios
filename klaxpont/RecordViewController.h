@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RecordViewController : UIViewController<UIImagePickerControllerDelegate>
+@interface RecordViewController : UIViewController<UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 -(void) showRecorder;
 @end
