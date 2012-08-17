@@ -21,6 +21,8 @@
 		01F9FB961481039300745398 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01F9FB951481039300745398 /* MobileCoreServices.framework */; };
 		093D00B515DD567B00518A9D /* VideoPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F9FB93148102B400745398 /* VideoPickerController.m */; };
 		093D00BC15DD611700518A9D /* klaxon.png in Resources */ = {isa = PBXBuildFile; fileRef = 093D00BB15DD611700518A9D /* klaxon.png */; };
+		093D00BF15DD621A00518A9D /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 093D00BD15DD621A00518A9D /* Model.xcdatamodeld */; };
+		093D00C215DD62B900518A9D /* Video.m in Sources */ = {isa = PBXBuildFile; fileRef = 093D00C115DD62B900518A9D /* Video.m */; };
 		0950760715DD3F3200D6299C /* DisclaimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0950760515DD3F3200D6299C /* DisclaimerViewController.m */; };
 		0950760815DD3F3200D6299C /* DisclaimerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0950760615DD3F3200D6299C /* DisclaimerViewController.xib */; };
 		09C2FCDD15DCFF9B00F01096 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09C2FCDC15DCFF9B00F01096 /* FacebookSDK.framework */; };
@@ -86,6 +88,9 @@
 		01F9FB93148102B400745398 /* VideoPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoPickerController.m; sourceTree = "<group>"; };
 		01F9FB951481039300745398 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		093D00BB15DD611700518A9D /* klaxon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = klaxon.png; sourceTree = "<group>"; };
+		093D00BE15DD621A00518A9D /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		093D00C015DD62B900518A9D /* Video.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Video.h; sourceTree = "<group>"; };
+		093D00C115DD62B900518A9D /* Video.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Video.m; sourceTree = "<group>"; };
 		0950760415DD3F3200D6299C /* DisclaimerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisclaimerViewController.h; sourceTree = "<group>"; };
 		0950760515DD3F3200D6299C /* DisclaimerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisclaimerViewController.m; sourceTree = "<group>"; };
 		0950760615DD3F3200D6299C /* DisclaimerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DisclaimerViewController.xib; sourceTree = "<group>"; };
@@ -196,6 +201,7 @@
 		01F9FB7C1480FB6300745398 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				093D00BD15DD621A00518A9D /* Model.xcdatamodeld */,
 				01F9FB7D1480FB6300745398 /* klaxpont-Info.plist */,
 				01F9FB811480FB6300745398 /* main.m */,
 				01F9FB831480FB6300745398 /* klaxpont-Prefix.pch */,
@@ -208,20 +214,8 @@
 		01F9FB97148104E100745398 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				01F9FB92148102B400745398 /* VideoPickerController.h */,
-				01F9FB93148102B400745398 /* VideoPickerController.m */,
-				0950760415DD3F3200D6299C /* DisclaimerViewController.h */,
-				0950760515DD3F3200D6299C /* DisclaimerViewController.m */,
-				0950760615DD3F3200D6299C /* DisclaimerViewController.xib */,
-				010FF6E515325AA3007A9998 /* AccountViewController.h */,
-				010FF6E615325AA4007A9998 /* AccountViewController.m */,
-				09C2FD0415DD240400F01096 /* AccountViewController.xib */,
-				09C2FD4A15DD2B7100F01096 /* RecordViewController.h */,
-				09C2FD4B15DD2B7100F01096 /* RecordViewController.m */,
-				09C2FD4E15DD305700F01096 /* MyVideosViewController.h */,
-				09C2FD4F15DD305700F01096 /* MyVideosViewController.m */,
-				09C2FD5115DD308000F01096 /* TopVideosViewController.h */,
-				09C2FD5215DD308000F01096 /* TopVideosViewController.m */,
+				093D00C315DD62BF00518A9D /* Model */,
+				093D00C415DD62D000518A9D /* ViewController */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -257,6 +251,36 @@
 				093D00BB15DD611700518A9D /* klaxon.png */,
 			);
 			path = images;
+			sourceTree = "<group>";
+		};
+		093D00C315DD62BF00518A9D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				093D00C015DD62B900518A9D /* Video.h */,
+				093D00C115DD62B900518A9D /* Video.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		093D00C415DD62D000518A9D /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				01F9FB92148102B400745398 /* VideoPickerController.h */,
+				01F9FB93148102B400745398 /* VideoPickerController.m */,
+				0950760415DD3F3200D6299C /* DisclaimerViewController.h */,
+				0950760515DD3F3200D6299C /* DisclaimerViewController.m */,
+				0950760615DD3F3200D6299C /* DisclaimerViewController.xib */,
+				010FF6E515325AA3007A9998 /* AccountViewController.h */,
+				010FF6E615325AA4007A9998 /* AccountViewController.m */,
+				09C2FD0415DD240400F01096 /* AccountViewController.xib */,
+				09C2FD4A15DD2B7100F01096 /* RecordViewController.h */,
+				09C2FD4B15DD2B7100F01096 /* RecordViewController.m */,
+				09C2FD4E15DD305700F01096 /* MyVideosViewController.h */,
+				09C2FD4F15DD305700F01096 /* MyVideosViewController.m */,
+				09C2FD5115DD308000F01096 /* TopVideosViewController.h */,
+				09C2FD5215DD308000F01096 /* TopVideosViewController.m */,
+			);
+			name = ViewController;
 			sourceTree = "<group>";
 		};
 		09C2FD4D15DD2FBD00F01096 /* deprecated */ = {
@@ -370,6 +394,8 @@
 				09C2FD5515DD318200F01096 /* UserHelper.m in Sources */,
 				0950760715DD3F3200D6299C /* DisclaimerViewController.m in Sources */,
 				093D00B515DD567B00518A9D /* VideoPickerController.m in Sources */,
+				093D00BF15DD621A00518A9D /* Model.xcdatamodeld in Sources */,
+				093D00C215DD62B900518A9D /* Video.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -487,6 +513,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		093D00BD15DD621A00518A9D /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				093D00BE15DD621A00518A9D /* Model.xcdatamodel */,
+			);
+			currentVersion = 093D00BE15DD621A00518A9D /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 01F9FB681480FB6300745398 /* Project object */;
 }
