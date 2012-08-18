@@ -8,15 +8,18 @@
 
 #import "VideoCell.h"
 
+
 @implementation VideoCell
 @synthesize thumbnailView;
 @synthesize titleLabel;
+@synthesize editButton;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         // Initialization code
+
     }
     return self;
 }
@@ -29,6 +32,5 @@
     // Configure the view for the selected state
 }
 
-- (IBAction)edit:(id)sender {
-}
+
 @end

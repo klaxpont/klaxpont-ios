@@ -12,4 +12,5 @@
 @interface DatabaseHelper : NSObject
 
 +(Video*)saveLocalVideo:(NSString*)localPath;
++(void)saveContext;
 @end

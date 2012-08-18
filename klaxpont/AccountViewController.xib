@@ -150,7 +150,7 @@
 						</object>
 					</array>
 					<object class="NSPSMatrix" key="NSFrameMatrix"/>
-					<string key="NSFrameSize">{320, 411}</string>
+					<string key="NSFrameSize">{320, 431}</string>
 					<reference key="NSSuperview"/>
 					<reference key="NSWindow"/>
 					<reference key="NSNextKeyView" ref="258528337"/>
@@ -163,10 +163,13 @@
 					</object>
 					<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 				</object>
-				<object class="IBUISimulatedMetricsInferredSentinel" key="IBUISimulatedBottomBarMetrics" id="513089304"/>
-				<reference key="IBUISimulatedTopBarMetrics" ref="513089304"/>
+				<object class="IBUISimulatedTabBarMetrics" key="IBUISimulatedBottomBarMetrics"/>
+				<object class="IBUISimulatedMetricsInferredSentinel" key="IBUISimulatedTopBarMetrics" id="513089304"/>
 				<reference key="IBUISimulatedStatusBarMetrics" ref="513089304"/>
-				<reference key="IBUISimulatedOrientationMetrics" ref="513089304"/>
+				<object class="IBUISimulatedOrientationMetrics" key="IBUISimulatedOrientationMetrics">
+					<int key="IBUIInterfaceOrientation">1</int>
+					<int key="interfaceOrientation">1</int>
+				</object>
 				<reference key="IBUISimulatedDestinationMetrics" ref="513089304"/>
 				<bool key="IBUIDesignatedEntryPoint">YES</bool>
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>

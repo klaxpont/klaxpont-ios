@@ -13,6 +13,8 @@
 @property (weak, nonatomic) IBOutlet UIImageView *thumbnailView;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 
-- (IBAction)edit:(id)sender;
+
+@property (weak, nonatomic) IBOutlet UIButton *editButton;
+
 
 @end

@@ -28,6 +28,8 @@
 		09619F5315DEF58200865DCA /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09619F5215DEF58200865DCA /* AVFoundation.framework */; };
 		09619F5515DEF69600865DCA /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09619F5415DEF69600865DCA /* CoreVideo.framework */; };
 		09619F5715DEF6A500865DCA /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09619F5615DEF6A500865DCA /* CoreMedia.framework */; };
+		09A949E515DF8D5500764203 /* EditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A949E315DF8D5500764203 /* EditViewController.m */; };
+		09A949E615DF8D5500764203 /* EditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09A949E415DF8D5500764203 /* EditViewController.xib */; };
 		09C2FCDD15DCFF9B00F01096 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09C2FCDC15DCFF9B00F01096 /* FacebookSDK.framework */; };
 		09C2FD4C15DD2B7100F01096 /* RecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C2FD4B15DD2B7100F01096 /* RecordViewController.m */; };
 		09C2FD5015DD305700F01096 /* MyVideosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C2FD4F15DD305700F01096 /* MyVideosViewController.m */; };
@@ -104,6 +106,9 @@
 		09619F5215DEF58200865DCA /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		09619F5415DEF69600865DCA /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		09619F5615DEF6A500865DCA /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		09A949E215DF8D5500764203 /* EditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditViewController.h; sourceTree = "<group>"; };
+		09A949E315DF8D5500764203 /* EditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditViewController.m; sourceTree = "<group>"; };
+		09A949E415DF8D5500764203 /* EditViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditViewController.xib; sourceTree = "<group>"; };
 		09C2FCDC15DCFF9B00F01096 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		09C2FD0415DD240400F01096 /* AccountViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccountViewController.xib; sourceTree = "<group>"; };
 		09C2FD4A15DD2B7100F01096 /* RecordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordViewController.h; sourceTree = "<group>"; };
@@ -307,6 +312,9 @@
 				09C2FD4F15DD305700F01096 /* MyVideosViewController.m */,
 				09C2FD5115DD308000F01096 /* TopVideosViewController.h */,
 				09C2FD5215DD308000F01096 /* TopVideosViewController.m */,
+				09A949E215DF8D5500764203 /* EditViewController.h */,
+				09A949E315DF8D5500764203 /* EditViewController.m */,
+				09A949E415DF8D5500764203 /* EditViewController.xib */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -412,6 +420,7 @@
 				0950760815DD3F3200D6299C /* DisclaimerViewController.xib in Resources */,
 				093D00BC15DD611700518A9D /* klaxon.png in Resources */,
 				09F2851115DE92CB00F8E7E8 /* VideoCell.xib in Resources */,
+				09A949E615DF8D5500764203 /* EditViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,6 +446,7 @@
 				093D00C215DD62B900518A9D /* Video.m in Sources */,
 				09F2850B15DE7ACC00F8E7E8 /* DatabaseHelper.m in Sources */,
 				09F2851515DE94A000F8E7E8 /* VideoCell.m in Sources */,
+				09A949E515DF8D5500764203 /* EditViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

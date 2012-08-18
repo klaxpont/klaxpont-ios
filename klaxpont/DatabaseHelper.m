@@ -31,4 +31,15 @@
     return recordedVideo;
 }
 
++(void)saveContext
+{
+    NSManagedObjectContext *context = [APP_DELEGATE managedObjectContext];
+    
+    NSError *error;
+    if (![context save:&error]) {
+        NSLog(@"Whoops, couldn't save: %@", [error localizedDescription]);
+    }
+
+}
+
 @end

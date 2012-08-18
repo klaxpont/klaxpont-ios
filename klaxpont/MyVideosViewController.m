@@ -11,6 +11,7 @@
 #import "VideoCell.h"
 #import "VideoPickerController.h"
 #import "DatabaseHelper.h"
+#import "EditViewController.h"
 
 @interface MyVideosViewController ()
 {
@@ -131,7 +132,15 @@
     Video *video = [self.fetchedResultsController objectAtIndexPath:indexPath];
     [[(VideoCell*)cell titleLabel] setText:video.title];
     [[(VideoCell*)cell thumbnailView] setImage:[video thumbnail]];
+    [[(VideoCell*)cell editButton] addTarget:self action:@selector(edit) forControlEvents:UIControlEventTouchUpInside];
 }
+
+//-(void) edit
+//{
+//    EditViewController *editViewController = EditViewController.new;
+//    [self presentModalViewController:editViewController animated:YES];
+//}
+
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -155,6 +164,14 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // open Video
+}
+
+- (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath
+{
+    EditViewController *editViewController = EditViewController.new;
+    Video *video = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    [editViewController setEditedVideo:video];
+    [self.navigationController pushViewController:editViewController animated:YES];
 }
 
 #pragma mark NSFetchedResults Controller delegate
