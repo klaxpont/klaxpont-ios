@@ -57,26 +57,54 @@
 #pragma mark - Actions
 
 - (IBAction)upload:(id)sender {
-    editedVideo.title = [self.titleTextField text];
-    
     [DatabaseHelper saveContext];
+    //send video
 }
 
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    // Dismiss the keyboard when the view outside the text field is touched.
+    [self.titleTextField resignFirstResponder];
+
+    [super touchesBegan:touches withEvent:event];
+}
+
+#pragma mark - Animations
+
+- (void) animateTextField: (UITextField*) textField up: (BOOL) up
+{
+    const int movementDistance = 80; // tweak as needed
+    const float movementDuration = 0.3f; // tweak as needed
+    
+    int movement = (up ? -movementDistance : movementDistance);
+    
+    [UIView beginAnimations: @"anim" context: nil];
+    [UIView setAnimationBeginsFromCurrentState: YES];
+    [UIView setAnimationDuration: movementDuration];
+    self.view.frame = CGRectOffset(self.view.frame, 0, movement);
+    [UIView commitAnimations];
+}
 
 #pragma  mark - UITextField  delegate methods
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField{
-    return NO;
+    if (textField == self.titleTextField) {
+		[textField resignFirstResponder];
+    }
+    return YES;
 }
 
-- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
-    
-    if([text isEqualToString:@"\n"]) {
-        [textView resignFirstResponder];
-        return NO;
-    }
-    
-    return YES;
+- (void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    [self animateTextField: textField up: YES];
+}
+
+
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+    [self animateTextField: textField up: NO];
+    editedVideo.title = [self.titleTextField text];
+    [DatabaseHelper saveContext];
 }
 
 @end
