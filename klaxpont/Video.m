@@ -32,7 +32,7 @@
         return nil;
 
     NSURL *url = [NSURL fileURLWithPath:self.localPath];
-
+    
     AVURLAsset *asset = [[AVURLAsset alloc] initWithURL:url options:nil];
     AVAssetImageGenerator *generate = [[AVAssetImageGenerator alloc] initWithAsset:asset];
     generate.appliesPreferredTrackTransform = YES;
@@ -40,8 +40,10 @@
     NSError *err = NULL;
     CMTime time = CMTimeMake(1, 60);
     CGImageRef imgRef = [generate copyCGImageAtTime:time actualTime:NULL error:&err];
-    NSLog(@"err==%@, imageRef==%@", err, imgRef);
-    
+    if(err != NULL){
+        NSLog(@"err==%@, imageRef==%@", err, imgRef);
+        return nil;
+    }
     return [[UIImage alloc] initWithCGImage:imgRef];
     
 }
