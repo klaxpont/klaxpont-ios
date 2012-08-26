@@ -12,6 +12,7 @@
 #import "VideoPickerController.h"
 #import "DatabaseHelper.h"
 #import "EditViewController.h"
+#import "VideoHelper.h"
 
 @interface MyVideosViewController ()
 {
@@ -90,6 +91,19 @@
     [self presentModalViewController:_videoPickerController animated:YES];
 
 }
+
+#pragma mark - Application's documents directory
+
+/**
+ Returns the path to the application's documents directory.
+ */
+- (NSString *)applicationDocumentsDirectory {
+	
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *basePath = ([paths count] > 0) ? [paths objectAtIndex:0] : nil;
+    return basePath;
+}
+
 #pragma mark - Delegates
 
 #pragma mark VideoPickerController
@@ -108,10 +122,18 @@
     
     NSURL *mediaUrl = [info objectForKey:UIImagePickerControllerMediaURL];
     NSString *moviePath = [mediaUrl path];
-    if ([DatabaseHelper saveLocalVideo:moviePath] != nil)
-        NSLog(@"Video successfully saved!");
-    else
-        NSLog(@"Video was not saved in db!");
+    // saving video to Documents
+     NSLog(@"video filename : %@", [mediaUrl lastPathComponent]);
+
+    NSError *error = nil;
+    NSString *newVideoPath = [[self applicationDocumentsDirectory] stringByAppendingPathComponent: [mediaUrl lastPathComponent]];
+    [[NSFileManager defaultManager] moveItemAtPath:moviePath toPath:newVideoPath error:&error];
+    if (error == nil) {
+        if ([DatabaseHelper saveLocalVideo:newVideoPath] != nil)
+            NSLog(@"Video successfully saved!");
+        else
+            NSLog(@"Video was not saved in db!");
+    }
 }
 
 #pragma mark Table view data source
@@ -163,7 +185,9 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // open Video
+    // retrieve Video
+    Video *video = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    [VideoHelper openVideo:video from:self];
 }
 
 - (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath

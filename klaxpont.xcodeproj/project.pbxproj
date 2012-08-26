@@ -12,6 +12,7 @@
 		017E42EB14CF9B2F00B47B4C /* libDailymotion.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 017E42E614CF9B1C00B47B4C /* libDailymotion.a */; };
 		01953F9A14D0A4120001169D /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 01953F9914D0A4120001169D /* MBProgressHUD.m */; };
 		019E021E1534C461002BC4F2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 019E021F1534C461002BC4F2 /* InfoPlist.strings */; };
+		01C37D2215EA65C900FCCEF5 /* VideoHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 01C37D2115EA65C900FCCEF5 /* VideoHelper.m */; };
 		01F972FC1491580100D763EA /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01F972FB1491580100D763EA /* MediaPlayer.framework */; };
 		01F9FB761480FB6300745398 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01F9FB751480FB6300745398 /* UIKit.framework */; };
 		01F9FB781480FB6300745398 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01F9FB771480FB6300745398 /* Foundation.framework */; };
@@ -81,6 +82,8 @@
 		019E02211534CD95002BC4F2 /* UserHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserHelper.m; sourceTree = "<group>"; };
 		01A6F148152BA57F00C1778F /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
 		01A6F149152BA57F00C1778F /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Settings.m; sourceTree = "<group>"; };
+		01C37D2015EA65C900FCCEF5 /* VideoHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoHelper.h; sourceTree = "<group>"; };
+		01C37D2115EA65C900FCCEF5 /* VideoHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoHelper.m; sourceTree = "<group>"; };
 		01F972FB1491580100D763EA /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		01F9FB711480FB6300745398 /* klaxpont.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = klaxpont.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01F9FB751480FB6300745398 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -266,6 +269,8 @@
 				09F2850A15DE7ACC00F8E7E8 /* DatabaseHelper.m */,
 				019E02201534CD95002BC4F2 /* UserHelper.h */,
 				019E02211534CD95002BC4F2 /* UserHelper.m */,
+				01C37D2015EA65C900FCCEF5 /* VideoHelper.h */,
+				01C37D2115EA65C900FCCEF5 /* VideoHelper.m */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -447,6 +452,7 @@
 				09F2850B15DE7ACC00F8E7E8 /* DatabaseHelper.m in Sources */,
 				09F2851515DE94A000F8E7E8 /* VideoCell.m in Sources */,
 				09A949E515DF8D5500764203 /* EditViewController.m in Sources */,
+				01C37D2215EA65C900FCCEF5 /* VideoHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

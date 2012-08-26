@@ -8,7 +8,7 @@
 
 #import "EditViewController.h"
 #import "DatabaseHelper.h"
-
+#import "VideoHelper.h"
 @interface EditViewController ()
 
 @end
@@ -33,8 +33,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     if (editedVideo) {
-        if (self.title)
+        if (self.title){
             self.title = editedVideo.title;
+            [[self titleTextField] setText:editedVideo.title];
+        }
         [self.previewImageView setImage:editedVideo.thumbnail];
     }
 
@@ -63,6 +65,14 @@
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
+    // handling video action
+    for (UITouch *touch in touches) {
+        CGPoint point = [touch locationInView:nil];
+        if(CGRectContainsPoint(self.previewImageView.frame, point)){
+            [VideoHelper openVideo:self.editedVideo from:self];
+            break;
+        }
+    }
     // Dismiss the keyboard when the view outside the text field is touched.
     [self.titleTextField resignFirstResponder];
 
@@ -73,6 +83,7 @@
 
 - (void) animateTextField: (UITextField*) textField up: (BOOL) up
 {
+    // see http://stackoverflow.com/questions/1247113/iphone-keyboard-covers-text-field
     const int movementDistance = 80; // tweak as needed
     const float movementDuration = 0.3f; // tweak as needed
     

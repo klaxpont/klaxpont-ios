@@ -27,8 +27,9 @@
 }
 
 
-- (UIImage*)loadImage {
-    if (self.localPath == nil)
+- (UIImage*)loadImage
+{
+    if (self.localPath == nil || [[NSFileManager defaultManager] fileExistsAtPath:self.localPath])
         return nil;
 
     NSURL *url = [NSURL fileURLWithPath:self.localPath];
@@ -45,7 +46,18 @@
         return nil;
     }
     return [[UIImage alloc] initWithCGImage:imgRef];
+}
+
+- (NSURL*) url
+{
+    NSURL *url = nil;
+
+    if([[NSFileManager defaultManager] fileExistsAtPath:self.localPath]){
+
+        url = [[NSURL alloc] initFileURLWithPath:self.localPath isDirectory:NO];
     
+    }
+    return url;
 }
 
 @end

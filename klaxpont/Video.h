@@ -19,4 +19,5 @@
 @property (nonatomic, retain) NSString * localPath;
 
 - (UIImage*) thumbnail;
+- (NSURL*) url;
 @end
