@@ -63,7 +63,7 @@
         
         [_disclaimerViewController setOnDenyBlock:^{
             UITabBarController *tabBar = ((UITabBarController*)self.parentViewController);
-            tabBar.selectedIndex = 2;// go to videbas
+            tabBar.selectedIndex = TABBAR_TOPVIDEOS_INDEX;// go to videbas
         }];
     }
 
