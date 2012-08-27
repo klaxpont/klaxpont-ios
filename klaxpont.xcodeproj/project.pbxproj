@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		01045B8214CF90DB00970E6C /* Settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 01045B8114CF90DB00970E6C /* Settings.plist */; };
+		0160DFE415EC04CC00BC1209 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0160DFE315EC04CC00BC1209 /* Accounts.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		0160DFE915EC0BA400BC1209 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0160DFE715EC0BA400BC1209 /* LoginViewController.m */; };
+		0160DFEA15EC0BA400BC1209 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0160DFE815EC0BA400BC1209 /* LoginViewController.xib */; };
+		0160DFEB15EC0F3E00BC1209 /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A6F149152BA57F00C1778F /* Settings.m */; };
 		016D0616152A5761001B7D30 /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 016D0615152A5761001B7D30 /* NSString+Additions.m */; };
 		017E42EB14CF9B2F00B47B4C /* libDailymotion.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 017E42E614CF9B1C00B47B4C /* libDailymotion.a */; };
 		01953F9A14D0A4120001169D /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 01953F9914D0A4120001169D /* MBProgressHUD.m */; };
@@ -73,6 +77,10 @@
 		01045B8114CF90DB00970E6C /* Settings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Settings.plist; sourceTree = "<group>"; };
 		010FF6E515325AA3007A9998 /* AccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountViewController.h; sourceTree = "<group>"; };
 		010FF6E615325AA4007A9998 /* AccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountViewController.m; sourceTree = "<group>"; };
+		0160DFE315EC04CC00BC1209 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		0160DFE615EC0BA400BC1209 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		0160DFE715EC0BA400BC1209 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		0160DFE815EC0BA400BC1209 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		016D0614152A5761001B7D30 /* NSString+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+Additions.h"; path = "helpers/NSString+Additions.h"; sourceTree = SOURCE_ROOT; };
 		016D0615152A5761001B7D30 /* NSString+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Additions.m"; path = "helpers/NSString+Additions.m"; sourceTree = SOURCE_ROOT; };
 		01953F9814D0A4120001169D /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBProgressHUD.h; path = MBProgressHUD/MBProgressHUD.h; sourceTree = SOURCE_ROOT; };
@@ -134,6 +142,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0160DFE415EC04CC00BC1209 /* Accounts.framework in Frameworks */,
 				09619F5715DEF6A500865DCA /* CoreMedia.framework in Frameworks */,
 				09619F5515DEF69600865DCA /* CoreVideo.framework in Frameworks */,
 				09619F5315DEF58200865DCA /* AVFoundation.framework in Frameworks */,
@@ -183,6 +192,7 @@
 		01F9FB661480FB6300745398 = {
 			isa = PBXGroup;
 			children = (
+				0160DFE315EC04CC00BC1209 /* Accounts.framework */,
 				016D0613152A5643001B7D30 /* Helpers */,
 				093D00B715DD5FA700518A9D /* Dailymotion */,
 				01045B4014CF7ABC00970E6C /* MBProgressHUD */,
@@ -265,6 +275,8 @@
 		093D00B815DD5FE400518A9D /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				01A6F148152BA57F00C1778F /* Settings.h */,
+				01A6F149152BA57F00C1778F /* Settings.m */,
 				09F2850915DE7ACC00F8E7E8 /* DatabaseHelper.h */,
 				09F2850A15DE7ACC00F8E7E8 /* DatabaseHelper.m */,
 				019E02201534CD95002BC4F2 /* UserHelper.h */,
@@ -320,6 +332,9 @@
 				09A949E215DF8D5500764203 /* EditViewController.h */,
 				09A949E315DF8D5500764203 /* EditViewController.m */,
 				09A949E415DF8D5500764203 /* EditViewController.xib */,
+				0160DFE615EC0BA400BC1209 /* LoginViewController.h */,
+				0160DFE715EC0BA400BC1209 /* LoginViewController.m */,
+				0160DFE815EC0BA400BC1209 /* LoginViewController.xib */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -329,8 +344,6 @@
 			children = (
 				01F9FB8A1480FB6300745398 /* ViewController.h */,
 				01F9FB8B1480FB6300745398 /* ViewController.m */,
-				01A6F148152BA57F00C1778F /* Settings.h */,
-				01A6F149152BA57F00C1778F /* Settings.m */,
 			);
 			name = deprecated;
 			sourceTree = "<group>";
@@ -426,6 +439,7 @@
 				093D00BC15DD611700518A9D /* klaxon.png in Resources */,
 				09F2851115DE92CB00F8E7E8 /* VideoCell.xib in Resources */,
 				09A949E615DF8D5500764203 /* EditViewController.xib in Resources */,
+				0160DFEA15EC0BA400BC1209 /* LoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,6 +467,8 @@
 				09F2851515DE94A000F8E7E8 /* VideoCell.m in Sources */,
 				09A949E515DF8D5500764203 /* EditViewController.m in Sources */,
 				01C37D2215EA65C900FCCEF5 /* VideoHelper.m in Sources */,
+				0160DFE915EC0BA400BC1209 /* LoginViewController.m in Sources */,
+				0160DFEB15EC0F3E00BC1209 /* Settings.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -524,6 +540,7 @@
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/dailymotion\"";
 				INFOPLIST_FILE = "klaxpont/klaxpont-Info.plist";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				OTHER_LDFLAGS = "-lsqlite3.0";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "\"$(BUILT_PRODUCTS_DIR)\"";
 				WRAPPER_EXTENSION = app;
@@ -542,6 +559,7 @@
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/dailymotion\"";
 				INFOPLIST_FILE = "klaxpont/klaxpont-Info.plist";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				OTHER_LDFLAGS = "-lsqlite3.0";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "\"$(BUILT_PRODUCTS_DIR)\"";
 				WRAPPER_EXTENSION = app;

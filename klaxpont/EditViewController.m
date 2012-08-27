@@ -9,6 +9,9 @@
 #import "EditViewController.h"
 #import "DatabaseHelper.h"
 #import "VideoHelper.h"
+#import "UserHelper.h"
+#import "LoginViewController.h"
+
 @interface EditViewController ()
 
 @end
@@ -60,7 +63,24 @@
 
 - (IBAction)upload:(id)sender {
     [DatabaseHelper saveContext];
-    //send video
+
+
+    if (![[UserHelper default] isRegistered]) {
+        LoginViewController *loginViewController = [[LoginViewController alloc] init];
+        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:loginViewController];
+        [[nav navigationBar] setBarStyle:UIBarStyleBlack];
+        
+        [[self navigationController] presentModalViewController:nav animated:YES];
+        return;
+    }
+    
+    if([self.editedVideo title])
+        //send video
+        [VideoHelper upload:self.editedVideo];
+    else
+        NSLog(@"missing title");
+        // TODO: alert
+
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event

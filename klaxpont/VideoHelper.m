@@ -28,4 +28,10 @@
         NSLog(@"no file found");
     }
 }
+
++(void)upload:(Video*)video
+{
+
+}
+
 @end

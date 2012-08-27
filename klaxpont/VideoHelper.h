@@ -12,4 +12,5 @@
 
 
 +(void)openVideo:(Video*)video from:(UIViewController*)viewController;
++(void)upload:(Video*)video;
 @end

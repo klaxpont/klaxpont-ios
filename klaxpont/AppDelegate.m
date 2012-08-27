@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-//#import "Settings.h"
+
 
 // the four controllers
 #import "RecordViewController.h"
@@ -15,7 +15,6 @@
 #import "TopVideosViewController.h"
 #import "AccountViewController.h"
 
-#import "Video.h"
 
 @implementation AppDelegate
 
@@ -24,13 +23,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
-//    [self initFacebook];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     UITabBarController *tabBarController = [[UITabBarController alloc] init];
     self.window.rootViewController = tabBarController;
-    
+   
     // add ViewControllers
     RecordViewController *recordViewController = RecordViewController.new;
     MyVideosViewController *myVideosViewController = MyVideosViewController.new;
@@ -43,6 +40,7 @@
 //    tabBarController.viewControllers = @[recordViewController, myVideosViewController, topVideosViewController, accountViewController];
 
     [[self window] addSubview:tabBarController.view];
+        NSLog(@"view image : %@", NSStringFromCGSize(    tabBarController.tabBar.frame.size));
 	[[self window] makeKeyAndVisible];
     return YES;
 }
@@ -105,27 +103,6 @@
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
     return [self.fbSession handleOpenURL:url];
 }
-
-//- (void) initFacebook
-//{
-//    _facebook = [[Facebook alloc] initWithAppId:[Settings facebookApiKey] andDelegate:self];
-//    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-//    if ([defaults objectForKey:@"FBAccessTokenKey"] 
-//        && [defaults objectForKey:@"FBExpirationDateKey"]) {
-//        _facebook.accessToken = [defaults objectForKey:@"FBAccessTokenKey"];
-//        _facebook.expirationDate = [defaults objectForKey:@"FBExpirationDateKey"];
-//    }
-//}
-//
-//- (void)fbDidLogin {
-//    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-//    [defaults setObject:[_facebook accessToken] forKey:@"FBAccessTokenKey"];
-//    [defaults setObject:[_facebook expirationDate] forKey:@"FBExpirationDateKey"];
-//    [defaults synchronize];
-//    [[NSNotificationCenter defaultCenter] postNotificationName:@"facebookDidLogin" object:nil];    
-//}
-//
-//
 
 #pragma mark - Core Data
 
