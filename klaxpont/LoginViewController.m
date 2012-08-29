@@ -9,6 +9,8 @@
 #import "LoginViewController.h"
 #import "AppDelegate.h"
 #import "Settings.h"
+#import "UserHelper.h"
+#import "NetworkManager.h"
 
 @interface LoginViewController ()
 
@@ -93,7 +95,7 @@
     } else {
         if (appDelegate.fbSession.state != FBSessionStateCreated) {
             // Create a new, logged out session.
-            appDelegate.fbSession = [[FBSession alloc] init];
+            appDelegate.fbSession = [[FBSession alloc] initWithAppID:[Settings facebookApiKey] permissions:nil urlSchemeSuffix:nil tokenCacheStrategy:nil];
         }
         
         // if the session isn't open, let's open it now and present the login UX to the user
@@ -102,6 +104,8 @@
                                                            NSError *error) {
             // and here we make sure to update our UX according to the new session state
             if (appDelegate.fbSession.isOpen) {
+
+                [[NetworkManager sharedManager] register];
                 [self dismissModalViewControllerAnimated:YES];
             }
         }];

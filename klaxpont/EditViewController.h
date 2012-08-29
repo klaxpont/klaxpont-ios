@@ -11,6 +11,7 @@
 
 @interface EditViewController : UIViewController<UITextFieldDelegate>
 
+@property (weak, nonatomic) IBOutlet UIButton *actionButton;
 @property (weak, nonatomic) IBOutlet UITextField *titleTextField;
 @property (weak, nonatomic) IBOutlet UIImageView *previewImageView;
 @property (nonatomic) Video *editedVideo;

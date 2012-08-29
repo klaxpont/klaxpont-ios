@@ -11,6 +11,7 @@
 #import "VideoHelper.h"
 #import "UserHelper.h"
 #import "LoginViewController.h"
+#import "NetworkManager.h"
 
 @interface EditViewController ()
 
@@ -18,6 +19,7 @@
 
 @implementation EditViewController
 @synthesize previewImageView;
+@synthesize actionButton;
 @synthesize titleTextField;
 @synthesize editedVideo;
 
@@ -35,13 +37,22 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    if (editedVideo) {
-        if (self.title){
-            self.title = editedVideo.title;
-            [[self titleTextField] setText:editedVideo.title];
-        }
-        [self.previewImageView setImage:editedVideo.thumbnail];
+    if (!editedVideo)
+        return;
+    
+    NSLog(@"video : %d", [self.editedVideo.videoId intValue]);
+    if (self.title){
+        self.title = editedVideo.title;
+        [[self titleTextField] setText:editedVideo.title];
     }
+    [self.previewImageView setImage:editedVideo.thumbnail];
+    
+    if ([self.editedVideo uploaded])
+        [self.actionButton setTitle:@"Publier" forState:UIControlStateNormal];
+    if([self.editedVideo published])
+        [self.actionButton setHidden:YES];
+        
+    
 
 }
 
@@ -49,6 +60,7 @@
 {
     [self setTitleTextField:nil];
     [self setPreviewImageView:nil];
+    [self setActionButton:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -74,10 +86,18 @@
         return;
     }
     
-    if([self.editedVideo title])
+    if([self.editedVideo title]){
         //send video
-        [VideoHelper upload:self.editedVideo];
-    else
+        if(![self.editedVideo uploaded])
+            [[NetworkManager sharedManager] uploadVideo:self.editedVideo];
+        else if (![self.editedVideo published])
+            [[NetworkManager sharedManager] publishVideo:self.editedVideo];
+        else{
+            // update video infos
+            NSLog(@"update video infos");
+        }
+
+    }else
         NSLog(@"missing title");
         // TODO: alert
 
