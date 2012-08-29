@@ -29,9 +29,4 @@
     }
 }
 
-+(void)upload:(Video*)video
-{
-
-}
-
 @end
