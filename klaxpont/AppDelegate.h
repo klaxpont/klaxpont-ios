@@ -25,6 +25,8 @@
 @property (nonatomic, retain, readonly) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 
 @property (strong, nonatomic) FBSession *fbSession;
+@property (strong, nonatomic) NSDictionary *dailymotionSession;
+
 @property (strong, nonatomic) UIWindow *window;
 
 

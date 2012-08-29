@@ -14,12 +14,13 @@
 #import "MyVideosViewController.h"
 #import "TopVideosViewController.h"
 #import "AccountViewController.h"
-
+#import "NetworkManager.h"
 
 @implementation AppDelegate
 
 @synthesize window = _window;
 @synthesize fbSession = _fbSession;
+@synthesize dailymotionSession = _dailymotionSession;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -37,8 +38,12 @@
     myVideosViewController.managedObjectContext = [self managedObjectContext];
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:myVideosViewController];
     tabBarController.viewControllers = @[recordViewController, navController, topVideosViewController, accountViewController];
-//    tabBarController.viewControllers = @[recordViewController, myVideosViewController, topVideosViewController, accountViewController];
+//    tabBarController.viewCon  trollers = @[recordViewController, myVideosViewController, topVideosViewController, accountViewController];
+    
 
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [[NetworkManager sharedManager] requestDailymotionToken];
+    });
     [[self window] addSubview:tabBarController.view];
         NSLog(@"view image : %@", NSStringFromCGSize(    tabBarController.tabBar.frame.size));
 	[[self window] makeKeyAndVisible];
