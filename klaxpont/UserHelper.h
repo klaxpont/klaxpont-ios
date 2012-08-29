@@ -35,4 +35,5 @@
 -(BOOL)isRegistered;
 -(BOOL)acceptedDisclaimer;
 -(void)acceptDisclaimer;
+
 @end
