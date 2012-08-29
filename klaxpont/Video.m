@@ -7,6 +7,7 @@
 //
 #import <AVFoundation/AVFoundation.h>
 #import "Video.h"
+#import "NSString+Additions.h"
 
 @implementation Video
 
@@ -15,6 +16,18 @@
 @dynamic latitude;
 @dynamic longitude;
 @dynamic localPath;
+@dynamic dailymotionVideoId;
+
+
+- (BOOL) published
+{
+    return (self.videoId && [self.videoId intValue] != 0);
+}
+
+- (BOOL) uploaded
+{
+    return ![self.dailymotionVideoId isEmpty];
+}
 
 
 - (UIImage*) thumbnail
