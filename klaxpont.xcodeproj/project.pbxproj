@@ -16,6 +16,7 @@
 		017E42EB14CF9B2F00B47B4C /* libDailymotion.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 017E42E614CF9B1C00B47B4C /* libDailymotion.a */; };
 		01953F9A14D0A4120001169D /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 01953F9914D0A4120001169D /* MBProgressHUD.m */; };
 		019E021E1534C461002BC4F2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 019E021F1534C461002BC4F2 /* InfoPlist.strings */; };
+		01A0E2C915ED6FB50053BD6D /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A0E2C815ED6FB50053BD6D /* NetworkManager.m */; };
 		01C37D2215EA65C900FCCEF5 /* VideoHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 01C37D2115EA65C900FCCEF5 /* VideoHelper.m */; };
 		01F972FC1491580100D763EA /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01F972FB1491580100D763EA /* MediaPlayer.framework */; };
 		01F9FB761480FB6300745398 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01F9FB751480FB6300745398 /* UIKit.framework */; };
@@ -88,6 +89,9 @@
 		019E021F1534C461002BC4F2 /* InfoPlist.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
 		019E02201534CD95002BC4F2 /* UserHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserHelper.h; sourceTree = "<group>"; };
 		019E02211534CD95002BC4F2 /* UserHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserHelper.m; sourceTree = "<group>"; };
+		01A0E2C715ED6FB50053BD6D /* NetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
+		01A0E2C815ED6FB50053BD6D /* NetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkManager.m; sourceTree = "<group>"; };
+		01A0E2CC15ED95BA0053BD6D /* add dailymotion video id.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = file; path = "add dailymotion video id.xcdatamodel"; sourceTree = "<group>"; };
 		01A6F148152BA57F00C1778F /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
 		01A6F149152BA57F00C1778F /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Settings.m; sourceTree = "<group>"; };
 		01C37D2015EA65C900FCCEF5 /* VideoHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoHelper.h; sourceTree = "<group>"; };
@@ -189,6 +193,24 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		01A0E2C615ED6F8A0053BD6D /* Singleton */ = {
+			isa = PBXGroup;
+			children = (
+				019E02201534CD95002BC4F2 /* UserHelper.h */,
+				019E02211534CD95002BC4F2 /* UserHelper.m */,
+				01A0E2C715ED6FB50053BD6D /* NetworkManager.h */,
+				01A0E2C815ED6FB50053BD6D /* NetworkManager.m */,
+			);
+			name = Singleton;
+			sourceTree = "<group>";
+		};
+		01A0E2CB15ED7D630053BD6D /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Network;
+			sourceTree = "<group>";
+		};
 		01F9FB661480FB6300745398 = {
 			isa = PBXGroup;
 			children = (
@@ -257,6 +279,7 @@
 		01F9FB97148104E100745398 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				01A0E2C615ED6F8A0053BD6D /* Singleton */,
 				09F2851215DE92D200F8E7E8 /* View */,
 				093D00C315DD62BF00518A9D /* Model */,
 				093D00C415DD62D000518A9D /* ViewController */,
@@ -279,8 +302,6 @@
 				01A6F149152BA57F00C1778F /* Settings.m */,
 				09F2850915DE7ACC00F8E7E8 /* DatabaseHelper.h */,
 				09F2850A15DE7ACC00F8E7E8 /* DatabaseHelper.m */,
-				019E02201534CD95002BC4F2 /* UserHelper.h */,
-				019E02211534CD95002BC4F2 /* UserHelper.m */,
 				01C37D2015EA65C900FCCEF5 /* VideoHelper.h */,
 				01C37D2115EA65C900FCCEF5 /* VideoHelper.m */,
 			);
@@ -306,6 +327,7 @@
 		093D00C315DD62BF00518A9D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				01A0E2CB15ED7D630053BD6D /* Network */,
 				093D00C015DD62B900518A9D /* Video.h */,
 				093D00C115DD62B900518A9D /* Video.m */,
 			);
@@ -469,6 +491,7 @@
 				01C37D2215EA65C900FCCEF5 /* VideoHelper.m in Sources */,
 				0160DFE915EC0BA400BC1209 /* LoginViewController.m in Sources */,
 				0160DFEB15EC0F3E00BC1209 /* Settings.m in Sources */,
+				01A0E2C915ED6FB50053BD6D /* NetworkManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -593,10 +616,11 @@
 		093D00BD15DD621A00518A9D /* Model.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				01A0E2CC15ED95BA0053BD6D /* add dailymotion video id.xcdatamodel */,
 				09F2850815DE780C00F8E7E8 /* adding localPath to Video.xcdatamodel */,
 				093D00BE15DD621A00518A9D /* Model.xcdatamodel */,
 			);
-			currentVersion = 09F2850815DE780C00F8E7E8 /* adding localPath to Video.xcdatamodel */;
+			currentVersion = 01A0E2CC15ED95BA0053BD6D /* add dailymotion video id.xcdatamodel */;
 			path = Model.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
