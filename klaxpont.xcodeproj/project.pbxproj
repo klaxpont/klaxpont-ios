@@ -91,7 +91,7 @@
 		019E02211534CD95002BC4F2 /* UserHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserHelper.m; sourceTree = "<group>"; };
 		01A0E2C715ED6FB50053BD6D /* NetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
 		01A0E2C815ED6FB50053BD6D /* NetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkManager.m; sourceTree = "<group>"; };
-		01A0E2CC15ED95BA0053BD6D /* add dailymotion video id.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = file; path = "add dailymotion video id.xcdatamodel"; sourceTree = "<group>"; };
+		01A0E2CC15ED95BA0053BD6D /* add dailymotion video id.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "add dailymotion video id.xcdatamodel"; sourceTree = "<group>"; };
 		01A6F148152BA57F00C1778F /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
 		01A6F149152BA57F00C1778F /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Settings.m; sourceTree = "<group>"; };
 		01C37D2015EA65C900FCCEF5 /* VideoHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoHelper.h; sourceTree = "<group>"; };
@@ -106,8 +106,6 @@
 		01F9FB831480FB6300745398 /* klaxpont-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "klaxpont-Prefix.pch"; sourceTree = "<group>"; };
 		01F9FB841480FB6300745398 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		01F9FB851480FB6300745398 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		01F9FB8A1480FB6300745398 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		01F9FB8B1480FB6300745398 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		01F9FB92148102B400745398 /* VideoPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoPickerController.h; sourceTree = "<group>"; };
 		01F9FB93148102B400745398 /* VideoPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoPickerController.m; sourceTree = "<group>"; };
 		01F9FB951481039300745398 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
@@ -253,7 +251,6 @@
 			isa = PBXGroup;
 			children = (
 				093D00B915DD611700518A9D /* resources */,
-				09C2FD4D15DD2FBD00F01096 /* deprecated */,
 				093D00B815DD5FE400518A9D /* Helpers */,
 				01F9FB841480FB6300745398 /* AppDelegate.h */,
 				01F9FB851480FB6300745398 /* AppDelegate.m */,
@@ -359,15 +356,6 @@
 				0160DFE815EC0BA400BC1209 /* LoginViewController.xib */,
 			);
 			name = ViewController;
-			sourceTree = "<group>";
-		};
-		09C2FD4D15DD2FBD00F01096 /* deprecated */ = {
-			isa = PBXGroup;
-			children = (
-				01F9FB8A1480FB6300745398 /* ViewController.h */,
-				01F9FB8B1480FB6300745398 /* ViewController.m */,
-			);
-			name = deprecated;
 			sourceTree = "<group>";
 		};
 		09F2851215DE92D200F8E7E8 /* View */ = {
