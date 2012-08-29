@@ -52,8 +52,11 @@ static NSString *knetworkManager = @"networkManager";
 {
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[[NSURL alloc] initWithString:SERVER_URL_FOR(USER_PATH)]];
     [request setHTTPMethod:@"POST"];
-    [request addValue:[NSString stringWithFormat:@"%@",[UserHelper default].facebookId]  forHTTPHeaderField:@"facebook_id"];
-    [request setValue:@"application/json" forHTTPHeaderField:@"content-type"];
+   
+    NSData *data = [[NSString stringWithFormat:@"facebook_id=%@", [UserHelper default].facebookId] dataUsingEncoding:NSUTF8StringEncoding];
+    [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
+
+    [request setHTTPBody:data];
     
     NSURLConnection *connection = [NSURLConnection connectionWithRequest:request  delegate:self];
     if (connection) {

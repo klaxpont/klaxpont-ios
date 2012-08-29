@@ -8,6 +8,7 @@
 
 #import "AccountViewController.h"
 #import "AppDelegate.h"
+#import "LoginViewController.h"
 @interface AccountViewController ()
 
 @end
@@ -80,49 +81,31 @@
 #pragma mark Actions
 
 - (IBAction)connectFacebook:(id)sender {
-
-//   if ([[APP_DELEGATE facebook] isSessionValid]) 
-//       [self facebookLogout];
-//   else
-//       [self facebookLogin];
-//    
-//    
+    if (![[UserHelper default] isRegistered])
+        [self facebookLogin];
+    else
+         [self facebookLogout];
 //    [self updateFacebookButton];
 }
 
 - (void)facebookLogin
 {
-//  [[APP_DELEGATE facebook] authorize:nil];
-
+    LoginViewController *loginViewController = [[LoginViewController alloc] init];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:loginViewController];
+    [[nav navigationBar] setBarStyle:UIBarStyleBlack];
+    
+    [self presentModalViewController:nav animated:YES];
+   
 }
 
 - (void)facebookLogout
 {
-//    [[APP_DELEGATE facebook] logout];
+
+
     
 }
 #pragma mark - Requests
 
--(void)requestFacebookInfos{
-    AppDelegate* appDelegate = (AppDelegate*) [UIApplication sharedApplication].delegate;
-//    [appDelegate.facebook requestWithGraphPath:FACEBOOK_PROFILE_PATH andDelegate:self];
-//    [appDelegate.facebook requestWithGraphPath:FACEBOOK_PROFILE_PICTURE_PATH andDelegate:self];
-}
-
--(void)registerUser
-{
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[[NSURL alloc] initWithString:SERVER_URL_FOR(USER_PATH)]];
-    [request setHTTPMethod:@"POST"];
-    [request addValue:[NSString stringWithFormat:@"%@",_user.facebookId]  forHTTPHeaderField:@"facebook_id"];
-    [request setValue:@"application/json" forHTTPHeaderField:@"content-type"];
-    
-    NSURLConnection *connection = [NSURLConnection connectionWithRequest:request  delegate:self];
-    if (connection) {
-        [connection start];
-    }
-
-
-}
 
 #pragma mark Facebook delegate methods
 - (void)requestLoading:(FBRequest *)request
@@ -167,34 +150,4 @@
 //    }   
 }
 
-#pragma mark NSURLConnection delegate methods
-- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
-{
-    NSHTTPURLResponse* httpResponse = (NSHTTPURLResponse*)response;
-    int responseStatusCode = [httpResponse statusCode];
-    NSLog(@"request status code %d", responseStatusCode);
-    if (responseStatusCode >= 400) {
-        [connection cancel];
-    }
-}
-
-- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
-{
-    if (data) {
-        NSLog(@"data from klaxpont %@", data );
-        NSError* error;
-        NSDictionary *result = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
-        NSLog(@"data from klaxpont %@",result );
-        [_user setKlaxpontId:[result objectForKey:@"user_id"]];
-       NSLog(@"error data from klaxpont %@",error );
-    }
-}
-
-- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
-{
-    NSLog(@"error from connection %@",error );
-    UIAlertView *alert= [[UIAlertView alloc] initWithTitle:@"Error" message:[error localizedDescription]  delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-    [alert show];
-    [connection cancel];    
-}
 @end
