@@ -78,6 +78,24 @@ static NSString *knetworkManager = @"networkManager";
 
 
 #pragma mark Video
+//TODO: this is shit but temporary, to refactor
+-(NSArray*) retrieveVideos
+{
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[[NSURL alloc] initWithString:SERVER_URL_FOR(VIDEO_PATH)]];
+    [request setValue:@"application/json" forHTTPHeaderField:@"content-type"];
+    NSURLResponse *response = nil;
+    NSError *error = nil;
+    NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+    if(error)
+        return nil;
+    if(response){
+        NSArray *result = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+        if(error)
+            return nil;
+        return result;
+    }
+    return nil;
+}
 
 -(void) uploadVideo:(Video*)video
 {
@@ -132,15 +150,6 @@ static NSString *knetworkManager = @"networkManager";
 }
 
 
--(void) handleVideosResponse:(NSData*) data
-{
-    NSLog(@"response %@", data);
-    NSError* error;
-    NSDictionary *result = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
-    NSLog(@"data from klaxpont videos; data: %@", result );
-
-}
-
 -(void) handleUserRegistrationResponse:(NSData*) data
 {
     if (data) {
@@ -183,11 +192,8 @@ static NSString *knetworkManager = @"networkManager";
 //    NSString *relativePath = [[[connection currentRequest] URL] relativePath];
     NSString *url = [connection.originalRequest.URL absoluteString];
 
-    if([url hasSuffix:VIDEO_PATH]){
-        if([[connection.originalRequest HTTPMethod] isEqualToString:@"POST"])
-            [self handlePublishVideoResponse:data];
-        else
-            [self handleVideosResponse:data];
+    if([url hasSuffix:VIDEO_PATH] && [[connection.originalRequest HTTPMethod] isEqualToString:@"POST"]){
+        [self handlePublishVideoResponse:data];
     }
     else if([url hasSuffix:DAILYMOTION_API_TOKEN_PATH]){
         [self handleDailymotionTokenResponse:data];

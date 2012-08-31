@@ -16,6 +16,7 @@
 
 - (void) register;
 - (void) uploadVideo:(Video*)video;
--(void) publishVideo:(Video*)video;
+- (void) publishVideo:(Video*)video;
 - (void) requestDailymotionToken;
+- (NSArray*) retrieveVideos;
 @end
