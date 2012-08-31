@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Dailymotion.h"
 
-@interface TopVideosViewController : UITableViewController
-
+@interface TopVideosViewController : UITableViewController<DailymotionPlayerDelegate>
+{
+    NSArray *_videos;
+}
 @end
