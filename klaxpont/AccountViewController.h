@@ -7,18 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "FBRequest.h"
-#import "User.h"
 
 
-@interface AccountViewController : UIViewController<FBRequestDelegate>
-{
-    User *_user;
-    NSMutableData *_facebookImageData;
-}
+
+@interface AccountViewController : UIViewController
+
 @property (weak, nonatomic) IBOutlet UIButton *facebookButton;
-- (IBAction)connectFacebook:(id)sender;
-@property (weak, nonatomic) IBOutlet UIImageView *facebookPicture;
 @property (weak, nonatomic) IBOutlet UILabel *username;
 
+- (IBAction)connectFacebook:(id)sender;
 @end

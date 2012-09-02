@@ -7,14 +7,26 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "FBConnect.h"   
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate, FBSessionDelegate>
+#import <CoreData/CoreData.h>
+#import <FacebookSDK/FacebookSDK.h>
+
+@interface AppDelegate : UIResponder <UIApplicationDelegate>
 {
-    Facebook *_facebook;
+    NSManagedObjectModel *managedObjectModel;
+    NSManagedObjectContext *managedObjectContext;
+    NSPersistentStoreCoordinator *persistentStoreCoordinator;
+
 }
 
-@property (nonatomic, retain) Facebook *facebook;
+
+@property (nonatomic, retain, readonly) NSManagedObjectModel *managedObjectModel;
+@property (nonatomic, retain, readonly) NSManagedObjectContext *managedObjectContext;
+@property (nonatomic, retain, readonly) NSPersistentStoreCoordinator *persistentStoreCoordinator;
+
+@property (strong, nonatomic) FBSession *fbSession;
+@property (strong, nonatomic) NSDictionary *dailymotionSession;
+
 @property (strong, nonatomic) UIWindow *window;
 
 

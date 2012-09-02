@@ -9,84 +9,119 @@
 /* Begin PBXBuildFile section */
 		01045B8214CF90DB00970E6C /* Settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 01045B8114CF90DB00970E6C /* Settings.plist */; };
 		010FF6E715325AA4007A9998 /* AccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 010FF6E615325AA4007A9998 /* AccountViewController.m */; };
-		014AF00015D2E66500F36146 /* default_thumbnail.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 014AEFFF15D2E66500F36146 /* default_thumbnail.jpg */; };
 		014AF00315D2E67300F36146 /* VideosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 014AF00215D2E67300F36146 /* VideosViewController.m */; };
 		016D0616152A5761001B7D30 /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 016D0615152A5761001B7D30 /* NSString+Additions.m */; };
-		017E42EB14CF9B2F00B47B4C /* libDailymotion.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 017E42E614CF9B1C00B47B4C /* libDailymotion.a */; };
 		01953F9A14D0A4120001169D /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 01953F9914D0A4120001169D /* MBProgressHUD.m */; };
-		019E021C1534C45A002BC4F2 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 019E021D1534C45A002BC4F2 /* MainStoryboard.storyboard */; };
 		019E021E1534C461002BC4F2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 019E021F1534C461002BC4F2 /* InfoPlist.strings */; };
-		019E02221534CD95002BC4F2 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 019E02211534CD95002BC4F2 /* User.m */; };
-		01A6F147152BA1EE00C1778F /* libfacebook_ios_sdk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 01A6F144152BA1D000C1778F /* libfacebook_ios_sdk.a */; };
 		01A6F14A152BA57F00C1778F /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A6F149152BA57F00C1778F /* Settings.m */; };
+		01B0422D15F3FDC5004FDE1D /* AccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01B0420E15F3FDC5004FDE1D /* AccountViewController.xib */; };
+		01B0422E15F3FDC5004FDE1D /* DatabaseHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B0421015F3FDC5004FDE1D /* DatabaseHelper.m */; };
+		01B0422F15F3FDC5004FDE1D /* DisclaimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B0421215F3FDC5004FDE1D /* DisclaimerViewController.m */; };
+		01B0423015F3FDC5004FDE1D /* DisclaimerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01B0421315F3FDC5004FDE1D /* DisclaimerViewController.xib */; };
+		01B0423115F3FDC5004FDE1D /* EditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B0421515F3FDC5004FDE1D /* EditViewController.m */; };
+		01B0423215F3FDC5004FDE1D /* EditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01B0421615F3FDC5004FDE1D /* EditViewController.xib */; };
+		01B0423315F3FDC5004FDE1D /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B0421815F3FDC5004FDE1D /* LoginViewController.m */; };
+		01B0423415F3FDC5004FDE1D /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01B0421915F3FDC5004FDE1D /* LoginViewController.xib */; };
+		01B0423515F3FDC5004FDE1D /* MyVideosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B0421B15F3FDC5004FDE1D /* MyVideosViewController.m */; };
+		01B0423615F3FDC5004FDE1D /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B0421D15F3FDC5004FDE1D /* NetworkManager.m */; };
+		01B0423715F3FDC5004FDE1D /* RecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B0421F15F3FDC5004FDE1D /* RecordViewController.m */; };
+		01B0423815F3FDC5004FDE1D /* TopVideosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B0422115F3FDC5004FDE1D /* TopVideosViewController.m */; };
+		01B0423915F3FDC5004FDE1D /* UserHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B0422315F3FDC5004FDE1D /* UserHelper.m */; };
+		01B0423A15F3FDC5004FDE1D /* Video.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B0422515F3FDC5004FDE1D /* Video.m */; };
+		01B0423B15F3FDC5004FDE1D /* VideoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B0422715F3FDC5004FDE1D /* VideoCell.m */; };
+		01B0423C15F3FDC5004FDE1D /* VideoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01B0422815F3FDC5004FDE1D /* VideoCell.xib */; };
+		01B0423D15F3FDC5004FDE1D /* VideoHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B0422A15F3FDC5004FDE1D /* VideoHelper.m */; };
+		01B0423E15F3FDC5004FDE1D /* VideoPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B0422C15F3FDC5004FDE1D /* VideoPlayerController.m */; };
+		01B0424515F3FFD7004FDE1D /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01B0424415F3FFD7004FDE1D /* FacebookSDK.framework */; };
+		01B0425415F40025004FDE1D /* libDailymotion.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 01B0424F15F40005004FDE1D /* libDailymotion.a */; };
+		01B0425815F40044004FDE1D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01B0425715F40044004FDE1D /* CoreData.framework */; };
+		01B0425C15F4009F004FDE1D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01B0425B15F4009F004FDE1D /* AVFoundation.framework */; };
+		01B0425E15F4014E004FDE1D /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 01B0425D15F4014E004FDE1D /* libsqlite3.0.dylib */; };
+		01B0426015F401EE004FDE1D /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01B0425F15F401EE004FDE1D /* CoreMedia.framework */; };
 		01F972FC1491580100D763EA /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01F972FB1491580100D763EA /* MediaPlayer.framework */; };
 		01F9FB761480FB6300745398 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01F9FB751480FB6300745398 /* UIKit.framework */; };
 		01F9FB781480FB6300745398 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01F9FB771480FB6300745398 /* Foundation.framework */; };
 		01F9FB7A1480FB6300745398 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01F9FB791480FB6300745398 /* CoreGraphics.framework */; };
 		01F9FB821480FB6300745398 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F9FB811480FB6300745398 /* main.m */; };
 		01F9FB861480FB6300745398 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F9FB851480FB6300745398 /* AppDelegate.m */; };
-		01F9FB8C1480FB6300745398 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F9FB8B1480FB6300745398 /* ViewController.m */; };
 		01F9FB94148102B400745398 /* VideoPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F9FB93148102B400745398 /* VideoPickerController.m */; };
 		01F9FB961481039300745398 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01F9FB951481039300745398 /* MobileCoreServices.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		017E42E514CF9B1C00B47B4C /* PBXContainerItemProxy */ = {
+		01B0424E15F40005004FDE1D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 01045B3414CF7A9B00970E6C /* iOS.xcodeproj */;
+			containerPortal = 01B0424615F40005004FDE1D /* Dailymotion SDK iOS.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = D2AAC07E0554694100DB518D;
 			remoteInfo = Dailymotion;
 		};
-		017E42E714CF9B1C00B47B4C /* PBXContainerItemProxy */ = {
+		01B0425015F40005004FDE1D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 01045B3414CF7A9B00970E6C /* iOS.xcodeproj */;
+			containerPortal = 01B0424615F40005004FDE1D /* Dailymotion SDK iOS.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 53E273561265BD1C00B541BE;
 			remoteInfo = DailymotionTests;
 		};
-		017E42E914CF9B2800B47B4C /* PBXContainerItemProxy */ = {
+		01B0425215F40020004FDE1D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 01045B3414CF7A9B00970E6C /* iOS.xcodeproj */;
+			containerPortal = 01B0424615F40005004FDE1D /* Dailymotion SDK iOS.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = D2AAC07D0554694100DB518D;
 			remoteInfo = Dailymotion;
 		};
-		01A6F143152BA1D000C1778F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 01A6F13C152BA1CF00C1778F /* facebook-ios-sdk.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D2AAC07E0554694100DB518D;
-			remoteInfo = "facebook-ios-sdk";
-		};
-		01A6F145152BA1E300C1778F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 01A6F13C152BA1CF00C1778F /* facebook-ios-sdk.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = D2AAC07D0554694100DB518D;
-			remoteInfo = "facebook-ios-sdk";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		01045B3414CF7A9B00970E6C /* iOS.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = iOS.xcodeproj; path = dailymotion/iOS.xcodeproj; sourceTree = "<group>"; };
 		01045B8114CF90DB00970E6C /* Settings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Settings.plist; sourceTree = "<group>"; };
 		010FF6E515325AA3007A9998 /* AccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountViewController.h; sourceTree = "<group>"; };
 		010FF6E615325AA4007A9998 /* AccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountViewController.m; sourceTree = "<group>"; };
-		014AEFFF15D2E66500F36146 /* default_thumbnail.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = default_thumbnail.jpg; sourceTree = "<group>"; };
 		014AF00115D2E67300F36146 /* VideosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideosViewController.h; sourceTree = "<group>"; };
 		014AF00215D2E67300F36146 /* VideosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideosViewController.m; sourceTree = "<group>"; };
 		016D0614152A5761001B7D30 /* NSString+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+Additions.h"; path = "helpers/NSString+Additions.h"; sourceTree = SOURCE_ROOT; };
 		016D0615152A5761001B7D30 /* NSString+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Additions.m"; path = "helpers/NSString+Additions.m"; sourceTree = SOURCE_ROOT; };
 		01953F9814D0A4120001169D /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBProgressHUD.h; path = MBProgressHUD/MBProgressHUD.h; sourceTree = SOURCE_ROOT; };
 		01953F9914D0A4120001169D /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBProgressHUD.m; path = MBProgressHUD/MBProgressHUD.m; sourceTree = SOURCE_ROOT; };
-		019E021D1534C45A002BC4F2 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
 		019E021F1534C461002BC4F2 /* InfoPlist.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
-		019E02201534CD95002BC4F2 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
-		019E02211534CD95002BC4F2 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
-		01A6F13C152BA1CF00C1778F /* facebook-ios-sdk.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "facebook-ios-sdk.xcodeproj"; path = "facebook/src/facebook-ios-sdk.xcodeproj"; sourceTree = "<group>"; };
 		01A6F148152BA57F00C1778F /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
 		01A6F149152BA57F00C1778F /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Settings.m; sourceTree = "<group>"; };
+		01B0420E15F3FDC5004FDE1D /* AccountViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccountViewController.xib; sourceTree = "<group>"; };
+		01B0420F15F3FDC5004FDE1D /* DatabaseHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseHelper.h; sourceTree = "<group>"; };
+		01B0421015F3FDC5004FDE1D /* DatabaseHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseHelper.m; sourceTree = "<group>"; };
+		01B0421115F3FDC5004FDE1D /* DisclaimerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisclaimerViewController.h; sourceTree = "<group>"; };
+		01B0421215F3FDC5004FDE1D /* DisclaimerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisclaimerViewController.m; sourceTree = "<group>"; };
+		01B0421315F3FDC5004FDE1D /* DisclaimerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DisclaimerViewController.xib; sourceTree = "<group>"; };
+		01B0421415F3FDC5004FDE1D /* EditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditViewController.h; sourceTree = "<group>"; };
+		01B0421515F3FDC5004FDE1D /* EditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditViewController.m; sourceTree = "<group>"; };
+		01B0421615F3FDC5004FDE1D /* EditViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditViewController.xib; sourceTree = "<group>"; };
+		01B0421715F3FDC5004FDE1D /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		01B0421815F3FDC5004FDE1D /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		01B0421915F3FDC5004FDE1D /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		01B0421A15F3FDC5004FDE1D /* MyVideosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyVideosViewController.h; sourceTree = "<group>"; };
+		01B0421B15F3FDC5004FDE1D /* MyVideosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyVideosViewController.m; sourceTree = "<group>"; };
+		01B0421C15F3FDC5004FDE1D /* NetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
+		01B0421D15F3FDC5004FDE1D /* NetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkManager.m; sourceTree = "<group>"; };
+		01B0421E15F3FDC5004FDE1D /* RecordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordViewController.h; sourceTree = "<group>"; };
+		01B0421F15F3FDC5004FDE1D /* RecordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordViewController.m; sourceTree = "<group>"; };
+		01B0422015F3FDC5004FDE1D /* TopVideosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopVideosViewController.h; sourceTree = "<group>"; };
+		01B0422115F3FDC5004FDE1D /* TopVideosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopVideosViewController.m; sourceTree = "<group>"; };
+		01B0422215F3FDC5004FDE1D /* UserHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserHelper.h; sourceTree = "<group>"; };
+		01B0422315F3FDC5004FDE1D /* UserHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserHelper.m; sourceTree = "<group>"; };
+		01B0422415F3FDC5004FDE1D /* Video.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Video.h; sourceTree = "<group>"; };
+		01B0422515F3FDC5004FDE1D /* Video.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Video.m; sourceTree = "<group>"; };
+		01B0422615F3FDC5004FDE1D /* VideoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoCell.h; sourceTree = "<group>"; };
+		01B0422715F3FDC5004FDE1D /* VideoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoCell.m; sourceTree = "<group>"; };
+		01B0422815F3FDC5004FDE1D /* VideoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VideoCell.xib; sourceTree = "<group>"; };
+		01B0422915F3FDC5004FDE1D /* VideoHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoHelper.h; sourceTree = "<group>"; };
+		01B0422A15F3FDC5004FDE1D /* VideoHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoHelper.m; sourceTree = "<group>"; };
+		01B0422B15F3FDC5004FDE1D /* VideoPlayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoPlayerController.h; sourceTree = "<group>"; };
+		01B0422C15F3FDC5004FDE1D /* VideoPlayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoPlayerController.m; sourceTree = "<group>"; };
+		01B0424415F3FFD7004FDE1D /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		01B0424615F40005004FDE1D /* Dailymotion SDK iOS.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "Dailymotion SDK iOS.xcodeproj"; path = "dailymotion/Dailymotion SDK iOS.xcodeproj"; sourceTree = SOURCE_ROOT; };
+		01B0425715F40044004FDE1D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		01B0425B15F4009F004FDE1D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		01B0425D15F4014E004FDE1D /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		01B0425F15F401EE004FDE1D /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		01F972FB1491580100D763EA /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		01F9FB711480FB6300745398 /* klaxpont.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = klaxpont.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01F9FB751480FB6300745398 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -97,8 +132,6 @@
 		01F9FB831480FB6300745398 /* klaxpont-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "klaxpont-Prefix.pch"; sourceTree = "<group>"; };
 		01F9FB841480FB6300745398 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		01F9FB851480FB6300745398 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		01F9FB8A1480FB6300745398 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		01F9FB8B1480FB6300745398 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		01F9FB92148102B400745398 /* VideoPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoPickerController.h; sourceTree = "<group>"; };
 		01F9FB93148102B400745398 /* VideoPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoPickerController.m; sourceTree = "<group>"; };
 		01F9FB951481039300745398 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
@@ -109,13 +142,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01A6F147152BA1EE00C1778F /* libfacebook_ios_sdk.a in Frameworks */,
-				017E42EB14CF9B2F00B47B4C /* libDailymotion.a in Frameworks */,
+				01B0426015F401EE004FDE1D /* CoreMedia.framework in Frameworks */,
+				01B0425E15F4014E004FDE1D /* libsqlite3.0.dylib in Frameworks */,
+				01B0425C15F4009F004FDE1D /* AVFoundation.framework in Frameworks */,
+				01B0425815F40044004FDE1D /* CoreData.framework in Frameworks */,
+				01B0425415F40025004FDE1D /* libDailymotion.a in Frameworks */,
 				01F972FC1491580100D763EA /* MediaPlayer.framework in Frameworks */,
 				01F9FB961481039300745398 /* MobileCoreServices.framework in Frameworks */,
 				01F9FB761480FB6300745398 /* UIKit.framework in Frameworks */,
 				01F9FB781480FB6300745398 /* Foundation.framework in Frameworks */,
 				01F9FB7A1480FB6300745398 /* CoreGraphics.framework in Frameworks */,
+				01B0424515F3FFD7004FDE1D /* FacebookSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,14 +169,6 @@
 			path = libs/MBProgressHUD;
 			sourceTree = "<group>";
 		};
-		014AEFFE15D2E66500F36146 /* images */ = {
-			isa = PBXGroup;
-			children = (
-				014AEFFF15D2E66500F36146 /* default_thumbnail.jpg */,
-			);
-			path = images;
-			sourceTree = "<group>";
-		};
 		016D0613152A5643001B7D30 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -150,29 +179,78 @@
 			path = klaxpont;
 			sourceTree = "<group>";
 		};
-		017E42E114CF9B1C00B47B4C /* Products */ = {
+		01B0423F15F3FDE7004FDE1D /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				017E42E614CF9B1C00B47B4C /* libDailymotion.a */,
-				017E42E814CF9B1C00B47B4C /* Tests.octest */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		01B0424015F3FDF6004FDE1D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				01B0422415F3FDC5004FDE1D /* Video.h */,
+				01B0422515F3FDC5004FDE1D /* Video.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		01B0424115F3FDFF004FDE1D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				01B0422615F3FDC5004FDE1D /* VideoCell.h */,
+				01B0422715F3FDC5004FDE1D /* VideoCell.m */,
+				01B0422815F3FDC5004FDE1D /* VideoCell.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		01B0424215F3FE05004FDE1D /* Singletons */ = {
+			isa = PBXGroup;
+			children = (
+				01B0422215F3FDC5004FDE1D /* UserHelper.h */,
+				01B0422315F3FDC5004FDE1D /* UserHelper.m */,
+				01B0421C15F3FDC5004FDE1D /* NetworkManager.h */,
+				01B0421D15F3FDC5004FDE1D /* NetworkManager.m */,
+			);
+			name = Singletons;
+			sourceTree = "<group>";
+		};
+		01B0424315F3FE1F004FDE1D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				01B0422915F3FDC5004FDE1D /* VideoHelper.h */,
+				01B0422A15F3FDC5004FDE1D /* VideoHelper.m */,
+				01A6F148152BA57F00C1778F /* Settings.h */,
+				01A6F149152BA57F00C1778F /* Settings.m */,
+				01B0420F15F3FDC5004FDE1D /* DatabaseHelper.h */,
+				01B0421015F3FDC5004FDE1D /* DatabaseHelper.m */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		01B0424715F40005004FDE1D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				01B0424F15F40005004FDE1D /* libDailymotion.a */,
+				01B0425115F40005004FDE1D /* Tests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		01A6F13D152BA1CF00C1778F /* Products */ = {
+		01B0426115F40233004FDE1D /* Dailymotion */ = {
 			isa = PBXGroup;
 			children = (
-				01A6F144152BA1D000C1778F /* libfacebook_ios_sdk.a */,
+				01B0424615F40005004FDE1D /* Dailymotion SDK iOS.xcodeproj */,
 			);
-			name = Products;
+			name = Dailymotion;
 			sourceTree = "<group>";
 		};
 		01F9FB661480FB6300745398 = {
 			isa = PBXGroup;
 			children = (
-				01A6F13C152BA1CF00C1778F /* facebook-ios-sdk.xcodeproj */,
+				01B0426115F40233004FDE1D /* Dailymotion */,
 				016D0613152A5643001B7D30 /* Helpers */,
-				01045B3414CF7A9B00970E6C /* iOS.xcodeproj */,
 				01045B4014CF7ABC00970E6C /* MBProgressHUD */,
 				01F9FB7B1480FB6300745398 /* klaxpont */,
 				01F9FB741480FB6300745398 /* Frameworks */,
@@ -191,6 +269,11 @@
 		01F9FB741480FB6300745398 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				01B0425F15F401EE004FDE1D /* CoreMedia.framework */,
+				01B0425D15F4014E004FDE1D /* libsqlite3.0.dylib */,
+				01B0425B15F4009F004FDE1D /* AVFoundation.framework */,
+				01B0425715F40044004FDE1D /* CoreData.framework */,
+				01B0424415F3FFD7004FDE1D /* FacebookSDK.framework */,
 				01F972FB1491580100D763EA /* MediaPlayer.framework */,
 				01F9FB951481039300745398 /* MobileCoreServices.framework */,
 				01F9FB751480FB6300745398 /* UIKit.framework */,
@@ -203,7 +286,6 @@
 		01F9FB7B1480FB6300745398 /* klaxpont */ = {
 			isa = PBXGroup;
 			children = (
-				014AEFFE15D2E66500F36146 /* images */,
 				01F9FB841480FB6300745398 /* AppDelegate.h */,
 				01F9FB851480FB6300745398 /* AppDelegate.m */,
 				01F9FB97148104E100745398 /* Classes */,
@@ -219,7 +301,6 @@
 				01F9FB811480FB6300745398 /* main.m */,
 				01F9FB831480FB6300745398 /* klaxpont-Prefix.pch */,
 				019E021F1534C461002BC4F2 /* InfoPlist.strings */,
-				019E021D1534C45A002BC4F2 /* MainStoryboard.storyboard */,
 				01045B8114CF90DB00970E6C /* Settings.plist */,
 			);
 			name = "Supporting Files";
@@ -228,18 +309,35 @@
 		01F9FB97148104E100745398 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				01B0424315F3FE1F004FDE1D /* Helpers */,
+				01B0424215F3FE05004FDE1D /* Singletons */,
+				01B0424115F3FDFF004FDE1D /* Views */,
+				01B0424015F3FDF6004FDE1D /* Models */,
+				01B0423F15F3FDE7004FDE1D /* ViewControllers */,
+				01B0421115F3FDC5004FDE1D /* DisclaimerViewController.h */,
+				01B0421215F3FDC5004FDE1D /* DisclaimerViewController.m */,
+				01B0421315F3FDC5004FDE1D /* DisclaimerViewController.xib */,
+				01B0421E15F3FDC5004FDE1D /* RecordViewController.h */,
+				01B0421F15F3FDC5004FDE1D /* RecordViewController.m */,
+				01B0421A15F3FDC5004FDE1D /* MyVideosViewController.h */,
+				01B0421B15F3FDC5004FDE1D /* MyVideosViewController.m */,
+				01B0422015F3FDC5004FDE1D /* TopVideosViewController.h */,
+				01B0422115F3FDC5004FDE1D /* TopVideosViewController.m */,
 				010FF6E515325AA3007A9998 /* AccountViewController.h */,
+				010FF6E615325AA4007A9998 /* AccountViewController.m */,
+				01B0420E15F3FDC5004FDE1D /* AccountViewController.xib */,
+				01B0421415F3FDC5004FDE1D /* EditViewController.h */,
+				01B0421515F3FDC5004FDE1D /* EditViewController.m */,
+				01B0421615F3FDC5004FDE1D /* EditViewController.xib */,
+				01B0421715F3FDC5004FDE1D /* LoginViewController.h */,
+				01B0421815F3FDC5004FDE1D /* LoginViewController.m */,
+				01B0421915F3FDC5004FDE1D /* LoginViewController.xib */,
+				01B0422B15F3FDC5004FDE1D /* VideoPlayerController.h */,
+				01B0422C15F3FDC5004FDE1D /* VideoPlayerController.m */,
 				014AF00115D2E67300F36146 /* VideosViewController.h */,
 				014AF00215D2E67300F36146 /* VideosViewController.m */,
-				010FF6E615325AA4007A9998 /* AccountViewController.m */,
-				01F9FB8A1480FB6300745398 /* ViewController.h */,
-				01F9FB8B1480FB6300745398 /* ViewController.m */,
 				01F9FB92148102B400745398 /* VideoPickerController.h */,
 				01F9FB93148102B400745398 /* VideoPickerController.m */,
-				01A6F148152BA57F00C1778F /* Settings.h */,
-				01A6F149152BA57F00C1778F /* Settings.m */,
-				019E02201534CD95002BC4F2 /* User.h */,
-				019E02211534CD95002BC4F2 /* User.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -258,8 +356,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				01A6F146152BA1E300C1778F /* PBXTargetDependency */,
-				017E42EA14CF9B2800B47B4C /* PBXTargetDependency */,
+				01B0425315F40020004FDE1D /* PBXTargetDependency */,
 			);
 			name = klaxpont;
 			productName = klaxpont;
@@ -286,12 +383,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 01A6F13D152BA1CF00C1778F /* Products */;
-					ProjectRef = 01A6F13C152BA1CF00C1778F /* facebook-ios-sdk.xcodeproj */;
-				},
-				{
-					ProductGroup = 017E42E114CF9B1C00B47B4C /* Products */;
-					ProjectRef = 01045B3414CF7A9B00970E6C /* iOS.xcodeproj */;
+					ProductGroup = 01B0424715F40005004FDE1D /* Products */;
+					ProjectRef = 01B0424615F40005004FDE1D /* Dailymotion SDK iOS.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -302,25 +395,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		017E42E614CF9B1C00B47B4C /* libDailymotion.a */ = {
+		01B0424F15F40005004FDE1D /* libDailymotion.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libDailymotion.a;
-			remoteRef = 017E42E514CF9B1C00B47B4C /* PBXContainerItemProxy */;
+			remoteRef = 01B0424E15F40005004FDE1D /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		017E42E814CF9B1C00B47B4C /* Tests.octest */ = {
+		01B0425115F40005004FDE1D /* Tests.octest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = Tests.octest;
-			remoteRef = 017E42E714CF9B1C00B47B4C /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		01A6F144152BA1D000C1778F /* libfacebook_ios_sdk.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libfacebook_ios_sdk.a;
-			remoteRef = 01A6F143152BA1D000C1778F /* PBXContainerItemProxy */;
+			remoteRef = 01B0425015F40005004FDE1D /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -332,8 +418,11 @@
 			files = (
 				01045B8214CF90DB00970E6C /* Settings.plist in Resources */,
 				019E021E1534C461002BC4F2 /* InfoPlist.strings in Resources */,
-				019E021C1534C45A002BC4F2 /* MainStoryboard.storyboard in Resources */,
-				014AF00015D2E66500F36146 /* default_thumbnail.jpg in Resources */,
+				01B0422D15F3FDC5004FDE1D /* AccountViewController.xib in Resources */,
+				01B0423015F3FDC5004FDE1D /* DisclaimerViewController.xib in Resources */,
+				01B0423215F3FDC5004FDE1D /* EditViewController.xib in Resources */,
+				01B0423415F3FDC5004FDE1D /* LoginViewController.xib in Resources */,
+				01B0423C15F3FDC5004FDE1D /* VideoCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,29 +435,35 @@
 			files = (
 				01F9FB821480FB6300745398 /* main.m in Sources */,
 				01F9FB861480FB6300745398 /* AppDelegate.m in Sources */,
-				01F9FB8C1480FB6300745398 /* ViewController.m in Sources */,
 				01F9FB94148102B400745398 /* VideoPickerController.m in Sources */,
 				01953F9A14D0A4120001169D /* MBProgressHUD.m in Sources */,
 				01A6F14A152BA57F00C1778F /* Settings.m in Sources */,
 				010FF6E715325AA4007A9998 /* AccountViewController.m in Sources */,
-				019E02221534CD95002BC4F2 /* User.m in Sources */,
 				016D0616152A5761001B7D30 /* NSString+Additions.m in Sources */,
 				014AF00315D2E67300F36146 /* VideosViewController.m in Sources */,
+				01B0422E15F3FDC5004FDE1D /* DatabaseHelper.m in Sources */,
+				01B0422F15F3FDC5004FDE1D /* DisclaimerViewController.m in Sources */,
+				01B0423115F3FDC5004FDE1D /* EditViewController.m in Sources */,
+				01B0423315F3FDC5004FDE1D /* LoginViewController.m in Sources */,
+				01B0423515F3FDC5004FDE1D /* MyVideosViewController.m in Sources */,
+				01B0423615F3FDC5004FDE1D /* NetworkManager.m in Sources */,
+				01B0423715F3FDC5004FDE1D /* RecordViewController.m in Sources */,
+				01B0423815F3FDC5004FDE1D /* TopVideosViewController.m in Sources */,
+				01B0423915F3FDC5004FDE1D /* UserHelper.m in Sources */,
+				01B0423A15F3FDC5004FDE1D /* Video.m in Sources */,
+				01B0423B15F3FDC5004FDE1D /* VideoCell.m in Sources */,
+				01B0423D15F3FDC5004FDE1D /* VideoHelper.m in Sources */,
+				01B0423E15F3FDC5004FDE1D /* VideoPlayerController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		017E42EA14CF9B2800B47B4C /* PBXTargetDependency */ = {
+		01B0425315F40020004FDE1D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Dailymotion;
-			targetProxy = 017E42E914CF9B2800B47B4C /* PBXContainerItemProxy */;
-		};
-		01A6F146152BA1E300C1778F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "facebook-ios-sdk";
-			targetProxy = 01A6F145152BA1E300C1778F /* PBXContainerItemProxy */;
+			targetProxy = 01B0425215F40020004FDE1D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -421,6 +516,10 @@
 		01F9FB901480FB6300745398 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "klaxpont/klaxpont-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -438,6 +537,10 @@
 		01F9FB911480FB6300745398 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "klaxpont/klaxpont-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
