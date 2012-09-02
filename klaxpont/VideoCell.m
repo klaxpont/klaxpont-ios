@@ -13,13 +13,15 @@
 @synthesize thumbnailView;
 @synthesize titleLabel;
 @synthesize editButton;
+@synthesize videoPlaceholder;
+
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         // Initialization code
-
+        [videoPlaceholder setHidden:YES];
     }
     return self;
 }

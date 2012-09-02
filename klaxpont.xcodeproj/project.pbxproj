@@ -13,10 +13,11 @@
 		0160DFEA15EC0BA400BC1209 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0160DFE815EC0BA400BC1209 /* LoginViewController.xib */; };
 		0160DFEB15EC0F3E00BC1209 /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A6F149152BA57F00C1778F /* Settings.m */; };
 		016D0616152A5761001B7D30 /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 016D0615152A5761001B7D30 /* NSString+Additions.m */; };
-		017E42EB14CF9B2F00B47B4C /* libDailymotion.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 017E42E614CF9B1C00B47B4C /* libDailymotion.a */; };
 		01953F9A14D0A4120001169D /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 01953F9914D0A4120001169D /* MBProgressHUD.m */; };
 		019E021E1534C461002BC4F2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 019E021F1534C461002BC4F2 /* InfoPlist.strings */; };
 		01A0E2C915ED6FB50053BD6D /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A0E2C815ED6FB50053BD6D /* NetworkManager.m */; };
+		01B1E23815F256C900930F5F /* VideoPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B1E23715F256C900930F5F /* VideoPlayerController.m */; };
+		01B1E24A15F26ECC00930F5F /* libDailymotion.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 01B1E24515F26E6500930F5F /* libDailymotion.a */; };
 		01C37D2215EA65C900FCCEF5 /* VideoHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 01C37D2115EA65C900FCCEF5 /* VideoHelper.m */; };
 		01F972FC1491580100D763EA /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01F972FB1491580100D763EA /* MediaPlayer.framework */; };
 		01F9FB761480FB6300745398 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01F9FB751480FB6300745398 /* UIKit.framework */; };
@@ -50,23 +51,23 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		017E42E514CF9B1C00B47B4C /* PBXContainerItemProxy */ = {
+		01B1E24415F26E6500930F5F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 01045B3414CF7A9B00970E6C /* iOS.xcodeproj */;
+			containerPortal = 01B1E23C15F26E6500930F5F /* Dailymotion SDK iOS.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = D2AAC07E0554694100DB518D;
 			remoteInfo = Dailymotion;
 		};
-		017E42E714CF9B1C00B47B4C /* PBXContainerItemProxy */ = {
+		01B1E24615F26E6500930F5F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 01045B3414CF7A9B00970E6C /* iOS.xcodeproj */;
+			containerPortal = 01B1E23C15F26E6500930F5F /* Dailymotion SDK iOS.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 53E273561265BD1C00B541BE;
 			remoteInfo = DailymotionTests;
 		};
-		017E42E914CF9B2800B47B4C /* PBXContainerItemProxy */ = {
+		01B1E24815F26E7F00930F5F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 01045B3414CF7A9B00970E6C /* iOS.xcodeproj */;
+			containerPortal = 01B1E23C15F26E6500930F5F /* Dailymotion SDK iOS.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = D2AAC07D0554694100DB518D;
 			remoteInfo = Dailymotion;
@@ -74,7 +75,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		01045B3414CF7A9B00970E6C /* iOS.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = iOS.xcodeproj; path = dailymotion/iOS.xcodeproj; sourceTree = "<group>"; };
 		01045B8114CF90DB00970E6C /* Settings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Settings.plist; sourceTree = "<group>"; };
 		010FF6E515325AA3007A9998 /* AccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountViewController.h; sourceTree = "<group>"; };
 		010FF6E615325AA4007A9998 /* AccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountViewController.m; sourceTree = "<group>"; };
@@ -94,6 +94,9 @@
 		01A0E2CC15ED95BA0053BD6D /* add dailymotion video id.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "add dailymotion video id.xcdatamodel"; sourceTree = "<group>"; };
 		01A6F148152BA57F00C1778F /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
 		01A6F149152BA57F00C1778F /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Settings.m; sourceTree = "<group>"; };
+		01B1E23615F256C900930F5F /* VideoPlayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoPlayerController.h; sourceTree = "<group>"; };
+		01B1E23715F256C900930F5F /* VideoPlayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoPlayerController.m; sourceTree = "<group>"; };
+		01B1E23C15F26E6500930F5F /* Dailymotion SDK iOS.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "Dailymotion SDK iOS.xcodeproj"; path = "dailymotion/Dailymotion SDK iOS.xcodeproj"; sourceTree = "<group>"; };
 		01C37D2015EA65C900FCCEF5 /* VideoHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoHelper.h; sourceTree = "<group>"; };
 		01C37D2115EA65C900FCCEF5 /* VideoHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoHelper.m; sourceTree = "<group>"; };
 		01F972FB1491580100D763EA /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
@@ -144,12 +147,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01B1E24A15F26ECC00930F5F /* libDailymotion.a in Frameworks */,
 				0160DFE415EC04CC00BC1209 /* Accounts.framework in Frameworks */,
 				09619F5715DEF6A500865DCA /* CoreMedia.framework in Frameworks */,
 				09619F5515DEF69600865DCA /* CoreVideo.framework in Frameworks */,
 				09619F5315DEF58200865DCA /* AVFoundation.framework in Frameworks */,
 				09F2850715DE713100F8E7E8 /* CoreData.framework in Frameworks */,
-				017E42EB14CF9B2F00B47B4C /* libDailymotion.a in Frameworks */,
 				01F972FC1491580100D763EA /* MediaPlayer.framework in Frameworks */,
 				01F9FB961481039300745398 /* MobileCoreServices.framework in Frameworks */,
 				01F9FB761480FB6300745398 /* UIKit.framework in Frameworks */,
@@ -182,15 +185,6 @@
 			path = klaxpont;
 			sourceTree = "<group>";
 		};
-		017E42E114CF9B1C00B47B4C /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				017E42E614CF9B1C00B47B4C /* libDailymotion.a */,
-				017E42E814CF9B1C00B47B4C /* Tests.octest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		01A0E2C615ED6F8A0053BD6D /* Singleton */ = {
 			isa = PBXGroup;
 			children = (
@@ -209,10 +203,18 @@
 			name = Network;
 			sourceTree = "<group>";
 		};
+		01B1E23D15F26E6500930F5F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				01B1E24515F26E6500930F5F /* libDailymotion.a */,
+				01B1E24715F26E6500930F5F /* Tests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		01F9FB661480FB6300745398 = {
 			isa = PBXGroup;
 			children = (
-				0160DFE315EC04CC00BC1209 /* Accounts.framework */,
 				016D0613152A5643001B7D30 /* Helpers */,
 				093D00B715DD5FA700518A9D /* Dailymotion */,
 				01045B4014CF7ABC00970E6C /* MBProgressHUD */,
@@ -233,6 +235,7 @@
 		01F9FB741480FB6300745398 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0160DFE315EC04CC00BC1209 /* Accounts.framework */,
 				09619F5615DEF6A500865DCA /* CoreMedia.framework */,
 				09619F5415DEF69600865DCA /* CoreVideo.framework */,
 				09619F5215DEF58200865DCA /* AVFoundation.framework */,
@@ -287,7 +290,7 @@
 		093D00B715DD5FA700518A9D /* Dailymotion */ = {
 			isa = PBXGroup;
 			children = (
-				01045B3414CF7A9B00970E6C /* iOS.xcodeproj */,
+				01B1E23C15F26E6500930F5F /* Dailymotion SDK iOS.xcodeproj */,
 			);
 			name = Dailymotion;
 			sourceTree = "<group>";
@@ -354,6 +357,8 @@
 				0160DFE615EC0BA400BC1209 /* LoginViewController.h */,
 				0160DFE715EC0BA400BC1209 /* LoginViewController.m */,
 				0160DFE815EC0BA400BC1209 /* LoginViewController.xib */,
+				01B1E23615F256C900930F5F /* VideoPlayerController.h */,
+				01B1E23715F256C900930F5F /* VideoPlayerController.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -382,7 +387,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				017E42EA14CF9B2800B47B4C /* PBXTargetDependency */,
+				01B1E24915F26E7F00930F5F /* PBXTargetDependency */,
 			);
 			name = klaxpont;
 			productName = klaxpont;
@@ -409,8 +414,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 017E42E114CF9B1C00B47B4C /* Products */;
-					ProjectRef = 01045B3414CF7A9B00970E6C /* iOS.xcodeproj */;
+					ProductGroup = 01B1E23D15F26E6500930F5F /* Products */;
+					ProjectRef = 01B1E23C15F26E6500930F5F /* Dailymotion SDK iOS.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -421,18 +426,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		017E42E614CF9B1C00B47B4C /* libDailymotion.a */ = {
+		01B1E24515F26E6500930F5F /* libDailymotion.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libDailymotion.a;
-			remoteRef = 017E42E514CF9B1C00B47B4C /* PBXContainerItemProxy */;
+			remoteRef = 01B1E24415F26E6500930F5F /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		017E42E814CF9B1C00B47B4C /* Tests.octest */ = {
+		01B1E24715F26E6500930F5F /* Tests.octest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = Tests.octest;
-			remoteRef = 017E42E714CF9B1C00B47B4C /* PBXContainerItemProxy */;
+			remoteRef = 01B1E24615F26E6500930F5F /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -480,16 +485,17 @@
 				0160DFE915EC0BA400BC1209 /* LoginViewController.m in Sources */,
 				0160DFEB15EC0F3E00BC1209 /* Settings.m in Sources */,
 				01A0E2C915ED6FB50053BD6D /* NetworkManager.m in Sources */,
+				01B1E23815F256C900930F5F /* VideoPlayerController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		017E42EA14CF9B2800B47B4C /* PBXTargetDependency */ = {
+		01B1E24915F26E7F00930F5F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Dailymotion;
-			targetProxy = 017E42E914CF9B2800B47B4C /* PBXContainerItemProxy */;
+			targetProxy = 01B1E24815F26E7F00930F5F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

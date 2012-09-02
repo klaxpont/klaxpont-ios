@@ -10,17 +10,17 @@
 #import "NetworkManager.h"
 #import "Video.h"
 #import "VideoCell.h"
-#import "VideoHelper.h"
-#import "AppDelegate.h"
+#import "VideoPlayerController.h"
 
 @interface TopVideosViewController ()
 {
-    DailymotionPlayerViewController *_playerController;
+    VideoPlayerController *controller;
 }
 -(void) configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
 @end
 
 @implementation TopVideosViewController
+@synthesize videos = _videos;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -28,7 +28,7 @@
     if (self) {
         // Custom initialization
         self.title = @"Les Vidébas";
-        _videos = [[NetworkManager sharedManager] retrieveVideos];
+
     }
     return self;
 }
@@ -42,6 +42,7 @@
     UITableViewCell *cell = [nib objectAtIndex:0];
     self.tableView.rowHeight = cell.frame.size.height;
 
+    _videos = [[NetworkManager sharedManager] retrieveVideos];
 }
 
 - (void)viewDidUnload
@@ -62,11 +63,14 @@
 -(void) configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
     NSLog(@"%d", [indexPath row]);
+    
     NSDictionary *video = [_videos objectAtIndex:[indexPath row]];
-    NSLog(@"%@",video);
-    [[(VideoCell*)cell titleLabel] setText:[video objectForKey:@"title"]];
-//    [[(VideoCell*)cell thumbnailView] setImage:[video thumbnail]];
-    [(VideoCell*)cell setAccessoryType:UITableViewCellAccessoryNone];
+    if(video){
+        //NSLog(@"%@",video);
+        [[(VideoCell*)cell titleLabel] setText:[video objectForKey:@"title"]];
+    //    [[(VideoCell*)cell thumbnailView] setImage:[video thumbnail]];
+        [(VideoCell*)cell setAccessoryType:UITableViewCellAccessoryNone];
+    }
 }
 
 #pragma mark - Table view data source
@@ -95,41 +99,60 @@
     // Configure the cell.
     [self configureCell:cell atIndexPath:indexPath];
     return cell;
-
 }
 
 
 
 #pragma mark - Table view delegate
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSDictionary *video = [_videos objectAtIndex:indexPath.row];
-//    NSString *videoUrl = [video objectForKey:@"video_url"];
-    NSString *videoId = [video objectForKey:@"dailymotion_video_id"];
-    if(_playerController == nil) {
-        Dailymotion *dailymotion = [[Dailymotion alloc] init];
-        //todo handle missing session
-        [dailymotion setSession:[APP_DELEGATE dailymotionSession]];
-
-        NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:
-                                [NSNumber numberWithBool:YES],@"fullscreen",
-                                [NSNumber numberWithBool:YES],@"autoplay",
-                                nil];
-        _playerController = [dailymotion player:videoId params:params];
-        _playerController.delegate = self;
+    NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"VideoCell" owner:self options:nil];
+    UITableViewCell *cell = [nib objectAtIndex:0];
+    if(selectedPath && indexPath.row == selectedPath.row){
+        return cell.frame.size.height + 200 + 10;
     }
-    [_playerController load:videoId];
-    [self presentModalViewController:_playerController animated:YES];
-//    [VideoHelper openDailymotionVideo:videoUrl from:self];
+
+    return cell.frame.size.height;
 }
 
-- (void)dailymotionPlayer:(DailymotionPlayerViewController *)player didReceiveEvent:(NSString *)eventName
+- (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if ([eventName isEqualToString:@"ended"])
-    {
-        [player dismissModalViewControllerAnimated:YES];
-//        progressBar.value = player.currentTime / player.duration;
+    if (selectedPath && indexPath.row == selectedPath.row)
+        selectedPath = nil;
+    if(controller)
+        [controller.view removeFromSuperview];
+
+}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (selectedPath && indexPath.row == selectedPath.row)
+        return;
+
+    NSDictionary *video = [_videos objectAtIndex:indexPath.row];
+    NSString *videoId = [video objectForKey:@"dailymotion_video_id"];
+    if (controller == nil) {
+        controller = [[VideoPlayerController alloc] initWithDailymotionVideo:videoId];
+    }else{
+        [controller setVideoId:videoId];
+    }
+    
+    selectedPath = indexPath;
+
+    [tableView beginUpdates];    
+    VideoCell* cell = (VideoCell*)[tableView cellForRowAtIndexPath:indexPath];
+    if (cell) {
+        if (selectedPath && indexPath.row == selectedPath.row && controller) {
+           [controller.view setFrame:CGRectMake(10, 72, 300, 200)];
+            // TODO: replace hard values
+            [cell.contentView addSubview:controller.view];
+        }
+    }
+
+    [tableView endUpdates];
+
+    if (controller) {
+        [controller play];
     }
 }
 
