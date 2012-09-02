@@ -161,6 +161,7 @@ static NSString *knetworkManager = @"networkManager";
         else{
             NSLog(@"data from klaxpont %@",result );
             [[UserHelper default] setKlaxpontId:[result objectForKey:@"user_id"]];
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"user.registered" object:nil];
         }
     }
 }

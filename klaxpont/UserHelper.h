@@ -16,24 +16,28 @@
 {
     NSUserDefaults *_defaults;
 
-    NSMutableData *_facebookPicture;
     NSString *_firstName;
     NSString *_lastName;
     NSNumber *_facebookId;
     NSNumber *_klaxpontId;// Klaxpont User id
+    BOOL _disclaimer;
 }
 
 
-@property(nonatomic, retain, setter = setFirstName:) NSString* firstName;
-@property(nonatomic, retain, setter = setLastName:) NSString* lastName;
-@property(nonatomic, retain, setter = setFacebookPicture:) NSMutableData* facebookPicture;
-@property(nonatomic, retain, setter = setFacebookId:) NSNumber* facebookId;
-@property(nonatomic, retain, setter = setKlaxpontId:) NSNumber* klaxpontId;
+@property(nonatomic, retain) NSString* firstName;
+@property(nonatomic, retain) NSString* lastName;
+@property(nonatomic, retain) NSNumber* facebookId;
+@property(nonatomic, retain) NSNumber* klaxpontId;
+
 
 +(UserHelper*) default;
+
+- (void) load;
+- (void) save;
+- (void) reset;
 
 -(BOOL)isRegistered;
 -(BOOL)acceptedDisclaimer;
 -(void)acceptDisclaimer;
-
+-(void)reset;
 @end

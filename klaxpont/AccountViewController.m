@@ -7,14 +7,17 @@
 //
 
 #import "AccountViewController.h"
-#import "AppDelegate.h"
+
 #import "LoginViewController.h"
+#import "AppDelegate.h"
+#import "UserHelper.h"
+
 @interface AccountViewController ()
 
 @end
 
 @implementation AccountViewController
-@synthesize facebookPicture;
+
 @synthesize username;
 @synthesize facebookButton;
 
@@ -32,45 +35,34 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
-    _user = [UserHelper default];
-    [self updateFacebookPicture];
-
-
-    [self updateFacebookButton];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(requestFacebookInfos) name:@"facebookDidLogin" object:nil];
-
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateFacebookButton) name:@"user.registered" object:nil];
 }
-- (void) updateFacebookPicture
+
+-(void) viewDidAppear:(BOOL)animated
 {
-    
-    UIImage *image = [UIImage imageWithData:[_user facebookPicture]];
-    [[self facebookPicture] setImage:image];
-    [[self facebookPicture] setFrame:CGRectMake(10, 10, image.size.width, image.size.height)];
+    [super viewDidAppear:animated];
+    [self updateFacebookButton];
 }
+
 -(void)updateFacebookButton
 {
-    if (_user.firstName) {
-        [[self username] setText:_user.firstName];
-    }else {
+    if ([[UserHelper default] isRegistered]) {
         [[self username] setText:nil];
+        [[self username] setHidden:YES];
+        [[self facebookButton] setTitle:@"Se déconnecter" forState:UIControlStateNormal];
+   }else {
+       [[self username] setHidden:NO];
+       [[self username] setText:[UserHelper default].firstName];
+       [[self facebookButton] setTitle:@"S'identifier/S'inscrire" forState:UIControlStateNormal];
     }
-    
-//    if ([[APP_DELEGATE facebook] isSessionValid]) {
-//        [[self facebookButton] setTitle:@"Se déconnecter" forState:UIControlStateNormal];              
-//    }else {
-//        [[self facebookButton] setTitle:@"Se connecter" forState:UIControlStateNormal];
-//    }
 }
 
 - (void)viewDidUnload
 {
-    [self setFacebookButton:nil];
-
-    [self setFacebookPicture:nil];
-    [self setUsername:nil];
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
+    [self setFacebookButton:nil];
+    [self setUsername:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -84,8 +76,8 @@
     if (![[UserHelper default] isRegistered])
         [self facebookLogin];
     else
-         [self facebookLogout];
-//    [self updateFacebookButton];
+        [[UserHelper default] reset];
+    [self updateFacebookButton];
 }
 
 - (void)facebookLogin
@@ -96,58 +88,6 @@
     
     [self presentModalViewController:nav animated:YES];
    
-}
-
-- (void)facebookLogout
-{
-
-
-    
-}
-#pragma mark - Requests
-
-
-#pragma mark Facebook delegate methods
-- (void)requestLoading:(FBRequest *)request
-{
-    //display loading
-}
-- (void) request:(FBRequest *)request didLoadRawResponse:(NSData *)data{
-//    if([request.url hasSuffix:FACEBOOK_PROFILE_PICTURE_PATH])
-//    {
-//        NSLog(@"request %@", request.url );     
-//        if(_user.facebookPicture == nil)
-//        {
-//            _user.facebookPicture = [[NSMutableData alloc] initWithData:data];
-//        }else {
-//            [_user.facebookPicture appendData:data];
-//        }
-//
-//    }
-}
-- (void) request:(FBRequest *)request didLoad:(id)result
-{
-//    if([request.url hasSuffix:FACEBOOK_PROFILE_PATH])
-//    {
-//        NSDictionary *identity = (NSDictionary*)result;
-//        NSLog(@"response profile %@", identity); 
-//
-//        // save it to nsuserdefaults for now but should we use core data instead?
-//        [_user setFirstName:[identity objectForKey:@"first_name"]];
-//        [_user setLastName:[identity objectForKey:@"last_name"]];
-//        [_user setFacebookId:[identity objectForKey:@"id"]];
-//
-//        [self updateFacebookButton];
-//        
-//        //register to klaxpont server
-//        if (![_user isRegistered])
-//            [self registerUser];
-//    }
-//    
-//    else if([request.url hasSuffix:FACEBOOK_PROFILE_PICTURE_PATH])
-//    {
-//        [self updateFacebookPicture];
-//    }   
 }
 
 @end

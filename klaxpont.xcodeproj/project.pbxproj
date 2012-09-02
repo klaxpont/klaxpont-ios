@@ -196,13 +196,6 @@
 			name = Singleton;
 			sourceTree = "<group>";
 		};
-		01A0E2CB15ED7D630053BD6D /* Network */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Network;
-			sourceTree = "<group>";
-		};
 		01B1E23D15F26E6500930F5F /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -327,7 +320,6 @@
 		093D00C315DD62BF00518A9D /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				01A0E2CB15ED7D630053BD6D /* Network */,
 				093D00C015DD62B900518A9D /* Video.h */,
 				093D00C115DD62B900518A9D /* Video.m */,
 			);
