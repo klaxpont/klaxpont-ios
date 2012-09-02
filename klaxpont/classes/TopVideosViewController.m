@@ -69,7 +69,7 @@
         //NSLog(@"%@",video);
         [[(VideoCell*)cell titleLabel] setText:[video objectForKey:@"title"]];
 //       [[(VideoCell*)cell thumbnailView] setImage:[video thumbnail]];
-//        [[(VideoCell*)cell imageView] setImage:[UIImage imageNamed:@"default_thumbnail.jpg"]];
+        [[(VideoCell*)cell  thumbnailView] setImage:[UIImage imageNamed:@"default_thumbnail.jpg"]];
        
         [(VideoCell*)cell setAccessoryType:UITableViewCellAccessoryNone];
     }
