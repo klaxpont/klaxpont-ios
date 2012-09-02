@@ -50,7 +50,6 @@
     
     // 
     _videoPickerController = [[VideoPickerController alloc] init];
-    [_videoPickerController setDelegate:self];
 
     // custom table cell
     NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"VideoCell" owner:self options:nil];
@@ -66,7 +65,7 @@
          abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
          */
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-        abort();
+        //abort();
     }
 
 }
@@ -88,6 +87,7 @@
 
 - (void) addVideo
 {
+    [_videoPickerController setDelegate:self];
     [self presentModalViewController:_videoPickerController animated:YES];
 
 }
@@ -116,24 +116,33 @@
 }
 
 - (void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
-    [picker dismissModalViewControllerAnimated:YES];
     [picker setDelegate:nil];
     NSLog(@"infos from dictionary : %@", info);
     
     NSURL *mediaUrl = [info objectForKey:UIImagePickerControllerMediaURL];
     NSString *moviePath = [mediaUrl path];
-    // saving video to Documents
-     NSLog(@"video filename : %@", [mediaUrl lastPathComponent]);
 
-    NSError *error = nil;
-    NSString *newVideoPath = [[self applicationDocumentsDirectory] stringByAppendingPathComponent: [mediaUrl lastPathComponent]];
-    [[NSFileManager defaultManager] moveItemAtPath:moviePath toPath:newVideoPath error:&error];
-    if (error == nil) {
-        if ([DatabaseHelper saveLocalVideo:newVideoPath] != nil)
-            NSLog(@"Video successfully saved!");
-        else
-            NSLog(@"Video was not saved in db!");
-    }
+    [picker dismissViewControllerAnimated:YES completion:^{
+    
+        // saving video to Documents
+        NSLog(@"video filename : %@", [mediaUrl lastPathComponent]);
+        
+        NSError *error = nil;
+        NSString *newVideoPath = [[self applicationDocumentsDirectory] stringByAppendingPathComponent: [mediaUrl lastPathComponent]];
+        [[NSFileManager defaultManager] moveItemAtPath:moviePath toPath:newVideoPath error:&error];
+     
+        if (error == nil) {
+            Video *video = [DatabaseHelper saveLocalVideo:newVideoPath];
+            if (video != nil){
+                NSLog(@"Video successfully saved!");
+                EditViewController *editController = EditViewController.new;
+                [editController setEditedVideo:video];
+                [self.navigationController pushViewController:editController animated:YES];
+            }
+            else
+                NSLog(@"Video was not saved in db!");
+        }
+    }];
 }
 
 #pragma mark Table view data source
@@ -156,12 +165,6 @@
     [[(VideoCell*)cell thumbnailView] setImage:[video thumbnail]];
     [[(VideoCell*)cell editButton] addTarget:self action:@selector(edit) forControlEvents:UIControlEventTouchUpInside];
 }
-
-//-(void) edit
-//{
-//    EditViewController *editViewController = EditViewController.new;
-//    [self presentModalViewController:editViewController animated:YES];
-//}
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath

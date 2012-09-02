@@ -11,6 +11,7 @@
 #import "DisclaimerViewController.h"
 #import "VideoPickerController.h"
 #import "DatabaseHelper.h"
+#import "EditViewController.h"
 
 @interface RecordViewController ()
 {
@@ -28,7 +29,6 @@
         // Custom initialization
         self.title = @"Record";
         _videoPickerController = [[VideoPickerController alloc] init];
-        [_videoPickerController setDelegate:self];
     }
     return self;
 }
@@ -102,6 +102,7 @@
         }
         
         [_videoPickerController setShowsCameraControls:YES];
+        [_videoPickerController setDelegate:self];
         [self presentModalViewController:_videoPickerController animated:YES];
     }else{
         // TODO display error message in case device has no camera video
@@ -120,27 +121,48 @@
 }
 
 - (void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
-    [picker dismissModalViewControllerAnimated:YES];
     [picker setDelegate:nil];
     NSLog(@"infos from dictionary : %@", info);
     
     NSURL *mediaUrl = [info objectForKey:UIImagePickerControllerMediaURL];
-    
-    if([info objectForKey:@"UIImagePickerControllerReferenceURL"] == nil){//no reference so that's a capture, let's save the video
-        NSString *moviePath = [mediaUrl path];
-        if (UIVideoAtPathIsCompatibleWithSavedPhotosAlbum (moviePath)) {
-            UISaveVideoAtPathToSavedPhotosAlbum(moviePath, nil, nil, nil);
-            if ([DatabaseHelper saveLocalVideo:moviePath] != nil)
-                NSLog(@"Video successfully saved!");
-            else
-                NSLog(@"Video was not saved in db!");
-        }
-        
-    }
+    [picker dismissViewControllerAnimated:YES completion:^{
+        if([info objectForKey:@"UIImagePickerControllerReferenceURL"] == nil){//no reference so that's a capture, let's save the video
+            NSString *moviePath = [mediaUrl path];
+            if (UIVideoAtPathIsCompatibleWithSavedPhotosAlbum (moviePath)) {
+                UISaveVideoAtPathToSavedPhotosAlbum(moviePath, nil, nil, nil);
+                Video *video = [DatabaseHelper saveLocalVideo:moviePath];
+                if (video != nil){
+                    NSLog(@"Video successfully saved!");
+                    
+                    UITabBarController *tabBar = ((UITabBarController*)self.parentViewController);
+                    
+                    UIView * fromView = self.view;
+                    UIView * toView = [[tabBar.viewControllers objectAtIndex:TABBAR_MYVIDEOS_INDEX] view];
+                    
+                    // Transition using a page curl.
+                    [UIView transitionFromView:fromView
+                                        toView:toView
+                                      duration:0.5
+                                       options:UIViewAnimationOptionTransitionCurlUp
+                                    completion:^(BOOL finished) {
+                                        if (finished) {
+                                            tabBar.selectedIndex = TABBAR_MYVIDEOS_INDEX;// go to videbas
+                                            
+                                            EditViewController *editController = EditViewController.new;
+                                            [editController setEditedVideo:video];
+                                            UINavigationController *nav = tabBar.selectedViewController;
+                                            [nav pushViewController:editController animated:YES];
+                                        }
+                                    }];
 
-    
-    
-    
+
+      
+                    //                    [self presentModalViewController:editController animated:YES];
+                }else
+                    NSLog(@"Video was not saved in db!");
+            }
+        }
+    }];
 }
 
 @end
