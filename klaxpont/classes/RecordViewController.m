@@ -150,14 +150,11 @@
                                             
                                             EditViewController *editController = EditViewController.new;
                                             [editController setEditedVideo:video];
-                                            UINavigationController *nav = tabBar.selectedViewController;
+                                            UINavigationController *nav = (UINavigationController *)tabBar.selectedViewController;
                                             [nav pushViewController:editController animated:YES];
                                         }
                                     }];
 
-
-      
-                    //                    [self presentModalViewController:editController animated:YES];
                 }else
                     NSLog(@"Video was not saved in db!");
             }
