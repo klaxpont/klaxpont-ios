@@ -39,13 +39,21 @@
 	[self.view setBackgroundColor:[UIColor whiteColor]];
     
 
-    
-    
+    UILabel *catchphrase = [[UILabel alloc] init];
+    [catchphrase setFrame:CGRectMake((self.view.frame.size.width/2) - 100, 40, 200, 40)];
+
+    [catchphrase setTextAlignment:UITextAlignmentCenter];
+
+
+    [catchphrase setText:@"Klaxponnne !"];
+
+    [self.view addSubview:catchphrase];
+
     
     UIImage *image = [UIImage imageNamed:@"klaxon.png"];
     UIButton *goRecordButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, image.size.width, image.size.height)];
     [goRecordButton setImage:image forState:UIControlStateNormal];
-    [goRecordButton setCenter:CGPointMake(self.view.frame.size.width/2, (self.view.frame.size.height - image.size.height)/2)];
+    [goRecordButton setCenter:CGPointMake(self.view.frame.size.width/2, (self.view.frame.size.height - image.size.height)/2 + 44)];
     [goRecordButton addTarget:self action:@selector(showRecorder) forControlEvents:UIControlEventTouchUpInside];
     
 //    [goRecordButton setTitle:@"RECORD" forState:UIControlStateNormal];

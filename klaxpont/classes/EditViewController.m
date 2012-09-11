@@ -80,7 +80,6 @@
     if (![[UserHelper default] isRegistered]) {
         LoginViewController *loginViewController = [[LoginViewController alloc] init];
         UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:loginViewController];
-        [[nav navigationBar] setBarStyle:UIBarStyleBlack];
         
         [[self navigationController] presentModalViewController:nav animated:YES];
         return;

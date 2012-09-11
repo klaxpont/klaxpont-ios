@@ -16,6 +16,7 @@
 #import "AccountViewController.h"
 #import "NetworkManager.h"
 #import "UserHelper.h"
+#import "KlaxAppearance.h"
 
 @implementation AppDelegate
 
@@ -39,15 +40,16 @@
     myVideosViewController.managedObjectContext = [self managedObjectContext];
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:myVideosViewController];
     tabBarController.viewControllers = @[recordViewController, navController, topVideosViewController, accountViewController];
-//    tabBarController.viewCon  trollers = @[recordViewController, myVideosViewController, topVideosViewController, accountViewController];
-    
 
+    
     dispatch_async(dispatch_get_main_queue(), ^{
         [[NetworkManager sharedManager] requestDailymotionToken];
     });
     [[self window] addSubview:tabBarController.view];
-        NSLog(@"view image : %@", NSStringFromCGSize(    tabBarController.tabBar.frame.size));
+    NSLog(@"view image : %@", NSStringFromCGSize(    tabBarController.tabBar.frame.size));
 	[[self window] makeKeyAndVisible];
+
+    [KlaxAppearance applyStyle];  
     return YES;
 }
 				

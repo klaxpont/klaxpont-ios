@@ -45,5 +45,10 @@
 	</array>
 	<key>UIStatusBarHidden</key>
 	<true/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Oregano-Regular.ttf</string>
+		<string>Oregano-Italic.ttf</string>
+	</array>
 </dict>
 </plist>

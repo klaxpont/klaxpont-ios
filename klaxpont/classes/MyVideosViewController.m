@@ -43,7 +43,6 @@
     [super viewDidLoad];
     
     // custom top bar
-    [[self navigationController].navigationBar setBarStyle:UIBarStyleBlack];
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addVideo)];
     [[self navigationItem] setRightBarButtonItem:addButton];
     

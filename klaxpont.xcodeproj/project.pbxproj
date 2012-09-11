@@ -42,6 +42,12 @@
 		01B042A815F40503004FDE1D /* VideoPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B0428F15F40503004FDE1D /* VideoPickerController.m */; };
 		01B042A915F40503004FDE1D /* VideoPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B0429115F40503004FDE1D /* VideoPlayerController.m */; };
 		01B042AA15F40503004FDE1D /* VideosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B0429315F40503004FDE1D /* VideosViewController.m */; };
+		01C6286F15FE9C61009D03D5 /* Strato-linked.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 01C6286915FE9C61009D03D5 /* Strato-linked.ttf */; };
+		01C6287015FE9C61009D03D5 /* Strato-unlinked.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 01C6286A15FE9C61009D03D5 /* Strato-unlinked.ttf */; };
+		01C6287915FE9F78009D03D5 /* Oregano-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 01C6287315FE9F78009D03D5 /* Oregano-Italic.ttf */; };
+		01C6287A15FE9F78009D03D5 /* Oregano-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 01C6287415FE9F78009D03D5 /* Oregano-Regular.ttf */; };
+		01C6287C15FE9F78009D03D5 /* Satisfy-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 01C6287715FE9F78009D03D5 /* Satisfy-Regular.ttf */; };
+		01C6287F15FEB866009D03D5 /* KlaxAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = 01C6287E15FEB866009D03D5 /* KlaxAppearance.m */; };
 		01F972FC1491580100D763EA /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01F972FB1491580100D763EA /* MediaPlayer.framework */; };
 		01F9FB761480FB6300745398 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01F9FB751480FB6300745398 /* UIKit.framework */; };
 		01F9FB781480FB6300745398 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01F9FB771480FB6300745398 /* Foundation.framework */; };
@@ -130,6 +136,19 @@
 		01B0429115F40503004FDE1D /* VideoPlayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VideoPlayerController.m; path = classes/VideoPlayerController.m; sourceTree = "<group>"; };
 		01B0429215F40503004FDE1D /* VideosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VideosViewController.h; path = classes/VideosViewController.h; sourceTree = "<group>"; };
 		01B0429315F40503004FDE1D /* VideosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VideosViewController.m; path = classes/VideosViewController.m; sourceTree = "<group>"; };
+		01C6286515FE9C61009D03D5 /* FontLog.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FontLog.txt; sourceTree = "<group>"; };
+		01C6286615FE9C61009D03D5 /* IMG_0928.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMG_0928.png; sourceTree = "<group>"; };
+		01C6286715FE9C61009D03D5 /* OFL-FAQ.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "OFL-FAQ.txt"; sourceTree = "<group>"; };
+		01C6286815FE9C61009D03D5 /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
+		01C6286915FE9C61009D03D5 /* Strato-linked.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Strato-linked.ttf"; sourceTree = "<group>"; };
+		01C6286A15FE9C61009D03D5 /* Strato-unlinked.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Strato-unlinked.ttf"; sourceTree = "<group>"; };
+		01C6287215FE9F78009D03D5 /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
+		01C6287315FE9F78009D03D5 /* Oregano-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oregano-Italic.ttf"; sourceTree = "<group>"; };
+		01C6287415FE9F78009D03D5 /* Oregano-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oregano-Regular.ttf"; sourceTree = "<group>"; };
+		01C6287615FE9F78009D03D5 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		01C6287715FE9F78009D03D5 /* Satisfy-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Satisfy-Regular.ttf"; sourceTree = "<group>"; };
+		01C6287D15FEB866009D03D5 /* KlaxAppearance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KlaxAppearance.h; path = classes/KlaxAppearance.h; sourceTree = "<group>"; };
+		01C6287E15FEB866009D03D5 /* KlaxAppearance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KlaxAppearance.m; path = classes/KlaxAppearance.m; sourceTree = "<group>"; };
 		01F972FB1491580100D763EA /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		01F9FB711480FB6300745398 /* klaxpont.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = klaxpont.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01F9FB751480FB6300745398 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -253,6 +272,8 @@
 				01B0428215F40502004FDE1D /* Settings.m */,
 				01B0428C15F40503004FDE1D /* VideoHelper.h */,
 				01B0428D15F40503004FDE1D /* VideoHelper.m */,
+				01C6287D15FEB866009D03D5 /* KlaxAppearance.h */,
+				01C6287E15FEB866009D03D5 /* KlaxAppearance.m */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -277,6 +298,7 @@
 		01B0426515F40480004FDE1D /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				01C6286315FE9C61009D03D5 /* fonts */,
 				01B0426615F40480004FDE1D /* images */,
 			);
 			path = resources;
@@ -289,6 +311,48 @@
 				01B0426815F40480004FDE1D /* klaxon.png */,
 			);
 			path = images;
+			sourceTree = "<group>";
+		};
+		01C6286315FE9C61009D03D5 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				01C6287115FE9F78009D03D5 /* Oregano */,
+				01C6287515FE9F78009D03D5 /* Satisfy */,
+				01C6286415FE9C61009D03D5 /* strato */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
+		01C6286415FE9C61009D03D5 /* strato */ = {
+			isa = PBXGroup;
+			children = (
+				01C6286515FE9C61009D03D5 /* FontLog.txt */,
+				01C6286615FE9C61009D03D5 /* IMG_0928.png */,
+				01C6286715FE9C61009D03D5 /* OFL-FAQ.txt */,
+				01C6286815FE9C61009D03D5 /* OFL.txt */,
+				01C6286915FE9C61009D03D5 /* Strato-linked.ttf */,
+				01C6286A15FE9C61009D03D5 /* Strato-unlinked.ttf */,
+			);
+			path = strato;
+			sourceTree = "<group>";
+		};
+		01C6287115FE9F78009D03D5 /* Oregano */ = {
+			isa = PBXGroup;
+			children = (
+				01C6287215FE9F78009D03D5 /* OFL.txt */,
+				01C6287315FE9F78009D03D5 /* Oregano-Italic.ttf */,
+				01C6287415FE9F78009D03D5 /* Oregano-Regular.ttf */,
+			);
+			path = Oregano;
+			sourceTree = "<group>";
+		};
+		01C6287515FE9F78009D03D5 /* Satisfy */ = {
+			isa = PBXGroup;
+			children = (
+				01C6287615FE9F78009D03D5 /* LICENSE.txt */,
+				01C6287715FE9F78009D03D5 /* Satisfy-Regular.ttf */,
+			);
+			path = Satisfy;
 			sourceTree = "<group>";
 		};
 		01F9FB661480FB6300745398 = {
@@ -447,6 +511,11 @@
 				01B0429B15F40503004FDE1D /* EditViewController.xib in Resources */,
 				01B0429D15F40503004FDE1D /* LoginViewController.xib in Resources */,
 				01B042A615F40503004FDE1D /* VideoCell.xib in Resources */,
+				01C6286F15FE9C61009D03D5 /* Strato-linked.ttf in Resources */,
+				01C6287015FE9C61009D03D5 /* Strato-unlinked.ttf in Resources */,
+				01C6287915FE9F78009D03D5 /* Oregano-Italic.ttf in Resources */,
+				01C6287A15FE9F78009D03D5 /* Oregano-Regular.ttf in Resources */,
+				01C6287C15FE9F78009D03D5 /* Satisfy-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -478,6 +547,7 @@
 				01B042A815F40503004FDE1D /* VideoPickerController.m in Sources */,
 				01B042A915F40503004FDE1D /* VideoPlayerController.m in Sources */,
 				01B042AA15F40503004FDE1D /* VideosViewController.m in Sources */,
+				01C6287F15FEB866009D03D5 /* KlaxAppearance.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

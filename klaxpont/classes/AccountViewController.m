@@ -84,7 +84,6 @@
 {
     LoginViewController *loginViewController = [[LoginViewController alloc] init];
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:loginViewController];
-    [[nav navigationBar] setBarStyle:UIBarStyleBlack];
     
     [self presentModalViewController:nav animated:YES];
    
