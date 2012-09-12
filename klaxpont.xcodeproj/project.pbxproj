@@ -48,6 +48,7 @@
 		01F9FB7A1480FB6300745398 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01F9FB791480FB6300745398 /* CoreGraphics.framework */; };
 		01F9FB821480FB6300745398 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F9FB811480FB6300745398 /* main.m */; };
 		01F9FB961481039300745398 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01F9FB951481039300745398 /* MobileCoreServices.framework */; };
+		425B3BF81601246400507680 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 425B3BF71601246400507680 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -139,6 +140,7 @@
 		01F9FB811480FB6300745398 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		01F9FB831480FB6300745398 /* klaxpont-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "klaxpont-Prefix.pch"; sourceTree = "<group>"; };
 		01F9FB951481039300745398 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		425B3BF71601246400507680 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +159,7 @@
 				01F9FB781480FB6300745398 /* Foundation.framework in Frameworks */,
 				01F9FB7A1480FB6300745398 /* CoreGraphics.framework in Frameworks */,
 				01B0424515F3FFD7004FDE1D /* FacebookSDK.framework in Frameworks */,
+				425B3BF81601246400507680 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,8 +317,9 @@
 		01F9FB741480FB6300745398 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				01B0425F15F401EE004FDE1D /* CoreMedia.framework */,
 				01B0425D15F4014E004FDE1D /* libsqlite3.0.dylib */,
+				425B3BF71601246400507680 /* CoreLocation.framework */,
+				01B0425F15F401EE004FDE1D /* CoreMedia.framework */,
 				01B0425B15F4009F004FDE1D /* AVFoundation.framework */,
 				01B0425715F40044004FDE1D /* CoreData.framework */,
 				01B0424415F3FFD7004FDE1D /* FacebookSDK.framework */,
