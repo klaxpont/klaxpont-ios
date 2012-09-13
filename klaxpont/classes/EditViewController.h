@@ -20,6 +20,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *titleTextField;
 @property (weak, nonatomic) IBOutlet UIImageView *previewImageView;
 @property (weak, nonatomic) IBOutlet UISwitch *locationSwitch;
+@property (weak, nonatomic) IBOutlet UILabel *locationLabel;
 @property (nonatomic) Video *editedVideo;
 
 - (IBAction)upload:(id)sender;

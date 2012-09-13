@@ -22,6 +22,8 @@
 @synthesize actionButton;
 @synthesize titleTextField;
 @synthesize editedVideo;
+@synthesize locationSwitch;
+@synthesize locationLabel;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -51,9 +53,6 @@
         [self.actionButton setTitle:@"Publier" forState:UIControlStateNormal];
     if([self.editedVideo published])
         [self.actionButton setHidden:YES];
-        
-    
-
 }
 
 - (void)viewDidUnload
@@ -74,7 +73,13 @@
 - (void)setEditedVideo:(Video *)editedVideo
 {
     if (self.editedVideo.latitude && self.editedVideo.longitude)
+    {
+        self.locationLabel.text = [NSString stringWithFormat:@"φ:%.4F, λ:%.4F",
+                                   [self.editedVideo.latitude doubleValue],
+                                   [self.editedVideo.longitude doubleValue]];
+        
         [self.locationSwitch setEnabled:YES];
+    }
     else
         [self.locationSwitch setEnabled:NO];
 }
@@ -148,6 +153,11 @@
             
             _editedVideoLatitude = nil;
             _editedVideoLongitude = nil;
+            
+            self.locationLabel.text = [NSString stringWithFormat:@"φ:%.4F, λ:%.4F",
+                                       [self.editedVideo.latitude doubleValue],
+                                       [self.editedVideo.longitude doubleValue]];
+
         }
         else if (!self.locationSwitch.isOn && _editedVideoLatitude)
         {
@@ -158,6 +168,8 @@
             // Reset the coordiates values
             self.editedVideo.latitude = nil;
             self.editedVideo.longitude = nil;
+            
+            self.locationLabel.text = @"";
         }
     }
 }
