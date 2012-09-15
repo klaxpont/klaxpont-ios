@@ -26,7 +26,8 @@
 
 - (BOOL) uploaded
 {
-    return ![self.dailymotionVideoId isEmpty];
+    BOOL t= self.dailymotionVideoId == nil;
+    return !t;
 }
 
 

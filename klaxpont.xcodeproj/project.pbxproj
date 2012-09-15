@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		01045B8214CF90DB00970E6C /* Settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 01045B8114CF90DB00970E6C /* Settings.plist */; };
 		016D0616152A5761001B7D30 /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 016D0615152A5761001B7D30 /* NSString+Additions.m */; };
+		017A970E1600CD8500B4C422 /* KlaxAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 017A970D1600CD8500B4C422 /* KlaxAlertView.m */; };
 		01953F9A14D0A4120001169D /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 01953F9914D0A4120001169D /* MBProgressHUD.m */; };
 		019E021E1534C461002BC4F2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 019E021F1534C461002BC4F2 /* InfoPlist.strings */; };
 		01B0424515F3FFD7004FDE1D /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01B0424415F3FFD7004FDE1D /* FacebookSDK.framework */; };
@@ -84,6 +85,8 @@
 		01045B8114CF90DB00970E6C /* Settings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Settings.plist; sourceTree = "<group>"; };
 		016D0614152A5761001B7D30 /* NSString+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+Additions.h"; path = "helpers/NSString+Additions.h"; sourceTree = SOURCE_ROOT; };
 		016D0615152A5761001B7D30 /* NSString+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Additions.m"; path = "helpers/NSString+Additions.m"; sourceTree = SOURCE_ROOT; };
+		017A970C1600CD8500B4C422 /* KlaxAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KlaxAlertView.h; path = classes/KlaxAlertView.h; sourceTree = "<group>"; };
+		017A970D1600CD8500B4C422 /* KlaxAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KlaxAlertView.m; path = classes/KlaxAlertView.m; sourceTree = "<group>"; };
 		01953F9814D0A4120001169D /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBProgressHUD.h; path = MBProgressHUD/MBProgressHUD.h; sourceTree = SOURCE_ROOT; };
 		01953F9914D0A4120001169D /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBProgressHUD.m; path = MBProgressHUD/MBProgressHUD.m; sourceTree = SOURCE_ROOT; };
 		019E021F1534C461002BC4F2 /* InfoPlist.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
@@ -248,6 +251,8 @@
 				01B0428915F40502004FDE1D /* VideoCell.h */,
 				01B0428A15F40503004FDE1D /* VideoCell.m */,
 				01B0428B15F40503004FDE1D /* VideoCell.xib */,
+				017A970C1600CD8500B4C422 /* KlaxAlertView.h */,
+				017A970D1600CD8500B4C422 /* KlaxAlertView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -548,6 +553,7 @@
 				01B042A915F40503004FDE1D /* VideoPlayerController.m in Sources */,
 				01B042AA15F40503004FDE1D /* VideosViewController.m in Sources */,
 				01C6287F15FEB866009D03D5 /* KlaxAppearance.m in Sources */,
+				017A970E1600CD8500B4C422 /* KlaxAlertView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

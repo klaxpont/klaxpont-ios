@@ -12,6 +12,7 @@
 #import "VideoPickerController.h"
 #import "DatabaseHelper.h"
 #import "EditViewController.h"
+#import "KlaxAlertView.h"
 
 @interface RecordViewController ()
 {
@@ -114,6 +115,36 @@
         [self presentModalViewController:_videoPickerController animated:YES];
     }else{
         // TODO display error message in case device has no camera video
+//        MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+//        hud.mode = MBProgressHUDModeAnnularDeterminate;
+//        hud.labelText = @"Loading";
+//        [self doSomethingInBackgroundWithProgressCallback:^(float progress) {
+//            hud.progress = progress;
+//        } completionCallback:^{
+//            [MBProgressHUD hideHUDForView:self.view animated:YES];
+//        }];
+        
+//        HUD = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
+//        [self.navigationController.view addSubview:HUD];
+//        
+//        // The sample image is based on the work by http://www.pixelpressicons.com, http://creativecommons.org/licenses/by/2.5/ca/
+//        // Make the customViews 37 by 37 pixels for best results (those are the bounds of the build-in progress indicators)
+//        HUD.customView = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"37x-Checkmark.png"]] autorelease];
+//        
+//        // Set custom view mode
+//        HUD.mode = MBProgressHUDModeCustomView;
+//        
+//        HUD.delegate = self;
+//        HUD.labelText = @"Completed";
+//        
+//        [HUD show:YES];
+//        [HUD hide:YES afterDelay:3];
+        KlaxAlertView *alert = [[KlaxAlertView alloc] initWithView:self.view];
+        alert.mode = MBProgressHUDModeCustomView;
+        [self.view addSubview:alert];
+        alert.labelText = NSLocalizedString(@"VIDEO_CAMERA_UNAVAILABLE",nil);
+        [alert show:YES];
+        
     }
 
 }
@@ -127,47 +158,80 @@
     [picker dismissModalViewControllerAnimated:YES];
     
 }
+- (void) moveToEditVideo:(Video*)video
+{
+    UITabBarController *tabBar = ((UITabBarController*)self.parentViewController);
+    
+    UIView * fromView = self.view;
+    UIView * toView = [[tabBar.viewControllers objectAtIndex:TABBAR_MYVIDEOS_INDEX] view];
+    
+    // Transition using a page curl.
+    [UIView transitionFromView:fromView
+                        toView:toView
+                      duration:0.5
+                       options:UIViewAnimationOptionTransitionCurlUp
+                    completion:^(BOOL finished) {
+                        if (finished) {
+                            tabBar.selectedIndex = TABBAR_MYVIDEOS_INDEX;// go to videbas
+                            
+                            EditViewController *editController = EditViewController.new;
+                            [editController setEditedVideo:video];
+                            UINavigationController *nav = (UINavigationController *)tabBar.selectedViewController;
+                            [nav pushViewController:editController animated:YES];
+                        }
+                    }];
+    
 
+}
 - (void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
+    // show Alert
+    KlaxAlertView *alert = [[KlaxAlertView alloc] initWithView:self.view];
+    alert.mode = MBProgressHUDModeCustomView;
+    [self.view addSubview:alert];
+    alert.labelText = NSLocalizedString(@"SAVING_VIDEO",nil);
+    [alert show:YES];
+
+    
     [picker setDelegate:nil];
     NSLog(@"infos from dictionary : %@", info);
     
     NSURL *mediaUrl = [info objectForKey:UIImagePickerControllerMediaURL];
     [picker dismissViewControllerAnimated:YES completion:^{
-        if([info objectForKey:@"UIImagePickerControllerReferenceURL"] == nil){//no reference so that's a capture, let's save the video
-            NSString *moviePath = [mediaUrl path];
-            if (UIVideoAtPathIsCompatibleWithSavedPhotosAlbum (moviePath)) {
-                UISaveVideoAtPathToSavedPhotosAlbum(moviePath, nil, nil, nil);
-                Video *video = [DatabaseHelper saveLocalVideo:moviePath];
-                if (video != nil){
-                    NSLog(@"Video successfully saved!");
-                    
-                    UITabBarController *tabBar = ((UITabBarController*)self.parentViewController);
-                    
-                    UIView * fromView = self.view;
-                    UIView * toView = [[tabBar.viewControllers objectAtIndex:TABBAR_MYVIDEOS_INDEX] view];
-                    
-                    // Transition using a page curl.
-                    [UIView transitionFromView:fromView
-                                        toView:toView
-                                      duration:0.5
-                                       options:UIViewAnimationOptionTransitionCurlUp
-                                    completion:^(BOOL finished) {
-                                        if (finished) {
-                                            tabBar.selectedIndex = TABBAR_MYVIDEOS_INDEX;// go to videbas
-                                            
-                                            EditViewController *editController = EditViewController.new;
-                                            [editController setEditedVideo:video];
-                                            UINavigationController *nav = (UINavigationController *)tabBar.selectedViewController;
-                                            [nav pushViewController:editController animated:YES];
-                                        }
-                                    }];
 
-                }else
-                    NSLog(@"Video was not saved in db!");
+        dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
+            Video *video = nil;
+            if([info objectForKey:@"UIImagePickerControllerReferenceURL"] == nil){//no reference so that's a capture, let's save the video
+                NSString *moviePath = [mediaUrl path];
+
+                if (UIVideoAtPathIsCompatibleWithSavedPhotosAlbum (moviePath)) {
+                    UISaveVideoAtPathToSavedPhotosAlbum(moviePath, nil, nil, nil);
+                    video = [DatabaseHelper saveLocalVideo:moviePath];
+                }
             }
-        }
+            
+
+            // Hide the HUD in the main tread
+            dispatch_async(dispatch_get_main_queue(), ^{
+ 
+
+                if (video != nil){
+                    [alert setLabelText:NSLocalizedString(@"VIDEO_SAVED", nil)];
+                    NSLog(@"Video successfully saved!");
+                    [self performSelector:@selector(moveToEditVideo:) withObject:video afterDelay:3];
+                }else{
+                    [alert setLabelText:NSLocalizedString(@"ERROR_SAVING_VIDEO", nil)];
+                    NSLog(@"Video was not saved in db!");
+                }
+                [alert hide:YES afterDelay:3];
+                    
+                
+            });
+            
+        });
     }];
+
+    
+
 }
 
 @end

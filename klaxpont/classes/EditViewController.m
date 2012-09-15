@@ -12,6 +12,7 @@
 #import "UserHelper.h"
 #import "LoginViewController.h"
 #import "NetworkManager.h"
+#import "KlaxAlertView.h"
 
 @interface EditViewController ()
 
@@ -51,9 +52,6 @@
         [self.actionButton setTitle:@"Publier" forState:UIControlStateNormal];
     if([self.editedVideo published])
         [self.actionButton setHidden:YES];
-        
-    
-
 }
 
 - (void)viewDidUnload
@@ -75,30 +73,56 @@
 
 - (IBAction)upload:(id)sender {
     [DatabaseHelper saveContext];
+    
+    KlaxAlertView *alert = [[KlaxAlertView alloc] initWithView:self.view];
+    [self.view addSubview:alert];
 
-
+    // show error
+    if(![self.editedVideo title]){
+        [alert setLabelText:NSLocalizedString(@"ERROR_MISSING_TITLE", nil)];
+        [alert show:YES];
+//        [alert hide:YES afterDelay:3];
+        
+        NSLog(@"missing title");
+        return;
+    }
+    
+    // register
     if (![[UserHelper default] isRegistered]) {
+        [alert setLabelText:NSLocalizedString(@"NEED_TO_REGISTER", nil)];
+        [alert show:YES];
+
         LoginViewController *loginViewController = [[LoginViewController alloc] init];
         UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:loginViewController];
         
         [[self navigationController] presentModalViewController:nav animated:YES];
         return;
     }
-    
-    if([self.editedVideo title]){
-        //send video
-        if(![self.editedVideo uploaded])
-            [[NetworkManager sharedManager] uploadVideo:self.editedVideo];
-        else if (![self.editedVideo published])
-            [[NetworkManager sharedManager] publishVideo:self.editedVideo];
-        else{
-            // update video infos
-            NSLog(@"update video infos");
-        }
 
-    }else
-        NSLog(@"missing title");
-        // TODO: alert
+
+    
+    //send video
+    NetworkManager *network = [NetworkManager sharedManager];
+    if(![self.editedVideo uploaded]){
+        [alert setLabelText:NSLocalizedString(@"VIDEO_UPLOADING", nil)];
+        [alert show:YES];
+//        [alert showWhileExecuting:@selector(uploadVideo:) onTarget:network withObject:self.editedVideo animated:YES];
+        [[NetworkManager sharedManager] uploadVideo:self.editedVideo];
+    }
+    else if (![self.editedVideo published])
+    {
+        [alert setLabelText:NSLocalizedString(@"VIDEO_PUBLISHING", nil)];
+        [alert show:YES];
+//          [alert showWhileExecuting:@selector(publishVideo:) onTarget:network withObject:self.editedVideo animated:YES];
+        [[NetworkManager sharedManager] publishVideo:self.editedVideo];
+    }
+    else{
+        [alert setLabelText:NSLocalizedString(@"VIDEO_UPDATE", nil)];
+        [alert show:YES];
+        // update video infos
+        NSLog(@"update video infos");
+    }
+
 
 }
 
