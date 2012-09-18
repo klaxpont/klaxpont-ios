@@ -43,7 +43,7 @@
 
 - (UIImage*)loadImage
 {
-    if (self.localPath == nil || [[NSFileManager defaultManager] fileExistsAtPath:self.localPath])
+    if (self.localPath == nil || ![[NSFileManager defaultManager] fileExistsAtPath:self.localPath])
         return nil;
 
     NSURL *url = [NSURL fileURLWithPath:self.localPath];
