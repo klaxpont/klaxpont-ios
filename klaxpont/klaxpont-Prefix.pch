@@ -20,7 +20,8 @@
 #define SERVER_URL_FOR(relativeURL) [NSString stringWithFormat:@"%@/%@",SERVER_BASE_URL, relativeURL]
 
 //Klaxpont API
-#define SERVER_BASE_URL @"http://klaxpont.herokuapp.com"
+#define SERVER_BASE_URL @"http://klaxpont.192.168.1.1.xip.io"
+//#define SERVER_BASE_URL @"http://klaxpont.herokuapp.com"
 #define DAILYMOTION_API_TOKEN_PATH @"api/dailymotion/token"
 #define USER_PATH @"api/users"
 #define VIDEO_PATH @"api/videos"
@@ -34,3 +35,6 @@
 #define TABBAR_MYVIDEOS_INDEX 1
 #define TABBAR_TOPVIDEOS_INDEX 2
 #define TABBAR_ACCOUNT_INDEX 3
+
+// Notifications
+#define ERROR_NOTIFICATION @"ErrorNotification"

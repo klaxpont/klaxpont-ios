@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		01045B8214CF90DB00970E6C /* Settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 01045B8114CF90DB00970E6C /* Settings.plist */; };
+		011FD6681604E410003BC6A4 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 011FD6671604E410003BC6A4 /* Reachability.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		011FD66A1604E931003BC6A4 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 011FD6691604E931003BC6A4 /* SystemConfiguration.framework */; };
+		011FD66D1605173F003BC6A4 /* BaseTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 011FD66C1605173F003BC6A4 /* BaseTabBarViewController.m */; };
+		0150A3F41607D92B0026B553 /* 37x-Checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = 0150A3F31607D92B0026B553 /* 37x-Checkmark.png */; };
 		016D0616152A5761001B7D30 /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 016D0615152A5761001B7D30 /* NSString+Additions.m */; };
 		017A970E1600CD8500B4C422 /* KlaxAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 017A970D1600CD8500B4C422 /* KlaxAlertView.m */; };
 		01953F9A14D0A4120001169D /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 01953F9914D0A4120001169D /* MBProgressHUD.m */; };
@@ -83,6 +87,12 @@
 
 /* Begin PBXFileReference section */
 		01045B8114CF90DB00970E6C /* Settings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Settings.plist; sourceTree = "<group>"; };
+		011FD6661604E410003BC6A4 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		011FD6671604E410003BC6A4 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		011FD6691604E931003BC6A4 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		011FD66B1605173E003BC6A4 /* BaseTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseTabBarViewController.h; path = classes/BaseTabBarViewController.h; sourceTree = "<group>"; };
+		011FD66C1605173F003BC6A4 /* BaseTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseTabBarViewController.m; path = classes/BaseTabBarViewController.m; sourceTree = "<group>"; };
+		0150A3F31607D92B0026B553 /* 37x-Checkmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "37x-Checkmark.png"; sourceTree = "<group>"; };
 		016D0614152A5761001B7D30 /* NSString+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+Additions.h"; path = "helpers/NSString+Additions.h"; sourceTree = SOURCE_ROOT; };
 		016D0615152A5761001B7D30 /* NSString+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Additions.m"; path = "helpers/NSString+Additions.m"; sourceTree = SOURCE_ROOT; };
 		017A970C1600CD8500B4C422 /* KlaxAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KlaxAlertView.h; path = classes/KlaxAlertView.h; sourceTree = "<group>"; };
@@ -168,6 +178,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				011FD66A1604E931003BC6A4 /* SystemConfiguration.framework in Frameworks */,
 				01B0426015F401EE004FDE1D /* CoreMedia.framework in Frameworks */,
 				01B0425E15F4014E004FDE1D /* libsqlite3.0.dylib in Frameworks */,
 				01B0425C15F4009F004FDE1D /* AVFoundation.framework in Frameworks */,
@@ -193,6 +204,15 @@
 			);
 			name = MBProgressHUD;
 			path = libs/MBProgressHUD;
+			sourceTree = "<group>";
+		};
+		011FD6651604E3F8003BC6A4 /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				011FD6661604E410003BC6A4 /* Reachability.h */,
+				011FD6671604E410003BC6A4 /* Reachability.m */,
+			);
+			name = Reachability;
 			sourceTree = "<group>";
 		};
 		016D0613152A5643001B7D30 /* Helpers */ = {
@@ -232,6 +252,8 @@
 				01B0429115F40503004FDE1D /* VideoPlayerController.m */,
 				01B0429215F40503004FDE1D /* VideosViewController.h */,
 				01B0429315F40503004FDE1D /* VideosViewController.m */,
+				011FD66B1605173E003BC6A4 /* BaseTabBarViewController.h */,
+				011FD66C1605173F003BC6A4 /* BaseTabBarViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -312,6 +334,7 @@
 		01B0426615F40480004FDE1D /* images */ = {
 			isa = PBXGroup;
 			children = (
+				0150A3F31607D92B0026B553 /* 37x-Checkmark.png */,
 				01B0426715F40480004FDE1D /* default_thumbnail.jpg */,
 				01B0426815F40480004FDE1D /* klaxon.png */,
 			);
@@ -363,6 +386,7 @@
 		01F9FB661480FB6300745398 = {
 			isa = PBXGroup;
 			children = (
+				011FD6651604E3F8003BC6A4 /* Reachability */,
 				01B0426115F40233004FDE1D /* Dailymotion */,
 				016D0613152A5643001B7D30 /* Helpers */,
 				01045B4014CF7ABC00970E6C /* MBProgressHUD */,
@@ -383,6 +407,7 @@
 		01F9FB741480FB6300745398 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				011FD6691604E931003BC6A4 /* SystemConfiguration.framework */,
 				01B0425F15F401EE004FDE1D /* CoreMedia.framework */,
 				01B0425D15F4014E004FDE1D /* libsqlite3.0.dylib */,
 				01B0425B15F4009F004FDE1D /* AVFoundation.framework */,
@@ -521,6 +546,7 @@
 				01C6287915FE9F78009D03D5 /* Oregano-Italic.ttf in Resources */,
 				01C6287A15FE9F78009D03D5 /* Oregano-Regular.ttf in Resources */,
 				01C6287C15FE9F78009D03D5 /* Satisfy-Regular.ttf in Resources */,
+				0150A3F41607D92B0026B553 /* 37x-Checkmark.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -554,6 +580,8 @@
 				01B042AA15F40503004FDE1D /* VideosViewController.m in Sources */,
 				01C6287F15FEB866009D03D5 /* KlaxAppearance.m in Sources */,
 				017A970E1600CD8500B4C422 /* KlaxAlertView.m in Sources */,
+				011FD6681604E410003BC6A4 /* Reachability.m in Sources */,
+				011FD66D1605173F003BC6A4 /* BaseTabBarViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,6 +10,7 @@
 
 @implementation KlaxAlertView
 
+
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
@@ -21,19 +22,32 @@
 }
 
 
+-(id)initWithError:(NSString*)errorMessage
+{
+    self = [self initWithFrame:CGRectZero];
+    if (self) {
+        // TODO custom image
+        UIImageView *errorView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"37x-Checkmark.png"]];
+
+
+        [self setCustomView:errorView];
+        self.dimBackground = YES;
+        // TODO custom title
+        self.labelText = @"Error";
+        self.detailsLabelText = errorMessage;
+        // the following will refresh display: needDisplay
+        self.mode = MBProgressHUDModeCustomView;
+    }
+    return self;
+}
+
+
+
 -(void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
-
     [self setDelegate:nil];
     [self hide:YES];
 }
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
-{
-    // Drawing code
-}
-*/
+
 
 @end

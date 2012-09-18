@@ -10,5 +10,5 @@
 
 @interface KlaxAlertView : MBProgressHUD
 
-
+-(id)initWithError:(NSString*)errorMessage;
 @end

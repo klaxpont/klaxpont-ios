@@ -13,6 +13,8 @@
 #import "Dailymotion.h"
 #import "DatabaseHelper.h"
 #import "AppDelegate.h"
+#import "Reachability.h"
+
 @interface NetworkManager()
 {
     Video *_currentVideo;
@@ -43,6 +45,17 @@ static NSString *knetworkManager = @"networkManager";
     }
     return self;
 }
+#pragma mark - Reachability
+
+- (BOOL) isNetworkAvailable
+{
+    Reachability *reachabilityForInternetConnection = [Reachability reachabilityForInternetConnection];
+    if([reachabilityForInternetConnection currentReachabilityStatus] == NotReachable){
+        NSLog(@"no connection");
+        return NO;
+    }
+    return YES;
+}
 
 #pragma mark - Requests
 
@@ -50,6 +63,9 @@ static NSString *knetworkManager = @"networkManager";
 
 -(void) register
 {
+    if(![self isNetworkAvailable])
+        return;
+    
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[[NSURL alloc] initWithString:SERVER_URL_FOR(USER_PATH)]];
     [request setHTTPMethod:@"POST"];
    
@@ -67,6 +83,9 @@ static NSString *knetworkManager = @"networkManager";
 #pragma mark Dailymotion
 
 - (void) requestDailymotionToken{
+    if(![self isNetworkAvailable])
+        return;
+
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[[NSURL alloc] initWithString:SERVER_URL_FOR(DAILYMOTION_API_TOKEN_PATH)]];
     [request setValue:@"application/json" forHTTPHeaderField:@"content-type"];
 
@@ -81,6 +100,9 @@ static NSString *knetworkManager = @"networkManager";
 //TODO: this is shit but temporary, to refactor
 -(NSArray*) retrieveVideos
 {
+    if(![self isNetworkAvailable])
+        return nil;
+
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[[NSURL alloc] initWithString:SERVER_URL_FOR(VIDEO_PATH)]];
     [request setValue:@"application/json" forHTTPHeaderField:@"content-type"];
     NSURLResponse *response = nil;
@@ -99,14 +121,23 @@ static NSString *knetworkManager = @"networkManager";
 
 -(void) uploadVideo:(Video*)video
 {
+    if(![self isNetworkAvailable])
+        return;
+
     NSLog(@"uploading video to dailymotion");
+    NSDictionary *errorResponse = @{@"code":@0, @"message":NSLocalizedString(@"VIDEO_UPLOADING", nil)};
+    [[NSNotificationCenter defaultCenter] postNotificationName:ERROR_NOTIFICATION object:nil userInfo:errorResponse];
+
     _currentVideo = video;
     // TODO test video has video_dailymotion id ?
-    
+
     //////////////upload to dailymotion
     Dailymotion *dailymotion = [[Dailymotion alloc] init];
     //todo handle missing session
-    [dailymotion setSession:[APP_DELEGATE dailymotionSession]];
+    NSDictionary *session = [APP_DELEGATE dailymotionSession];
+    [dailymotion setSession:session];
+
+    NSLog(@"uploadVideo session: %@",[dailymotion readSession]);
     
     //upload
     [dailymotion uploadFile:[video localPath] delegate:self];
@@ -116,7 +147,13 @@ static NSString *knetworkManager = @"networkManager";
 
 -(void) publishVideo:(Video*)video
 {
+    if(![self isNetworkAvailable])
+        return;
+
+    NSDictionary *errorResponse = @{@"code":@0, @"message":NSLocalizedString(@"VIDEO_PUBLISHING", nil)};
+    [[NSNotificationCenter defaultCenter] postNotificationName:ERROR_NOTIFICATION object:nil userInfo:errorResponse];
     NSLog(@"publishing video to our Server");
+
     _currentVideo = video;
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[[NSURL alloc] initWithString:SERVER_URL_FOR(VIDEO_PATH)]];
       
@@ -138,9 +175,25 @@ static NSString *knetworkManager = @"networkManager";
 {
     if (data) {
         NSError* error;
-        //todo handle error
-        [APP_DELEGATE setDailymotionSession:[NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error]];
+        NSDictionary *response = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+        if (error != nil) {
+            NSLog(@"handleDailymotionTokenResponse: error parsing response: %@", [error localizedDescription]);
+            //todo handle error
+            NSDictionary *errorResponse = @{@"code":@0, @"message":[error localizedDescription]};
+            [[NSNotificationCenter defaultCenter] postNotificationName:ERROR_NOTIFICATION object:nil userInfo:errorResponse];
+            return;
+        }
+        NSDictionary *errorResponse = [response objectForKey:@"error"];
+        if (errorResponse) {
+            [[NSNotificationCenter defaultCenter] postNotificationName:ERROR_NOTIFICATION object:self userInfo:errorResponse];
+            return;
+        }
+        
+        NSDictionary *session = [response objectForKey:@"response"];
+        NSLog(@"dailymotion session %@", session);
+        [APP_DELEGATE setDailymotionSession:session];
         NSNumber *timeout = [[APP_DELEGATE dailymotionSession] objectForKey:@"expires_in"];
+        NSLog(@"set dailymotion session %@", [APP_DELEGATE dailymotionSession]);
         
         if (timeout) {
             //scheduling request for refreshToken to our server
@@ -193,6 +246,19 @@ static NSString *knetworkManager = @"networkManager";
 //    NSString *relativePath = [[[connection currentRequest] URL] relativePath];
     NSString *url = [connection.originalRequest.URL absoluteString];
 
+    NSLog(@"data from klaxpont %@", data );
+    NSError* error;
+    NSDictionary *result = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+    if(error)
+        NSLog(@"error data from klaxpont %@",error );
+    else{
+        NSLog(@"data from klaxpont %@",result );
+        [[UserHelper default] setKlaxpontId:[result objectForKey:@"user_id"]];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"user.registered" object:nil];
+    }
+
+
+
     if([url hasSuffix:VIDEO_PATH] && [[connection.originalRequest HTTPMethod] isEqualToString:@"POST"]){
         [self handlePublishVideoResponse:data];
     }
@@ -209,8 +275,10 @@ static NSString *knetworkManager = @"networkManager";
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
 {
     NSLog(@"error from connection %@",error );
-    UIAlertView *alert= [[UIAlertView alloc] initWithTitle:@"Error" message:[error localizedDescription]  delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-    [alert show];
+    [[NSNotificationCenter defaultCenter] postNotificationName:ERROR_NOTIFICATION object:self userInfo:[NSDictionary dictionaryWithObjectsAndKeys:[error localizedDescription], @"error", nil]];
+
+//    UIAlertView *alert= [[UIAlertView alloc] initWithTitle:@"Error" message:[error localizedDescription]  delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+//    [alert show];
     [connection cancel];
 }
 
@@ -234,6 +302,7 @@ static NSString *knetworkManager = @"networkManager";
                                          otherButtonTitles:nil, nil];
     [alert show];
 }
+
 
 - (void)dailymotion:(Dailymotion *)dailymotion didUploadFileAtURL:(NSString *)URL;
 {

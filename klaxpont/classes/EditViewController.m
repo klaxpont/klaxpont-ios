@@ -73,24 +73,19 @@
 
 - (IBAction)upload:(id)sender {
     [DatabaseHelper saveContext];
-    
-    KlaxAlertView *alert = [[KlaxAlertView alloc] initWithView:self.view];
-    [self.view addSubview:alert];
 
     // show error
     if(![self.editedVideo title]){
-        [alert setLabelText:NSLocalizedString(@"ERROR_MISSING_TITLE", nil)];
-        [alert show:YES];
-//        [alert hide:YES afterDelay:3];
-        
+        NSDictionary *errorResponse = @{@"code":@0, @"message":NSLocalizedString(@"MISSING_VIDEO_TITLE_ERROR", nil)};
+        [[NSNotificationCenter defaultCenter] postNotificationName:ERROR_NOTIFICATION object:nil userInfo:errorResponse];
         NSLog(@"missing title");
         return;
     }
     
     // register
     if (![[UserHelper default] isRegistered]) {
-        [alert setLabelText:NSLocalizedString(@"NEED_TO_REGISTER", nil)];
-        [alert show:YES];
+        NSDictionary *errorResponse = @{@"code":@0, @"message":NSLocalizedString(@"NEED_TO_REGISTER", nil)};
+        [[NSNotificationCenter defaultCenter] postNotificationName:ERROR_NOTIFICATION object:nil userInfo:errorResponse];
 
         LoginViewController *loginViewController = [[LoginViewController alloc] init];
         UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:loginViewController];
@@ -99,31 +94,19 @@
         return;
     }
 
-
-    
     //send video
-    NetworkManager *network = [NetworkManager sharedManager];
     if(![self.editedVideo uploaded]){
-        [alert setLabelText:NSLocalizedString(@"VIDEO_UPLOADING", nil)];
-        [alert show:YES];
-//        [alert showWhileExecuting:@selector(uploadVideo:) onTarget:network withObject:self.editedVideo animated:YES];
         [[NetworkManager sharedManager] uploadVideo:self.editedVideo];
     }
     else if (![self.editedVideo published])
     {
-        [alert setLabelText:NSLocalizedString(@"VIDEO_PUBLISHING", nil)];
-        [alert show:YES];
-//          [alert showWhileExecuting:@selector(publishVideo:) onTarget:network withObject:self.editedVideo animated:YES];
         [[NetworkManager sharedManager] publishVideo:self.editedVideo];
     }
     else{
-        [alert setLabelText:NSLocalizedString(@"VIDEO_UPDATE", nil)];
-        [alert show:YES];
-        // update video infos
+        NSDictionary *errorResponse = @{@"code":@0, @"message":NSLocalizedString(@"VIDEO_UPDATE", nil)};
+        [[NSNotificationCenter defaultCenter] postNotificationName:ERROR_NOTIFICATION object:nil userInfo:errorResponse];
         NSLog(@"update video infos");
     }
-
-
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
