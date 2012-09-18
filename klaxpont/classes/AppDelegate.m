@@ -17,6 +17,7 @@
 #import "NetworkManager.h"
 #import "UserHelper.h"
 #import "KlaxAppearance.h"
+#import "BaseTabBarViewController.h"
 
 @implementation AppDelegate
 
@@ -28,7 +29,7 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    UITabBarController *tabBarController = [[UITabBarController alloc] init];
+    BaseTabBarViewController *tabBarController = [[BaseTabBarViewController alloc] init];
     self.window.rootViewController = tabBarController;
    
     // add ViewControllers
