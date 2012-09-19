@@ -85,12 +85,14 @@
     // register
     if (![[UserHelper default] isRegistered]) {
         NSDictionary *errorResponse = @{@"code":@0, @"message":NSLocalizedString(@"NEED_TO_REGISTER", nil)};
-        [[NSNotificationCenter defaultCenter] postNotificationName:ERROR_NOTIFICATION object:nil userInfo:errorResponse];
-
-        LoginViewController *loginViewController = [[LoginViewController alloc] init];
-        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:loginViewController];
+        [[NSNotificationCenter defaultCenter] postNotificationName:ERROR_NOTIFICATION_WITH_ON_COMPLETE_BLOCK object:^{
+            LoginViewController *loginViewController = [[LoginViewController alloc] init];
+            UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:loginViewController];
+            
+            [[self navigationController] presentModalViewController:nav animated:YES];
         
-        [[self navigationController] presentModalViewController:nav animated:YES];
+        } userInfo:errorResponse];
+
         return;
     }
 

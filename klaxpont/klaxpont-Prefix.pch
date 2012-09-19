@@ -38,3 +38,4 @@
 
 // Notifications
 #define ERROR_NOTIFICATION @"ErrorNotification"
+#define ERROR_NOTIFICATION_WITH_ON_COMPLETE_BLOCK @"ErrorNotificationWithCompletionBlock"
