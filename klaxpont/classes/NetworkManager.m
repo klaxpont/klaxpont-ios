@@ -188,7 +188,7 @@ static NSString *knetworkManager = @"networkManager";
 {
     NSLog(@"handleUserRegistrationResponse %@", data);
     [[UserHelper default] setKlaxpontId:[data objectForKey:@"user_id"]];
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"user.registered" object:nil];
+    [[NSNotificationCenter defaultCenter] postNotificationName:USER_REGISTERED_NOTIFICATION object:nil];
 }
 
 -(void) handlePublishVideoResponse:(NSDictionary*)data
@@ -205,16 +205,17 @@ static NSString *knetworkManager = @"networkManager";
     NSHTTPURLResponse* httpResponse = (NSHTTPURLResponse*)response;
     int responseStatusCode = [httpResponse statusCode];
     NSLog(@"request status code %d", responseStatusCode);
-//    if (responseStatusCode >= 400) {
-//        [connection cancel];
-//    }
+    if (responseStatusCode >= 400) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:ERROR_NOTIFICATION_WITH_ON_COMPLETE_BLOCK object:nil userInfo:[NSDictionary dictionaryWithObjectsAndKeys:@"Error with server", @"error", nil]];
+        [connection cancel];
+    }
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
 {
     NSString *url = [connection.originalRequest.URL absoluteString];
 
-    NSLog(@"data from klaxpont %@", data );
+    NSLog(@"didReceiveData: data from klaxpont %@", data );
     NSError* error;
     NSDictionary *result = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
     
@@ -223,16 +224,16 @@ static NSString *knetworkManager = @"networkManager";
         [[NSNotificationCenter defaultCenter] postNotificationName:ERROR_NOTIFICATION object:nil userInfo:@{@"message": [error localizedDescription]}];
         NSLog(@"error data from klaxpont %@",error );
     }else{
-        NSLog(@"data from klaxpont %@", result);
+        NSLog(@"didReceiveData: json parsed %@", result);
 
         // handle error from server
-        NSDictionary *errorResponse = [result objectForKey:@"error"];
+        NSDictionary *errorResponse = [result objectForKey:SERVER_JSON_ERROR];
         if (errorResponse) {
             [[NSNotificationCenter defaultCenter] postNotificationName:ERROR_NOTIFICATION object:self userInfo:errorResponse];
             return;
         }
         
-        NSDictionary *dataResponse = [result objectForKey:@"response"];
+        NSDictionary *dataResponse = [result objectForKey:SERVER_JSON_RESPONSE];
         // switch
         if([url hasSuffix:VIDEO_PATH] && [[connection.originalRequest HTTPMethod] isEqualToString:@"POST"]){
             [self handlePublishVideoResponse:dataResponse];
@@ -267,7 +268,7 @@ static NSString *knetworkManager = @"networkManager";
 
 
 - (void)dailymotion:(Dailymotion *)dailymotion didReturnError:(NSError *)error userInfo:(NSDictionary *)userInfo{
-    [[NSNotificationCenter defaultCenter] postNotificationName:ERROR_NOTIFICATION object:self userInfo:[NSDictionary dictionaryWithObjectsAndKeys:[error localizedDescription], @"error", nil]];
+    [[NSNotificationCenter defaultCenter] postNotificationName:ERROR_NOTIFICATION_WITH_ON_COMPLETE_BLOCK object:nil userInfo:[NSDictionary dictionaryWithObjectsAndKeys:[error localizedDescription], @"error", nil]];
 }
 
 

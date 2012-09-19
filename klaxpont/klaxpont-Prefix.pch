@@ -39,3 +39,9 @@
 // Notifications
 #define ERROR_NOTIFICATION @"ErrorNotification"
 #define ERROR_NOTIFICATION_WITH_ON_COMPLETE_BLOCK @"ErrorNotificationWithCompletionBlock"
+#define USER_REGISTERED_NOTIFICATION @"UserRegistered"
+// Server Responses
+#define SERVER_JSON_RESPONSE @"response"
+#define SERVER_JSON_ERROR @"error"
+#define SERVER_JSON_ERROR_MESSAGE @"message"
+#define SERVER_JSON_ERROR_CODE @"code"

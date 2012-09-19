@@ -35,7 +35,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateFacebookButton) name:@"user.registered" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateFacebookButton) name:USER_REGISTERED_NOTIFICATION object:nil];
 }
 
 -(void) viewDidAppear:(BOOL)animated
