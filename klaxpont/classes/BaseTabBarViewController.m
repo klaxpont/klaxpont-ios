@@ -60,11 +60,10 @@
 {
     [self showAlert:notification];
 
-    if(![_alert isDescendantOfView:self.view]){
-        [_alert hide:YES afterDelay:1];
-        if ([notification object]) {
-            [self performSelector:@selector(executeBlock:) withObject:[notification object] afterDelay:1];
-        }
+
+    [_alert hide:YES afterDelay:1];
+    if ([notification object]) {
+        [self performSelector:@selector(executeBlock:) withObject:[notification object] afterDelay:1];
     }
 }
 
