@@ -21,7 +21,7 @@
 
 - (BOOL) published
 {
-    return (self.videoId && [self.videoId intValue] != 0);
+    return (self.videoId && ![self.videoId isEmpty]);
 }
 
 - (BOOL) uploaded

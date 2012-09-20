@@ -12,7 +12,7 @@
 
 @interface Video : NSManagedObject
 
-@property (nonatomic, retain) NSNumber * videoId;
+@property (nonatomic, retain) NSString * videoId;
 @property (nonatomic, retain) NSString * title;
 @property (nonatomic, retain) NSNumber * latitude;
 @property (nonatomic, retain) NSNumber * longitude;

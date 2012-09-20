@@ -12,6 +12,7 @@
 		011FD66A1604E931003BC6A4 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 011FD6691604E931003BC6A4 /* SystemConfiguration.framework */; };
 		011FD66D1605173F003BC6A4 /* BaseTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 011FD66C1605173F003BC6A4 /* BaseTabBarViewController.m */; };
 		0150A3F41607D92B0026B553 /* 37x-Checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = 0150A3F31607D92B0026B553 /* 37x-Checkmark.png */; };
+		0150A3F9160A972C0026B553 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0150A3F5160A972C0026B553 /* Model.xcdatamodeld */; };
 		016D0616152A5761001B7D30 /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 016D0615152A5761001B7D30 /* NSString+Additions.m */; };
 		017A970E1600CD8500B4C422 /* KlaxAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 017A970D1600CD8500B4C422 /* KlaxAlertView.m */; };
 		01953F9A14D0A4120001169D /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 01953F9914D0A4120001169D /* MBProgressHUD.m */; };
@@ -93,6 +94,9 @@
 		011FD66B1605173E003BC6A4 /* BaseTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseTabBarViewController.h; path = classes/BaseTabBarViewController.h; sourceTree = "<group>"; };
 		011FD66C1605173F003BC6A4 /* BaseTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseTabBarViewController.m; path = classes/BaseTabBarViewController.m; sourceTree = "<group>"; };
 		0150A3F31607D92B0026B553 /* 37x-Checkmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "37x-Checkmark.png"; sourceTree = "<group>"; };
+		0150A3F6160A972C0026B553 /* add dailymotion video id.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "add dailymotion video id.xcdatamodel"; sourceTree = "<group>"; };
+		0150A3F7160A972C0026B553 /* adding localPath to Video.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "adding localPath to Video.xcdatamodel"; sourceTree = "<group>"; };
+		0150A3F8160A972C0026B553 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		016D0614152A5761001B7D30 /* NSString+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+Additions.h"; path = "helpers/NSString+Additions.h"; sourceTree = SOURCE_ROOT; };
 		016D0615152A5761001B7D30 /* NSString+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Additions.m"; path = "helpers/NSString+Additions.m"; sourceTree = SOURCE_ROOT; };
 		017A970C1600CD8500B4C422 /* KlaxAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KlaxAlertView.h; path = classes/KlaxAlertView.h; sourceTree = "<group>"; };
@@ -438,6 +442,7 @@
 				01F9FB7D1480FB6300745398 /* klaxpont-Info.plist */,
 				01F9FB811480FB6300745398 /* main.m */,
 				01F9FB831480FB6300745398 /* klaxpont-Prefix.pch */,
+				0150A3F5160A972C0026B553 /* Model.xcdatamodeld */,
 				019E021F1534C461002BC4F2 /* InfoPlist.strings */,
 				01045B8114CF90DB00970E6C /* Settings.plist */,
 			);
@@ -582,6 +587,7 @@
 				017A970E1600CD8500B4C422 /* KlaxAlertView.m in Sources */,
 				011FD6681604E410003BC6A4 /* Reachability.m in Sources */,
 				011FD66D1605173F003BC6A4 /* BaseTabBarViewController.m in Sources */,
+				0150A3F9160A972C0026B553 /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -705,6 +711,21 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		0150A3F5160A972C0026B553 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				0150A3F6160A972C0026B553 /* add dailymotion video id.xcdatamodel */,
+				0150A3F7160A972C0026B553 /* adding localPath to Video.xcdatamodel */,
+				0150A3F8160A972C0026B553 /* Model.xcdatamodel */,
+			);
+			currentVersion = 0150A3F6160A972C0026B553 /* add dailymotion video id.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 01F9FB681480FB6300745398 /* Project object */;
 }
