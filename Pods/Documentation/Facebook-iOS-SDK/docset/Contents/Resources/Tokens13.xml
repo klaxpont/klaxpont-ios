@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/FBGraphObjectTableSelection.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/FBGraphObjectTableSelection</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBGraphObjectTableSelection.h</DeclaredIn>
+			
+			<NodeRef refid="13"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBGraphObjectTableSelection/setDelegate:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBGraphObjectTableSelection.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, assign) NSObject&lt;FBGraphObjectSelectionChangedDelegate&gt; *delegate</Declaration>
+			
+			
+			<Anchor>//api/name/delegate</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FBGraphObjectTableSelection/delegate</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBGraphObjectTableSelection.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, assign) NSObject&lt;FBGraphObjectSelectionChangedDelegate&gt; *delegate</Declaration>
+			
+			
+			<Anchor>//api/name/delegate</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBGraphObjectTableSelection/setSelection:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBGraphObjectTableSelection.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain, readonly) NSArray *selection</Declaration>
+			
+			
+			<Anchor>//api/name/selection</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FBGraphObjectTableSelection/selection</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBGraphObjectTableSelection.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain, readonly) NSArray *selection</Declaration>
+			
+			
+			<Anchor>//api/name/selection</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBGraphObjectTableSelection/setAllowsMultipleSelection:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBGraphObjectTableSelection.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic) BOOL allowsMultipleSelection</Declaration>
+			
+			
+			<Anchor>//api/name/allowsMultipleSelection</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FBGraphObjectTableSelection/allowsMultipleSelection</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBGraphObjectTableSelection.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic) BOOL allowsMultipleSelection</Declaration>
+			
+			
+			<Anchor>//api/name/allowsMultipleSelection</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBGraphObjectTableSelection/initWithDataSource:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBGraphObjectTableSelection.h</DeclaredIn>			
+			
+			<Declaration>- (id)initWithDataSource:(FBGraphObjectTableDataSource *)dataSource</Declaration>
+			
+			
+			<Anchor>//api/name/initWithDataSource:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBGraphObjectTableSelection/clearSelectionInTableView:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBGraphObjectTableSelection.h</DeclaredIn>			
+			
+			<Declaration>- (void)clearSelectionInTableView:(UITableView *)tableView</Declaration>
+			
+			
+			<Anchor>//api/name/clearSelectionInTableView:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

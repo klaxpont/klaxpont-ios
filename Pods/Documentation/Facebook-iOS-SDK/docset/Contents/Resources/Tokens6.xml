@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/FBFrictionlessRequestSettings.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/FBFrictionlessRequestSettings</TokenIdentifier>
+			<Abstract type="html">Do not use this interface directly, instead, use methods in Facebook.h</Abstract>
+			<DeclaredIn>FBFrictionlessRequestSettings.h</DeclaredIn>
+			
+			<NodeRef refid="6"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBFrictionlessRequestSettings/setEnabled:</TokenIdentifier>
+			<Abstract type="html">BOOL indicating whether frictionless request sending has been enabled</Abstract>
+			<DeclaredIn>FBFrictionlessRequestSettings.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) BOOL enabled</Declaration>
+			
+			
+			<Anchor>//api/name/enabled</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FBFrictionlessRequestSettings/enabled</TokenIdentifier>
+			<Abstract type="html">BOOL indicating whether frictionless request sending has been enabled</Abstract>
+			<DeclaredIn>FBFrictionlessRequestSettings.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) BOOL enabled</Declaration>
+			
+			
+			<Anchor>//api/name/enabled</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBFrictionlessRequestSettings/enableWithFacebook:</TokenIdentifier>
+			<Abstract type="html">Enable frictionless request sending by the sdk; this means:
+1. query and cache the current set of frictionless recipients
+2. flag other facets of the sdk to behave in a frictionless way</Abstract>
+			<DeclaredIn>FBFrictionlessRequestSettings.h</DeclaredIn>			
+			
+			<Declaration>- (void)enableWithFacebook:(Facebook *)facebook</Declaration>
+			
+			
+			<Anchor>//api/name/enableWithFacebook:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBFrictionlessRequestSettings/reloadRecipientCacheWithFacebook:</TokenIdentifier>
+			<Abstract type="html">Reload recipient cache; called by the sdk to keep the cache fresh;
+method makes graph request: me/apprequestformerrecipients</Abstract>
+			<DeclaredIn>FBFrictionlessRequestSettings.h</DeclaredIn>			
+			
+			<Declaration>- (void)reloadRecipientCacheWithFacebook:(Facebook *)facebook</Declaration>
+			
+			
+			<Anchor>//api/name/reloadRecipientCacheWithFacebook:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBFrictionlessRequestSettings/updateRecipientCacheWithRecipients:</TokenIdentifier>
+			<Abstract type="html">Update the recipient cache; called by the sdk to keep the cache fresh;</Abstract>
+			<DeclaredIn>FBFrictionlessRequestSettings.h</DeclaredIn>			
+			
+			<Declaration>- (void)updateRecipientCacheWithRecipients:(NSArray *)ids</Declaration>
+			
+			
+			<Anchor>//api/name/updateRecipientCacheWithRecipients:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBFrictionlessRequestSettings/isFrictionlessEnabledForRecipient:</TokenIdentifier>
+			<Abstract type="html">Given an fbID for a user, indicates whether user is enabled for
+frictionless calls</Abstract>
+			<DeclaredIn>FBFrictionlessRequestSettings.h</DeclaredIn>			
+			
+			<Declaration>- (BOOL)isFrictionlessEnabledForRecipient:(id)fbid</Declaration>
+			
+			
+			<Anchor>//api/name/isFrictionlessEnabledForRecipient:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBFrictionlessRequestSettings/isFrictionlessEnabledForRecipients:</TokenIdentifier>
+			<Abstract type="html">Given an array of user fbIDs, indicates whether they are enabled for
+frictionless calls</Abstract>
+			<DeclaredIn>FBFrictionlessRequestSettings.h</DeclaredIn>			
+			
+			<Declaration>- (BOOL)isFrictionlessEnabledForRecipients:(NSArray *)fbids</Declaration>
+			
+			
+			<Anchor>//api/name/isFrictionlessEnabledForRecipients:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBFrictionlessRequestSettings/init</TokenIdentifier>
+			<Abstract type="html">init the frictionless cache object</Abstract>
+			<DeclaredIn>FBFrictionlessRequestSettings.h</DeclaredIn>			
+			
+			<Declaration>- (id)init</Declaration>
+			
+			
+			<Anchor>//api/name/init</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

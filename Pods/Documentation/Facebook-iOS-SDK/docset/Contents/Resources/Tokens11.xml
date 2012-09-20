@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/FBGraphObjectTableCell.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/FBGraphObjectTableCell</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBGraphObjectTableCell.h</DeclaredIn>
+			
+			<NodeRef refid="11"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBGraphObjectTableCell/setTitle:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBGraphObjectTableCell.h</DeclaredIn>			
+			
+			<Declaration>@property (copy, nonatomic) NSString *title</Declaration>
+			
+			
+			<Anchor>//api/name/title</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FBGraphObjectTableCell/title</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBGraphObjectTableCell.h</DeclaredIn>			
+			
+			<Declaration>@property (copy, nonatomic) NSString *title</Declaration>
+			
+			
+			<Anchor>//api/name/title</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBGraphObjectTableCell/setTitleSuffix:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBGraphObjectTableCell.h</DeclaredIn>			
+			
+			<Declaration>@property (copy, nonatomic) NSString *titleSuffix</Declaration>
+			
+			
+			<Anchor>//api/name/titleSuffix</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FBGraphObjectTableCell/titleSuffix</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBGraphObjectTableCell.h</DeclaredIn>			
+			
+			<Declaration>@property (copy, nonatomic) NSString *titleSuffix</Declaration>
+			
+			
+			<Anchor>//api/name/titleSuffix</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBGraphObjectTableCell/setBoldTitle:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBGraphObjectTableCell.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic) BOOL boldTitle</Declaration>
+			
+			
+			<Anchor>//api/name/boldTitle</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FBGraphObjectTableCell/boldTitle</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBGraphObjectTableCell.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic) BOOL boldTitle</Declaration>
+			
+			
+			<Anchor>//api/name/boldTitle</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBGraphObjectTableCell/setBoldTitleSuffix:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBGraphObjectTableCell.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic) BOOL boldTitleSuffix</Declaration>
+			
+			
+			<Anchor>//api/name/boldTitleSuffix</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FBGraphObjectTableCell/boldTitleSuffix</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBGraphObjectTableCell.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic) BOOL boldTitleSuffix</Declaration>
+			
+			
+			<Anchor>//api/name/boldTitleSuffix</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBGraphObjectTableCell/setSubtitle:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBGraphObjectTableCell.h</DeclaredIn>			
+			
+			<Declaration>@property (copy, nonatomic) NSString *subtitle</Declaration>
+			
+			
+			<Anchor>//api/name/subtitle</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FBGraphObjectTableCell/subtitle</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBGraphObjectTableCell.h</DeclaredIn>			
+			
+			<Declaration>@property (copy, nonatomic) NSString *subtitle</Declaration>
+			
+			
+			<Anchor>//api/name/subtitle</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBGraphObjectTableCell/setPicture:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBGraphObjectTableCell.h</DeclaredIn>			
+			
+			<Declaration>@property (retain, nonatomic) UIImage *picture</Declaration>
+			
+			
+			<Anchor>//api/name/picture</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FBGraphObjectTableCell/picture</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBGraphObjectTableCell.h</DeclaredIn>			
+			
+			<Declaration>@property (retain, nonatomic) UIImage *picture</Declaration>
+			
+			
+			<Anchor>//api/name/picture</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/FBGraphObjectTableCell/rowHeight</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBGraphObjectTableCell.h</DeclaredIn>			
+			
+			<Declaration>+ (CGFloat)rowHeight</Declaration>
+			
+			
+			<Anchor>//api/name/rowHeight</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBGraphObjectTableCell/startAnimatingActivityIndicator</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBGraphObjectTableCell.h</DeclaredIn>			
+			
+			<Declaration>- (void)startAnimatingActivityIndicator</Declaration>
+			
+			
+			<Anchor>//api/name/startAnimatingActivityIndicator</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBGraphObjectTableCell/stopAnimatingActivityIndicator</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBGraphObjectTableCell.h</DeclaredIn>			
+			
+			<Declaration>- (void)stopAnimatingActivityIndicator</Declaration>
+			
+			
+			<Anchor>//api/name/stopAnimatingActivityIndicator</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

@@ -17,7 +17,6 @@
 		017A970E1600CD8500B4C422 /* KlaxAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 017A970D1600CD8500B4C422 /* KlaxAlertView.m */; };
 		01953F9A14D0A4120001169D /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 01953F9914D0A4120001169D /* MBProgressHUD.m */; };
 		019E021E1534C461002BC4F2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 019E021F1534C461002BC4F2 /* InfoPlist.strings */; };
-		01B0424515F3FFD7004FDE1D /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01B0424415F3FFD7004FDE1D /* FacebookSDK.framework */; };
 		01B0425415F40025004FDE1D /* libDailymotion.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 01B0424F15F40005004FDE1D /* libDailymotion.a */; };
 		01B0425815F40044004FDE1D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01B0425715F40044004FDE1D /* CoreData.framework */; };
 		01B0425C15F4009F004FDE1D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01B0425B15F4009F004FDE1D /* AVFoundation.framework */; };
@@ -105,7 +104,6 @@
 		01953F9814D0A4120001169D /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBProgressHUD.h; path = MBProgressHUD/MBProgressHUD.h; sourceTree = SOURCE_ROOT; };
 		01953F9914D0A4120001169D /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBProgressHUD.m; path = MBProgressHUD/MBProgressHUD.m; sourceTree = SOURCE_ROOT; };
 		019E021F1534C461002BC4F2 /* InfoPlist.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
-		01B0424415F3FFD7004FDE1D /* FacebookSDK.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		01B0424615F40005004FDE1D /* Dailymotion SDK iOS.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "Dailymotion SDK iOS.xcodeproj"; path = "dailymotion/Dailymotion SDK iOS.xcodeproj"; sourceTree = SOURCE_ROOT; };
 		01B0425715F40044004FDE1D /* CoreData.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		01B0425B15F4009F004FDE1D /* AVFoundation.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -196,7 +194,6 @@
 				01F9FB761480FB6300745398 /* UIKit.framework in Frameworks */,
 				01F9FB781480FB6300745398 /* Foundation.framework in Frameworks */,
 				01F9FB7A1480FB6300745398 /* CoreGraphics.framework in Frameworks */,
-				01B0424515F3FFD7004FDE1D /* FacebookSDK.framework in Frameworks */,
 				5078ABED1D1B4BA9BA6ED778 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -421,7 +418,6 @@
 				01B0425D15F4014E004FDE1D /* libsqlite3.0.dylib */,
 				01B0425B15F4009F004FDE1D /* AVFoundation.framework */,
 				01B0425715F40044004FDE1D /* CoreData.framework */,
-				01B0424415F3FFD7004FDE1D /* FacebookSDK.framework */,
 				01F972FB1491580100D763EA /* MediaPlayer.framework */,
 				01F9FB951481039300745398 /* MobileCoreServices.framework */,
 				01F9FB751480FB6300745398 /* UIKit.framework */,
@@ -683,7 +679,7 @@
 				GCC_PREFIX_HEADER = "klaxpont/klaxpont-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
 					"\"$(SRCROOT)/dailymotion\"",
-					"\"$(SRCROOT)/facebook\"/**",
+					"${inherited}",
 				);
 				INFOPLIST_FILE = "klaxpont/klaxpont-Info.plist";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
@@ -705,7 +701,7 @@
 				GCC_PREFIX_HEADER = "klaxpont/klaxpont-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
 					"\"$(SRCROOT)/dailymotion\"",
-					"\"$(SRCROOT)/facebook\"/**",
+					"${inherited}",
 				);
 				INFOPLIST_FILE = "klaxpont/klaxpont-Info.plist";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";

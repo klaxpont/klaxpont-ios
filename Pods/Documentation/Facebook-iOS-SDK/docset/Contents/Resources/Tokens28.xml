@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/FBURLConnection.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/FBURLConnection</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBURLConnection.h</DeclaredIn>
+			
+			<NodeRef refid="28"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBURLConnection/initWithURL:completionHandler:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBURLConnection.h</DeclaredIn>			
+			
+			<Declaration>- (FBURLConnection *)initWithURL:(NSURL *)url completionHandler:(FBURLConnectionHandler)handler</Declaration>
+			
+			
+			<Anchor>//api/name/initWithURL:completionHandler:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBURLConnection/initWithRequest:skipRoundTripIfCached:completionHandler:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBURLConnection.h</DeclaredIn>			
+			
+			<Declaration>- (FBURLConnection *)initWithRequest:(NSURLRequest *)request skipRoundTripIfCached:(BOOL)skipRoundtripIfCached completionHandler:(FBURLConnectionHandler)handler</Declaration>
+			
+			
+			<Anchor>//api/name/initWithRequest:skipRoundTripIfCached:completionHandler:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBURLConnection/cancel</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBURLConnection.h</DeclaredIn>			
+			
+			<Declaration>- (void)cancel</Declaration>
+			
+			
+			<Anchor>//api/name/cancel</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

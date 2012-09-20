@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/FBContentLink.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/FBContentLink</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBContentLink.h</DeclaredIn>
+			
+			<NodeRef refid="3"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBContentLink/setTargetURL:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBContentLink.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, copy) NSURL *targetURL</Declaration>
+			
+			
+			<Anchor>//api/name/targetURL</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FBContentLink/targetURL</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBContentLink.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, copy) NSURL *targetURL</Declaration>
+			
+			
+			<Anchor>//api/name/targetURL</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBContentLink/setActionTypes:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBContentLink.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, copy) NSArray *actionTypes</Declaration>
+			
+			
+			<Anchor>//api/name/actionTypes</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FBContentLink/actionTypes</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBContentLink.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, copy) NSArray *actionTypes</Declaration>
+			
+			
+			<Anchor>//api/name/actionTypes</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBContentLink/setSource:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBContentLink.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, copy) NSString *source</Declaration>
+			
+			
+			<Anchor>//api/name/source</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FBContentLink/source</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBContentLink.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, copy) NSString *source</Declaration>
+			
+			
+			<Anchor>//api/name/source</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBContentLink/setRef:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBContentLink.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, copy) NSArray *ref</Declaration>
+			
+			
+			<Anchor>//api/name/ref</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FBContentLink/ref</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBContentLink.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, copy) NSArray *ref</Declaration>
+			
+			
+			<Anchor>//api/name/ref</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBContentLink/setOriginalQueryParameters:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBContentLink.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, copy) NSDictionary *originalQueryParameters</Declaration>
+			
+			
+			<Anchor>//api/name/originalQueryParameters</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FBContentLink/originalQueryParameters</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBContentLink.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, copy) NSDictionary *originalQueryParameters</Declaration>
+			
+			
+			<Anchor>//api/name/originalQueryParameters</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBContentLink/initWithURL:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBContentLink.h</DeclaredIn>			
+			
+			<Declaration>- (id)initWithURL:(NSURL *)url</Declaration>
+			
+			
+			<Anchor>//api/name/initWithURL:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

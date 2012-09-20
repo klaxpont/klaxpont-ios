@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/FBGraphObjectPagingLoader.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/FBGraphObjectPagingLoader</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBGraphObjectPagingLoader.h</DeclaredIn>
+			
+			<NodeRef refid="10"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBGraphObjectPagingLoader/setTableView:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBGraphObjectPagingLoader.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) UITableView *tableView</Declaration>
+			
+			
+			<Anchor>//api/name/tableView</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FBGraphObjectPagingLoader/tableView</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBGraphObjectPagingLoader.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) UITableView *tableView</Declaration>
+			
+			
+			<Anchor>//api/name/tableView</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBGraphObjectPagingLoader/setDataSource:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBGraphObjectPagingLoader.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) FBGraphObjectTableDataSource *dataSource</Declaration>
+			
+			
+			<Anchor>//api/name/dataSource</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FBGraphObjectPagingLoader/dataSource</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBGraphObjectPagingLoader.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) FBGraphObjectTableDataSource *dataSource</Declaration>
+			
+			
+			<Anchor>//api/name/dataSource</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBGraphObjectPagingLoader/setSession:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBGraphObjectPagingLoader.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) FBSession *session</Declaration>
+			
+			
+			<Anchor>//api/name/session</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FBGraphObjectPagingLoader/session</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBGraphObjectPagingLoader.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) FBSession *session</Declaration>
+			
+			
+			<Anchor>//api/name/session</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBGraphObjectPagingLoader/setDelegate:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBGraphObjectPagingLoader.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, assign) id&lt;&gt; delegate</Declaration>
+			
+			
+			<Anchor>//api/name/delegate</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FBGraphObjectPagingLoader/delegate</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBGraphObjectPagingLoader.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, assign) id&lt;&gt; delegate</Declaration>
+			
+			
+			<Anchor>//api/name/delegate</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBGraphObjectPagingLoader/setPagingMode:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBGraphObjectPagingLoader.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) FBGraphObjectPagingMode pagingMode</Declaration>
+			
+			
+			<Anchor>//api/name/pagingMode</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FBGraphObjectPagingLoader/pagingMode</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBGraphObjectPagingLoader.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) FBGraphObjectPagingMode pagingMode</Declaration>
+			
+			
+			<Anchor>//api/name/pagingMode</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBGraphObjectPagingLoader/setIsResultFromCache:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBGraphObjectPagingLoader.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) BOOL isResultFromCache</Declaration>
+			
+			
+			<Anchor>//api/name/isResultFromCache</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FBGraphObjectPagingLoader/isResultFromCache</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBGraphObjectPagingLoader.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) BOOL isResultFromCache</Declaration>
+			
+			
+			<Anchor>//api/name/isResultFromCache</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBGraphObjectPagingLoader/initWithDataSource:pagingMode:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBGraphObjectPagingLoader.h</DeclaredIn>			
+			
+			<Declaration>- (id)initWithDataSource:(FBGraphObjectTableDataSource *)aDataSource pagingMode:(FBGraphObjectPagingMode)pagingMode</Declaration>
+			
+			
+			<Anchor>//api/name/initWithDataSource:pagingMode:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBGraphObjectPagingLoader/startLoadingWithRequest:cacheIdentity:skipRoundtripIfCached:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBGraphObjectPagingLoader.h</DeclaredIn>			
+			
+			<Declaration>- (void)startLoadingWithRequest:(FBRequest *)request cacheIdentity:(NSString *)cacheIdentity skipRoundtripIfCached:(BOOL)skipRoundtripIfCached</Declaration>
+			
+			
+			<Anchor>//api/name/startLoadingWithRequest:cacheIdentity:skipRoundtripIfCached:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBGraphObjectPagingLoader/addResultsAndUpdateView:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBGraphObjectPagingLoader.h</DeclaredIn>			
+			
+			<Declaration>- (void)addResultsAndUpdateView:(NSDictionary *)results</Declaration>
+			
+			
+			<Anchor>//api/name/addResultsAndUpdateView:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBGraphObjectPagingLoader/cancel</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBGraphObjectPagingLoader.h</DeclaredIn>			
+			
+			<Declaration>- (void)cancel</Declaration>
+			
+			
+			<Anchor>//api/name/cancel</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBGraphObjectPagingLoader/reset</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBGraphObjectPagingLoader.h</DeclaredIn>			
+			
+			<Declaration>- (void)reset</Declaration>
+			
+			
+			<Anchor>//api/name/reset</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

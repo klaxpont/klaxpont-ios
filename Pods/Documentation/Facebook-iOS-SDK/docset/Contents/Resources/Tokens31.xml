@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/FBViewController.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/FBViewController</TokenIdentifier>
+			<Abstract type="html">@class FBViewController</Abstract>
+			<DeclaredIn>FBViewController.h</DeclaredIn>
+			
+			<NodeRef refid="31"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBViewController/setCancelButton:</TokenIdentifier>
+			<Abstract type="html">@abstract
+The Cancel button to display when presented modally. If nil, no Cancel button is displayed.
+If this button is provided, its target and action will be redirected to internal handlers, replacing
+any previous target that may have been set.</Abstract>
+			<DeclaredIn>FBViewController.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) IBOutlet UIBarButtonItem *cancelButton</Declaration>
+			
+			
+			<Anchor>//api/name/cancelButton</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FBViewController/cancelButton</TokenIdentifier>
+			<Abstract type="html">@abstract
+The Cancel button to display when presented modally. If nil, no Cancel button is displayed.
+If this button is provided, its target and action will be redirected to internal handlers, replacing
+any previous target that may have been set.</Abstract>
+			<DeclaredIn>FBViewController.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) IBOutlet UIBarButtonItem *cancelButton</Declaration>
+			
+			
+			<Anchor>//api/name/cancelButton</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBViewController/setDoneButton:</TokenIdentifier>
+			<Abstract type="html">@abstract
+The Done button to display when presented modally. If nil, no Done button is displayed.
+If this button is provided, its target and action will be redirected to internal handlers, replacing
+any previous target that may have been set.</Abstract>
+			<DeclaredIn>FBViewController.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) IBOutlet UIBarButtonItem *doneButton</Declaration>
+			
+			
+			<Anchor>//api/name/doneButton</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FBViewController/doneButton</TokenIdentifier>
+			<Abstract type="html">@abstract
+The Done button to display when presented modally. If nil, no Done button is displayed.
+If this button is provided, its target and action will be redirected to internal handlers, replacing
+any previous target that may have been set.</Abstract>
+			<DeclaredIn>FBViewController.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) IBOutlet UIBarButtonItem *doneButton</Declaration>
+			
+			
+			<Anchor>//api/name/doneButton</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBViewController/setDelegate:</TokenIdentifier>
+			<Abstract type="html">@abstract
+The delegate that will be called when Cancel or Done is pressed. Derived classes may specify
+derived types for their delegates that provide additional functionality.</Abstract>
+			<DeclaredIn>FBViewController.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, assign) IBOutlet id&lt;&gt; delegate</Declaration>
+			
+			
+			<Anchor>//api/name/delegate</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FBViewController/delegate</TokenIdentifier>
+			<Abstract type="html">@abstract
+The delegate that will be called when Cancel or Done is pressed. Derived classes may specify
+derived types for their delegates that provide additional functionality.</Abstract>
+			<DeclaredIn>FBViewController.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, assign) IBOutlet id&lt;&gt; delegate</Declaration>
+			
+			
+			<Anchor>//api/name/delegate</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBViewController/setCanvasView:</TokenIdentifier>
+			<Abstract type="html">@abstract
+The view into which derived classes should put their subviews. This view will be resized correctly
+depending on whether or not a toolbar is displayed.</Abstract>
+			<DeclaredIn>FBViewController.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly, retain) UIView *canvasView</Declaration>
+			
+			
+			<Anchor>//api/name/canvasView</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FBViewController/canvasView</TokenIdentifier>
+			<Abstract type="html">@abstract
+The view into which derived classes should put their subviews. This view will be resized correctly
+depending on whether or not a toolbar is displayed.</Abstract>
+			<DeclaredIn>FBViewController.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly, retain) UIView *canvasView</Declaration>
+			
+			
+			<Anchor>//api/name/canvasView</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBViewController/presentModallyFromViewController:animated:handler:</TokenIdentifier>
+			<Abstract type="html">@abstract
+Provides a wrapper that presents the view controller modally and automatically dismisses it
+when either the Done or Cancel button is pressed. If Done is pressed, the block provided by the
+doneHandler parameter is called.</Abstract>
+			<DeclaredIn>FBViewController.h</DeclaredIn>			
+			
+			<Declaration>- (void)presentModallyFromViewController:(UIViewController *)viewController animated:(BOOL)animated handler:(FBModalCompletionHandler)handler</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>viewController</Name>
+					<Abstract type="html">The view controller that is presenting this view controller.</Abstract>
+				</Parameter><Parameter>
+					<Name>animated</Name>
+					<Abstract type="html">If YES, presenting and dismissing the view controller is animated.</Abstract>
+				</Parameter><Parameter>
+					<Name>handler</Name>
+					<Abstract type="html">The block called when the Done or Cancel button is pressed.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/presentModallyFromViewController:animated:handler:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBViewController/setCompatiblePresentingViewController:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBViewController+Internal.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) UIViewController *compatiblePresentingViewController</Declaration>
+			
+			
+			<Anchor>//api/name/compatiblePresentingViewController</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FBViewController/compatiblePresentingViewController</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBViewController+Internal.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) UIViewController *compatiblePresentingViewController</Declaration>
+			
+			
+			<Anchor>//api/name/compatiblePresentingViewController</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

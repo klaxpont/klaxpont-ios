@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Protocols/FBGraphObject.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intf/FBGraphObject</TokenIdentifier>
+			<Abstract type="html">@protocol</Abstract>
+			<DeclaredIn>FBGraphObject.h</DeclaredIn>
+			
+			<NodeRef refid="37"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/FBGraphObject/count</TokenIdentifier>
+			<Abstract type="html">@method
+@abstract
+Returns the number of properties on this FBGraphObject.</Abstract>
+			<DeclaredIn>FBGraphObject.h</DeclaredIn>			
+			
+			<Declaration>- (NSUInteger)count</Declaration>
+			
+			
+			<Anchor>//api/name/count</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/FBGraphObject/objectForKey:</TokenIdentifier>
+			<Abstract type="html">@method
+@abstract
+Returns a property on this FBGraphObject.</Abstract>
+			<DeclaredIn>FBGraphObject.h</DeclaredIn>			
+			
+			<Declaration>- (id)objectForKey:(id)aKey</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>aKey</Name>
+					<Abstract type="html">name of the property to return</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/objectForKey:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/FBGraphObject/keyEnumerator</TokenIdentifier>
+			<Abstract type="html">@method
+@abstract
+Returns an enumerator of the property naems on this FBGraphObject.</Abstract>
+			<DeclaredIn>FBGraphObject.h</DeclaredIn>			
+			
+			<Declaration>- (NSEnumerator *)keyEnumerator</Declaration>
+			
+			
+			<Anchor>//api/name/keyEnumerator</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/FBGraphObject/removeObjectForKey:</TokenIdentifier>
+			<Abstract type="html">@method
+@abstract
+Removes a property on this FBGraphObject.</Abstract>
+			<DeclaredIn>FBGraphObject.h</DeclaredIn>			
+			
+			<Declaration>- (void)removeObjectForKey:(id)aKey</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>aKey</Name>
+					<Abstract type="html">name of the property to remove</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/removeObjectForKey:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/FBGraphObject/setObject:forKey:</TokenIdentifier>
+			<Abstract type="html">@method
+@abstract
+Sets the value of a property on this FBGraphObject.</Abstract>
+			<DeclaredIn>FBGraphObject.h</DeclaredIn>			
+			
+			<Declaration>- (void)setObject:(id)anObject forKey:(id)aKey</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>anObject</Name>
+					<Abstract type="html">the new value of the property</Abstract>
+				</Parameter><Parameter>
+					<Name>aKey</Name>
+					<Abstract type="html">name of the property to set</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/setObject:forKey:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

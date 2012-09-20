@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DocSetNodes version="1.0">
+    <TOC>
+        <Node type="folder">
+            <Name>Facebook-iOS-SDK 3.0.8</Name>
+            <Path>index.html</Path>
+			<Subnodes>
+                
+				
+				<Node type="folder">
+					<Name>Classes</Name>
+					<Path>index.html</Path>
+					<Subnodes>
+						<NodeRef refid="1"/>
+						<NodeRef refid="2"/>
+						<NodeRef refid="3"/>
+						<NodeRef refid="4"/>
+						<NodeRef refid="5"/>
+						<NodeRef refid="6"/>
+						<NodeRef refid="7"/>
+						<NodeRef refid="8"/>
+						<NodeRef refid="9"/>
+						<NodeRef refid="10"/>
+						<NodeRef refid="11"/>
+						<NodeRef refid="12"/>
+						<NodeRef refid="13"/>
+						<NodeRef refid="14"/>
+						<NodeRef refid="15"/>
+						<NodeRef refid="16"/>
+						<NodeRef refid="17"/>
+						<NodeRef refid="18"/>
+						<NodeRef refid="19"/>
+						<NodeRef refid="20"/>
+						<NodeRef refid="21"/>
+						<NodeRef refid="22"/>
+						<NodeRef refid="23"/>
+						<NodeRef refid="24"/>
+						<NodeRef refid="25"/>
+						<NodeRef refid="26"/>
+						<NodeRef refid="27"/>
+						<NodeRef refid="28"/>
+						<NodeRef refid="29"/>
+						<NodeRef refid="30"/>
+						<NodeRef refid="31"/>
+						<NodeRef refid="32"/>
+						
+					</Subnodes>
+				</Node>
+				
+				
+				
+				<Node type="folder">
+					<Name>Protocols</Name>
+					<Path>index.html</Path>
+					<Subnodes>
+						<NodeRef refid="33"/>
+						<NodeRef refid="34"/>
+						<NodeRef refid="35"/>
+						<NodeRef refid="36"/>
+						<NodeRef refid="37"/>
+						<NodeRef refid="38"/>
+						<NodeRef refid="39"/>
+						<NodeRef refid="40"/>
+						<NodeRef refid="41"/>
+						<NodeRef refid="42"/>
+						<NodeRef refid="43"/>
+						<NodeRef refid="44"/>
+						<NodeRef refid="45"/>
+						<NodeRef refid="46"/>
+						<NodeRef refid="47"/>
+						<NodeRef refid="48"/>
+						<NodeRef refid="49"/>
+						<NodeRef refid="50"/>
+						<NodeRef refid="51"/>
+						<NodeRef refid="52"/>
+						
+					</Subnodes>
+				</Node>
+				
+			</Subnodes>
+        </Node>
+    </TOC>
+	<Library>
+		
+		<Node id="1">
+			<Name>FBCacheDescriptor</Name>
+			<Path>Classes/FBCacheDescriptor.html</Path>
+		</Node>
+		<Node id="2">
+			<Name>FBCacheIndex</Name>
+			<Path>Classes/FBCacheIndex.html</Path>
+		</Node>
+		<Node id="3">
+			<Name>FBContentLink</Name>
+			<Path>Classes/FBContentLink.html</Path>
+		</Node>
+		<Node id="4">
+			<Name>FBDataDiskCache</Name>
+			<Path>Classes/FBDataDiskCache.html</Path>
+		</Node>
+		<Node id="5">
+			<Name>FBDialog</Name>
+			<Path>Classes/FBDialog.html</Path>
+		</Node>
+		<Node id="6">
+			<Name>FBFrictionlessRequestSettings</Name>
+			<Path>Classes/FBFrictionlessRequestSettings.html</Path>
+		</Node>
+		<Node id="7">
+			<Name>FBFriendPickerCacheDescriptor</Name>
+			<Path>Classes/FBFriendPickerCacheDescriptor.html</Path>
+		</Node>
+		<Node id="8">
+			<Name>FBFriendPickerViewController</Name>
+			<Path>Classes/FBFriendPickerViewController.html</Path>
+		</Node>
+		<Node id="9">
+			<Name>FBGraphObject</Name>
+			<Path>Classes/FBGraphObject.html</Path>
+		</Node>
+		<Node id="10">
+			<Name>FBGraphObjectPagingLoader</Name>
+			<Path>Classes/FBGraphObjectPagingLoader.html</Path>
+		</Node>
+		<Node id="11">
+			<Name>FBGraphObjectTableCell</Name>
+			<Path>Classes/FBGraphObjectTableCell.html</Path>
+		</Node>
+		<Node id="12">
+			<Name>FBGraphObjectTableDataSource</Name>
+			<Path>Classes/FBGraphObjectTableDataSource.html</Path>
+		</Node>
+		<Node id="13">
+			<Name>FBGraphObjectTableSelection</Name>
+			<Path>Classes/FBGraphObjectTableSelection.html</Path>
+		</Node>
+		<Node id="14">
+			<Name>FBLogger</Name>
+			<Path>Classes/FBLogger.html</Path>
+		</Node>
+		<Node id="15">
+			<Name>FBLoginDialog</Name>
+			<Path>Classes/FBLoginDialog.html</Path>
+		</Node>
+		<Node id="16">
+			<Name>FBLoginView</Name>
+			<Path>Classes/FBLoginView.html</Path>
+		</Node>
+		<Node id="17">
+			<Name>FBPlacePickerCacheDescriptor</Name>
+			<Path>Classes/FBPlacePickerCacheDescriptor.html</Path>
+		</Node>
+		<Node id="18">
+			<Name>FBPlacePickerViewController</Name>
+			<Path>Classes/FBPlacePickerViewController.html</Path>
+		</Node>
+		<Node id="19">
+			<Name>FBProfilePictureView</Name>
+			<Path>Classes/FBProfilePictureView.html</Path>
+		</Node>
+		<Node id="20">
+			<Name>FBRequest</Name>
+			<Path>Classes/FBRequest.html</Path>
+		</Node>
+		<Node id="21">
+			<Name>FBRequestBody</Name>
+			<Path>Classes/FBRequestBody.html</Path>
+		</Node>
+		<Node id="22">
+			<Name>FBRequestConnection</Name>
+			<Path>Classes/FBRequestConnection.html</Path>
+		</Node>
+		<Node id="23">
+			<Name>FBSession</Name>
+			<Path>Classes/FBSession.html</Path>
+		</Node>
+		<Node id="24">
+			<Name>FBSessionManualTokenCachingStrategy</Name>
+			<Path>Classes/FBSessionManualTokenCachingStrategy.html</Path>
+		</Node>
+		<Node id="25">
+			<Name>FBSessionTokenCachingStrategy</Name>
+			<Path>Classes/FBSessionTokenCachingStrategy.html</Path>
+		</Node>
+		<Node id="26">
+			<Name>FBSettings</Name>
+			<Path>Classes/FBSettings.html</Path>
+		</Node>
+		<Node id="27">
+			<Name>FBTestSession</Name>
+			<Path>Classes/FBTestSession.html</Path>
+		</Node>
+		<Node id="28">
+			<Name>FBURLConnection</Name>
+			<Path>Classes/FBURLConnection.html</Path>
+		</Node>
+		<Node id="29">
+			<Name>FBUserSettingsViewController</Name>
+			<Path>Classes/FBUserSettingsViewController.html</Path>
+		</Node>
+		<Node id="30">
+			<Name>FBUtility</Name>
+			<Path>Classes/FBUtility.html</Path>
+		</Node>
+		<Node id="31">
+			<Name>FBViewController</Name>
+			<Path>Classes/FBViewController.html</Path>
+		</Node>
+		<Node id="32">
+			<Name>Facebook</Name>
+			<Path>Classes/Facebook.html</Path>
+		</Node>
+		
+		
+		<Node id="33">
+			<Name>FBCacheIndexFileDelegate</Name>
+			<Path>Protocols/FBCacheIndexFileDelegate.html</Path>
+		</Node>
+		<Node id="34">
+			<Name>FBDialogDelegate</Name>
+			<Path>Protocols/FBDialogDelegate.html</Path>
+		</Node>
+		<Node id="35">
+			<Name>FBFriendPickerDelegate</Name>
+			<Path>Protocols/FBFriendPickerDelegate.html</Path>
+		</Node>
+		<Node id="36">
+			<Name>FBGraphLocation</Name>
+			<Path>Protocols/FBGraphLocation.html</Path>
+		</Node>
+		<Node id="37">
+			<Name>FBGraphObject</Name>
+			<Path>Protocols/FBGraphObject.html</Path>
+		</Node>
+		<Node id="38">
+			<Name>FBGraphObjectDataSourceDataNeededDelegate</Name>
+			<Path>Protocols/FBGraphObjectDataSourceDataNeededDelegate.html</Path>
+		</Node>
+		<Node id="39">
+			<Name>FBGraphObjectPagingLoaderDelegate</Name>
+			<Path>Protocols/FBGraphObjectPagingLoaderDelegate.html</Path>
+		</Node>
+		<Node id="40">
+			<Name>FBGraphObjectSelectionChangedDelegate</Name>
+			<Path>Protocols/FBGraphObjectSelectionChangedDelegate.html</Path>
+		</Node>
+		<Node id="41">
+			<Name>FBGraphObjectSelectionQueryDelegate</Name>
+			<Path>Protocols/FBGraphObjectSelectionQueryDelegate.html</Path>
+		</Node>
+		<Node id="42">
+			<Name>FBGraphObjectViewControllerDelegate</Name>
+			<Path>Protocols/FBGraphObjectViewControllerDelegate.html</Path>
+		</Node>
+		<Node id="43">
+			<Name>FBGraphPlace</Name>
+			<Path>Protocols/FBGraphPlace.html</Path>
+		</Node>
+		<Node id="44">
+			<Name>FBGraphUser</Name>
+			<Path>Protocols/FBGraphUser.html</Path>
+		</Node>
+		<Node id="45">
+			<Name>FBLoginDialogDelegate</Name>
+			<Path>Protocols/FBLoginDialogDelegate.html</Path>
+		</Node>
+		<Node id="46">
+			<Name>FBLoginViewDelegate</Name>
+			<Path>Protocols/FBLoginViewDelegate.html</Path>
+		</Node>
+		<Node id="47">
+			<Name>FBOpenGraphAction</Name>
+			<Path>Protocols/FBOpenGraphAction.html</Path>
+		</Node>
+		<Node id="48">
+			<Name>FBPlacePickerDelegate</Name>
+			<Path>Protocols/FBPlacePickerDelegate.html</Path>
+		</Node>
+		<Node id="49">
+			<Name>FBRequestDelegate</Name>
+			<Path>Protocols/FBRequestDelegate.html</Path>
+		</Node>
+		<Node id="50">
+			<Name>FBSessionDelegate</Name>
+			<Path>Protocols/FBSessionDelegate.html</Path>
+		</Node>
+		<Node id="51">
+			<Name>FBUserSettingsDelegate</Name>
+			<Path>Protocols/FBUserSettingsDelegate.html</Path>
+		</Node>
+		<Node id="52">
+			<Name>FBViewControllerDelegate</Name>
+			<Path>Protocols/FBViewControllerDelegate.html</Path>
+		</Node>
+		
+	</Library>
+</DocSetNodes>

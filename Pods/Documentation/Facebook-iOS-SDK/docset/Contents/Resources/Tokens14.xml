@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/FBLogger.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/FBLogger</TokenIdentifier>
+			<Abstract type="html">@class FBLogger</Abstract>
+			<DeclaredIn>FBLogger.h</DeclaredIn>
+			
+			<NodeRef refid="14"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBLogger/setContents:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBLogger.h</DeclaredIn>			
+			
+			<Declaration>@property (copy, nonatomic) NSString *contents</Declaration>
+			
+			
+			<Anchor>//api/name/contents</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FBLogger/contents</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBLogger.h</DeclaredIn>			
+			
+			<Declaration>@property (copy, nonatomic) NSString *contents</Declaration>
+			
+			
+			<Anchor>//api/name/contents</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBLogger/setLoggerSerialNumber:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBLogger.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) NSUInteger loggerSerialNumber</Declaration>
+			
+			
+			<Anchor>//api/name/loggerSerialNumber</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FBLogger/loggerSerialNumber</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBLogger.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) NSUInteger loggerSerialNumber</Declaration>
+			
+			
+			<Anchor>//api/name/loggerSerialNumber</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBLogger/setLoggingBehavior:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBLogger.h</DeclaredIn>			
+			
+			<Declaration>@property (copy, nonatomic, readonly) NSString *loggingBehavior</Declaration>
+			
+			
+			<Anchor>//api/name/loggingBehavior</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FBLogger/loggingBehavior</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBLogger.h</DeclaredIn>			
+			
+			<Declaration>@property (copy, nonatomic, readonly) NSString *loggingBehavior</Declaration>
+			
+			
+			<Anchor>//api/name/loggingBehavior</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBLogger/setIsActive:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBLogger.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) BOOL isActive</Declaration>
+			
+			
+			<Anchor>//api/name/isActive</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FBLogger/isActive</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBLogger.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) BOOL isActive</Declaration>
+			
+			
+			<Anchor>//api/name/isActive</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBLogger/initWithLoggingBehavior:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBLogger.h</DeclaredIn>			
+			
+			<Declaration>- (id)initWithLoggingBehavior:(NSString *)loggingBehavior</Declaration>
+			
+			
+			<Anchor>//api/name/initWithLoggingBehavior:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBLogger/appendString:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBLogger.h</DeclaredIn>			
+			
+			<Declaration>- (void)appendString:(NSString *)string</Declaration>
+			
+			
+			<Anchor>//api/name/appendString:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBLogger/appendFormat:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBLogger.h</DeclaredIn>			
+			
+			<Declaration>- (void)appendFormat:(NSString *)formatString, ...</Declaration>
+			
+			
+			<Anchor>//api/name/appendFormat:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBLogger/appendKey:value:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBLogger.h</DeclaredIn>			
+			
+			<Declaration>- (void)appendKey:(NSString *)key value:(NSString *)value</Declaration>
+			
+			
+			<Anchor>//api/name/appendKey:value:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBLogger/emitToNSLog</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBLogger.h</DeclaredIn>			
+			
+			<Declaration>- (void)emitToNSLog</Declaration>
+			
+			
+			<Anchor>//api/name/emitToNSLog</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/FBLogger/newSerialNumber</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBLogger.h</DeclaredIn>			
+			
+			<Declaration>+ (NSUInteger)newSerialNumber</Declaration>
+			
+			
+			<Anchor>//api/name/newSerialNumber</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/FBLogger/singleShotLogEntry:logEntry:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBLogger.h</DeclaredIn>			
+			
+			<Declaration>+ (void)singleShotLogEntry:(NSString *)loggingBehavior logEntry:(NSString *)logEntry</Declaration>
+			
+			
+			<Anchor>//api/name/singleShotLogEntry:logEntry:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/FBLogger/singleShotLogEntry:formatString:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBLogger.h</DeclaredIn>			
+			
+			<Declaration>+ (void)singleShotLogEntry:(NSString *)loggingBehavior formatString:(NSString *)formatString, ...</Declaration>
+			
+			
+			<Anchor>//api/name/singleShotLogEntry:formatString:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/FBLogger/singleShotLogEntry:timestampTag:formatString:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBLogger.h</DeclaredIn>			
+			
+			<Declaration>+ (void)singleShotLogEntry:(NSString *)loggingBehavior timestampTag:(NSObject *)timestampTag formatString:(NSString *)formatString, ...</Declaration>
+			
+			
+			<Anchor>//api/name/singleShotLogEntry:timestampTag:formatString:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/FBLogger/registerCurrentTime:withTag:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBLogger.h</DeclaredIn>			
+			
+			<Declaration>+ (void)registerCurrentTime:(NSString *)loggingBehavior withTag:(NSObject *)timestampTag</Declaration>
+			
+			
+			<Anchor>//api/name/registerCurrentTime:withTag:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/FBLogger/registerStringToReplace:replaceWith:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBLogger.h</DeclaredIn>			
+			
+			<Declaration>+ (void)registerStringToReplace:(NSString *)replace replaceWith:(NSString *)replaceWith</Declaration>
+			
+			
+			<Anchor>//api/name/registerStringToReplace:replaceWith:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

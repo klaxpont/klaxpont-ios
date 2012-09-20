@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/FBCacheDescriptor.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/FBCacheDescriptor</TokenIdentifier>
+			<Abstract type="html">@class</Abstract>
+			<DeclaredIn>FBCacheDescriptor.h</DeclaredIn>
+			
+			<NodeRef refid="1"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBCacheDescriptor/prefetchAndCacheForSession:</TokenIdentifier>
+			<Abstract type="html">@method
+@abstract
+Fetches and caches the data described by the cache descriptor instance, for the given session.</Abstract>
+			<DeclaredIn>FBCacheDescriptor.h</DeclaredIn>			
+			
+			<Declaration>- (void)prefetchAndCacheForSession:(FBSession *)session</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>session</Name>
+					<Abstract type="html">the FBSession to use for fetching data</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/prefetchAndCacheForSession:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

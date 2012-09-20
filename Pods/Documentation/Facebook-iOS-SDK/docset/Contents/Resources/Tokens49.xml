@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Protocols/FBRequestDelegate.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intf/FBRequestDelegate</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>Facebook.h</DeclaredIn>
+			
+			<NodeRef refid="49"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/FBRequestDelegate/requestLoading:</TokenIdentifier>
+			<Abstract type="html">Called just before the request is sent to the server.</Abstract>
+			<DeclaredIn>Facebook.h</DeclaredIn>			
+			
+			<Declaration>- (void)requestLoading:(FBRequest *)request</Declaration>
+			
+			
+			<Anchor>//api/name/requestLoading:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/FBRequestDelegate/request:didReceiveResponse:</TokenIdentifier>
+			<Abstract type="html">Called when the Facebook API request has returned a response.</Abstract>
+			<DeclaredIn>Facebook.h</DeclaredIn>			
+			
+			<Declaration>- (void)request:(FBRequest *)request didReceiveResponse:(NSURLResponse *)response</Declaration>
+			
+			
+			<Anchor>//api/name/request:didReceiveResponse:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/FBRequestDelegate/request:didFailWithError:</TokenIdentifier>
+			<Abstract type="html">Called when an error prevents the request from completing successfully.</Abstract>
+			<DeclaredIn>Facebook.h</DeclaredIn>			
+			
+			<Declaration>- (void)request:(FBRequest *)request didFailWithError:(NSError *)error</Declaration>
+			
+			
+			<Anchor>//api/name/request:didFailWithError:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/FBRequestDelegate/request:didLoad:</TokenIdentifier>
+			<Abstract type="html">Called when a request returns and its response has been parsed into
+an object.</Abstract>
+			<DeclaredIn>Facebook.h</DeclaredIn>			
+			
+			<Declaration>- (void)request:(FBRequest *)request didLoad:(id)result</Declaration>
+			
+			
+			<Anchor>//api/name/request:didLoad:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/FBRequestDelegate/request:didLoadRawResponse:</TokenIdentifier>
+			<Abstract type="html">Called when a request returns a response.</Abstract>
+			<DeclaredIn>Facebook.h</DeclaredIn>			
+			
+			<Declaration>- (void)request:(FBRequest *)request didLoadRawResponse:(NSData *)data</Declaration>
+			
+			
+			<Anchor>//api/name/request:didLoadRawResponse:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

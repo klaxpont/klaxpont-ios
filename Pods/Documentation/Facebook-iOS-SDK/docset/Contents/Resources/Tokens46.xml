@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Protocols/FBLoginViewDelegate.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intf/FBLoginViewDelegate</TokenIdentifier>
+			<Abstract type="html">@protocol</Abstract>
+			<DeclaredIn>FBLoginView.h</DeclaredIn>
+			
+			<NodeRef refid="46"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/FBLoginViewDelegate/loginViewShowingLoggedInUser:</TokenIdentifier>
+			<Abstract type="html">@abstract
+Tells the delegate that the view is now in logged in mode</Abstract>
+			<DeclaredIn>FBLoginView.h</DeclaredIn>			
+			
+			<Declaration>- (void)loginViewShowingLoggedInUser:(FBLoginView *)loginView</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>loginView</Name>
+					<Abstract type="html">The login view that transitioned its view mode</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/loginViewShowingLoggedInUser:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/FBLoginViewDelegate/loginViewFetchedUserInfo:user:</TokenIdentifier>
+			<Abstract type="html">@abstract
+Tells the delegate that the view is has now fetched user info</Abstract>
+			<DeclaredIn>FBLoginView.h</DeclaredIn>			
+			
+			<Declaration>- (void)loginViewFetchedUserInfo:(FBLoginView *)loginView user:(id&lt;FBGraphUser&gt;)user</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>loginView</Name>
+					<Abstract type="html">The login view that transitioned its view mode</Abstract>
+				</Parameter><Parameter>
+					<Name>user</Name>
+					<Abstract type="html">The user info object describing the logged in user</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/loginViewFetchedUserInfo:user:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/FBLoginViewDelegate/loginViewShowingLoggedOutUser:</TokenIdentifier>
+			<Abstract type="html">@abstract
+Tells the delegate that the view is now in logged out mode</Abstract>
+			<DeclaredIn>FBLoginView.h</DeclaredIn>			
+			
+			<Declaration>- (void)loginViewShowingLoggedOutUser:(FBLoginView *)loginView</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>loginView</Name>
+					<Abstract type="html">The login view that transitioned its view mode</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/loginViewShowingLoggedOutUser:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

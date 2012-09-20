@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/FBSessionTokenCachingStrategy.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/FBSessionTokenCachingStrategy</TokenIdentifier>
+			<Abstract type="html">@class</Abstract>
+			<DeclaredIn>FBSessionTokenCachingStrategy.h</DeclaredIn>
+			
+			<NodeRef refid="25"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBSessionTokenCachingStrategy/init</TokenIdentifier>
+			<Abstract type="html">@abstract Initializes and returns an instance</Abstract>
+			<DeclaredIn>FBSessionTokenCachingStrategy.h</DeclaredIn>			
+			
+			<Declaration>- (id)init</Declaration>
+			
+			
+			<Anchor>//api/name/init</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBSessionTokenCachingStrategy/initWithUserDefaultTokenInformationKeyName:</TokenIdentifier>
+			<Abstract type="html">@abstract
+Initializes and returns an instance</Abstract>
+			<DeclaredIn>FBSessionTokenCachingStrategy.h</DeclaredIn>			
+			
+			<Declaration>- (id)initWithUserDefaultTokenInformationKeyName:(NSString *)tokenInformationKeyName</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>tokenInformationKeyName</Name>
+					<Abstract type="html">Specifies a key name to use for cached token information in NSUserDefaults, nil
+indicates a default value of @&quot;FBAccessTokenInformationKey&quot;</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/initWithUserDefaultTokenInformationKeyName:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBSessionTokenCachingStrategy/cacheTokenInformation:</TokenIdentifier>
+			<Abstract type="html">@abstract
+Called by FBSession (and overridden by inheritors), in order to cache token information.</Abstract>
+			<DeclaredIn>FBSessionTokenCachingStrategy.h</DeclaredIn>			
+			
+			<Declaration>- (void)cacheTokenInformation:(NSDictionary *)tokenInformation</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>tokenInformation</Name>
+					<Abstract type="html">Dictionary containing token information to be cached by the method</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/cacheTokenInformation:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBSessionTokenCachingStrategy/fetchTokenInformation</TokenIdentifier>
+			<Abstract type="html">@abstract
+Called by FBSession (and overridden by inheritors), in order to fetch cached token information</Abstract>
+			<DeclaredIn>FBSessionTokenCachingStrategy.h</DeclaredIn>			
+			
+			<Declaration>- (NSDictionary *)fetchTokenInformation</Declaration>
+			
+			
+			<Anchor>//api/name/fetchTokenInformation</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBSessionTokenCachingStrategy/clearToken</TokenIdentifier>
+			<Abstract type="html">@abstract
+Called by FBSession (and overridden by inheritors), in order delete any cached information for the current token</Abstract>
+			<DeclaredIn>FBSessionTokenCachingStrategy.h</DeclaredIn>			
+			
+			<Declaration>- (void)clearToken</Declaration>
+			
+			
+			<Anchor>//api/name/clearToken</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/FBSessionTokenCachingStrategy/defaultInstance</TokenIdentifier>
+			<Abstract type="html">@abstract
+Helper function called by the SDK as well as apps, in order to fetch the default strategy instance.</Abstract>
+			<DeclaredIn>FBSessionTokenCachingStrategy.h</DeclaredIn>			
+			
+			<Declaration>+ (FBSessionTokenCachingStrategy *)defaultInstance</Declaration>
+			
+			
+			<Anchor>//api/name/defaultInstance</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/FBSessionTokenCachingStrategy/isValidTokenInformation:</TokenIdentifier>
+			<Abstract type="html">@abstract
+Helper function called by the SDK as well as application code, used to determine whether a given dictionary
+contains the minimum token information usable by the FBSession.</Abstract>
+			<DeclaredIn>FBSessionTokenCachingStrategy.h</DeclaredIn>			
+			
+			<Declaration>+ (BOOL)isValidTokenInformation:(NSDictionary *)tokenInformation</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>tokenInformation</Name>
+					<Abstract type="html">Dictionary containing token information to be validated</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/isValidTokenInformation:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

@@ -1,0 +1,563 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/FBSession.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/FBSession</TokenIdentifier>
+			<Abstract type="html">@class FBSession</Abstract>
+			<DeclaredIn>FBSession.h</DeclaredIn>
+			
+			<NodeRef refid="23"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBSession/init</TokenIdentifier>
+			<Abstract type="html">@method</Abstract>
+			<DeclaredIn>FBSession.h</DeclaredIn>			
+			
+			<Declaration>- (id)init</Declaration>
+			
+			
+			<Anchor>//api/name/init</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBSession/initWithPermissions:</TokenIdentifier>
+			<Abstract type="html">@method</Abstract>
+			<DeclaredIn>FBSession.h</DeclaredIn>			
+			
+			<Declaration>- (id)initWithPermissions:(NSArray *)permissions</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>permissions</Name>
+					<Abstract type="html">An array of strings representing the permissions to request during the
+authentication flow. A value of nil will indicates basic permissions. The default is nil.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/initWithPermissions:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBSession/initWithAppID:permissions:urlSchemeSuffix:tokenCacheStrategy:</TokenIdentifier>
+			<Abstract type="html">@method</Abstract>
+			<DeclaredIn>FBSession.h</DeclaredIn>			
+			
+			<Declaration>- (id)initWithAppID:(NSString *)appID permissions:(NSArray *)permissions urlSchemeSuffix:(NSString *)urlSchemeSuffix tokenCacheStrategy:(FBSessionTokenCachingStrategy *)tokenCachingStrategy</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>appID</Name>
+					<Abstract type="html">The Facebook App ID for the session. If nil is passed in the default App ID will be obtained from a call to [FBSession defaultAppID]. The default is nil.</Abstract>
+				</Parameter><Parameter>
+					<Name>permissions</Name>
+					<Abstract type="html">An array of strings representing the permissions to request during the
+authentication flow. A value of nil will indicates basic permissions. The default is nil.</Abstract>
+				</Parameter><Parameter>
+					<Name>urlSchemeSuffix</Name>
+					<Abstract type="html">The URL Scheme Suffix to be used in scenarious where multiple iOS apps use one Facebook App ID. A value of nil indicates that this information should be pulled from the plist. The default is nil.</Abstract>
+				</Parameter><Parameter>
+					<Name>tokenCachingStrategy</Name>
+					<Abstract type="html">Specifies a key name to use for cached token information in NSUserDefaults, nil
+indicates a default value of @&quot;FBAccessTokenInformationKey&quot;.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/initWithAppID:permissions:urlSchemeSuffix:tokenCacheStrategy:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBSession/setIsOpen:</TokenIdentifier>
+			<Abstract type="html">@abstract Indicates whether the session is open and ready for use.</Abstract>
+			<DeclaredIn>FBSession.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly) BOOL isOpen</Declaration>
+			
+			
+			<Anchor>//api/name/isOpen</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FBSession/isOpen</TokenIdentifier>
+			<Abstract type="html">@abstract Indicates whether the session is open and ready for use.</Abstract>
+			<DeclaredIn>FBSession.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly) BOOL isOpen</Declaration>
+			
+			
+			<Anchor>//api/name/isOpen</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBSession/setState:</TokenIdentifier>
+			<Abstract type="html">@abstract Detailed session state</Abstract>
+			<DeclaredIn>FBSession.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly) FBSessionState state</Declaration>
+			
+			
+			<Anchor>//api/name/state</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FBSession/state</TokenIdentifier>
+			<Abstract type="html">@abstract Detailed session state</Abstract>
+			<DeclaredIn>FBSession.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly) FBSessionState state</Declaration>
+			
+			
+			<Anchor>//api/name/state</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBSession/setAppID:</TokenIdentifier>
+			<Abstract type="html">@abstract Identifies the Facebook app which the session object represents.</Abstract>
+			<DeclaredIn>FBSession.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, copy) NSString *appID</Declaration>
+			
+			
+			<Anchor>//api/name/appID</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FBSession/appID</TokenIdentifier>
+			<Abstract type="html">@abstract Identifies the Facebook app which the session object represents.</Abstract>
+			<DeclaredIn>FBSession.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, copy) NSString *appID</Declaration>
+			
+			
+			<Anchor>//api/name/appID</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBSession/setUrlSchemeSuffix:</TokenIdentifier>
+			<Abstract type="html">@abstract Identifies the URL Scheme Suffix used by the session. This is used when multiple iOS apps share a single Facebook app ID.</Abstract>
+			<DeclaredIn>FBSession.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, copy) NSString *urlSchemeSuffix</Declaration>
+			
+			
+			<Anchor>//api/name/urlSchemeSuffix</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FBSession/urlSchemeSuffix</TokenIdentifier>
+			<Abstract type="html">@abstract Identifies the URL Scheme Suffix used by the session. This is used when multiple iOS apps share a single Facebook app ID.</Abstract>
+			<DeclaredIn>FBSession.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, copy) NSString *urlSchemeSuffix</Declaration>
+			
+			
+			<Anchor>//api/name/urlSchemeSuffix</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBSession/setAccessToken:</TokenIdentifier>
+			<Abstract type="html">@abstract The access token for the session object.</Abstract>
+			<DeclaredIn>FBSession.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, copy) NSString *accessToken</Declaration>
+			
+			
+			<Anchor>//api/name/accessToken</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FBSession/accessToken</TokenIdentifier>
+			<Abstract type="html">@abstract The access token for the session object.</Abstract>
+			<DeclaredIn>FBSession.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, copy) NSString *accessToken</Declaration>
+			
+			
+			<Anchor>//api/name/accessToken</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBSession/setExpirationDate:</TokenIdentifier>
+			<Abstract type="html">@abstract The expiration date of the access token for the session object.</Abstract>
+			<DeclaredIn>FBSession.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, copy) NSDate *expirationDate</Declaration>
+			
+			
+			<Anchor>//api/name/expirationDate</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FBSession/expirationDate</TokenIdentifier>
+			<Abstract type="html">@abstract The expiration date of the access token for the session object.</Abstract>
+			<DeclaredIn>FBSession.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, copy) NSDate *expirationDate</Declaration>
+			
+			
+			<Anchor>//api/name/expirationDate</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBSession/setPermissions:</TokenIdentifier>
+			<Abstract type="html">@abstract The permissions granted to the access token during the authentication flow.</Abstract>
+			<DeclaredIn>FBSession.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, copy) NSArray *permissions</Declaration>
+			
+			
+			<Anchor>//api/name/permissions</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FBSession/permissions</TokenIdentifier>
+			<Abstract type="html">@abstract The permissions granted to the access token during the authentication flow.</Abstract>
+			<DeclaredIn>FBSession.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, copy) NSArray *permissions</Declaration>
+			
+			
+			<Anchor>//api/name/permissions</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBSession/openWithCompletionHandler:</TokenIdentifier>
+			<Abstract type="html">@method</Abstract>
+			<DeclaredIn>FBSession.h</DeclaredIn>			
+			
+			<Declaration>- (void)openWithCompletionHandler:(FBSessionStateHandler)handler</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>handler</Name>
+					<Abstract type="html">A block to call with the state changes. The default is nil.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/openWithCompletionHandler:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBSession/openWithBehavior:completionHandler:</TokenIdentifier>
+			<Abstract type="html">@method</Abstract>
+			<DeclaredIn>FBSession.h</DeclaredIn>			
+			
+			<Declaration>- (void)openWithBehavior:(FBSessionLoginBehavior)behavior completionHandler:(FBSessionStateHandler)handler</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>behavior</Name>
+					<Abstract type="html">Controls whether to allow, force, or prohibit Facebook Login or Inline Facebook Login. The default
+is to allow Facebook Login, with fallback to Inline Facebook Login.</Abstract>
+				</Parameter><Parameter>
+					<Name>handler</Name>
+					<Abstract type="html">A block to call with session state changes. The default is nil.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/openWithBehavior:completionHandler:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBSession/close</TokenIdentifier>
+			<Abstract type="html">@abstract
+Closes the local in-memory session object, but does not clear the persisted token cache.</Abstract>
+			<DeclaredIn>FBSession.h</DeclaredIn>			
+			
+			<Declaration>- (void)close</Declaration>
+			
+			
+			<Anchor>//api/name/close</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBSession/closeAndClearTokenInformation</TokenIdentifier>
+			<Abstract type="html">@abstract
+Closes the in-memory session, and clears any persisted cache related to the session.</Abstract>
+			<DeclaredIn>FBSession.h</DeclaredIn>			
+			
+			<Declaration>- (void)closeAndClearTokenInformation</Declaration>
+			
+			
+			<Anchor>//api/name/closeAndClearTokenInformation</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBSession/reauthorizeWithPermissions:behavior:completionHandler:</TokenIdentifier>
+			<Abstract type="html">@abstract
+Reauthorizes the session, with additional permissions.
+  </Abstract>
+			<DeclaredIn>FBSession.h</DeclaredIn>			
+			
+			<Declaration>- (void)reauthorizeWithPermissions:(NSArray *)permissions behavior:(FBSessionLoginBehavior)behavior completionHandler:(FBSessionReauthorizeResultHandler)handler</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>permissions</Name>
+					<Abstract type="html">An array of strings representing the permissions to request during the
+authentication flow. A value of nil will indicates basic permissions. The default is nil.</Abstract>
+				</Parameter><Parameter>
+					<Name>behavior</Name>
+					<Abstract type="html">Controls whether to allow, force, or prohibit Facebook Login. The default
+is to allow Facebook Login and fall back to Inline Facebook Login if needed.</Abstract>
+				</Parameter><Parameter>
+					<Name>handler</Name>
+					<Abstract type="html">A block to call with session state changes. The default is nil.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/reauthorizeWithPermissions:behavior:completionHandler:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBSession/handleOpenURL:</TokenIdentifier>
+			<Abstract type="html">@abstract
+A helper method that is used to provide an implementation for
+[UIApplicationDelegate application:openURL:sourceApplication:annotation:]. It should be invoked during
+the Facebook Login flow and will update the session information based on the incoming URL.</Abstract>
+			<DeclaredIn>FBSession.h</DeclaredIn>			
+			
+			<Declaration>- (BOOL)handleOpenURL:(NSURL *)url</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>url</Name>
+					<Abstract type="html">The URL as passed to [UIApplicationDelegate application:openURL:sourceApplication:annotation:].</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/handleOpenURL:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/FBSession/openActiveSessionWithAllowLoginUI:</TokenIdentifier>
+			<Abstract type="html">@abstract
+This is the simplest method for opening a session with Facebook. Using sessionOpen logs on a user,
+and sets the static activeSession which becomes the default session object for any Facebook UI widgets
+used by the application. This session becomes the active session, whether open succeeds or fails.</Abstract>
+			<DeclaredIn>FBSession.h</DeclaredIn>			
+			
+			<Declaration>+ (BOOL)openActiveSessionWithAllowLoginUI:(BOOL)allowLoginUI</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>allowLoginUI</Name>
+					<Abstract type="html">Sometimes it is useful to attempt to open a session, but only if
+no login UI will be required to accomplish the operation. For example, at application startup it may not
+be disirable to transition to login UI for the user, and yet an open session is desired so long as a cached
+token can be used to open the session. Passing NO to this argument, assures the method will not present UI
+to the user in order to open the session.
+
+@discussion
+Returns YES if the session was opened synchronously without presenting UI to the user. This occurs
+when there is a cached token available from a previous run of the application. If NO is returned, this indicates
+that the session was not immediately opened, via cache. However, if YES was passed as allowLoginUI, then it is
+possible that the user will login, and the session will become open asynchronously. The primary use for
+this return value is to switch-on facebook capabilities in your UX upon startup, in the case were the session
+is opened via cache.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/openActiveSessionWithAllowLoginUI:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/FBSession/openActiveSessionWithPermissions:allowLoginUI:completionHandler:</TokenIdentifier>
+			<Abstract type="html">@abstract
+This is a simple method for opening a session with Facebook. Using sessionOpen logs on a user,
+and sets the static activeSession which becomes the default session object for any Facebook UI widgets
+used by the application. This session becomes the active session, whether open succeeds or fails.</Abstract>
+			<DeclaredIn>FBSession.h</DeclaredIn>			
+			
+			<Declaration>+ (BOOL)openActiveSessionWithPermissions:(NSArray *)permissions allowLoginUI:(BOOL)allowLoginUI completionHandler:(FBSessionStateHandler)handler</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>permissions</Name>
+					<Abstract type="html">An array of strings representing the permissions to request during the
+authentication flow. A value of nil will indicates basic permissions. A nil value specifies
+default permissions.
+  </Abstract>
+				</Parameter><Parameter>
+					<Name>allowLoginUI</Name>
+					<Abstract type="html">Sometimes it is useful to attempt to open a session, but only if
+no login UI will be required to accomplish the operation. For example, at application startup it may not
+be desirable to transition to login UI for the user, and yet an open session is desired so long as a cached
+token can be used to open the session. Passing NO to this argument, assures the method will not present UI
+to the user in order to open the session.</Abstract>
+				</Parameter><Parameter>
+					<Name>handler</Name>
+					<Abstract type="html">Many applications will benefit from notification when a session becomes invalid
+or undergoes other state transitions. If a block is provided, the FBSession
+object will call the block each time the session changes state.
+
+@discussion
+Returns true if the session was opened synchronously without presenting UI to the user. This occurs
+when there is a cached token available from a previous run of the application. If NO is returned, this indicates
+that the session was not immediately opened, via cache. However, if YES was passed as allowLoginUI, then it is
+possible that the user will login, and the session will become open asynchronously. The primary use for
+this return value is to switch-on facebook capabilities in your UX upon startup, in the case were the session
+is opened via cache.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/openActiveSessionWithPermissions:allowLoginUI:completionHandler:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/FBSession/activeSession</TokenIdentifier>
+			<Abstract type="html">@abstract
+An appication may get or set the current active session. Certain high-level components in the SDK
+will use the activeSession to set default session (e.g. FBLoginView, FBFriendPickerViewController</Abstract>
+			<DeclaredIn>FBSession.h</DeclaredIn>			
+			
+			<Declaration>+ (FBSession *)activeSession</Declaration>
+			
+			
+			<Anchor>//api/name/activeSession</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/FBSession/setActiveSession:</TokenIdentifier>
+			<Abstract type="html">@abstract
+An appication may get or set the current active session. Certain high-level components in the SDK
+will use the activeSession to set default session (e.g. FBLoginView, FBFriendPickerViewController</Abstract>
+			<DeclaredIn>FBSession.h</DeclaredIn>			
+			
+			<Declaration>+ (FBSession *)setActiveSession:(FBSession *)session</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>session</Name>
+					<Abstract type="html">The FBSession object to become the active session
+
+@discussion
+If an application prefers the flexibilility of directly instantiating a session object, an active
+session can be set directly.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/setActiveSession:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/FBSession/setDefaultAppID:</TokenIdentifier>
+			<Abstract type="html">@method</Abstract>
+			<DeclaredIn>FBSession.h</DeclaredIn>			
+			
+			<Declaration>+ (void)setDefaultAppID:(NSString *)appID</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>appID</Name>
+					<Abstract type="html">The default Facebook App ID to use for &lt;FBSession&gt; methods.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/setDefaultAppID:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/FBSession/defaultAppID</TokenIdentifier>
+			<Abstract type="html">@method</Abstract>
+			<DeclaredIn>FBSession.h</DeclaredIn>			
+			
+			<Declaration>+ (NSString *)defaultAppID</Declaration>
+			
+			
+			<Anchor>//api/name/defaultAppID</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBSession/refreshAccessToken:expirationDate:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBSession+Internal.h</DeclaredIn>			
+			
+			<Declaration>- (void)refreshAccessToken:(NSString *)token expirationDate:(NSDate *)expireDate</Declaration>
+			
+			
+			<Anchor>//api/name/refreshAccessToken:expirationDate:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBSession/shouldExtendAccessToken</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBSession+Internal.h</DeclaredIn>			
+			
+			<Declaration>- (BOOL)shouldExtendAccessToken</Declaration>
+			
+			
+			<Anchor>//api/name/shouldExtendAccessToken</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/FBSession/activeSessionIfOpen</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBSession+Internal.h</DeclaredIn>			
+			
+			<Declaration>+ (FBSession *)activeSessionIfOpen</Declaration>
+			
+			
+			<Anchor>//api/name/activeSessionIfOpen</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/FBSession/deleteFacebookCookies</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBSession+Internal.h</DeclaredIn>			
+			
+			<Declaration>+ (void)deleteFacebookCookies</Declaration>
+			
+			
+			<Anchor>//api/name/deleteFacebookCookies</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/FBSession/expirationDateFromExpirationTimeString:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBSession+Internal.h</DeclaredIn>			
+			
+			<Declaration>+ (NSDate *)expirationDateFromExpirationTimeString:(NSString *)expirationTime</Declaration>
+			
+			
+			<Anchor>//api/name/expirationDateFromExpirationTimeString:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBSession/transitionToState:andUpdateToken:andExpirationDate:shouldCache:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBSession+Protected.h</DeclaredIn>			
+			
+			<Declaration>- (BOOL)transitionToState:(FBSessionState)state andUpdateToken:(NSString *)token andExpirationDate:(NSDate *)date shouldCache:(BOOL)shouldCache</Declaration>
+			
+			
+			<Anchor>//api/name/transitionToState:andUpdateToken:andExpirationDate:shouldCache:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBSession/transitionAndCallHandlerWithState:error:token:expirationDate:shouldCache:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBSession+Protected.h</DeclaredIn>			
+			
+			<Declaration>- (void)transitionAndCallHandlerWithState:(FBSessionState)status error:(NSError *)error token:(NSString *)token expirationDate:(NSDate *)date shouldCache:(BOOL)shouldCache</Declaration>
+			
+			
+			<Anchor>//api/name/transitionAndCallHandlerWithState:error:token:expirationDate:shouldCache:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBSession/authorizeWithPermissions:behavior:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBSession+Protected.h</DeclaredIn>			
+			
+			<Declaration>- (void)authorizeWithPermissions:(NSArray *)permissions behavior:(FBSessionLoginBehavior)behavior</Declaration>
+			
+			
+			<Anchor>//api/name/authorizeWithPermissions:behavior:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/FBSession/errorLoginFailedWithReason:errorCode:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBSession+Protected.h</DeclaredIn>			
+			
+			<Declaration>+ (NSError *)errorLoginFailedWithReason:(NSString *)errorReason errorCode:(NSString *)errorCode</Declaration>
+			
+			
+			<Anchor>//api/name/errorLoginFailedWithReason:errorCode:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

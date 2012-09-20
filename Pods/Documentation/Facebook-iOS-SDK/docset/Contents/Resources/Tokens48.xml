@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Protocols/FBPlacePickerDelegate.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intf/FBPlacePickerDelegate</TokenIdentifier>
+			<Abstract type="html">@protocol</Abstract>
+			<DeclaredIn>FBPlacePickerViewController.h</DeclaredIn>
+			
+			<NodeRef refid="48"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/FBPlacePickerDelegate/placePickerViewControllerDataDidChange:</TokenIdentifier>
+			<Abstract type="html">@abstract
+Tells the delegate that data has been loaded.</Abstract>
+			<DeclaredIn>FBPlacePickerViewController.h</DeclaredIn>			
+			
+			<Declaration>- (void)placePickerViewControllerDataDidChange:(FBPlacePickerViewController *)placePicker</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>placePicker</Name>
+					<Abstract type="html">The place picker view controller whose data changed.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/placePickerViewControllerDataDidChange:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/FBPlacePickerDelegate/placePickerViewControllerSelectionDidChange:</TokenIdentifier>
+			<Abstract type="html">@abstract
+Tells the delegate that the selection has changed.</Abstract>
+			<DeclaredIn>FBPlacePickerViewController.h</DeclaredIn>			
+			
+			<Declaration>- (void)placePickerViewControllerSelectionDidChange:(FBPlacePickerViewController *)placePicker</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>placePicker</Name>
+					<Abstract type="html">The place picker view controller whose selection changed.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/placePickerViewControllerSelectionDidChange:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/FBPlacePickerDelegate/placePickerViewController:shouldIncludePlace:</TokenIdentifier>
+			<Abstract type="html">@abstract
+Asks the delegate whether to include a place in the list.
+  
+@discussion
+This can be used to implement a search bar that filters the places list.</Abstract>
+			<DeclaredIn>FBPlacePickerViewController.h</DeclaredIn>			
+			
+			<Declaration>- (BOOL)placePickerViewController:(FBPlacePickerViewController *)placePicker shouldIncludePlace:(id&lt;FBGraphPlace&gt;)place</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>placePicker</Name>
+					<Abstract type="html">The place picker view controller that is requesting this information.</Abstract>
+				</Parameter><Parameter>
+					<Name>place</Name>
+					<Abstract type="html">An FBGraphPlace object representing the place.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/placePickerViewController:shouldIncludePlace:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/FBPlacePickerDelegate/placePickerViewController:handleError:</TokenIdentifier>
+			<Abstract type="html">@abstract
+Called if there is a communication error.</Abstract>
+			<DeclaredIn>FBPlacePickerViewController.h</DeclaredIn>			
+			
+			<Declaration>- (void)placePickerViewController:(FBPlacePickerViewController *)placePicker handleError:(NSError *)error</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>placePicker</Name>
+					<Abstract type="html">The place picker view controller that encountered the error.</Abstract>
+				</Parameter><Parameter>
+					<Name>error</Name>
+					<Abstract type="html">An error object containing details of the error.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/placePickerViewController:handleError:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

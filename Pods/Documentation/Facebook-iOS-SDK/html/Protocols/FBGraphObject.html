@@ -1,0 +1,684 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>FBGraphObject Protocol Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<meta name="viewport" content="width=550" />
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.0.5 (build 789)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">Facebook-iOS-SDK 3.0.8 </a></h1>
+				<a id="developerHome" href="../index.html">Facebook</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">FBGraphObject Protocol Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/count">&nbsp;&nbsp;&nbsp;&nbsp;- count</option>
+	
+	<option value="//api/name/keyEnumerator">&nbsp;&nbsp;&nbsp;&nbsp;- keyEnumerator</option>
+	
+	<option value="//api/name/objectForKey:">&nbsp;&nbsp;&nbsp;&nbsp;- objectForKey:</option>
+	
+	<option value="//api/name/removeObjectForKey:">&nbsp;&nbsp;&nbsp;&nbsp;- removeObjectForKey:</option>
+	
+	<option value="//api/name/setObject:forKey:">&nbsp;&nbsp;&nbsp;&nbsp;- setObject:forKey:</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+</ul></li>
+
+
+
+
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/count">count</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/keyEnumerator">keyEnumerator</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/objectForKey:">objectForKey:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/removeObjectForKey:">removeObjectForKey:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setObject:forKey:">setObject:forKey:</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="FBGraphObject Protocol Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">FBGraphObject Protocol Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Conforms to</td>
+	<td class="specification-value">NSObject</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">FBGraphObject.h</td>
+</tr>
+						</tbody></table></div>
+					
+					
+					
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>@protocol</p>
+
+<p>@abstract
+The <a href="../Classes/FBGraphObject.html"><code>FBGraphObject</code></a> protocol is the base protocol which enables typed access to graph objects and
+open graph objects. Inherit from this protocol or a sub-protocol in order to introduce custom types
+for typed access to <a href="../Classes/Facebook.html">Facebook</a> objects.</p>
+
+<p>@discussion
+The <a href="../Classes/FBGraphObject.html"><code>FBGraphObject</code></a> protocol is the core type used by the <a href="../Classes/Facebook.html">Facebook</a> SDK for iOS to
+represent objects in the <a href="../Classes/Facebook.html">Facebook</a> Social Graph and the <a href="../Classes/Facebook.html">Facebook</a> Open Graph (OG).
+The <a href="../Classes/FBGraphObject.html"><code>FBGraphObject</code></a> class implements useful default functionality, but is rarely
+used directly by applications. The <a href="../Classes/FBGraphObject.html"><code>FBGraphObject</code></a> protocol, in contrast is the
+base protocol for all graph object access via the SDK.</p>
+
+<p>Goals of the <a href="../Classes/FBGraphObject.html">FBGraphObject</a> types:</p>
+
+<ul>
+   <li> Lightweight/maintainable/robust </li>
+   <li> Extensible and resilient to change, both by [Facebook](../Classes/Facebook.html) and third party (OG) </li>
+   <li> Simple and natural extension to Objective-C </li> 
+</ul>
+
+
+<p>The <a href="../Classes/FBGraphObject.html">FBGraphObject</a> at its core is a duck typed (if it walks/swims/quacks&hellip;
+its a duck) model which supports an optional static facade. Duck-typing achieves
+the flexibility necessary for Social Graph and OG uses, and the static facade
+increases discoverability, maintainability, robustness and simplicity.
+The following excerpt from the PlacePickerSample shows a simple use of the
+a facade protocol <a href="../Protocols/FBGraphPlace.html"><code>FBGraphPlace</code></a> by an application:</p>
+
+<pre>
+&dash; (void)placePickerViewControllerSelectionDidChange:([FBPlacePickerViewController](../Classes/FBPlacePickerViewController.html) *)placePicker
+{
+   id&#060;FBGraphPlace&#062; place = placePicker.selection;
+
+   // we'll use logging to show the simple typed property access to place and location info
+   NSLog(@"place=%@, city=%@, state=%@, lat long=%@ %@", 
+     place.name,
+     place.location.city,
+     place.location.state,
+     place.location.latitude,
+     place.location.longitude);
+}
+</pre>
+
+
+<p>Note that in this example, access to common place information is available through typed property
+syntax. But if at some point places in the Social Graph supported additional fields &ldquo;foo&rdquo; and &ldquo;bar&rdquo;, not
+reflected in the <code>FBGraphPlace</code> protocol, the application could still access the values like so:</p>
+
+<pre>
+NSString *foo = [place objectForKey:@"foo"]; // perhaps located at the ... in the preceding example
+NSNumber *bar = [place objectForKey:@"bar"]; // extensibility applies to Social and Open graph uses
+</pre>
+
+
+<p>In addition to untyped access, applications and future revisions of the SDK may add facade protocols by
+declaring a protocol inheriting the <code>FBGraphObject</code> protocol, like so:</p>
+
+<pre>
+&#064;protocol MyGraphThing&#060;FBGraphObject&#062;
+&#064;property (copy, nonatomic) NSString *id;
+&#064;property (copy, nonatomic) NSString *name;
+&#064;end
+</pre>
+
+
+<p>Important: facade implementations are inferred by graph objects returned by the methods of the SDK. This
+means that no explicit implementation is required by application or SDK code. Any <code>FBGraphObject</code> instance
+may be cast to any <code>FBGraphObject</code> facade protocol, and accessed via properties. If a field is not present
+for a given facade property, the property will return nil.</p>
+
+<p>The following layer diagram depicts some of the concepts discussed thus far:</p>
+
+<pre>
+                       *-------------* *------------* *-------------**--------------------------*
+            Facade --> | [FBGraphUser](../Protocols/FBGraphUser.html) | |FBGraphPlace| | MyGraphThing|| MyGraphPersonExtentension| ...
+                       *-------------* *------------* *-------------**--------------------------*
+                       *------------------------------------* *--------------------------------------*
+  Transparent impl --> |     [FBGraphObject](../Classes/FBGraphObject.html) (instances)      | |      CustomClass&#060;FBGraphObject&#062;      |
+                       *------------------------------------* *--------------------------------------*
+                       *-------------------**------------------------* *-----------------------------*
+     Apparent impl --> |NSMutableDictionary||[FBGraphObject](../Classes/FBGraphObject.html) (protocol)| |[FBGraphObject](../Classes/FBGraphObject.html) (class methods)|
+                       *-------------------**------------------------* *-----------------------------*
+</pre>
+
+
+<p>The <em>Facade</em> layer is meant for typed access to graph objects. The <em>Transparent impl</em> layer (more
+specifically, the instance capabilities of <code>FBGraphObject</code>) are used by the SDK and app logic
+internally, but are not part of the public interface between application and SDK. The <em>Apparent impl</em>
+layer represents the lower-level &ldquo;duck-typed&rdquo; use of graph objects.</p>
+
+<p>Implementation note: the SDK returns <code>NSMutableDictionary</code> derived instances with types declared like
+one of the following:</p>
+
+<pre>
+NSMutableDictionary&#060;FBGraphObject&#062; *obj;     // no facade specified (still castable by app)
+NSMutableDictionary&#060;FBGraphPlace&#062; *person;   // facade specified when possible
+</pre>
+
+
+<p>However, when passing a graph object to the SDK, <code>NSMutableDictionary</code> is not assumed; only the
+<a href="../Classes/FBGraphObject.html">FBGraphObject</a> protocol is assumed, like so:</p>
+
+<pre>
+id&#060;FBGraphObject&#062; anyGraphObj;
+</pre>
+
+
+<p>As such, the methods declared on the <a href="../Classes/FBGraphObject.html"><code>FBGraphObject</code></a> protocol represent the methods used by the SDK to
+consume graph objects. While the <a href="../Classes/FBGraphObject.html"><code>FBGraphObject</code></a> class implements the full <code>NSMutableDictionary</code> and KVC
+interfaces, these are not consumed directly by the SDK, and are optional for custom implementations.</p>
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						
+						
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/count">&ndash;&nbsp;count</a></code>
+		<span class="tooltip"><p>@method
+@abstract
+Returns the number of properties on this <a href="../Classes/FBGraphObject.html"><code>FBGraphObject</code></a>.</p></span>
+	</span>
+	
+	<span class="task-item-suffix">required method</span>
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/objectForKey:">&ndash;&nbsp;objectForKey:</a></code>
+		<span class="tooltip"><p>@method
+@abstract
+Returns a property on this <a href="../Classes/FBGraphObject.html"><code>FBGraphObject</code></a>.</p></span>
+	</span>
+	
+	<span class="task-item-suffix">required method</span>
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/keyEnumerator">&ndash;&nbsp;keyEnumerator</a></code>
+		<span class="tooltip"><p>@method
+@abstract
+Returns an enumerator of the property naems on this <a href="../Classes/FBGraphObject.html"><code>FBGraphObject</code></a>.</p></span>
+	</span>
+	
+	<span class="task-item-suffix">required method</span>
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/removeObjectForKey:">&ndash;&nbsp;removeObjectForKey:</a></code>
+		<span class="tooltip"><p>@method
+@abstract
+Removes a property on this <a href="../Classes/FBGraphObject.html"><code>FBGraphObject</code></a>.</p></span>
+	</span>
+	
+	<span class="task-item-suffix">required method</span>
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setObject:forKey:">&ndash;&nbsp;setObject:forKey:</a></code>
+		<span class="tooltip"><p>@method
+@abstract
+Sets the value of a property on this <a href="../Classes/FBGraphObject.html"><code>FBGraphObject</code></a>.</p></span>
+	</span>
+	
+	<span class="task-item-suffix">required method</span>
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/count" title="count"></a>
+	<h3 class="subsubtitle method-title">count</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>@method
+@abstract
+Returns the number of properties on this <a href="../Classes/FBGraphObject.html"><code>FBGraphObject</code></a>.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSUInteger)count</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>@method
+@abstract
+Returns the number of properties on this <a href="../Classes/FBGraphObject.html"><code>FBGraphObject</code></a>.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">FBGraphObject.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/keyEnumerator" title="keyEnumerator"></a>
+	<h3 class="subsubtitle method-title">keyEnumerator</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>@method
+@abstract
+Returns an enumerator of the property naems on this <a href="../Classes/FBGraphObject.html"><code>FBGraphObject</code></a>.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSEnumerator *)keyEnumerator</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>@method
+@abstract
+Returns an enumerator of the property naems on this <a href="../Classes/FBGraphObject.html"><code>FBGraphObject</code></a>.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">FBGraphObject.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/objectForKey:" title="objectForKey:"></a>
+	<h3 class="subsubtitle method-title">objectForKey:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>@method
+@abstract
+Returns a property on this <a href="../Classes/FBGraphObject.html"><code>FBGraphObject</code></a>.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (id)objectForKey:(id)<em>aKey</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>aKey</em></dt>
+			<dd><p>name of the property to return</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>@method
+@abstract
+Returns a property on this <a href="../Classes/FBGraphObject.html"><code>FBGraphObject</code></a>.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">FBGraphObject.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/removeObjectForKey:" title="removeObjectForKey:"></a>
+	<h3 class="subsubtitle method-title">removeObjectForKey:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>@method
+@abstract
+Removes a property on this <a href="../Classes/FBGraphObject.html"><code>FBGraphObject</code></a>.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)removeObjectForKey:(id)<em>aKey</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>aKey</em></dt>
+			<dd><p>name of the property to remove</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>@method
+@abstract
+Removes a property on this <a href="../Classes/FBGraphObject.html"><code>FBGraphObject</code></a>.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">FBGraphObject.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setObject:forKey:" title="setObject:forKey:"></a>
+	<h3 class="subsubtitle method-title">setObject:forKey:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>@method
+@abstract
+Sets the value of a property on this <a href="../Classes/FBGraphObject.html"><code>FBGraphObject</code></a>.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)setObject:(id)<em>anObject</em> forKey:(id)<em>aKey</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>anObject</em></dt>
+			<dd><p>the new value of the property</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>aKey</em></dt>
+			<dd><p>name of the property to set</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>@method
+@abstract
+Sets the value of a property on this <a href="../Classes/FBGraphObject.html"><code>FBGraphObject</code></a>.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">FBGraphObject.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2012 Facebook. All rights reserved. (Last updated: 2012-09-21)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 789)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+			
+			// If showing in Xcode, hide the TOC and Header
+			if (navigator.userAgent.match(/xcode/i)) {
+				document.getElementById("contents").className = "hideInXcode"
+				document.getElementById("tocContainer").className = "hideInXcode"
+				document.getElementById("top_header").className = "hideInXcode"
+			}
+			
+		</script>
+	</body>
+</html>

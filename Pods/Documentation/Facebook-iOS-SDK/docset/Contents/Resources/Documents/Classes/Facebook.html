@@ -1,0 +1,763 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>Facebook Class Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<meta name="viewport" content="width=550" />
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.0.5 (build 789)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">Facebook-iOS-SDK 3.0.8 </a></h1>
+				<a id="developerHome" href="../index.html">Facebook</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">Facebook Class Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	<option value="properties">Properties</option>
+	
+	<option value="//api/name/accessToken">&nbsp;&nbsp;&nbsp;&nbsp;accessToken</option>
+	
+	<option value="//api/name/expirationDate">&nbsp;&nbsp;&nbsp;&nbsp;expirationDate</option>
+	
+	<option value="//api/name/isFrictionlessRequestsEnabled">&nbsp;&nbsp;&nbsp;&nbsp;isFrictionlessRequestsEnabled</option>
+	
+	<option value="//api/name/session">&nbsp;&nbsp;&nbsp;&nbsp;session</option>
+	
+	<option value="//api/name/sessionDelegate">&nbsp;&nbsp;&nbsp;&nbsp;sessionDelegate</option>
+	
+	<option value="//api/name/urlSchemeSuffix">&nbsp;&nbsp;&nbsp;&nbsp;urlSchemeSuffix</option>
+	
+	
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/authorize:">&nbsp;&nbsp;&nbsp;&nbsp;- authorize:</option>
+	
+	<option value="//api/name/dialog:andDelegate:">&nbsp;&nbsp;&nbsp;&nbsp;- dialog:andDelegate:</option>
+	
+	<option value="//api/name/dialog:andParams:andDelegate:">&nbsp;&nbsp;&nbsp;&nbsp;- dialog:andParams:andDelegate:</option>
+	
+	<option value="//api/name/enableFrictionlessRequests">&nbsp;&nbsp;&nbsp;&nbsp;- enableFrictionlessRequests</option>
+	
+	<option value="//api/name/extendAccessToken">&nbsp;&nbsp;&nbsp;&nbsp;- extendAccessToken</option>
+	
+	<option value="//api/name/extendAccessTokenIfNeeded">&nbsp;&nbsp;&nbsp;&nbsp;- extendAccessTokenIfNeeded</option>
+	
+	<option value="//api/name/handleOpenURL:">&nbsp;&nbsp;&nbsp;&nbsp;- handleOpenURL:</option>
+	
+	<option value="//api/name/initWithAppId:andDelegate:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithAppId:andDelegate:</option>
+	
+	<option value="//api/name/initWithAppId:urlSchemeSuffix:andDelegate:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithAppId:urlSchemeSuffix:andDelegate:</option>
+	
+	<option value="//api/name/isFrictionlessEnabledForRecipient:">&nbsp;&nbsp;&nbsp;&nbsp;- isFrictionlessEnabledForRecipient:</option>
+	
+	<option value="//api/name/isFrictionlessEnabledForRecipients:">&nbsp;&nbsp;&nbsp;&nbsp;- isFrictionlessEnabledForRecipients:</option>
+	
+	<option value="//api/name/isSessionValid">&nbsp;&nbsp;&nbsp;&nbsp;- isSessionValid</option>
+	
+	<option value="//api/name/logout">&nbsp;&nbsp;&nbsp;&nbsp;- logout</option>
+	
+	<option value="//api/name/logout:">&nbsp;&nbsp;&nbsp;&nbsp;- logout:</option>
+	
+	<option value="//api/name/reloadFrictionlessRecipientCache">&nbsp;&nbsp;&nbsp;&nbsp;- reloadFrictionlessRecipientCache</option>
+	
+	<option value="//api/name/requestWithGraphPath:andDelegate:">&nbsp;&nbsp;&nbsp;&nbsp;- requestWithGraphPath:andDelegate:</option>
+	
+	<option value="//api/name/requestWithGraphPath:andParams:andDelegate:">&nbsp;&nbsp;&nbsp;&nbsp;- requestWithGraphPath:andParams:andDelegate:</option>
+	
+	<option value="//api/name/requestWithGraphPath:andParams:andHttpMethod:andDelegate:">&nbsp;&nbsp;&nbsp;&nbsp;- requestWithGraphPath:andParams:andHttpMethod:andDelegate:</option>
+	
+	<option value="//api/name/requestWithMethodName:andParams:andHttpMethod:andDelegate:">&nbsp;&nbsp;&nbsp;&nbsp;- requestWithMethodName:andParams:andHttpMethod:andDelegate:</option>
+	
+	<option value="//api/name/requestWithParams:andDelegate:">&nbsp;&nbsp;&nbsp;&nbsp;- requestWithParams:andDelegate:</option>
+	
+	<option value="//api/name/shouldExtendAccessToken">&nbsp;&nbsp;&nbsp;&nbsp;- shouldExtendAccessToken</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+</ul></li>
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/accessToken">accessToken</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/expirationDate">expirationDate</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isFrictionlessRequestsEnabled">isFrictionlessRequestsEnabled</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/session">session</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sessionDelegate">sessionDelegate</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/urlSchemeSuffix">urlSchemeSuffix</a></span></li>
+	
+</ul></li>
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/authorize:">authorize:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/dialog:andDelegate:">dialog:andDelegate:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/dialog:andParams:andDelegate:">dialog:andParams:andDelegate:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/enableFrictionlessRequests">enableFrictionlessRequests</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/extendAccessToken">extendAccessToken</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/extendAccessTokenIfNeeded">extendAccessTokenIfNeeded</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/handleOpenURL:">handleOpenURL:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithAppId:andDelegate:">initWithAppId:andDelegate:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithAppId:urlSchemeSuffix:andDelegate:">initWithAppId:urlSchemeSuffix:andDelegate:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isFrictionlessEnabledForRecipient:">isFrictionlessEnabledForRecipient:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isFrictionlessEnabledForRecipients:">isFrictionlessEnabledForRecipients:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isSessionValid">isSessionValid</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/logout">logout</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/logout:">logout:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/reloadFrictionlessRecipientCache">reloadFrictionlessRecipientCache</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/requestWithGraphPath:andDelegate:">requestWithGraphPath:andDelegate:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/requestWithGraphPath:andParams:andDelegate:">requestWithGraphPath:andParams:andDelegate:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/requestWithGraphPath:andParams:andHttpMethod:andDelegate:">requestWithGraphPath:andParams:andHttpMethod:andDelegate:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/requestWithMethodName:andParams:andHttpMethod:andDelegate:">requestWithMethodName:andParams:andHttpMethod:andDelegate:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/requestWithParams:andDelegate:">requestWithParams:andDelegate:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/shouldExtendAccessToken">shouldExtendAccessToken</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="Facebook Class Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">Facebook Class Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value">NSObject</td>
+</tr><tr>
+	<td class="specification-title">Conforms to</td>
+	<td class="specification-value"><a href="../Protocols/FBLoginDialogDelegate.html">FBLoginDialogDelegate</a></td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">Facebook.h</td>
+</tr>
+						</tbody></table></div>
+					
+					
+					
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>Main Facebook interface for interacting with the Facebook developer API.
+Provides methods to log in and log out a user, make requests using the REST
+and Graph APIs, and start user interface interactions (such as
+pop-ups promoting for credentials, permissions, stream posts, etc.)</p>
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						
+						
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/accessToken">&nbsp;&nbsp;accessToken</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/expirationDate">&nbsp;&nbsp;expirationDate</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/sessionDelegate">&nbsp;&nbsp;sessionDelegate</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/urlSchemeSuffix">&nbsp;&nbsp;urlSchemeSuffix</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/isFrictionlessRequestsEnabled">&nbsp;&nbsp;isFrictionlessRequestsEnabled</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/session">&nbsp;&nbsp;session</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initWithAppId:andDelegate:">&ndash;&nbsp;initWithAppId:andDelegate:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initWithAppId:urlSchemeSuffix:andDelegate:">&ndash;&nbsp;initWithAppId:urlSchemeSuffix:andDelegate:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/authorize:">&ndash;&nbsp;authorize:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/extendAccessToken">&ndash;&nbsp;extendAccessToken</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/extendAccessTokenIfNeeded">&ndash;&nbsp;extendAccessTokenIfNeeded</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/shouldExtendAccessToken">&ndash;&nbsp;shouldExtendAccessToken</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/handleOpenURL:">&ndash;&nbsp;handleOpenURL:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/logout">&ndash;&nbsp;logout</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/logout:">&ndash;&nbsp;logout:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/requestWithParams:andDelegate:">&ndash;&nbsp;requestWithParams:andDelegate:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/requestWithMethodName:andParams:andHttpMethod:andDelegate:">&ndash;&nbsp;requestWithMethodName:andParams:andHttpMethod:andDelegate:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/requestWithGraphPath:andDelegate:">&ndash;&nbsp;requestWithGraphPath:andDelegate:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/requestWithGraphPath:andParams:andDelegate:">&ndash;&nbsp;requestWithGraphPath:andParams:andDelegate:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/requestWithGraphPath:andParams:andHttpMethod:andDelegate:">&ndash;&nbsp;requestWithGraphPath:andParams:andHttpMethod:andDelegate:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/dialog:andDelegate:">&ndash;&nbsp;dialog:andDelegate:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/dialog:andParams:andDelegate:">&ndash;&nbsp;dialog:andParams:andDelegate:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/isSessionValid">&ndash;&nbsp;isSessionValid</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/enableFrictionlessRequests">&ndash;&nbsp;enableFrictionlessRequests</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/reloadFrictionlessRecipientCache">&ndash;&nbsp;reloadFrictionlessRecipientCache</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/isFrictionlessEnabledForRecipient:">&ndash;&nbsp;isFrictionlessEnabledForRecipient:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/isFrictionlessEnabledForRecipients:">&ndash;&nbsp;isFrictionlessEnabledForRecipients:</a></code>
+		
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Properties" name="properties"></a>
+						<h2 class="subtitle subtitle-methods">Properties</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/accessToken" title="accessToken"></a>
+	<h3 class="subsubtitle method-title">accessToken</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/expirationDate" title="expirationDate"></a>
+	<h3 class="subsubtitle method-title">expirationDate</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/isFrictionlessRequestsEnabled" title="isFrictionlessRequestsEnabled"></a>
+	<h3 class="subsubtitle method-title">isFrictionlessRequestsEnabled</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/session" title="session"></a>
+	<h3 class="subsubtitle method-title">session</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/sessionDelegate" title="sessionDelegate"></a>
+	<h3 class="subsubtitle method-title">sessionDelegate</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/urlSchemeSuffix" title="urlSchemeSuffix"></a>
+	<h3 class="subsubtitle method-title">urlSchemeSuffix</h3>
+	
+	
+</div>
+						
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/authorize:" title="authorize:"></a>
+	<h3 class="subsubtitle method-title">authorize:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/dialog:andDelegate:" title="dialog:andDelegate:"></a>
+	<h3 class="subsubtitle method-title">dialog:andDelegate:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/dialog:andParams:andDelegate:" title="dialog:andParams:andDelegate:"></a>
+	<h3 class="subsubtitle method-title">dialog:andParams:andDelegate:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/enableFrictionlessRequests" title="enableFrictionlessRequests"></a>
+	<h3 class="subsubtitle method-title">enableFrictionlessRequests</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/extendAccessToken" title="extendAccessToken"></a>
+	<h3 class="subsubtitle method-title">extendAccessToken</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/extendAccessTokenIfNeeded" title="extendAccessTokenIfNeeded"></a>
+	<h3 class="subsubtitle method-title">extendAccessTokenIfNeeded</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/handleOpenURL:" title="handleOpenURL:"></a>
+	<h3 class="subsubtitle method-title">handleOpenURL:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/initWithAppId:andDelegate:" title="initWithAppId:andDelegate:"></a>
+	<h3 class="subsubtitle method-title">initWithAppId:andDelegate:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/initWithAppId:urlSchemeSuffix:andDelegate:" title="initWithAppId:urlSchemeSuffix:andDelegate:"></a>
+	<h3 class="subsubtitle method-title">initWithAppId:urlSchemeSuffix:andDelegate:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/isFrictionlessEnabledForRecipient:" title="isFrictionlessEnabledForRecipient:"></a>
+	<h3 class="subsubtitle method-title">isFrictionlessEnabledForRecipient:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/isFrictionlessEnabledForRecipients:" title="isFrictionlessEnabledForRecipients:"></a>
+	<h3 class="subsubtitle method-title">isFrictionlessEnabledForRecipients:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/isSessionValid" title="isSessionValid"></a>
+	<h3 class="subsubtitle method-title">isSessionValid</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/logout" title="logout"></a>
+	<h3 class="subsubtitle method-title">logout</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/logout:" title="logout:"></a>
+	<h3 class="subsubtitle method-title">logout:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/reloadFrictionlessRecipientCache" title="reloadFrictionlessRecipientCache"></a>
+	<h3 class="subsubtitle method-title">reloadFrictionlessRecipientCache</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/requestWithGraphPath:andDelegate:" title="requestWithGraphPath:andDelegate:"></a>
+	<h3 class="subsubtitle method-title">requestWithGraphPath:andDelegate:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/requestWithGraphPath:andParams:andDelegate:" title="requestWithGraphPath:andParams:andDelegate:"></a>
+	<h3 class="subsubtitle method-title">requestWithGraphPath:andParams:andDelegate:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/requestWithGraphPath:andParams:andHttpMethod:andDelegate:" title="requestWithGraphPath:andParams:andHttpMethod:andDelegate:"></a>
+	<h3 class="subsubtitle method-title">requestWithGraphPath:andParams:andHttpMethod:andDelegate:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/requestWithMethodName:andParams:andHttpMethod:andDelegate:" title="requestWithMethodName:andParams:andHttpMethod:andDelegate:"></a>
+	<h3 class="subsubtitle method-title">requestWithMethodName:andParams:andHttpMethod:andDelegate:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/requestWithParams:andDelegate:" title="requestWithParams:andDelegate:"></a>
+	<h3 class="subsubtitle method-title">requestWithParams:andDelegate:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/shouldExtendAccessToken" title="shouldExtendAccessToken"></a>
+	<h3 class="subsubtitle method-title">shouldExtendAccessToken</h3>
+	
+	
+</div>
+						
+					</div>
+					
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2012 Facebook. All rights reserved. (Last updated: 2012-09-21)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 789)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+			
+			// If showing in Xcode, hide the TOC and Header
+			if (navigator.userAgent.match(/xcode/i)) {
+				document.getElementById("contents").className = "hideInXcode"
+				document.getElementById("tocContainer").className = "hideInXcode"
+				document.getElementById("top_header").className = "hideInXcode"
+			}
+			
+		</script>
+	</body>
+</html>

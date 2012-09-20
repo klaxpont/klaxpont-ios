@@ -1,0 +1,1319 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>FBPlacePickerViewController Class Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<meta name="viewport" content="width=550" />
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.0.5 (build 789)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">Facebook-iOS-SDK 3.0.8 </a></h1>
+				<a id="developerHome" href="../index.html">Facebook</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">FBPlacePickerViewController Class Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	<option value="properties">Properties</option>
+	
+	<option value="//api/name/fieldsForRequest">&nbsp;&nbsp;&nbsp;&nbsp;fieldsForRequest</option>
+	
+	<option value="//api/name/itemPicturesEnabled">&nbsp;&nbsp;&nbsp;&nbsp;itemPicturesEnabled</option>
+	
+	<option value="//api/name/locationCoordinate">&nbsp;&nbsp;&nbsp;&nbsp;locationCoordinate</option>
+	
+	<option value="//api/name/radiusInMeters">&nbsp;&nbsp;&nbsp;&nbsp;radiusInMeters</option>
+	
+	<option value="//api/name/resultsLimit">&nbsp;&nbsp;&nbsp;&nbsp;resultsLimit</option>
+	
+	<option value="//api/name/searchText">&nbsp;&nbsp;&nbsp;&nbsp;searchText</option>
+	
+	<option value="//api/name/selection">&nbsp;&nbsp;&nbsp;&nbsp;selection</option>
+	
+	<option value="//api/name/session">&nbsp;&nbsp;&nbsp;&nbsp;session</option>
+	
+	<option value="//api/name/spinner">&nbsp;&nbsp;&nbsp;&nbsp;spinner</option>
+	
+	<option value="//api/name/tableView">&nbsp;&nbsp;&nbsp;&nbsp;tableView</option>
+	
+	
+	
+	
+	<option value="class_methods">Class Methods</option>
+	
+	<option value="//api/name/cacheDescriptorWithLocationCoordinate:radiusInMeters:searchText:resultsLimit:fieldsForRequest:">&nbsp;&nbsp;&nbsp;&nbsp;+ cacheDescriptorWithLocationCoordinate:radiusInMeters:searchText:resultsLimit:fieldsForRequest:</option>
+	
+	<option value="//api/name/requestForPlacesSearchAtCoordinate:radiusInMeters:resultsLimit:searchText:fields:datasource:session:">&nbsp;&nbsp;&nbsp;&nbsp;+ requestForPlacesSearchAtCoordinate:radiusInMeters:resultsLimit:searchText:fields:datasource:session:</option>
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/clearSelection">&nbsp;&nbsp;&nbsp;&nbsp;- clearSelection</option>
+	
+	<option value="//api/name/configureUsingCachedDescriptor:">&nbsp;&nbsp;&nbsp;&nbsp;- configureUsingCachedDescriptor:</option>
+	
+	<option value="//api/name/init">&nbsp;&nbsp;&nbsp;&nbsp;- init</option>
+	
+	<option value="//api/name/initWithCoder:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithCoder:</option>
+	
+	<option value="//api/name/initWithNibName:bundle:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithNibName:bundle:</option>
+	
+	<option value="//api/name/loadData">&nbsp;&nbsp;&nbsp;&nbsp;- loadData</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Internal Methods">Internal Methods</a></span></li>
+	
+</ul></li>
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/fieldsForRequest">fieldsForRequest</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/itemPicturesEnabled">itemPicturesEnabled</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/locationCoordinate">locationCoordinate</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/radiusInMeters">radiusInMeters</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/resultsLimit">resultsLimit</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/searchText">searchText</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/selection">selection</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/session">session</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/spinner">spinner</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/tableView">tableView</a></span></li>
+	
+</ul></li>
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/cacheDescriptorWithLocationCoordinate:radiusInMeters:searchText:resultsLimit:fieldsForRequest:">cacheDescriptorWithLocationCoordinate:radiusInMeters:searchText:resultsLimit:fieldsForRequest:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/requestForPlacesSearchAtCoordinate:radiusInMeters:resultsLimit:searchText:fields:datasource:session:">requestForPlacesSearchAtCoordinate:radiusInMeters:resultsLimit:searchText:fields:datasource:session:</a></span></li>
+	
+</ul></li>
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/clearSelection">clearSelection</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/configureUsingCachedDescriptor:">configureUsingCachedDescriptor:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/init">init</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithCoder:">initWithCoder:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithNibName:bundle:">initWithNibName:bundle:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/loadData">loadData</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="FBPlacePickerViewController Class Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">FBPlacePickerViewController Class Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value"><a href="../Classes/FBViewController.html">FBViewController</a> : UIViewController</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">FBPlacePickerViewController.h</td>
+</tr>
+						</tbody></table></div>
+					
+					
+					
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>@class FBPlacePickerViewController</p>
+
+<p>@abstract
+The <code>FBPlacePickerViewController</code> class creates a controller object that manages
+the user interface for displaying and selecting nearby places.</p>
+
+<p>@discussion
+When the <code>FBPlacePickerViewController</code> view loads it creates a <code>UITableView</code> object
+where the places near a given location will be displayed. You can access this view
+through the <a href="#//api/name/tableView"><code>tableView</code></a> property.</p>
+
+<p>The place data can be pre-fetched and cached prior to using the view controller. The
+cache is setup using an <a href="../Classes/FBCacheDescriptor.html">FBCacheDescriptor</a> object that can trigger the
+data fetch. Any place data requests will first check the cache and use that data.
+If the place picker is being displayed cached data will initially be shown before
+a fresh copy is retrieved.</p>
+
+<p>The <code>delegate</code> property may be set to an object that conforms to the <a href="../Protocols/FBPlacePickerDelegate.html">FBPlacePickerDelegate</a>
+protocol. The <code>delegate</code> object will receive updates related to place <a href="#//api/name/selection">selection</a> and
+data changes. The delegate can also be used to filter the places to display in the
+picker.</p>
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						
+						<h3 class="subsubtitle task-title">Other Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/spinner">&nbsp;&nbsp;spinner</a></code>
+		<span class="tooltip"><p>@abstract
+Returns an outlet for the spinner used in the view controller.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/tableView">&nbsp;&nbsp;tableView</a></code>
+		<span class="tooltip"><p>@abstract
+Returns an outlet for the table view managed by the view controller.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/fieldsForRequest">&nbsp;&nbsp;fieldsForRequest</a></code>
+		<span class="tooltip"><p>@abstract
+Addtional fields to fetch when making the Graph API call to get place data.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/itemPicturesEnabled">&nbsp;&nbsp;itemPicturesEnabled</a></code>
+		<span class="tooltip"><p>@abstract
+A Boolean value that indicates whether place profile pictures are displayed.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/locationCoordinate">&nbsp;&nbsp;locationCoordinate</a></code>
+		<span class="tooltip"><p>@abstract
+The coordinates to use for place discovery.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/radiusInMeters">&nbsp;&nbsp;radiusInMeters</a></code>
+		<span class="tooltip"><p>@abstract
+The radius to use for place discovery.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/resultsLimit">&nbsp;&nbsp;resultsLimit</a></code>
+		<span class="tooltip"><p>@abstract
+The maximum number of places to fetch.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/searchText">&nbsp;&nbsp;searchText</a></code>
+		<span class="tooltip"><p>@abstract
+The search words used to narrow down the results returned.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/session">&nbsp;&nbsp;session</a></code>
+		<span class="tooltip"><p>@abstract
+The session that is used in the request for place data.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/selection">&nbsp;&nbsp;selection</a></code>
+		<span class="tooltip"><p>@abstract
+The place that is currently selected in the view.  This is nil
+if nothing is selected.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/clearSelection">&ndash;&nbsp;clearSelection</a></code>
+		<span class="tooltip"><p>@abstract
+Clears the current <a href="#//api/name/selection">selection</a>, so the picker is ready for a fresh use.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/init">&ndash;&nbsp;init</a></code>
+		<span class="tooltip"><p>@abstract
+Initializes a place picker view controller.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initWithCoder:">&ndash;&nbsp;initWithCoder:</a></code>
+		<span class="tooltip"><p>@abstract
+Initializes a place picker view controller.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initWithNibName:bundle:">&ndash;&nbsp;initWithNibName:bundle:</a></code>
+		<span class="tooltip"><p>@abstract
+Initializes a place picker view controller.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/configureUsingCachedDescriptor:">&ndash;&nbsp;configureUsingCachedDescriptor:</a></code>
+		<span class="tooltip"><p>@abstract
+Configures the properties used in the caching data queries.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/loadData">&ndash;&nbsp;loadData</a></code>
+		<span class="tooltip"><p>@abstract
+Initiates a query to get place data the first time or in response to changes in
+the search criteria, filter, or location information.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/cacheDescriptorWithLocationCoordinate:radiusInMeters:searchText:resultsLimit:fieldsForRequest:">+&nbsp;cacheDescriptorWithLocationCoordinate:radiusInMeters:searchText:resultsLimit:fieldsForRequest:</a></code>
+		<span class="tooltip"><p>@method</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Internal Methods" name="task_Internal Methods"></a>
+						<h3 class="subsubtitle task-title">Internal Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/requestForPlacesSearchAtCoordinate:radiusInMeters:resultsLimit:searchText:fields:datasource:session:">+&nbsp;requestForPlacesSearchAtCoordinate:radiusInMeters:resultsLimit:searchText:fields:datasource:session:</a></code>
+		
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Properties" name="properties"></a>
+						<h2 class="subtitle subtitle-methods">Properties</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/fieldsForRequest" title="fieldsForRequest"></a>
+	<h3 class="subsubtitle method-title">fieldsForRequest</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>@abstract
+Addtional fields to fetch when making the Graph API call to get place data.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) NSSet *fieldsForRequest</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>@abstract
+Addtional fields to fetch when making the Graph API call to get place data.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">FBPlacePickerViewController.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/itemPicturesEnabled" title="itemPicturesEnabled"></a>
+	<h3 class="subsubtitle method-title">itemPicturesEnabled</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>@abstract
+A Boolean value that indicates whether place profile pictures are displayed.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic) BOOL itemPicturesEnabled</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>@abstract
+A Boolean value that indicates whether place profile pictures are displayed.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">FBPlacePickerViewController.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/locationCoordinate" title="locationCoordinate"></a>
+	<h3 class="subsubtitle method-title">locationCoordinate</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>@abstract
+The coordinates to use for place discovery.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic) CLLocationCoordinate2D locationCoordinate</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>@abstract
+The coordinates to use for place discovery.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">FBPlacePickerViewController.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/radiusInMeters" title="radiusInMeters"></a>
+	<h3 class="subsubtitle method-title">radiusInMeters</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>@abstract
+The radius to use for place discovery.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic) NSInteger radiusInMeters</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>@abstract
+The radius to use for place discovery.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">FBPlacePickerViewController.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/resultsLimit" title="resultsLimit"></a>
+	<h3 class="subsubtitle method-title">resultsLimit</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>@abstract
+The maximum number of places to fetch.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic) NSInteger resultsLimit</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>@abstract
+The maximum number of places to fetch.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">FBPlacePickerViewController.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/searchText" title="searchText"></a>
+	<h3 class="subsubtitle method-title">searchText</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>@abstract
+The search words used to narrow down the results returned.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) NSString *searchText</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>@abstract
+The search words used to narrow down the results returned.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">FBPlacePickerViewController.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/selection" title="selection"></a>
+	<h3 class="subsubtitle method-title">selection</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>@abstract
+The place that is currently selected in the view.  This is nil
+if nothing is selected.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, retain, readonly) id&lt;&gt; selection</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>@abstract
+The place that is currently selected in the view.  This is nil
+if nothing is selected.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">FBPlacePickerViewController.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/session" title="session"></a>
+	<h3 class="subsubtitle method-title">session</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>@abstract
+The session that is used in the request for place data.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, retain) FBSession *session</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>@abstract
+The session that is used in the request for place data.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">FBPlacePickerViewController.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/spinner" title="spinner"></a>
+	<h3 class="subsubtitle method-title">spinner</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>@abstract
+Returns an outlet for the spinner used in the view controller.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, retain) IBOutlet UIActivityIndicatorView *spinner</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>@abstract
+Returns an outlet for the spinner used in the view controller.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">FBPlacePickerViewController.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/tableView" title="tableView"></a>
+	<h3 class="subsubtitle method-title">tableView</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>@abstract
+Returns an outlet for the table view managed by the view controller.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, retain) IBOutlet UITableView *tableView</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>@abstract
+Returns an outlet for the table view managed by the view controller.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">FBPlacePickerViewController.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Class Methods" name="class_methods"></a>
+						<h2 class="subtitle subtitle-methods">Class Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/cacheDescriptorWithLocationCoordinate:radiusInMeters:searchText:resultsLimit:fieldsForRequest:" title="cacheDescriptorWithLocationCoordinate:radiusInMeters:searchText:resultsLimit:fieldsForRequest:"></a>
+	<h3 class="subsubtitle method-title">cacheDescriptorWithLocationCoordinate:radiusInMeters:searchText:resultsLimit:fieldsForRequest:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>@method</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>+ (FBCacheDescriptor *)cacheDescriptorWithLocationCoordinate:(CLLocationCoordinate2D)<em>locationCoordinate</em> radiusInMeters:(NSInteger)<em>radiusInMeters</em> searchText:(NSString *)<em>searchText</em> resultsLimit:(NSInteger)<em>resultsLimit</em> fieldsForRequest:(NSSet *)<em>fieldsForRequest</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>locationCoordinate</em></dt>
+			<dd><p>The coordinates to use for place discovery.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>radiusInMeters</em></dt>
+			<dd><p>The radius to use for place discovery.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>searchText</em></dt>
+			<dd><p>The search words used to narrow down the results returned.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>resultsLimit</em></dt>
+			<dd><p>The maximum number of places to fetch.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>fieldsForRequest</em></dt>
+			<dd><p>Addtional fields to fetch when making the Graph API call to get place data.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>@method</p>
+
+<p>@abstract
+Creates a cache descriptor with additional fields and a profile ID for use with the
+<code>FBPlacePickerViewController</code> object.</p>
+
+<p>@discussion
+An <a href="../Classes/FBCacheDescriptor.html"><code>FBCacheDescriptor</code></a> object may be used to pre-fetch data before it is used by
+the view controller. It may also be used to configure the <code>FBPlacePickerViewController</code>
+object.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">FBPlacePickerViewController.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/requestForPlacesSearchAtCoordinate:radiusInMeters:resultsLimit:searchText:fields:datasource:session:" title="requestForPlacesSearchAtCoordinate:radiusInMeters:resultsLimit:searchText:fields:datasource:session:"></a>
+	<h3 class="subsubtitle method-title">requestForPlacesSearchAtCoordinate:radiusInMeters:resultsLimit:searchText:fields:datasource:session:</h3>
+	
+	
+</div>
+						
+					</div>
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/clearSelection" title="clearSelection"></a>
+	<h3 class="subsubtitle method-title">clearSelection</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>@abstract
+Clears the current <a href="#//api/name/selection">selection</a>, so the picker is ready for a fresh use.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)clearSelection</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>@abstract
+Clears the current <a href="#//api/name/selection">selection</a>, so the picker is ready for a fresh use.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">FBPlacePickerViewController.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/configureUsingCachedDescriptor:" title="configureUsingCachedDescriptor:"></a>
+	<h3 class="subsubtitle method-title">configureUsingCachedDescriptor:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>@abstract
+Configures the properties used in the caching data queries.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)configureUsingCachedDescriptor:(FBCacheDescriptor *)<em>cacheDescriptor</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>cacheDescriptor</em></dt>
+			<dd><p>The <a href="../Classes/FBCacheDescriptor.html">FBCacheDescriptor</a> containing the cache query properties.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>@abstract
+Configures the properties used in the caching data queries.</p>
+
+<p>@discussion
+Cache descriptors are used to fetch and cache the data used by the view controller.
+If the view controller finds a cached copy of the data, it will
+first display the cached content then fetch a fresh copy from the server.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">FBPlacePickerViewController.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/init" title="init"></a>
+	<h3 class="subsubtitle method-title">init</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>@abstract
+Initializes a place picker view controller.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (id)init</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>@abstract
+Initializes a place picker view controller.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">FBPlacePickerViewController.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/initWithCoder:" title="initWithCoder:"></a>
+	<h3 class="subsubtitle method-title">initWithCoder:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>@abstract
+Initializes a place picker view controller.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (id)initWithCoder:(NSCoder *)<em>aDecoder</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>aDecoder</em></dt>
+			<dd><p>An unarchiver object.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>@abstract
+Initializes a place picker view controller.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">FBPlacePickerViewController.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/initWithNibName:bundle:" title="initWithNibName:bundle:"></a>
+	<h3 class="subsubtitle method-title">initWithNibName:bundle:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>@abstract
+Initializes a place picker view controller.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (id)initWithNibName:(NSString *)<em>nibNameOrNil</em> bundle:(NSBundle *)<em>nibBundleOrNil</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>nibNameOrNil</em></dt>
+			<dd><p>The name of the nib file to associate with the view controller. The nib file name should not contain any leading path information. If you specify nil, the nibName property is set to nil.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>nibBundleOrNil</em></dt>
+			<dd><p>The bundle in which to search for the nib file. This method looks for the nib file in the bundle&rsquo;s language-specific project directories first, followed by the Resources directory. If nil, this method looks for the nib file in the main bundle.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>@abstract
+Initializes a place picker view controller.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">FBPlacePickerViewController.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/loadData" title="loadData"></a>
+	<h3 class="subsubtitle method-title">loadData</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>@abstract
+Initiates a query to get place data the first time or in response to changes in
+the search criteria, filter, or location information.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)loadData</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>@abstract
+Initiates a query to get place data the first time or in response to changes in
+the search criteria, filter, or location information.</p>
+
+<p>@discussion
+A cached copy will be returned if available. The cached view is temporary until a fresh copy is
+retrieved from the server. It is legal to call this more than once.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">FBPlacePickerViewController.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2012 Facebook. All rights reserved. (Last updated: 2012-09-21)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 789)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+			
+			// If showing in Xcode, hide the TOC and Header
+			if (navigator.userAgent.match(/xcode/i)) {
+				document.getElementById("contents").className = "hideInXcode"
+				document.getElementById("tocContainer").className = "hideInXcode"
+				document.getElementById("top_header").className = "hideInXcode"
+			}
+			
+		</script>
+	</body>
+</html>

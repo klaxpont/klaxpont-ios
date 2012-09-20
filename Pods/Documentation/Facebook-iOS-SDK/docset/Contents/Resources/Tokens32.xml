@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/Facebook.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/Facebook</TokenIdentifier>
+			<Abstract type="html">Main Facebook interface for interacting with the Facebook developer API.
+Provides methods to log in and log out a user, make requests using the REST
+and Graph APIs, and start user interface interactions (such as
+pop-ups promoting for credentials, permissions, stream posts, etc.)</Abstract>
+			<DeclaredIn>Facebook.h</DeclaredIn>
+			
+			<NodeRef refid="32"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/Facebook/setAccessToken:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>Facebook.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, copy) NSString *accessToken</Declaration>
+			
+			
+			<Anchor>//api/name/accessToken</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/Facebook/accessToken</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>Facebook.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, copy) NSString *accessToken</Declaration>
+			
+			
+			<Anchor>//api/name/accessToken</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/Facebook/setExpirationDate:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>Facebook.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, copy) NSDate *expirationDate</Declaration>
+			
+			
+			<Anchor>//api/name/expirationDate</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/Facebook/expirationDate</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>Facebook.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, copy) NSDate *expirationDate</Declaration>
+			
+			
+			<Anchor>//api/name/expirationDate</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/Facebook/setSessionDelegate:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>Facebook.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, assign) id&lt;&gt; sessionDelegate</Declaration>
+			
+			
+			<Anchor>//api/name/sessionDelegate</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/Facebook/sessionDelegate</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>Facebook.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, assign) id&lt;&gt; sessionDelegate</Declaration>
+			
+			
+			<Anchor>//api/name/sessionDelegate</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/Facebook/setUrlSchemeSuffix:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>Facebook.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, copy) NSString *urlSchemeSuffix</Declaration>
+			
+			
+			<Anchor>//api/name/urlSchemeSuffix</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/Facebook/urlSchemeSuffix</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>Facebook.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, copy) NSString *urlSchemeSuffix</Declaration>
+			
+			
+			<Anchor>//api/name/urlSchemeSuffix</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/Facebook/setIsFrictionlessRequestsEnabled:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>Facebook.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) BOOL isFrictionlessRequestsEnabled</Declaration>
+			
+			
+			<Anchor>//api/name/isFrictionlessRequestsEnabled</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/Facebook/isFrictionlessRequestsEnabled</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>Facebook.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) BOOL isFrictionlessRequestsEnabled</Declaration>
+			
+			
+			<Anchor>//api/name/isFrictionlessRequestsEnabled</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/Facebook/setSession:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>Facebook.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly, retain) FBSession *session</Declaration>
+			
+			
+			<Anchor>//api/name/session</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/Facebook/session</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>Facebook.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly, retain) FBSession *session</Declaration>
+			
+			
+			<Anchor>//api/name/session</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/Facebook/initWithAppId:andDelegate:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>Facebook.h</DeclaredIn>			
+			
+			<Declaration>- (id)initWithAppId:(NSString *)appId andDelegate:(id&lt;FBSessionDelegate&gt;)delegate</Declaration>
+			
+			
+			<Anchor>//api/name/initWithAppId:andDelegate:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/Facebook/initWithAppId:urlSchemeSuffix:andDelegate:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>Facebook.h</DeclaredIn>			
+			
+			<Declaration>- (id)initWithAppId:(NSString *)appId urlSchemeSuffix:(NSString *)urlSchemeSuffix andDelegate:(id&lt;FBSessionDelegate&gt;)delegate</Declaration>
+			
+			
+			<Anchor>//api/name/initWithAppId:urlSchemeSuffix:andDelegate:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/Facebook/authorize:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>Facebook.h</DeclaredIn>			
+			
+			<Declaration>- (void)authorize:(NSArray *)permissions</Declaration>
+			
+			
+			<Anchor>//api/name/authorize:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/Facebook/extendAccessToken</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>Facebook.h</DeclaredIn>			
+			
+			<Declaration>- (void)extendAccessToken</Declaration>
+			
+			
+			<Anchor>//api/name/extendAccessToken</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/Facebook/extendAccessTokenIfNeeded</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>Facebook.h</DeclaredIn>			
+			
+			<Declaration>- (void)extendAccessTokenIfNeeded</Declaration>
+			
+			
+			<Anchor>//api/name/extendAccessTokenIfNeeded</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/Facebook/shouldExtendAccessToken</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>Facebook.h</DeclaredIn>			
+			
+			<Declaration>- (BOOL)shouldExtendAccessToken</Declaration>
+			
+			
+			<Anchor>//api/name/shouldExtendAccessToken</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/Facebook/handleOpenURL:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>Facebook.h</DeclaredIn>			
+			
+			<Declaration>- (BOOL)handleOpenURL:(NSURL *)url</Declaration>
+			
+			
+			<Anchor>//api/name/handleOpenURL:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/Facebook/logout</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>Facebook.h</DeclaredIn>			
+			
+			<Declaration>- (void)logout</Declaration>
+			
+			
+			<Anchor>//api/name/logout</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/Facebook/logout:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>Facebook.h</DeclaredIn>			
+			
+			<Declaration>- (void)logout:(id&lt;FBSessionDelegate&gt;)delegate</Declaration>
+			
+			
+			<Anchor>//api/name/logout:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/Facebook/requestWithParams:andDelegate:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>Facebook.h</DeclaredIn>			
+			
+			<Declaration>- (FBRequest *)requestWithParams:(NSMutableDictionary *)params andDelegate:(id&lt;FBRequestDelegate&gt;)delegate</Declaration>
+			
+			
+			<Anchor>//api/name/requestWithParams:andDelegate:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/Facebook/requestWithMethodName:andParams:andHttpMethod:andDelegate:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>Facebook.h</DeclaredIn>			
+			
+			<Declaration>- (FBRequest *)requestWithMethodName:(NSString *)methodName andParams:(NSMutableDictionary *)params andHttpMethod:(NSString *)httpMethod andDelegate:(id&lt;FBRequestDelegate&gt;)delegate</Declaration>
+			
+			
+			<Anchor>//api/name/requestWithMethodName:andParams:andHttpMethod:andDelegate:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/Facebook/requestWithGraphPath:andDelegate:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>Facebook.h</DeclaredIn>			
+			
+			<Declaration>- (FBRequest *)requestWithGraphPath:(NSString *)graphPath andDelegate:(id&lt;FBRequestDelegate&gt;)delegate</Declaration>
+			
+			
+			<Anchor>//api/name/requestWithGraphPath:andDelegate:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/Facebook/requestWithGraphPath:andParams:andDelegate:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>Facebook.h</DeclaredIn>			
+			
+			<Declaration>- (FBRequest *)requestWithGraphPath:(NSString *)graphPath andParams:(NSMutableDictionary *)params andDelegate:(id&lt;FBRequestDelegate&gt;)delegate</Declaration>
+			
+			
+			<Anchor>//api/name/requestWithGraphPath:andParams:andDelegate:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/Facebook/requestWithGraphPath:andParams:andHttpMethod:andDelegate:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>Facebook.h</DeclaredIn>			
+			
+			<Declaration>- (FBRequest *)requestWithGraphPath:(NSString *)graphPath andParams:(NSMutableDictionary *)params andHttpMethod:(NSString *)httpMethod andDelegate:(id&lt;FBRequestDelegate&gt;)delegate</Declaration>
+			
+			
+			<Anchor>//api/name/requestWithGraphPath:andParams:andHttpMethod:andDelegate:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/Facebook/dialog:andDelegate:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>Facebook.h</DeclaredIn>			
+			
+			<Declaration>- (void)dialog:(NSString *)action andDelegate:(id&lt;FBDialogDelegate&gt;)delegate</Declaration>
+			
+			
+			<Anchor>//api/name/dialog:andDelegate:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/Facebook/dialog:andParams:andDelegate:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>Facebook.h</DeclaredIn>			
+			
+			<Declaration>- (void)dialog:(NSString *)action andParams:(NSMutableDictionary *)params andDelegate:(id&lt;FBDialogDelegate&gt;)delegate</Declaration>
+			
+			
+			<Anchor>//api/name/dialog:andParams:andDelegate:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/Facebook/isSessionValid</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>Facebook.h</DeclaredIn>			
+			
+			<Declaration>- (BOOL)isSessionValid</Declaration>
+			
+			
+			<Anchor>//api/name/isSessionValid</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/Facebook/enableFrictionlessRequests</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>Facebook.h</DeclaredIn>			
+			
+			<Declaration>- (void)enableFrictionlessRequests</Declaration>
+			
+			
+			<Anchor>//api/name/enableFrictionlessRequests</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/Facebook/reloadFrictionlessRecipientCache</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>Facebook.h</DeclaredIn>			
+			
+			<Declaration>- (void)reloadFrictionlessRecipientCache</Declaration>
+			
+			
+			<Anchor>//api/name/reloadFrictionlessRecipientCache</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/Facebook/isFrictionlessEnabledForRecipient:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>Facebook.h</DeclaredIn>			
+			
+			<Declaration>- (BOOL)isFrictionlessEnabledForRecipient:(id)fbid</Declaration>
+			
+			
+			<Anchor>//api/name/isFrictionlessEnabledForRecipient:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/Facebook/isFrictionlessEnabledForRecipients:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>Facebook.h</DeclaredIn>			
+			
+			<Declaration>- (BOOL)isFrictionlessEnabledForRecipients:(NSArray *)fbids</Declaration>
+			
+			
+			<Anchor>//api/name/isFrictionlessEnabledForRecipients:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

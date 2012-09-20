@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/FBSessionManualTokenCachingStrategy.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/FBSessionManualTokenCachingStrategy</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBSessionManualTokenCachingStrategy.h</DeclaredIn>
+			
+			<NodeRef refid="24"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBSessionManualTokenCachingStrategy/setAccessToken:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBSessionManualTokenCachingStrategy.h</DeclaredIn>			
+			
+			<Declaration>@property (readwrite, copy) NSString *accessToken</Declaration>
+			
+			
+			<Anchor>//api/name/accessToken</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FBSessionManualTokenCachingStrategy/accessToken</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBSessionManualTokenCachingStrategy.h</DeclaredIn>			
+			
+			<Declaration>@property (readwrite, copy) NSString *accessToken</Declaration>
+			
+			
+			<Anchor>//api/name/accessToken</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBSessionManualTokenCachingStrategy/setExpirationDate:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBSessionManualTokenCachingStrategy.h</DeclaredIn>			
+			
+			<Declaration>@property (readwrite, copy) NSDate *expirationDate</Declaration>
+			
+			
+			<Anchor>//api/name/expirationDate</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FBSessionManualTokenCachingStrategy/expirationDate</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBSessionManualTokenCachingStrategy.h</DeclaredIn>			
+			
+			<Declaration>@property (readwrite, copy) NSDate *expirationDate</Declaration>
+			
+			
+			<Anchor>//api/name/expirationDate</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

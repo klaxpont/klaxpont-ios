@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Protocols/FBCacheIndexFileDelegate.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intf/FBCacheIndexFileDelegate</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBCacheIndex.h</DeclaredIn>
+			
+			<NodeRef refid="33"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/FBCacheIndexFileDelegate/cacheIndex:writeFileWithName:data:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBCacheIndex.h</DeclaredIn>			
+			
+			<Declaration>- (void)cacheIndex:(FBCacheIndex *)cacheIndex writeFileWithName:(NSString *)name data:(NSData *)data</Declaration>
+			
+			
+			<Anchor>//api/name/cacheIndex:writeFileWithName:data:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/FBCacheIndexFileDelegate/cacheIndex:deleteFileWithName:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBCacheIndex.h</DeclaredIn>			
+			
+			<Declaration>- (void)cacheIndex:(FBCacheIndex *)cacheIndex deleteFileWithName:(NSString *)name</Declaration>
+			
+			
+			<Anchor>//api/name/cacheIndex:deleteFileWithName:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

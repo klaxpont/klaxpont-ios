@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/FBProfilePictureView.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/FBProfilePictureView</TokenIdentifier>
+			<Abstract type="html">@class
+@abstract
+An instance of FBProfilePictureView is used to display a profile picture.</Abstract>
+			<DeclaredIn>FBProfilePictureView.h</DeclaredIn>
+			
+			<NodeRef refid="19"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBProfilePictureView/setProfileID:</TokenIdentifier>
+			<Abstract type="html">@abstract
+The Facebook ID of the user, place or object for which a picture should be fetched and displayed.</Abstract>
+			<DeclaredIn>FBProfilePictureView.h</DeclaredIn>			
+			
+			<Declaration>@property (copy, nonatomic) NSString *profileID</Declaration>
+			
+			
+			<Anchor>//api/name/profileID</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FBProfilePictureView/profileID</TokenIdentifier>
+			<Abstract type="html">@abstract
+The Facebook ID of the user, place or object for which a picture should be fetched and displayed.</Abstract>
+			<DeclaredIn>FBProfilePictureView.h</DeclaredIn>			
+			
+			<Declaration>@property (copy, nonatomic) NSString *profileID</Declaration>
+			
+			
+			<Anchor>//api/name/profileID</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBProfilePictureView/setPictureCropping:</TokenIdentifier>
+			<Abstract type="html">@abstract
+The cropping to use for the profile picture.</Abstract>
+			<DeclaredIn>FBProfilePictureView.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic) FBProfilePictureCropping pictureCropping</Declaration>
+			
+			
+			<Anchor>//api/name/pictureCropping</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FBProfilePictureView/pictureCropping</TokenIdentifier>
+			<Abstract type="html">@abstract
+The cropping to use for the profile picture.</Abstract>
+			<DeclaredIn>FBProfilePictureView.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic) FBProfilePictureCropping pictureCropping</Declaration>
+			
+			
+			<Anchor>//api/name/pictureCropping</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBProfilePictureView/init</TokenIdentifier>
+			<Abstract type="html">@abstract
+Initializes and returns a profile view object.</Abstract>
+			<DeclaredIn>FBProfilePictureView.h</DeclaredIn>			
+			
+			<Declaration>- (id)init</Declaration>
+			
+			
+			<Anchor>//api/name/init</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBProfilePictureView/initWithProfileID:pictureCropping:</TokenIdentifier>
+			<Abstract type="html">@abstract
+Initializes and returns a profile view object for the given Facebook ID and cropping.</Abstract>
+			<DeclaredIn>FBProfilePictureView.h</DeclaredIn>			
+			
+			<Declaration>- (id)initWithProfileID:(NSString *)profileID pictureCropping:(FBProfilePictureCropping)pictureCropping</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>profileID</Name>
+					<Abstract type="html">The Facebook ID of the user, place or object for which a picture should be fetched and displayed.</Abstract>
+				</Parameter><Parameter>
+					<Name>pictureCropping</Name>
+					<Abstract type="html">The cropping to use for the profile picture.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/initWithProfileID:pictureCropping:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

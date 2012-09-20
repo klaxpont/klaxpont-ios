@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/FBPlacePickerCacheDescriptor.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/FBPlacePickerCacheDescriptor</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBPlacePickerCacheDescriptor.h</DeclaredIn>
+			
+			<NodeRef refid="17"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBPlacePickerCacheDescriptor/initWithLocationCoordinate:radiusInMeters:searchText:resultsLimit:fieldsForRequest:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBPlacePickerCacheDescriptor.h</DeclaredIn>			
+			
+			<Declaration>- (id)initWithLocationCoordinate:(CLLocationCoordinate2D)locationCoordinate radiusInMeters:(NSInteger)radiusInMeters searchText:(NSString *)searchText resultsLimit:(NSInteger)resultsLimit fieldsForRequest:(NSSet *)fieldsForRequest</Declaration>
+			
+			
+			<Anchor>//api/name/initWithLocationCoordinate:radiusInMeters:searchText:resultsLimit:fieldsForRequest:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBPlacePickerCacheDescriptor/setLocationCoordinate:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBPlacePickerCacheDescriptor.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) CLLocationCoordinate2D locationCoordinate</Declaration>
+			
+			
+			<Anchor>//api/name/locationCoordinate</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FBPlacePickerCacheDescriptor/locationCoordinate</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBPlacePickerCacheDescriptor.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) CLLocationCoordinate2D locationCoordinate</Declaration>
+			
+			
+			<Anchor>//api/name/locationCoordinate</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBPlacePickerCacheDescriptor/setRadiusInMeters:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBPlacePickerCacheDescriptor.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) NSInteger radiusInMeters</Declaration>
+			
+			
+			<Anchor>//api/name/radiusInMeters</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FBPlacePickerCacheDescriptor/radiusInMeters</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBPlacePickerCacheDescriptor.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) NSInteger radiusInMeters</Declaration>
+			
+			
+			<Anchor>//api/name/radiusInMeters</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBPlacePickerCacheDescriptor/setResultsLimit:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBPlacePickerCacheDescriptor.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) NSInteger resultsLimit</Declaration>
+			
+			
+			<Anchor>//api/name/resultsLimit</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FBPlacePickerCacheDescriptor/resultsLimit</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBPlacePickerCacheDescriptor.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) NSInteger resultsLimit</Declaration>
+			
+			
+			<Anchor>//api/name/resultsLimit</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBPlacePickerCacheDescriptor/setSearchText:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBPlacePickerCacheDescriptor.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly, copy) NSString *searchText</Declaration>
+			
+			
+			<Anchor>//api/name/searchText</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FBPlacePickerCacheDescriptor/searchText</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBPlacePickerCacheDescriptor.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly, copy) NSString *searchText</Declaration>
+			
+			
+			<Anchor>//api/name/searchText</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FBPlacePickerCacheDescriptor/setFieldsForRequest:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBPlacePickerCacheDescriptor.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly, copy) NSSet *fieldsForRequest</Declaration>
+			
+			
+			<Anchor>//api/name/fieldsForRequest</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FBPlacePickerCacheDescriptor/fieldsForRequest</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FBPlacePickerCacheDescriptor.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly, copy) NSSet *fieldsForRequest</Declaration>
+			
+			
+			<Anchor>//api/name/fieldsForRequest</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

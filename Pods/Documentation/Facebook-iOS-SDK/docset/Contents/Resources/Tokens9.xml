@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/FBGraphObject.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/FBGraphObject</TokenIdentifier>
+			<Abstract type="html">@class</Abstract>
+			<DeclaredIn>FBGraphObject.h</DeclaredIn>
+			
+			<NodeRef refid="9"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/FBGraphObject/graphObject</TokenIdentifier>
+			<Abstract type="html">@method
+@abstract
+Used to create a graph object for, usually for use in posting a new graph object or action</Abstract>
+			<DeclaredIn>FBGraphObject.h</DeclaredIn>			
+			
+			<Declaration>+ (NSMutableDictionary&lt;FBGraphObject&gt; *)graphObject</Declaration>
+			
+			
+			<Anchor>//api/name/graphObject</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/FBGraphObject/graphObjectWrappingDictionary:</TokenIdentifier>
+			<Abstract type="html">@method
+@abstract
+Used to wrap an existing dictionary with a FBGraphObject facade</Abstract>
+			<DeclaredIn>FBGraphObject.h</DeclaredIn>			
+			
+			<Declaration>+ (NSMutableDictionary&lt;FBGraphObject&gt; *)graphObjectWrappingDictionary:(NSDictionary *)jsonDictionary</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>jsonDictionary</Name>
+					<Abstract type="html">the dictionary representing the underlying object to wrap</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/graphObjectWrappingDictionary:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/FBGraphObject/isGraphObjectID:sameAs:</TokenIdentifier>
+			<Abstract type="html">@method
+@abstract
+Used to compare two FBGraphObjects to determine if represent the same object. We do not overload
+the concept of equality as there are various types of equality that may be important for an FBGraphObject
+(for instance, two different FBGraphObjects could represent the same object, but contain different
+subsets of fields).</Abstract>
+			<DeclaredIn>FBGraphObject.h</DeclaredIn>			
+			
+			<Declaration>+ (BOOL)isGraphObjectID:(id&lt;FBGraphObject&gt;)anObject sameAs:(id&lt;FBGraphObject&gt;)anotherObject</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>anObject</Name>
+					<Abstract type="html">an FBGraphObject to test</Abstract>
+				</Parameter><Parameter>
+					<Name>anotherObject</Name>
+					<Abstract type="html">the FBGraphObject to compare it against</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/isGraphObjectID:sameAs:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

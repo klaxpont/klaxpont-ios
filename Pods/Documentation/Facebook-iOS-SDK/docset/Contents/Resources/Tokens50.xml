@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Protocols/FBSessionDelegate.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intf/FBSessionDelegate</TokenIdentifier>
+			<Abstract type="html">Your application should implement this delegate to receive session callbacks.</Abstract>
+			<DeclaredIn>Facebook.h</DeclaredIn>
+			
+			<NodeRef refid="50"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/FBSessionDelegate/fbDidLogin</TokenIdentifier>
+			<Abstract type="html">Called when the user successfully logged in.</Abstract>
+			<DeclaredIn>Facebook.h</DeclaredIn>			
+			
+			<Declaration>- (void)fbDidLogin</Declaration>
+			
+			
+			<Anchor>//api/name/fbDidLogin</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/FBSessionDelegate/fbDidNotLogin:</TokenIdentifier>
+			<Abstract type="html">Called when the user dismissed the dialog without logging in.</Abstract>
+			<DeclaredIn>Facebook.h</DeclaredIn>			
+			
+			<Declaration>- (void)fbDidNotLogin:(BOOL)cancelled</Declaration>
+			
+			
+			<Anchor>//api/name/fbDidNotLogin:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/FBSessionDelegate/fbDidExtendToken:expiresAt:</TokenIdentifier>
+			<Abstract type="html">Called after the access token was extended. If your application has any
+references to the previous access token (for example, if your application
+stores the previous access token in persistent storage), your application
+should overwrite the old access token with the new one in this method.
+See extendAccessToken for more details.</Abstract>
+			<DeclaredIn>Facebook.h</DeclaredIn>			
+			
+			<Declaration>- (void)fbDidExtendToken:(NSString *)accessToken expiresAt:(NSDate *)expiresAt</Declaration>
+			
+			
+			<Anchor>//api/name/fbDidExtendToken:expiresAt:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/FBSessionDelegate/fbDidLogout</TokenIdentifier>
+			<Abstract type="html">Called when the user logged out.</Abstract>
+			<DeclaredIn>Facebook.h</DeclaredIn>			
+			
+			<Declaration>- (void)fbDidLogout</Declaration>
+			
+			
+			<Anchor>//api/name/fbDidLogout</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/FBSessionDelegate/fbSessionInvalidated</TokenIdentifier>
+			<Abstract type="html">Called when the current session has expired. This might happen when:
+- the access token expired
+- the app has been disabled
+- the user revoked the app&apos;s permissions
+- the user changed his or her password</Abstract>
+			<DeclaredIn>Facebook.h</DeclaredIn>			
+			
+			<Declaration>- (void)fbSessionInvalidated</Declaration>
+			
+			
+			<Anchor>//api/name/fbSessionInvalidated</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>
