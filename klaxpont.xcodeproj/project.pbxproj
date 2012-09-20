@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		01045B8214CF90DB00970E6C /* Settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 01045B8114CF90DB00970E6C /* Settings.plist */; };
-		011FD6681604E410003BC6A4 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 011FD6671604E410003BC6A4 /* Reachability.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		011FD66A1604E931003BC6A4 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 011FD6691604E931003BC6A4 /* SystemConfiguration.framework */; };
 		011FD66D1605173F003BC6A4 /* BaseTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 011FD66C1605173F003BC6A4 /* BaseTabBarViewController.m */; };
 		0150A3F41607D92B0026B553 /* 37x-Checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = 0150A3F31607D92B0026B553 /* 37x-Checkmark.png */; };
@@ -88,8 +87,6 @@
 
 /* Begin PBXFileReference section */
 		01045B8114CF90DB00970E6C /* Settings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Settings.plist; sourceTree = "<group>"; };
-		011FD6661604E410003BC6A4 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
-		011FD6671604E410003BC6A4 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		011FD6691604E931003BC6A4 /* SystemConfiguration.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		011FD66B1605173E003BC6A4 /* BaseTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseTabBarViewController.h; path = classes/BaseTabBarViewController.h; sourceTree = "<group>"; };
 		011FD66C1605173F003BC6A4 /* BaseTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseTabBarViewController.m; path = classes/BaseTabBarViewController.m; sourceTree = "<group>"; };
@@ -209,15 +206,6 @@
 			);
 			name = MBProgressHUD;
 			path = libs/MBProgressHUD;
-			sourceTree = "<group>";
-		};
-		011FD6651604E3F8003BC6A4 /* Reachability */ = {
-			isa = PBXGroup;
-			children = (
-				011FD6661604E410003BC6A4 /* Reachability.h */,
-				011FD6671604E410003BC6A4 /* Reachability.m */,
-			);
-			name = Reachability;
 			sourceTree = "<group>";
 		};
 		016D0613152A5643001B7D30 /* Helpers */ = {
@@ -391,7 +379,6 @@
 		01F9FB661480FB6300745398 = {
 			isa = PBXGroup;
 			children = (
-				011FD6651604E3F8003BC6A4 /* Reachability */,
 				01B0426115F40233004FDE1D /* Dailymotion */,
 				016D0613152A5643001B7D30 /* Helpers */,
 				01045B4014CF7ABC00970E6C /* MBProgressHUD */,
@@ -605,7 +592,6 @@
 				01B042AA15F40503004FDE1D /* VideosViewController.m in Sources */,
 				01C6287F15FEB866009D03D5 /* KlaxAppearance.m in Sources */,
 				017A970E1600CD8500B4C422 /* KlaxAlertView.m in Sources */,
-				011FD6681604E410003BC6A4 /* Reachability.m in Sources */,
 				011FD66D1605173F003BC6A4 /* BaseTabBarViewController.m in Sources */,
 				0150A3F9160A972C0026B553 /* Model.xcdatamodeld in Sources */,
 			);
