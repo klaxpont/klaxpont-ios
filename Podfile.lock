@@ -2,17 +2,20 @@
 PODS:
 - Facebook-iOS-SDK (3.0.8):
   - SBJson (= 2.2.3)
+- MBProgressHUD (0.5)
 - Reachability (3.0.0)
 - SBJson (2.2.3)
 - Specta (0.1.5)
 
 DEPENDENCIES:
 - Facebook-iOS-SDK (= 3.0.8)
+- MBProgressHUD
 - Reachability
 - Specta (~> 0.1.5)
 
 SPEC CHECKSUMS:
   Facebook-iOS-SDK: b0ba662e2a7d39a76ff04cca7d42f6d4b629fffb
+  MBProgressHUD: b23ee11c42253d6d804e8e0bfabdc334e8b2571f
   Reachability: 500bd76bf6cd8ff2c6fb715fc5f44ef6e4c024f2
   SBJson: cc373c9eed9314a45715e4fb77a1415c45fa056e
   Specta: 94bced03f773407ae9dc1883de0d96d9be739e42
