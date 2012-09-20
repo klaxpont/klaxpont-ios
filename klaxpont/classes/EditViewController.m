@@ -41,7 +41,7 @@
     if (!editedVideo)
         return;
     
-    NSLog(@"video : %d", [self.editedVideo.videoId intValue]);
+    NSLog(@"video : %@", self.editedVideo.videoId);
     if (self.title){
         self.title = editedVideo.title;
         [[self titleTextField] setText:editedVideo.title];

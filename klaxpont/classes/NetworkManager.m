@@ -111,10 +111,10 @@ static NSString *knetworkManager = @"networkManager";
     if(error)
         return nil;
     if(response){
-        NSArray *result = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+        NSDictionary *result = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
         if(error)
             return nil;
-        return result;
+        return [result objectForKey:SERVER_JSON_RESPONSE];
     }
     return nil;
 }
@@ -137,7 +137,7 @@ static NSString *knetworkManager = @"networkManager";
     NSDictionary *session = [APP_DELEGATE dailymotionSession];
     [dailymotion setSession:session];
 
-    NSLog(@"uploadVideo session: %@",[dailymotion readSession]);
+    NSLog(@"uploadVideo session: %@",session);
     
     //upload
     [dailymotion uploadFile:[video localPath] delegate:self];
@@ -194,6 +194,13 @@ static NSString *knetworkManager = @"networkManager";
 -(void) handlePublishVideoResponse:(NSDictionary*)data
 {
     NSLog(@"handlePublishVideoResponse %@", data);
+
+     
+
+    [_currentVideo setVideoId:[data objectForKey:@"id"]];
+    [DatabaseHelper saveContext];
+    //    [[NSNotificationCenter defaultCenter] postNotificationName:INFO_NOTIFICATION object:nil userInfo:[NSDictionary dictionaryWithObjectsAndKeys:[error localizedDescription], @"error", nil]];
+
 }
 
 #pragma mark - Delegates
@@ -263,12 +270,14 @@ static NSString *knetworkManager = @"networkManager";
     NSDictionary *dictionnary = (NSDictionary*)result;
     [_currentVideo setDailymotionVideoId:[dictionnary objectForKey:@"id"]];
     [DatabaseHelper saveContext];
+//    [[NSNotificationCenter defaultCenter] postNotificationName:INFO_NOTIFICATION object:nil userInfo:[NSDictionary dictionaryWithObjectsAndKeys:[error localizedDescription], @"error", nil]];
+    
     [self publishVideo:_currentVideo];
 }
 
 
 - (void)dailymotion:(Dailymotion *)dailymotion didReturnError:(NSError *)error userInfo:(NSDictionary *)userInfo{
-    [[NSNotificationCenter defaultCenter] postNotificationName:ERROR_NOTIFICATION_WITH_ON_COMPLETE_BLOCK object:nil userInfo:[NSDictionary dictionaryWithObjectsAndKeys:[error localizedDescription], @"error", nil]];
+    [[NSNotificationCenter defaultCenter] postNotificationName:ERROR_NOTIFICATION_WITH_ON_COMPLETE_BLOCK object:nil userInfo:[NSDictionary dictionaryWithObjectsAndKeys:[error localizedDescription], @"message", nil]];
 }
 
 
