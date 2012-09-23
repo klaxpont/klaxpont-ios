@@ -4,6 +4,8 @@ klaxpont.xcodeproj/xcuserdata/
 klaxpont.xcodeproj/project.xcworkspace/xcuserdata/
 klaxpont/Settings.plist
 docset-installed.txt
+klaxpont.xcworkspace/xcuserdata/*
+Pods
 
 # OS generated files #
 ######################
