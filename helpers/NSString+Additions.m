@@ -10,6 +10,16 @@
 
 @implementation NSString (Additions)
 
+
+
++(BOOL)isStringEmpty:(NSString*)string{
+    if(string){
+       return [string isEmpty];
+    }
+    return YES;
+}
+
+/* Only works if the NSString object is not nil*/
 -(BOOL)isEmpty{
  
     if (((NSNull *) self == [NSNull null]) || (self == nil) ) {

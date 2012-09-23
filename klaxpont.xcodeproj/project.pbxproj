@@ -10,6 +10,11 @@
 		01045B8214CF90DB00970E6C /* Settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 01045B8114CF90DB00970E6C /* Settings.plist */; };
 		011FD66A1604E931003BC6A4 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 011FD6691604E931003BC6A4 /* SystemConfiguration.framework */; };
 		011FD66D1605173F003BC6A4 /* BaseTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 011FD66C1605173F003BC6A4 /* BaseTabBarViewController.m */; };
+		01438660160F11C90035C821 /* NetworkManagerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0143865F160F11C90035C821 /* NetworkManagerTest.m */; };
+		014386A3160F25400035C821 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01F9FB791480FB6300745398 /* CoreGraphics.framework */; };
+		014386A4160F256F0035C821 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 011FD6691604E931003BC6A4 /* SystemConfiguration.framework */; };
+		014386A5160F25800035C821 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 01B0425D15F4014E004FDE1D /* libsqlite3.0.dylib */; };
+		014386B1160F880B0035C821 /* NSString+AdditionsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 014386B0160F880B0035C821 /* NSString+AdditionsTest.m */; };
 		0150A3F41607D92B0026B553 /* 37x-Checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = 0150A3F31607D92B0026B553 /* 37x-Checkmark.png */; };
 		0150A3F9160A972C0026B553 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0150A3F5160A972C0026B553 /* Model.xcdatamodeld */; };
 		016D0616152A5761001B7D30 /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 016D0615152A5761001B7D30 /* NSString+Additions.m */; };
@@ -51,6 +56,10 @@
 		01C6287A15FE9F78009D03D5 /* Oregano-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 01C6287415FE9F78009D03D5 /* Oregano-Regular.ttf */; };
 		01C6287C15FE9F78009D03D5 /* Satisfy-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 01C6287715FE9F78009D03D5 /* Satisfy-Regular.ttf */; };
 		01C6287F15FEB866009D03D5 /* KlaxAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = 01C6287E15FEB866009D03D5 /* KlaxAppearance.m */; };
+		01F52606160BD63E00E241B5 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01F52605160BD63E00E241B5 /* SenTestingKit.framework */; };
+		01F52607160BD63E00E241B5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01F9FB751480FB6300745398 /* UIKit.framework */; };
+		01F52608160BD63E00E241B5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01F9FB771480FB6300745398 /* Foundation.framework */; };
+		01F5260E160BD63E00E241B5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 01F5260C160BD63E00E241B5 /* InfoPlist.strings */; };
 		01F972FC1491580100D763EA /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01F972FB1491580100D763EA /* MediaPlayer.framework */; };
 		01F9FB761480FB6300745398 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01F9FB751480FB6300745398 /* UIKit.framework */; };
 		01F9FB781480FB6300745398 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01F9FB771480FB6300745398 /* Foundation.framework */; };
@@ -58,9 +67,17 @@
 		01F9FB821480FB6300745398 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F9FB811480FB6300745398 /* main.m */; };
 		01F9FB961481039300745398 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01F9FB951481039300745398 /* MobileCoreServices.framework */; };
 		5078ABED1D1B4BA9BA6ED778 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A339671C8C8D4532AF739CAA /* libPods.a */; };
+		C0F5303D1C424F9DA32230EB /* libPods-klaxpont_test.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4645E7F9B9114146AFFD7069 /* libPods-klaxpont_test.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		014386A6160F31A20035C821 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 01F9FB681480FB6300745398 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 01F9FB701480FB6300745398;
+			remoteInfo = klaxpont;
+		};
 		01B0424E15F40005004FDE1D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 01B0424615F40005004FDE1D /* Dailymotion SDK iOS.xcodeproj */;
@@ -89,6 +106,8 @@
 		011FD6691604E931003BC6A4 /* SystemConfiguration.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		011FD66B1605173E003BC6A4 /* BaseTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseTabBarViewController.h; path = classes/BaseTabBarViewController.h; sourceTree = "<group>"; };
 		011FD66C1605173F003BC6A4 /* BaseTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseTabBarViewController.m; path = classes/BaseTabBarViewController.m; sourceTree = "<group>"; };
+		0143865F160F11C90035C821 /* NetworkManagerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkManagerTest.m; sourceTree = "<group>"; };
+		014386B0160F880B0035C821 /* NSString+AdditionsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+AdditionsTest.m"; sourceTree = "<group>"; };
 		0150A3F31607D92B0026B553 /* 37x-Checkmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "37x-Checkmark.png"; sourceTree = "<group>"; };
 		0150A3F6160A972C0026B553 /* add dailymotion video id.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "add dailymotion video id.xcdatamodel"; sourceTree = "<group>"; };
 		0150A3F7160A972C0026B553 /* adding localPath to Video.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "adding localPath to Video.xcdatamodel"; sourceTree = "<group>"; };
@@ -159,6 +178,11 @@
 		01C6287715FE9F78009D03D5 /* Satisfy-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Satisfy-Regular.ttf"; sourceTree = "<group>"; };
 		01C6287D15FEB866009D03D5 /* KlaxAppearance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KlaxAppearance.h; path = classes/KlaxAppearance.h; sourceTree = "<group>"; };
 		01C6287E15FEB866009D03D5 /* KlaxAppearance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KlaxAppearance.m; path = classes/KlaxAppearance.m; sourceTree = "<group>"; };
+		01F52604160BD63E00E241B5 /* klaxpont_test.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = klaxpont_test.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		01F52605160BD63E00E241B5 /* SenTestingKit.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		01F5260B160BD63E00E241B5 /* klaxpont_test-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "klaxpont_test-Info.plist"; sourceTree = "<group>"; };
+		01F5260D160BD63E00E241B5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		01F52612160BD63E00E241B5 /* klaxpont_test-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "klaxpont_test-Prefix.pch"; sourceTree = "<group>"; };
 		01F972FB1491580100D763EA /* MediaPlayer.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		01F9FB711480FB6300745398 /* klaxpont.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = klaxpont.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01F9FB751480FB6300745398 /* UIKit.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -168,11 +192,27 @@
 		01F9FB811480FB6300745398 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		01F9FB831480FB6300745398 /* klaxpont-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "klaxpont-Prefix.pch"; sourceTree = "<group>"; };
 		01F9FB951481039300745398 /* MobileCoreServices.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		2C7479E7F40D4897AA2A637E /* Pods-klaxpont_test.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-klaxpont_test.xcconfig"; path = "Pods/Pods-klaxpont_test.xcconfig"; sourceTree = SOURCE_ROOT; };
 		35A79BD71B80400792626D83 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		4645E7F9B9114146AFFD7069 /* libPods-klaxpont_test.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-klaxpont_test.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A339671C8C8D4532AF739CAA /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		01F52600160BD63E00E241B5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01F52606160BD63E00E241B5 /* SenTestingKit.framework in Frameworks */,
+				01F52607160BD63E00E241B5 /* UIKit.framework in Frameworks */,
+				01F52608160BD63E00E241B5 /* Foundation.framework in Frameworks */,
+				C0F5303D1C424F9DA32230EB /* libPods-klaxpont_test.a in Frameworks */,
+				014386A3160F25400035C821 /* CoreGraphics.framework in Frameworks */,
+				014386A4160F256F0035C821 /* SystemConfiguration.framework in Frameworks */,
+				014386A5160F25800035C821 /* libsqlite3.0.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		01F9FB6E1480FB6300745398 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -363,15 +403,37 @@
 			path = Satisfy;
 			sourceTree = "<group>";
 		};
+		01F52609160BD63E00E241B5 /* klaxpont_test */ = {
+			isa = PBXGroup;
+			children = (
+				014386B0160F880B0035C821 /* NSString+AdditionsTest.m */,
+				0143865F160F11C90035C821 /* NetworkManagerTest.m */,
+				01F5260A160BD63E00E241B5 /* Supporting Files */,
+			);
+			path = klaxpont_test;
+			sourceTree = "<group>";
+		};
+		01F5260A160BD63E00E241B5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				01F5260B160BD63E00E241B5 /* klaxpont_test-Info.plist */,
+				01F5260C160BD63E00E241B5 /* InfoPlist.strings */,
+				01F52612160BD63E00E241B5 /* klaxpont_test-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		01F9FB661480FB6300745398 = {
 			isa = PBXGroup;
 			children = (
 				01B0426115F40233004FDE1D /* Dailymotion */,
 				016D0613152A5643001B7D30 /* Helpers */,
 				01F9FB7B1480FB6300745398 /* klaxpont */,
+				01F52609160BD63E00E241B5 /* klaxpont_test */,
 				01F9FB741480FB6300745398 /* Frameworks */,
 				01F9FB721480FB6300745398 /* Products */,
 				35A79BD71B80400792626D83 /* Pods.xcconfig */,
+				2C7479E7F40D4897AA2A637E /* Pods-klaxpont_test.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -379,6 +441,7 @@
 			isa = PBXGroup;
 			children = (
 				01F9FB711480FB6300745398 /* klaxpont.app */,
+				01F52604160BD63E00E241B5 /* klaxpont_test.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -397,6 +460,8 @@
 				01F9FB771480FB6300745398 /* Foundation.framework */,
 				01F9FB791480FB6300745398 /* CoreGraphics.framework */,
 				A339671C8C8D4532AF739CAA /* libPods.a */,
+				01F52605160BD63E00E241B5 /* SenTestingKit.framework */,
+				4645E7F9B9114146AFFD7069 /* libPods-klaxpont_test.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -441,6 +506,26 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		01F52603160BD63E00E241B5 /* klaxpont_test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 01F52613160BD63E00E241B5 /* Build configuration list for PBXNativeTarget "klaxpont_test" */;
+			buildPhases = (
+				01F525FF160BD63E00E241B5 /* Sources */,
+				01F52600160BD63E00E241B5 /* Frameworks */,
+				01F52601160BD63E00E241B5 /* Resources */,
+				2D7B7DE280BB4C219650ABA9 /* Copy Pods Resources */,
+				01F52602160BD63E00E241B5 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				014386A7160F31A20035C821 /* PBXTargetDependency */,
+			);
+			name = klaxpont_test;
+			productName = klaxpont_test;
+			productReference = 01F52604160BD63E00E241B5 /* klaxpont_test.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
 		01F9FB701480FB6300745398 /* klaxpont */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 01F9FB8F1480FB6300745398 /* Build configuration list for PBXNativeTarget "klaxpont" */;
@@ -487,6 +572,7 @@
 			projectRoot = "";
 			targets = (
 				01F9FB701480FB6300745398 /* klaxpont */,
+				01F52603160BD63E00E241B5 /* klaxpont_test */,
 			);
 		};
 /* End PBXProject section */
@@ -509,6 +595,14 @@
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
+		01F52601160BD63E00E241B5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01F5260E160BD63E00E241B5 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		01F9FB6F1480FB6300745398 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -534,6 +628,33 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		01F52602160BD63E00E241B5 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+		2D7B7DE280BB4C219650ABA9 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-klaxpont_test-resources.sh\"\n";
+		};
 		52013287B8B24C54B5DB6129 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -551,6 +672,15 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		01F525FF160BD63E00E241B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01438660160F11C90035C821 /* NetworkManagerTest.m in Sources */,
+				014386B1160F880B0035C821 /* NSString+AdditionsTest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		01F9FB6D1480FB6300745398 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -585,6 +715,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		014386A7160F31A20035C821 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 01F9FB701480FB6300745398 /* klaxpont */;
+			targetProxy = 014386A6160F31A20035C821 /* PBXContainerItemProxy */;
+		};
 		01B0425315F40020004FDE1D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Dailymotion;
@@ -592,7 +727,70 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		01F5260C160BD63E00E241B5 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				01F5260D160BD63E00E241B5 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
+		01F52614160BD63E00E241B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C7479E7F40D4897AA2A637E /* Pods-klaxpont_test.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/klaxpont.app/klaxpont";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "klaxpont_test/klaxpont_test-Prefix.pch";
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/dailymotion\"",
+					"${inherited}",
+				);
+				INFOPLIST_FILE = "klaxpont_test/klaxpont_test-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		01F52615160BD63E00E241B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C7479E7F40D4897AA2A637E /* Pods-klaxpont_test.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/klaxpont.app/klaxpont";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "klaxpont_test/klaxpont_test-Prefix.pch";
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/dailymotion\"",
+					"${inherited}",
+				);
+				INFOPLIST_FILE = "klaxpont_test/klaxpont_test-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
 		01F9FB8D1480FB6300745398 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -685,6 +883,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		01F52613160BD63E00E241B5 /* Build configuration list for PBXNativeTarget "klaxpont_test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				01F52614160BD63E00E241B5 /* Debug */,
+				01F52615160BD63E00E241B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		01F9FB6B1480FB6300745398 /* Build configuration list for PBXProject "klaxpont" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

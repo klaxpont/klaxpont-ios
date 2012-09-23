@@ -1,5 +1,6 @@
 
 PODS:
+- Expecta (0.2.0)
 - Facebook-iOS-SDK (3.0.8):
   - SBJson (= 2.2.3)
 - MBProgressHUD (0.5)
@@ -8,6 +9,7 @@ PODS:
 - Specta (0.1.5)
 
 DEPENDENCIES:
+- Expecta (~> 0.2.0)
 - Facebook-iOS-SDK (= 3.0.8)
 - MBProgressHUD
 - Reachability
@@ -18,6 +20,7 @@ SPEC CHECKSUMS:
   MBProgressHUD: b23ee11c42253d6d804e8e0bfabdc334e8b2571f
   Reachability: 500bd76bf6cd8ff2c6fb715fc5f44ef6e4c024f2
   SBJson: cc373c9eed9314a45715e4fb77a1415c45fa056e
+  Expecta: 1521da8c54c253277d5fae673f516c76ed838bc7
   Specta: 94bced03f773407ae9dc1883de0d96d9be739e42
 
 COCOAPODS: 0.14.0

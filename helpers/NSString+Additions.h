@@ -11,4 +11,5 @@
 @interface NSString (Additions)
 
 -(BOOL)isEmpty;
++(BOOL)isStringEmpty:(NSString*)string;
 @end
