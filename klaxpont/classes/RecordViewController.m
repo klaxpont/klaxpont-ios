@@ -18,9 +18,17 @@
     DisclaimerViewController *_disclaimerViewController;
     VideoPickerController   *_videoPickerController;
 }
+
+/*!
+ *
+ */
+- (void)startStandardUpdates;
+
 @end
 
 @implementation RecordViewController
+
+@synthesize location = _location;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -29,6 +37,8 @@
         // Custom initialization
         self.title = @"Record";
         _videoPickerController = [[VideoPickerController alloc] init];
+        
+        _location = nil;
     }
     return self;
 }
@@ -50,7 +60,6 @@
     
 //    [goRecordButton setTitle:@"RECORD" forState:UIControlStateNormal];
     [self.view addSubview:goRecordButton];
-
     
     
     
@@ -72,10 +81,26 @@
 {
     [super viewDidAppear:animated];
     
+    // Start the location feature in order to prompt user authorization
+    [self startStandardUpdates];
+    
+    // Pause the service as position is only requested when starting recording
+    if (_locationManager)
+        [_locationManager stopUpdatingLocation];
+    
     if(_disclaimerViewController != nil && ![[UserHelper default] acceptedDisclaimer]){
         [self presentModalViewController:_disclaimerViewController animated:YES];
     }
 
+}
+
+- (void) viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
+    
+    // Stop the location feature
+    if(_locationManager)
+        [_locationManager stopUpdatingLocation];
 }
 
 - (void)viewDidUnload
@@ -104,10 +129,35 @@
         [_videoPickerController setShowsCameraControls:YES];
         [_videoPickerController setDelegate:self];
         [self presentModalViewController:_videoPickerController animated:YES];
+        
+        // Start the location service update to save video position
+        _storeLocation = YES;
+        [self startStandardUpdates];
+        
     }else{
         // TODO display error message in case device has no camera video
     }
 
+}
+
+- (void)startStandardUpdates
+{
+    // Create the location manager if necessary
+    if (nil == _locationManager)
+    {
+        _locationManager = [[CLLocationManager alloc] init];
+        
+        _locationManager.delegate = self;
+        _locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters;
+        
+        // Set a movement threshold for new events
+        _locationManager.distanceFilter = 10;
+    }
+    
+    // Reset previous session stored location
+    _location = nil;
+    
+    [_locationManager startUpdatingLocation];
 }
 
 #pragma mark - Delegates
@@ -133,6 +183,13 @@
                 Video *video = [DatabaseHelper saveLocalVideo:moviePath];
                 if (video != nil){
                     NSLog(@"Video successfully saved!");
+                    
+                    // Manage video location
+                    if (_location != nil)
+                    {
+                        video.latitude = [NSNumber numberWithDouble:_location.coordinate.latitude];
+                        video.longitude = [NSNumber numberWithDouble:_location.coordinate.longitude];
+                    }
                     
                     UITabBarController *tabBar = ((UITabBarController*)self.parentViewController);
                     
@@ -160,6 +217,29 @@
             }
         }
     }];
+}
+
+#pragma mark - CLLocationManager delegate methods
+- (void)locationManager:(CLLocationManager *)manager
+    didUpdateToLocation:(CLLocation *)newLocation
+           fromLocation:(CLLocation *)oldLocation
+{
+    // Store the location event time
+    _lastLocationEventDate = newLocation.timestamp;
+    
+    // Check for useful location event
+    NSTimeInterval howRecent = [_lastLocationEventDate timeIntervalSinceNow];
+    if (_storeLocation && abs(howRecent) < 15.0)
+    {
+        // Store the received location
+        _location = newLocation;
+        
+        _storeLocation = NO;
+        
+        NSLog(@"latitude %+.6f, longitude %+.6f\n",
+              newLocation.coordinate.latitude,
+              newLocation.coordinate.longitude);
+    }
 }
 
 @end

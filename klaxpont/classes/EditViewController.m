@@ -22,6 +22,8 @@
 @synthesize actionButton;
 @synthesize titleTextField;
 @synthesize editedVideo;
+@synthesize locationSwitch;
+@synthesize locationLabel;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -51,9 +53,6 @@
         [self.actionButton setTitle:@"Publier" forState:UIControlStateNormal];
     if([self.editedVideo published])
         [self.actionButton setHidden:YES];
-        
-    
-
 }
 
 - (void)viewDidUnload
@@ -69,6 +68,20 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+- (void)setEditedVideo:(Video *)editedVideo
+{
+    if (self.editedVideo.latitude && self.editedVideo.longitude)
+    {
+        self.locationLabel.text = [NSString stringWithFormat:@"φ:%.4F, λ:%.4F",
+                                   [self.editedVideo.latitude doubleValue],
+                                   [self.editedVideo.longitude doubleValue]];
+        
+        [self.locationSwitch setEnabled:YES];
+    }
+    else
+        [self.locationSwitch setEnabled:NO];
 }
 
 #pragma mark - Actions
@@ -100,7 +113,16 @@
     }else
         NSLog(@"missing title");
         // TODO: alert
-
+    
+    // Check if switch button was used and for necessary location info update
+    if (_editedVideoLatitude && [_editedVideoLatitude doubleValue] != [self.editedVideo.latitude doubleValue])
+    {
+        self.editedVideo.latitude = _editedVideoLatitude;
+        self.editedVideo.longitude = _editedVideoLongitude;
+        
+        // Re-save the video
+        [DatabaseHelper saveContext];
+    }
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
@@ -117,6 +139,39 @@
     [self.titleTextField resignFirstResponder];
 
     [super touchesBegan:touches withEvent:event];
+}
+
+- (IBAction)manageLocation:(id)sender
+{
+    // Check for existing video in edition
+    if (self.editedVideo && self.locationSwitch.enabled)
+    {
+        if (self.locationSwitch.isOn && !self.editedVideo.latitude)
+        {
+            self.editedVideo.latitude = _editedVideoLatitude;
+            self.editedVideo.longitude = _editedVideoLongitude;
+            
+            _editedVideoLatitude = nil;
+            _editedVideoLongitude = nil;
+            
+            self.locationLabel.text = [NSString stringWithFormat:@"φ:%.4F, λ:%.4F",
+                                       [self.editedVideo.latitude doubleValue],
+                                       [self.editedVideo.longitude doubleValue]];
+
+        }
+        else if (!self.locationSwitch.isOn && _editedVideoLatitude)
+        {
+            // Cache current video location values
+            _editedVideoLatitude = self.editedVideo.latitude;
+            _editedVideoLongitude = self.editedVideo.longitude;
+            
+            // Reset the coordiates values
+            self.editedVideo.latitude = nil;
+            self.editedVideo.longitude = nil;
+            
+            self.locationLabel.text = @"";
+        }
+    }
 }
 
 #pragma mark - Animations
