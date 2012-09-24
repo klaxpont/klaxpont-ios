@@ -59,6 +59,15 @@ static NSString *knetworkManager = @"networkManager";
 
 #pragma mark - Requests
 
+#pragma mark Image
+
+-(UIImage*) downloadImage:(NSString*)imageUrl
+{
+
+
+    return [UIImage imageNamed:@"default_thumbnail.jpg"];
+}
+
 #pragma mark User
 
 -(void) register
@@ -82,7 +91,8 @@ static NSString *knetworkManager = @"networkManager";
 
 #pragma mark Dailymotion
 
-- (void) requestDailymotionToken{
+- (void) requestDailymotionToken
+{
     if(![self isNetworkAvailable])
         return;
 

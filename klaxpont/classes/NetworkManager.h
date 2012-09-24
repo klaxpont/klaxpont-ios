@@ -19,4 +19,6 @@
 - (void) publishVideo:(Video*)video;
 - (void) requestDailymotionToken;
 - (NSArray*) retrieveVideos;
+
+-(UIImage*) downloadImage:(NSString*)imageUrl;
 @end
