@@ -26,7 +26,7 @@
 
 SpecBegin(NetworkManager)
 
-describe(@"NetworkManager", ^{
+describe(@"downloading an Image", ^{
     __block NetworkManager *manager = nil;
 
     beforeAll(^{
@@ -42,6 +42,7 @@ describe(@"NetworkManager", ^{
         UIImage *defaultImage = [UIImage imageNamed:@"default_thumbnail.jpg"];
         
         __block UIImage *image = nil;
+        // faking the url request
         [self swizzleMethod:@selector(dataWithContentsOfURL:)     inClass:[NSData class]
                  withMethod:@selector(noDataWithContentsOfURL:) fromClass:[NetworkManagerTest class]
                executeBlock:^{
@@ -49,14 +50,16 @@ describe(@"NetworkManager", ^{
                }];
         
         expect(image).notTo.beNil();
+        // testing data instead of pointer with UIImageRepresentation
         expect(UIImageJPEGRepresentation(image, 1.0)).equal(UIImageJPEGRepresentation(defaultImage, 1.0));
     });
 
-    it(@"should return an image", ^{
+    it(@"should return requested image", ^{
         UIImage *defaultImage = [UIImage imageNamed:@"default_thumbnail.jpg"];
         UIImage *expectedImage = [UIImage imageNamed:@"klaxon.png"];
 
         __block UIImage *image = nil;
+        // faking the url request
         [self swizzleMethod:@selector(dataWithContentsOfURL:)     inClass:[NSData class]
                  withMethod:@selector(fakeDataWithContentsOfURL:) fromClass:[NetworkManagerTest class]
                executeBlock:^{
@@ -64,6 +67,7 @@ describe(@"NetworkManager", ^{
                }];
        
         expect(image).notTo.beNil();
+        // testing data instead of pointer with UIImageRepresentation
         expect(UIImageJPEGRepresentation(image, 1.0)).notTo.equal(UIImageJPEGRepresentation(defaultImage, 1.0));
         expect(UIImagePNGRepresentation(image)).equal(UIImagePNGRepresentation(expectedImage));
     });
