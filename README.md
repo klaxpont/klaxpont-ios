@@ -7,8 +7,9 @@
 
 1. `pod install`
 2. Rename Settings.plist.sample to Settings.plist
-3. Complete Settings.plist with an access_token + refresh_token
-4. change build settings : Code signing and certificates
+3. Open `klaxpont.xcworkspace`
+4. Complete Settings.plist with an access_token + refresh_token
+5. change build settings : Code signing and certificates
 
 # Documentation #
 
