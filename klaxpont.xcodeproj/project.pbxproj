@@ -12,9 +12,6 @@
 		011FD66A1604E931003BC6A4 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 011FD6691604E931003BC6A4 /* SystemConfiguration.framework */; };
 		011FD66D1605173F003BC6A4 /* BaseTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 011FD66C1605173F003BC6A4 /* BaseTabBarViewController.m */; };
 		01438660160F11C90035C821 /* NetworkManagerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0143865F160F11C90035C821 /* NetworkManagerTest.m */; };
-		014386A3160F25400035C821 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01F9FB791480FB6300745398 /* CoreGraphics.framework */; };
-		014386A4160F256F0035C821 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 011FD6691604E931003BC6A4 /* SystemConfiguration.framework */; };
-		014386A5160F25800035C821 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 01B0425D15F4014E004FDE1D /* libsqlite3.0.dylib */; };
 		014386B1160F880B0035C821 /* NSString+AdditionsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 014386B0160F880B0035C821 /* NSString+AdditionsTest.m */; };
 		0150A3F41607D92B0026B553 /* 37x-Checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = 0150A3F31607D92B0026B553 /* 37x-Checkmark.png */; };
 		0150A3F9160A972C0026B553 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0150A3F5160A972C0026B553 /* Model.xcdatamodeld */; };
@@ -187,9 +184,6 @@
 				01F52607160BD63E00E241B5 /* UIKit.framework in Frameworks */,
 				01F52608160BD63E00E241B5 /* Foundation.framework in Frameworks */,
 				C0F5303D1C424F9DA32230EB /* libPods-klaxpont_test.a in Frameworks */,
-				014386A3160F25400035C821 /* CoreGraphics.framework in Frameworks */,
-				014386A4160F256F0035C821 /* SystemConfiguration.framework in Frameworks */,
-				014386A5160F25800035C821 /* libsqlite3.0.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
