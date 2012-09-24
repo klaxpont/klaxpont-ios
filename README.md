@@ -2,6 +2,7 @@
 
 - Xcode Compiler : Apple LLVM compiler 4.0 or above
 - [Cocopods](https://github.com/CocoaPods/CocoaPods)
+- Ruby 1.8.7 ->	see issue https://github.com/CocoaPods/CocoaPods/issues/554
 
 # Install #
 
