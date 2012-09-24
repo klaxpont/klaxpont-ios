@@ -4,6 +4,7 @@
 #import "Expecta.h"
 #import <OCMock.h> 
 #import "NetworkManager.h"
+#import "UserHelper.h"
 #import "SenTestCase+MethodSwizzling.h"
 
 
@@ -74,4 +75,32 @@ describe(@"downloading an Image", ^{
     
 });
 
+
+describe(@"register an User", ^{
+    __block NetworkManager *manager = nil;
+    
+    beforeAll(^{
+        manager = [NetworkManager sharedManager];
+    });
+    
+    pending(@"should send facebook ID along the request", ^{
+        // TODO 1)don't really send the request
+        // TODO 2)assert headers and params are well set
+        
+        id userMock = [OCMockObject partialMockForObject:[UserHelper default]];
+        [[[userMock stub] andReturn:@"123"] facebookId];
+
+        id mockConnection = [OCMockObject partialMockForObject:NSURLConnection.new];
+//        id mockConnection = [OCMockObject mockForClass:[NSURLConnection class]];
+        [(NSURLConnection*)[mockConnection expect] start];
+
+
+        [manager register];
+        [mockConnection verify];
+        [userMock verify];
+        expect([UserHelper default].klaxpontId).will.notTo.beNil();
+    });
+    pending(@"should parse the response and set klaxpontId", ^{});
+    
+});
 SpecEnd
