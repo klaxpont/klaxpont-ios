@@ -41,8 +41,15 @@
     NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"VideoCell" owner:self options:nil];
     UITableViewCell *cell = [nib objectAtIndex:0];
     self.tableView.rowHeight = cell.frame.size.height;
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        _videos = [[NetworkManager sharedManager] retrieveVideos];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.tableView reloadData];
+        
+        });
+    });
 
-    _videos = [[NetworkManager sharedManager] retrieveVideos];
 }
 
 - (void)viewDidUnload
@@ -68,8 +75,22 @@
     if(video){
         //NSLog(@"%@",video);
         [[(VideoCell*)cell titleLabel] setText:[video objectForKey:@"title"]];
-//       [[(VideoCell*)cell thumbnailView] setImage:[video thumbnail]];
         [[(VideoCell*)cell  thumbnailView] setImage:[UIImage imageNamed:@"default_thumbnail.jpg"]];
+        NSString *thumbnailUrl = [video objectForKey:@"thumbnail_url"];
+        NSLog(@"thumbnail url %@", thumbnailUrl);
+        __block UIImage *image = nil;
+  
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:thumbnailUrl]];
+            image = [UIImage imageWithData:data];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                //ici, on est dans le main thread.
+                [[(VideoCell*)cell  thumbnailView] setImage:image];
+            });
+        });
+        
+//        [[(VideoCell*)cell thumbnailView] setImage:];
+    
        
         [(VideoCell*)cell setAccessoryType:UITableViewCellAccessoryNone];
     }
@@ -98,6 +119,8 @@
         cell = [nib objectAtIndex:0];
     }
     
+    
+
     // Configure the cell.
     [self configureCell:cell atIndexPath:indexPath];
     return cell;
