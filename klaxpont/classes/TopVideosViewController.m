@@ -75,21 +75,22 @@
     if(video){
         //NSLog(@"%@",video);
         [[(VideoCell*)cell titleLabel] setText:[video objectForKey:@"title"]];
-        [[(VideoCell*)cell  thumbnailView] setImage:[UIImage imageNamed:@"default_thumbnail.jpg"]];
+//        [[(VideoCell*)cell  thumbnailView] setImage:[UIImage imageNamed:@"default_thumbnail.jpg"]];
+
         NSString *thumbnailUrl = [video objectForKey:@"thumbnail_url"];
         NSLog(@"thumbnail url %@", thumbnailUrl);
+
         __block UIImage *image = nil;
-  
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-            NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:thumbnailUrl]];
-            image = [UIImage imageWithData:data];
+
+            image = [[NetworkManager sharedManager] downloadImage:thumbnailUrl];
             dispatch_async(dispatch_get_main_queue(), ^{
                 //ici, on est dans le main thread.
                 [[(VideoCell*)cell  thumbnailView] setImage:image];
             });
         });
         
-//        [[(VideoCell*)cell thumbnailView] setImage:];
+
     
        
         [(VideoCell*)cell setAccessoryType:UITableViewCellAccessoryNone];
