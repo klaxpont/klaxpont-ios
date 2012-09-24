@@ -21,13 +21,12 @@
 
 - (BOOL) published
 {
-    return (self.videoId && ![self.videoId isEmpty]);
+    return ![NSString isStringEmpty:self.videoId];
 }
 
 - (BOOL) uploaded
 {
-    BOOL t= self.dailymotionVideoId == nil;
-    return !t;
+    return ![NSString isStringEmpty:self.dailymotionVideoId];
 }
 
 
