@@ -21,7 +21,6 @@
 		016D0616152A5761001B7D30 /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 016D0615152A5761001B7D30 /* NSString+Additions.m */; };
 		017A970E1600CD8500B4C422 /* KlaxAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 017A970D1600CD8500B4C422 /* KlaxAlertView.m */; };
 		019E021E1534C461002BC4F2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 019E021F1534C461002BC4F2 /* InfoPlist.strings */; };
-		01B0425415F40025004FDE1D /* libDailymotion.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 01B0424F15F40005004FDE1D /* libDailymotion.a */; };
 		01B0425815F40044004FDE1D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01B0425715F40044004FDE1D /* CoreData.framework */; };
 		01B0425C15F4009F004FDE1D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01B0425B15F4009F004FDE1D /* AVFoundation.framework */; };
 		01B0425E15F4014E004FDE1D /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 01B0425D15F4014E004FDE1D /* libsqlite3.0.dylib */; };
@@ -79,27 +78,6 @@
 			remoteGlobalIDString = 01F9FB701480FB6300745398;
 			remoteInfo = klaxpont;
 		};
-		01B0424E15F40005004FDE1D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 01B0424615F40005004FDE1D /* Dailymotion SDK iOS.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D2AAC07E0554694100DB518D;
-			remoteInfo = Dailymotion;
-		};
-		01B0425015F40005004FDE1D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 01B0424615F40005004FDE1D /* Dailymotion SDK iOS.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 53E273561265BD1C00B541BE;
-			remoteInfo = DailymotionTests;
-		};
-		01B0425215F40020004FDE1D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 01B0424615F40005004FDE1D /* Dailymotion SDK iOS.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = D2AAC07D0554694100DB518D;
-			remoteInfo = Dailymotion;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -120,7 +98,6 @@
 		017A970C1600CD8500B4C422 /* KlaxAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KlaxAlertView.h; path = classes/KlaxAlertView.h; sourceTree = "<group>"; };
 		017A970D1600CD8500B4C422 /* KlaxAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KlaxAlertView.m; path = classes/KlaxAlertView.m; sourceTree = "<group>"; };
 		019E021F1534C461002BC4F2 /* InfoPlist.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
-		01B0424615F40005004FDE1D /* Dailymotion SDK iOS.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "Dailymotion SDK iOS.xcodeproj"; path = "dailymotion/Dailymotion SDK iOS.xcodeproj"; sourceTree = SOURCE_ROOT; };
 		01B0425715F40044004FDE1D /* CoreData.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		01B0425B15F4009F004FDE1D /* AVFoundation.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		01B0425D15F4014E004FDE1D /* libsqlite3.0.dylib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
@@ -225,7 +202,6 @@
 				01B0425E15F4014E004FDE1D /* libsqlite3.0.dylib in Frameworks */,
 				01B0425C15F4009F004FDE1D /* AVFoundation.framework in Frameworks */,
 				01B0425815F40044004FDE1D /* CoreData.framework in Frameworks */,
-				01B0425415F40025004FDE1D /* libDailymotion.a in Frameworks */,
 				01F972FC1491580100D763EA /* MediaPlayer.framework in Frameworks */,
 				01F9FB961481039300745398 /* MobileCoreServices.framework in Frameworks */,
 				01F9FB761480FB6300745398 /* UIKit.framework in Frameworks */,
@@ -328,23 +304,6 @@
 			name = Helpers;
 			sourceTree = "<group>";
 		};
-		01B0424715F40005004FDE1D /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				01B0424F15F40005004FDE1D /* libDailymotion.a */,
-				01B0425115F40005004FDE1D /* Tests.octest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		01B0426115F40233004FDE1D /* Dailymotion */ = {
-			isa = PBXGroup;
-			children = (
-				01B0424615F40005004FDE1D /* Dailymotion SDK iOS.xcodeproj */,
-			);
-			name = Dailymotion;
-			sourceTree = "<group>";
-		};
 		01B0426515F40480004FDE1D /* resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -431,7 +390,6 @@
 		01F9FB661480FB6300745398 = {
 			isa = PBXGroup;
 			children = (
-				01B0426115F40233004FDE1D /* Dailymotion */,
 				016D0613152A5643001B7D30 /* Helpers */,
 				01F9FB7B1480FB6300745398 /* klaxpont */,
 				01F52609160BD63E00E241B5 /* klaxpont_test */,
@@ -543,7 +501,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				01B0425315F40020004FDE1D /* PBXTargetDependency */,
 			);
 			name = klaxpont;
 			productName = klaxpont;
@@ -568,12 +525,6 @@
 			mainGroup = 01F9FB661480FB6300745398;
 			productRefGroup = 01F9FB721480FB6300745398 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 01B0424715F40005004FDE1D /* Products */;
-					ProjectRef = 01B0424615F40005004FDE1D /* Dailymotion SDK iOS.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				01F9FB701480FB6300745398 /* klaxpont */,
@@ -581,23 +532,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		01B0424F15F40005004FDE1D /* libDailymotion.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libDailymotion.a;
-			remoteRef = 01B0424E15F40005004FDE1D /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		01B0425115F40005004FDE1D /* Tests.octest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = Tests.octest;
-			remoteRef = 01B0425015F40005004FDE1D /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		01F52601160BD63E00E241B5 /* Resources */ = {
@@ -726,11 +660,6 @@
 			target = 01F9FB701480FB6300745398 /* klaxpont */;
 			targetProxy = 014386A6160F31A20035C821 /* PBXContainerItemProxy */;
 		};
-		01B0425315F40020004FDE1D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Dailymotion;
-			targetProxy = 01B0425215F40020004FDE1D /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -759,10 +688,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "klaxpont_test/klaxpont_test-Prefix.pch";
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				HEADER_SEARCH_PATHS = (
-					"\"$(SRCROOT)/dailymotion\"",
-					"${inherited}",
-				);
+				HEADER_SEARCH_PATHS = "${inherited}";
 				INFOPLIST_FILE = "klaxpont_test/klaxpont_test-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -785,10 +711,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "klaxpont_test/klaxpont_test-Prefix.pch";
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				HEADER_SEARCH_PATHS = (
-					"\"$(SRCROOT)/dailymotion\"",
-					"${inherited}",
-				);
+				HEADER_SEARCH_PATHS = "${inherited}";
 				INFOPLIST_FILE = "klaxpont_test/klaxpont_test-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -852,10 +775,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "klaxpont/klaxpont-Prefix.pch";
-				HEADER_SEARCH_PATHS = (
-					"\"$(SRCROOT)/dailymotion\"",
-					"${inherited}",
-				);
+				HEADER_SEARCH_PATHS = "${inherited}";
 				INFOPLIST_FILE = "klaxpont/klaxpont-Info.plist";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -874,10 +794,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "klaxpont/klaxpont-Prefix.pch";
-				HEADER_SEARCH_PATHS = (
-					"\"$(SRCROOT)/dailymotion\"",
-					"${inherited}",
-				);
+				HEADER_SEARCH_PATHS = "${inherited}";
 				INFOPLIST_FILE = "klaxpont/klaxpont-Info.plist";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";

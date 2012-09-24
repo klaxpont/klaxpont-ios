@@ -1,6 +1,11 @@
+# Requirements #
+
+- Xcode Compiler : Apple LLVM compiler 4.0 or above
+- [Cocopods](https://github.com/CocoaPods/CocoaPods)
+
 # Install #
 
-1. git submodule init --update
+1. `pod install`
 2. Rename Settings.plist.sample to Settings.plist
 3. Complete Settings.plist with an access_token + refresh_token
 4. change build settings : Code signing and certificates
