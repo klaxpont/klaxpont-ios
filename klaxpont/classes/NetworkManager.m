@@ -64,7 +64,11 @@ static NSString *knetworkManager = @"networkManager";
 -(UIImage*) downloadImage:(NSString*)imageUrl
 {
 
-
+    NSURL *url = [NSURL URLWithString:imageUrl];
+    NSData *data = [NSData dataWithContentsOfURL:url];
+    if(data){
+        return [UIImage imageWithData:data];
+    }
     return [UIImage imageNamed:@"default_thumbnail.jpg"];
 }
 
