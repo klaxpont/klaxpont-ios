@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		01045B8214CF90DB00970E6C /* Settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 01045B8114CF90DB00970E6C /* Settings.plist */; };
 		01159B2F1610C33D00D98AFE /* SenTestCase+MethodSwizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 01159B2E1610C33D00D98AFE /* SenTestCase+MethodSwizzling.m */; };
-		01159B6C16110FAB00D98AFE /* KlaxAlertViewTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 01159B6B16110FAB00D98AFE /* KlaxAlertViewTest.m */; };
 		011FD66A1604E931003BC6A4 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 011FD6691604E931003BC6A4 /* SystemConfiguration.framework */; };
 		011FD66D1605173F003BC6A4 /* BaseTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 011FD66C1605173F003BC6A4 /* BaseTabBarViewController.m */; };
 		01438660160F11C90035C821 /* NetworkManagerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0143865F160F11C90035C821 /* NetworkManagerTest.m */; };
@@ -82,7 +81,6 @@
 		01045B8114CF90DB00970E6C /* Settings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Settings.plist; sourceTree = "<group>"; };
 		01159B2D1610C33D00D98AFE /* SenTestCase+MethodSwizzling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SenTestCase+MethodSwizzling.h"; sourceTree = "<group>"; };
 		01159B2E1610C33D00D98AFE /* SenTestCase+MethodSwizzling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SenTestCase+MethodSwizzling.m"; sourceTree = "<group>"; };
-		01159B6B16110FAB00D98AFE /* KlaxAlertViewTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KlaxAlertViewTest.m; sourceTree = "<group>"; };
 		011FD6691604E931003BC6A4 /* SystemConfiguration.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		011FD66B1605173E003BC6A4 /* BaseTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseTabBarViewController.h; path = classes/BaseTabBarViewController.h; sourceTree = "<group>"; };
 		011FD66C1605173F003BC6A4 /* BaseTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseTabBarViewController.m; path = classes/BaseTabBarViewController.m; sourceTree = "<group>"; };
@@ -365,7 +363,6 @@
 			isa = PBXGroup;
 			children = (
 				014386B0160F880B0035C821 /* NSString+AdditionsTest.m */,
-				01159B6B16110FAB00D98AFE /* KlaxAlertViewTest.m */,
 				0143865F160F11C90035C821 /* NetworkManagerTest.m */,
 				01F5260A160BD63E00E241B5 /* Supporting Files */,
 				01159B2D1610C33D00D98AFE /* SenTestCase+MethodSwizzling.h */,
@@ -576,7 +573,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
-			showEnvVarsInLog = 0;
 		};
 		2D7B7DE280BB4C219650ABA9 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -616,7 +612,6 @@
 				01438660160F11C90035C821 /* NetworkManagerTest.m in Sources */,
 				014386B1160F880B0035C821 /* NSString+AdditionsTest.m in Sources */,
 				01159B2F1610C33D00D98AFE /* SenTestCase+MethodSwizzling.m in Sources */,
-				01159B6C16110FAB00D98AFE /* KlaxAlertViewTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
