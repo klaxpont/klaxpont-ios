@@ -46,7 +46,6 @@
 		01B042A715F40503004FDE1D /* VideoHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B0428D15F40503004FDE1D /* VideoHelper.m */; };
 		01B042A815F40503004FDE1D /* VideoPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B0428F15F40503004FDE1D /* VideoPickerController.m */; };
 		01B042A915F40503004FDE1D /* VideoPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B0429115F40503004FDE1D /* VideoPlayerController.m */; };
-		01B042AA15F40503004FDE1D /* VideosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B0429315F40503004FDE1D /* VideosViewController.m */; };
 		01C6286F15FE9C61009D03D5 /* Strato-linked.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 01C6286915FE9C61009D03D5 /* Strato-linked.ttf */; };
 		01C6287015FE9C61009D03D5 /* Strato-unlinked.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 01C6286A15FE9C61009D03D5 /* Strato-unlinked.ttf */; };
 		01C6287915FE9F78009D03D5 /* Oregano-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 01C6287315FE9F78009D03D5 /* Oregano-Italic.ttf */; };
@@ -140,8 +139,6 @@
 		01B0428F15F40503004FDE1D /* VideoPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VideoPickerController.m; path = classes/VideoPickerController.m; sourceTree = "<group>"; };
 		01B0429015F40503004FDE1D /* VideoPlayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VideoPlayerController.h; path = classes/VideoPlayerController.h; sourceTree = "<group>"; };
 		01B0429115F40503004FDE1D /* VideoPlayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VideoPlayerController.m; path = classes/VideoPlayerController.m; sourceTree = "<group>"; };
-		01B0429215F40503004FDE1D /* VideosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VideosViewController.h; path = classes/VideosViewController.h; sourceTree = "<group>"; };
-		01B0429315F40503004FDE1D /* VideosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VideosViewController.m; path = classes/VideosViewController.m; sourceTree = "<group>"; };
 		01C6286515FE9C61009D03D5 /* FontLog.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FontLog.txt; sourceTree = "<group>"; };
 		01C6286615FE9C61009D03D5 /* IMG_0928.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMG_0928.png; sourceTree = "<group>"; };
 		01C6286715FE9C61009D03D5 /* OFL-FAQ.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "OFL-FAQ.txt"; sourceTree = "<group>"; };
@@ -243,8 +240,6 @@
 				01B0428F15F40503004FDE1D /* VideoPickerController.m */,
 				01B0429015F40503004FDE1D /* VideoPlayerController.h */,
 				01B0429115F40503004FDE1D /* VideoPlayerController.m */,
-				01B0429215F40503004FDE1D /* VideosViewController.h */,
-				01B0429315F40503004FDE1D /* VideosViewController.m */,
 				011FD66B1605173E003BC6A4 /* BaseTabBarViewController.h */,
 				011FD66C1605173F003BC6A4 /* BaseTabBarViewController.m */,
 			);
@@ -638,7 +633,6 @@
 				01B042A715F40503004FDE1D /* VideoHelper.m in Sources */,
 				01B042A815F40503004FDE1D /* VideoPickerController.m in Sources */,
 				01B042A915F40503004FDE1D /* VideoPlayerController.m in Sources */,
-				01B042AA15F40503004FDE1D /* VideosViewController.m in Sources */,
 				01C6287F15FEB866009D03D5 /* KlaxAppearance.m in Sources */,
 				017A970E1600CD8500B4C422 /* KlaxAlertView.m in Sources */,
 				011FD66D1605173F003BC6A4 /* BaseTabBarViewController.m in Sources */,
