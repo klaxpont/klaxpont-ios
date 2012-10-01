@@ -27,6 +27,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    NSLog(@"server %@",SERVER_BASE_URL);
+    [KlaxAppearance applyStyle];  
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     BaseTabBarViewController *tabBarController = [[BaseTabBarViewController alloc] init];
@@ -50,9 +52,10 @@
     });
     [[self window] addSubview:tabBarController.view];
     NSLog(@"view image : %@", NSStringFromCGSize(    tabBarController.tabBar.frame.size));
+
 	[[self window] makeKeyAndVisible];
 
-    [KlaxAppearance applyStyle];  
+
     return YES;
 }
 				

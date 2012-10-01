@@ -13,6 +13,7 @@
 #import "DatabaseHelper.h"
 #import "EditViewController.h"
 #import "KlaxAlertView.h"
+#import "KlaxAppearance.h"
 
 @interface RecordViewController ()
 {
@@ -41,17 +42,17 @@
     
 
     UILabel *catchphrase = [[UILabel alloc] init];
-    [catchphrase setFrame:CGRectMake((self.view.frame.size.width/2) - 100, 40, 200, 40)];
+    [catchphrase setFrame:CGRectMake((self.view.frame.size.width/2) - 100, 60, 200, 40)];
 
     [catchphrase setTextAlignment:UITextAlignmentCenter];
 
-
-    [catchphrase setText:@"Klaxponnne !"];
+    [catchphrase setFont: [UIFont fontWithName:DEFAULT_FONT size:40]];
+    [catchphrase setText:@"Klaxponne !"];
 
     [self.view addSubview:catchphrase];
 
     
-    UIImage *image = [UIImage imageNamed:@"klaxon.png"];
+    UIImage *image = [UIImage imageNamed:@"klaxpont_logo.png"];
     UIButton *goRecordButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, image.size.width, image.size.height)];
     [goRecordButton setImage:image forState:UIControlStateNormal];
     [goRecordButton setCenter:CGPointMake(self.view.frame.size.width/2, (self.view.frame.size.height - image.size.height)/2 + 44)];

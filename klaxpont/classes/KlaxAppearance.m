@@ -16,23 +16,24 @@
     [[UINavigationBar appearance] setBarStyle:UIBarStyleBlack];
     [[UINavigationBar appearance] setTitleTextAttributes:@{UITextAttributeFont:[UIFont fontWithName:DEFAULT_FONT size:24]}];
 
-    // General Buttons
+    // Labels and Texts
     UILabel *labelAppearance = [UILabel appearance];
+    [labelAppearance setTextColor:[UIColor blackColor]];
     [labelAppearance setFont:generalFont];
     [[UITextView appearance] setFont:generalFont];
-    [labelAppearance setTextColor:[UIColor blackColor]];
 
-   
+    // General Buttons
     UIButton *buttonAppearance = [UIButton appearance];
     [buttonAppearance setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
 
-    // TabBar Buttons
-    [[UIButton appearanceWhenContainedIn:[UITabBar class], nil]
-     setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [[UILabel appearanceWhenContainedIn:[UITabBar class], nil]
-     setTextColor:[UIColor whiteColor]];
-    [[UILabel appearanceWhenContainedIn:[UITabBar class], nil]
-     setFont:[UIFont fontWithName:DEFAULT_FONT size:14]];
+    
+    // tab bar
+    [[UITabBarItem appearance] setTitleTextAttributes:
+     [NSDictionary dictionaryWithObjectsAndKeys:
+      [UIColor whiteColor], UITextAttributeTextColor,
+      [UIFont fontWithName:DEFAULT_FONT size:16], UITextAttributeFont,
+      nil]
+                                             forState:UIControlStateNormal];
     
 
 
