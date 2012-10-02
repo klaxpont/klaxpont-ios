@@ -26,7 +26,7 @@
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
-    self = [super initWithStyle:style];
+    self = [super initWithStyle:UITableViewStyleGrouped];
     if (self) {
         // Custom initialization
         self.title = @"Les Vidébas";
@@ -43,6 +43,13 @@
     NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"VideoCell" owner:self options:nil];
     UITableViewCell *cell = [nib objectAtIndex:0];
     self.tableView.rowHeight = cell.frame.size.height;
+	self.tableView.layer.cornerRadius = 5.0;
+
+//    [self.tableView setSeparatorColor:[UIColor blackColor]];
+
+    [self.tableView setBackgroundView:nil];
+    [self.tableView setBackgroundColor:[UIColor whiteColor]];
+ 
 
     if (_refreshHeaderView == nil) {
 		
@@ -54,13 +61,12 @@
 		_refreshHeaderView = view;
 		
 	}
-	
 	//  update the last update date
 	[_refreshHeaderView refreshLastUpdatedDate];
     [self egoRefreshScrollViewDataSourceStartManualLoading:self.tableView];
     [self reloadTableViewDataSource];
 
-
+    
 }
 
 - (void)viewDidUnload
@@ -88,7 +94,7 @@
         //NSLog(@"%@",video);
         [[(VideoCell*)cell titleLabel] setText:[video objectForKey:@"title"]];
 
-
+        
         if([video objectForKey:@"thumbnail_url"] != [NSNull null])
         {
             NSString *thumbnailUrl = [video objectForKey:@"thumbnail_url"];
@@ -106,8 +112,12 @@
             });
         }else
             [[(VideoCell*)cell  thumbnailView] setImage:[UIImage imageNamed:@"default_thumbnail.jpg"]];
-    
-       
+//        [cell.layer setFrame:CGRectMake(10, 10, 10, 10)];
+//        cell.layer.borderColor = (__bridge CGColorRef)([UIColor grayColor]);
+//        [cell.layer setBorderColor:[UIColor clearColor].CGColor];
+//        cell.layer.borderWidth = 10.0;
+//        [cell.contentView setBackgroundColor:[UIColor whiteColor]];
+//        [cell setBackgroundColor:[UIColor whiteColor]];
         [(VideoCell*)cell setAccessoryType:UITableViewCellAccessoryNone];
     }
 }
@@ -133,7 +143,7 @@
     if (cell == nil) {
         NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"VideoCell" owner:self options:nil];
         cell = [nib objectAtIndex:0];
-        UIFont *font = [[[UILabel appearance] font] fontWithSize:14.0];
+        UIFont *font = [[[UILabel appearance] font] fontWithSize:16.0];
         [[cell titleLabel] setFont:font];
     }
 
