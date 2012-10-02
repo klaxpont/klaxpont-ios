@@ -7,12 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "EGORefreshTableHeaderView.h"
 
-
-@interface TopVideosViewController : UITableViewController
+@interface TopVideosViewController : UITableViewController<EGORefreshTableHeaderDelegate>
 {
     NSArray *_videos;
     NSIndexPath *selectedPath;
+    
+    EGORefreshTableHeaderView *_refreshHeaderView;
+	
+	//  Reloading var should really be your tableviews datasource
+	//  Putting it here for demo purposes
+	BOOL _reloading;
 }
 @property(nonatomic,retain) NSArray *videos;
 @end

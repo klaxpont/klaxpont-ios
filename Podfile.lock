@@ -1,33 +1,19 @@
 
-SPEC CHECKSUMS: 
-  OCMock: 77a9c4c57af6bf258a537d34cf09abf422affede
-  Reachability: 500bd76bf6cd8ff2c6fb715fc5f44ef6e4c024f2
-  MBProgressHUD: b23ee11c42253d6d804e8e0bfabdc334e8b2571f
-  SBJson: cc373c9eed9314a45715e4fb77a1415c45fa056e
-  dailymotion-sdk-objc: ee20bed134e4c371a297dabfebd673b10f105364
-  Specta: 94bced03f773407ae9dc1883de0d96d9be739e42
-  Expecta: 1521da8c54c253277d5fae673f516c76ed838bc7
-  Facebook-iOS-SDK: b0ba662e2a7d39a76ff04cca7d42f6d4b629fffb
-
-COCOAPODS: 0.14.0
-
-EXTERNAL SOURCES: 
-  dailymotion-sdk-objc: 
-    :podspec: https://raw.github.com/gist/3778049/6a066850b48e632a49a6e448b1591f6966160a88/dailymotion-sdk-objc.podspec
-
-PODS: 
+PODS:
+- EGOTableViewPullRefresh (0.1.0)
 - Expecta (0.2.0)
-- Facebook-iOS-SDK (3.0.8): 
+- Facebook-iOS-SDK (3.0.8):
   - SBJson (= 2.2.3)
 - MBProgressHUD (0.5)
 - OCMock (2.0.1)
 - Reachability (3.0.0)
 - SBJson (2.2.3)
 - Specta (0.1.5)
-- dailymotion-sdk-objc (1.7): 
+- dailymotion-sdk-objc (1.7):
   - SBJson
 
-DEPENDENCIES: 
+DEPENDENCIES:
+- EGOTableViewPullRefresh
 - Expecta (~> 0.2.0)
 - Facebook-iOS-SDK (= 3.0.8)
 - MBProgressHUD
@@ -35,3 +21,20 @@ DEPENDENCIES:
 - Reachability
 - Specta (~> 0.1.5)
 - dailymotion-sdk-objc (from `https://raw.github.com/gist/3778049/6a066850b48e632a49a6e448b1591f6966160a88/dailymotion-sdk-objc.podspec')
+
+EXTERNAL SOURCES:
+  dailymotion-sdk-objc:
+    :podspec: https://raw.github.com/gist/3778049/6a066850b48e632a49a6e448b1591f6966160a88/dailymotion-sdk-objc.podspec
+
+SPEC CHECKSUMS:
+  EGOTableViewPullRefresh: 6ba637ce6dd3186b503d2d91e6b3a08a26d650f5
+  Facebook-iOS-SDK: b0ba662e2a7d39a76ff04cca7d42f6d4b629fffb
+  MBProgressHUD: b23ee11c42253d6d804e8e0bfabdc334e8b2571f
+  Reachability: 500bd76bf6cd8ff2c6fb715fc5f44ef6e4c024f2
+  SBJson: cc373c9eed9314a45715e4fb77a1415c45fa056e
+  dailymotion-sdk-objc: ee20bed134e4c371a297dabfebd673b10f105364
+  Expecta: 1521da8c54c253277d5fae673f516c76ed838bc7
+  OCMock: 77a9c4c57af6bf258a537d34cf09abf422affede
+  Specta: 94bced03f773407ae9dc1883de0d96d9be739e42
+
+COCOAPODS: 0.14.0
