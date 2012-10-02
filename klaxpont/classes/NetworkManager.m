@@ -51,9 +51,10 @@ static NSString *knetworkManager = @"networkManager";
 {
     Reachability *reachabilityForInternetConnection = [Reachability reachabilityForInternetConnection];
     if([reachabilityForInternetConnection currentReachabilityStatus] == NotReachable){
-        NSLog(@"no connection");
+        NSLog(@"no internet connection");
         return NO;
     }
+ 
     return YES;
 }
 
@@ -122,12 +123,28 @@ static NSString *knetworkManager = @"networkManager";
     NSURLResponse *response = nil;
     NSError *error = nil;
     NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
-    if(error)
+    if(error){
+
+        dispatch_async(dispatch_get_main_queue(), ^{
+            NSDictionary *errorResponse = @{@"code":@0, @"message":[error localizedDescription]};
+            [[NSNotificationCenter defaultCenter] postNotificationName:ERROR_NOTIFICATION object:nil userInfo:errorResponse];
+           
+        
+        });
         return nil;
+    }
     if(response){
         NSDictionary *result = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
-        if(error)
+        if(error){
+//            dispatch_async(dispatch_get_main_queue(), ^{
+                NSDictionary *errorResponse = @{@"code":@0, @"message":[error localizedDescription]};
+                [[NSNotificationCenter defaultCenter] postNotificationName:ERROR_NOTIFICATION object:nil userInfo:errorResponse];
+                
+                
+//            });
+
             return nil;
+        }
         return [result objectForKey:SERVER_JSON_RESPONSE];
     }
     return nil;
