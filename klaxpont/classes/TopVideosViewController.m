@@ -90,7 +90,7 @@
                 image = [[NetworkManager sharedManager] downloadImage:thumbnailUrl];
                 dispatch_async(dispatch_get_main_queue(), ^{
                     //ici, on est dans le main thread.
-                    [[(VideoCell*)cell  thumbnailView] setImage:image];
+                    [[(VideoCell*)cell thumbnailView] setImage:image];
                 });
             });
         }else
@@ -122,9 +122,9 @@
     if (cell == nil) {
         NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"VideoCell" owner:self options:nil];
         cell = [nib objectAtIndex:0];
+        UIFont *font = [[[UILabel appearance] font] fontWithSize:14.0];
+        [[cell titleLabel] setFont:font];
     }
-    
-    
 
     // Configure the cell.
     [self configureCell:cell atIndexPath:indexPath];
@@ -139,32 +139,37 @@
 {
     NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"VideoCell" owner:self options:nil];
     UITableViewCell *cell = [nib objectAtIndex:0];
+    NSUInteger height = cell.frame.size.height;
     if(selectedPath && indexPath.row == selectedPath.row){
-        return cell.frame.size.height + 200 + 10;
+        return height + 200 + 10;
     }
 
-    return cell.frame.size.height;
+    return height;
 }
 
 - (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (selectedPath && indexPath.row == selectedPath.row)
         selectedPath = nil;
-    if(controller)
-        [controller.view removeFromSuperview];
+//    if(controller)
+//        //[controller.view removeFromSuperview];
 
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (selectedPath && indexPath.row == selectedPath.row)
+    if (selectedPath && indexPath.row == selectedPath.row){
+        selectedPath = nil;
+        [tableView beginUpdates];
+        [tableView endUpdates];
         return;
-
+    }
     NSDictionary *video = [_videos objectAtIndex:indexPath.row];
     NSString *videoId = [video objectForKey:@"dailymotion_video_id"];
+
     if (controller == nil) {
         controller = [[VideoPlayerController alloc] initWithDailymotionVideo:videoId];
     }else{
-        [controller setVideoId:videoId];
+        [controller setVideoId:videoId];//[controller load:videoId];
     }
     
     selectedPath = indexPath;
@@ -173,17 +178,18 @@
     VideoCell* cell = (VideoCell*)[tableView cellForRowAtIndexPath:indexPath];
     if (cell) {
         if (selectedPath && indexPath.row == selectedPath.row && controller) {
-           [controller.view setFrame:CGRectMake(10, 72, 300, 200)];
-            // TODO: replace hard values
-            [cell.contentView addSubview:controller.view];
+//            [self presentModalViewController:controller animated:YES];
+//            [controller.view setFrame:CGRectMake(0, 72, WIDTH(controller.view), HEIGHT(controller.view))];
+//            
+//            [cell.contentView addSubview:controller.view];
         }
     }
 
     [tableView endUpdates];
 
-    if (controller) {
-        [controller play];
-    }
+//    if (controller) {
+//        [controller play];
+//    }
 }
 
 @end
