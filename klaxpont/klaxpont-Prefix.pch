@@ -11,6 +11,7 @@
 #ifdef __OBJC__
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
+    #import "Macros.h"
 #endif
 
 
@@ -20,8 +21,13 @@
 #define SERVER_URL_FOR(relativeURL) [NSString stringWithFormat:@"%@/%@",SERVER_BASE_URL, relativeURL]
 
 //Klaxpont API
-#define SERVER_BASE_URL @"http://klaxpont.192.168.1.1.xip.io"
+
+#define LOCAL_IP @"192.168.1.3"
+//ifconfig | grep "inet " | grep -v 127.0.0.1 | cut -d ' ' -f2
+
+#define SERVER_BASE_URL [NSString stringWithFormat:@"http://klaxpont.%@.xip.io", LOCAL_IP]
 //#define SERVER_BASE_URL @"http://klaxpont.herokuapp.com"
+
 #define DAILYMOTION_API_TOKEN_PATH @"api/dailymotion/token"
 #define USER_PATH @"api/users"
 #define VIDEO_PATH @"api/videos"
