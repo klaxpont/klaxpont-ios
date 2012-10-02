@@ -70,27 +70,31 @@
 -(void) configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
     NSLog(@"%d", [indexPath row]);
+
     
     NSDictionary *video = [_videos objectAtIndex:[indexPath row]];
     if(video){
         //NSLog(@"%@",video);
         [[(VideoCell*)cell titleLabel] setText:[video objectForKey:@"title"]];
-//        [[(VideoCell*)cell  thumbnailView] setImage:[UIImage imageNamed:@"default_thumbnail.jpg"]];
 
-        NSString *thumbnailUrl = [video objectForKey:@"thumbnail_url"];
-        NSLog(@"thumbnail url %@", thumbnailUrl);
 
-        __block UIImage *image = nil;
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        if([video objectForKey:@"thumbnail_url"] != [NSNull null])
+        {
+            NSString *thumbnailUrl = [video objectForKey:@"thumbnail_url"];
+            NSLog(@"thumbnail url %@", thumbnailUrl);
 
-            image = [[NetworkManager sharedManager] downloadImage:thumbnailUrl];
-            dispatch_async(dispatch_get_main_queue(), ^{
-                //ici, on est dans le main thread.
-                [[(VideoCell*)cell  thumbnailView] setImage:image];
+            
+            __block UIImage *image = nil;
+            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+
+                image = [[NetworkManager sharedManager] downloadImage:thumbnailUrl];
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    //ici, on est dans le main thread.
+                    [[(VideoCell*)cell  thumbnailView] setImage:image];
+                });
             });
-        });
-        
-
+        }else
+            [[(VideoCell*)cell  thumbnailView] setImage:[UIImage imageNamed:@"default_thumbnail.jpg"]];
     
        
         [(VideoCell*)cell setAccessoryType:UITableViewCellAccessoryNone];
