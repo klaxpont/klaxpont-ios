@@ -57,7 +57,7 @@
 	
 	//  update the last update date
 	[_refreshHeaderView refreshLastUpdatedDate];
-    
+    [self egoRefreshScrollViewDataSourceStartManualLoading:self.tableView];
     [self reloadTableViewDataSource];
 
 
@@ -207,7 +207,6 @@
 #pragma mark Data Source Loading / Reloading Methods
 
 - (void)reloadTableViewDataSource{
-	
     // download videos
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         _reloading = YES;
@@ -217,14 +216,11 @@
             [self doneLoadingTableViewData];
         });
     });
-	
 }
 
 - (void)doneLoadingTableViewData{
-	
     _reloading = NO;
 	[_refreshHeaderView egoRefreshScrollViewDataSourceDidFinishedLoading:self.tableView];
-	
 }
 
 
@@ -232,15 +228,11 @@
 #pragma mark UIScrollViewDelegate Methods
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
-	
 	[_refreshHeaderView egoRefreshScrollViewDidScroll:scrollView];
-    
 }
 
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
-	
 	[_refreshHeaderView egoRefreshScrollViewDidEndDragging:scrollView];
-	
 }
 
 
@@ -248,20 +240,23 @@
 #pragma mark EGORefreshTableHeaderDelegate Methods
 
 - (void)egoRefreshTableHeaderDidTriggerRefresh:(EGORefreshTableHeaderView*)view{
-	
 	[self reloadTableViewDataSource];
 }
 
 - (BOOL)egoRefreshTableHeaderDataSourceIsLoading:(EGORefreshTableHeaderView*)view{
-	
 	return _reloading;
-	
 }
 
 - (NSDate*)egoRefreshTableHeaderDataSourceLastUpdated:(EGORefreshTableHeaderView*)view{
-	
-	return [NSDate date]; // should return date data source was last changed
-	
+	return [NSDate date]; // should return date data source was last changed	
+}
+
+#pragma mark - Manually refresh view update
+
+- (void)egoRefreshScrollViewDataSourceStartManualLoading:(UIScrollView *)scrollView {
+    // faint the scrollView in order to trigger the loading
+    [scrollView setContentOffset:CGPointMake(0, -70)];
+    [_refreshHeaderView egoRefreshScrollViewDidEndDragging:scrollView];
 }
 
 @end
