@@ -21,6 +21,7 @@ The project's documentation can be generated (docset) via appledoc (http://gentl
 # Notes #
 
 * Upload video only works on device
+* Dailymotion thumbnails resolution: 640*480
 
 # TODO #
 
