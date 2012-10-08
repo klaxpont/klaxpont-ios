@@ -8,9 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		01045B8214CF90DB00970E6C /* Settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 01045B8114CF90DB00970E6C /* Settings.plist */; };
+		010D787E161C52DF00166017 /* gribouillis-reverse.fw.png in Resources */ = {isa = PBXBuildFile; fileRef = 010D787D161C52DF00166017 /* gribouillis-reverse.fw.png */; };
 		01159B2F1610C33D00D98AFE /* SenTestCase+MethodSwizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 01159B2E1610C33D00D98AFE /* SenTestCase+MethodSwizzling.m */; };
 		011FD66A1604E931003BC6A4 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 011FD6691604E931003BC6A4 /* SystemConfiguration.framework */; };
 		011FD66D1605173F003BC6A4 /* BaseTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 011FD66C1605173F003BC6A4 /* BaseTabBarViewController.m */; };
+		01428B3B161B661C00E314A0 /* RegisterRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 01428B3A161B661C00E314A0 /* RegisterRequest.m */; };
+		01428B42161B752900E314A0 /* DailymotionTokenRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 01428B41161B752800E314A0 /* DailymotionTokenRequest.m */; };
 		01438660160F11C90035C821 /* NetworkManagerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0143865F160F11C90035C821 /* NetworkManagerTest.m */; };
 		014386B1160F880B0035C821 /* NSString+AdditionsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 014386B0160F880B0035C821 /* NSString+AdditionsTest.m */; };
 		0150A3F41607D92B0026B553 /* 37x-Checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = 0150A3F31607D92B0026B553 /* 37x-Checkmark.png */; };
@@ -23,7 +26,6 @@
 		01B0425E15F4014E004FDE1D /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 01B0425D15F4014E004FDE1D /* libsqlite3.0.dylib */; };
 		01B0426015F401EE004FDE1D /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01B0425F15F401EE004FDE1D /* CoreMedia.framework */; };
 		01B0426915F40480004FDE1D /* default_thumbnail.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 01B0426715F40480004FDE1D /* default_thumbnail.jpg */; };
-		01B0426A15F40480004FDE1D /* klaxon.png in Resources */ = {isa = PBXBuildFile; fileRef = 01B0426815F40480004FDE1D /* klaxon.png */; };
 		01B0429415F40503004FDE1D /* AccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B0426C15F40500004FDE1D /* AccountViewController.m */; };
 		01B0429515F40503004FDE1D /* AccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01B0426D15F40500004FDE1D /* AccountViewController.xib */; };
 		01B0429615F40503004FDE1D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B0426F15F40500004FDE1D /* AppDelegate.m */; };
@@ -64,6 +66,7 @@
 		01F9FB7A1480FB6300745398 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01F9FB791480FB6300745398 /* CoreGraphics.framework */; };
 		01F9FB821480FB6300745398 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F9FB811480FB6300745398 /* main.m */; };
 		01F9FB961481039300745398 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01F9FB951481039300745398 /* MobileCoreServices.framework */; };
+		01FF309B162373A2001A034C /* black_sample@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01FF309A162373A2001A034C /* black_sample@2x.png */; };
 		5078ABED1D1B4BA9BA6ED778 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A339671C8C8D4532AF739CAA /* libPods.a */; };
 		C0F5303D1C424F9DA32230EB /* libPods-klaxpont_test.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4645E7F9B9114146AFFD7069 /* libPods-klaxpont_test.a */; };
 /* End PBXBuildFile section */
@@ -80,12 +83,17 @@
 
 /* Begin PBXFileReference section */
 		01045B8114CF90DB00970E6C /* Settings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Settings.plist; sourceTree = "<group>"; };
+		010D787D161C52DF00166017 /* gribouillis-reverse.fw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gribouillis-reverse.fw.png"; sourceTree = "<group>"; };
 		01159B2D1610C33D00D98AFE /* SenTestCase+MethodSwizzling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SenTestCase+MethodSwizzling.h"; sourceTree = "<group>"; };
 		01159B2E1610C33D00D98AFE /* SenTestCase+MethodSwizzling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SenTestCase+MethodSwizzling.m"; sourceTree = "<group>"; };
 		011FD6691604E931003BC6A4 /* SystemConfiguration.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		011FD66B1605173E003BC6A4 /* BaseTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseTabBarViewController.h; path = classes/BaseTabBarViewController.h; sourceTree = "<group>"; };
 		011FD66C1605173F003BC6A4 /* BaseTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseTabBarViewController.m; path = classes/BaseTabBarViewController.m; sourceTree = "<group>"; };
-		0143865F160F11C90035C821 /* NetworkManagerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkManagerTest.m; sourceTree = "<group>"; };
+		01428B39161B661C00E314A0 /* RegisterRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RegisterRequest.h; path = classes/RegisterRequest.h; sourceTree = "<group>"; };
+		01428B3A161B661C00E314A0 /* RegisterRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RegisterRequest.m; path = classes/RegisterRequest.m; sourceTree = "<group>"; };
+		01428B40161B752800E314A0 /* DailymotionTokenRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DailymotionTokenRequest.h; path = classes/DailymotionTokenRequest.h; sourceTree = "<group>"; };
+		01428B41161B752800E314A0 /* DailymotionTokenRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DailymotionTokenRequest.m; path = classes/DailymotionTokenRequest.m; sourceTree = "<group>"; };
+		0143865F160F11C90035C821 /* NetworkManagerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = NetworkManagerTest.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		014386B0160F880B0035C821 /* NSString+AdditionsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+AdditionsTest.m"; sourceTree = "<group>"; };
 		0150A3F31607D92B0026B553 /* 37x-Checkmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "37x-Checkmark.png"; sourceTree = "<group>"; };
 		0150A3F6160A972C0026B553 /* add dailymotion video id.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "add dailymotion video id.xcdatamodel"; sourceTree = "<group>"; };
@@ -101,7 +109,6 @@
 		01B0425D15F4014E004FDE1D /* libsqlite3.0.dylib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		01B0425F15F401EE004FDE1D /* CoreMedia.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		01B0426715F40480004FDE1D /* default_thumbnail.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = default_thumbnail.jpg; sourceTree = "<group>"; };
-		01B0426815F40480004FDE1D /* klaxon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = klaxon.png; sourceTree = "<group>"; };
 		01B0426B15F40500004FDE1D /* AccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AccountViewController.h; path = classes/AccountViewController.h; sourceTree = "<group>"; };
 		01B0426C15F40500004FDE1D /* AccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AccountViewController.m; path = classes/AccountViewController.m; sourceTree = "<group>"; };
 		01B0426D15F40500004FDE1D /* AccountViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AccountViewController.xib; path = classes/AccountViewController.xib; sourceTree = "<group>"; };
@@ -121,7 +128,7 @@
 		01B0427B15F40501004FDE1D /* MyVideosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyVideosViewController.h; path = classes/MyVideosViewController.h; sourceTree = "<group>"; };
 		01B0427C15F40501004FDE1D /* MyVideosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyVideosViewController.m; path = classes/MyVideosViewController.m; sourceTree = "<group>"; };
 		01B0427D15F40501004FDE1D /* NetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NetworkManager.h; path = classes/NetworkManager.h; sourceTree = "<group>"; };
-		01B0427E15F40502004FDE1D /* NetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NetworkManager.m; path = classes/NetworkManager.m; sourceTree = "<group>"; };
+		01B0427E15F40502004FDE1D /* NetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = NetworkManager.m; path = classes/NetworkManager.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		01B0427F15F40502004FDE1D /* RecordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RecordViewController.h; path = classes/RecordViewController.h; sourceTree = "<group>"; };
 		01B0428015F40502004FDE1D /* RecordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RecordViewController.m; path = classes/RecordViewController.m; sourceTree = "<group>"; };
 		01B0428115F40502004FDE1D /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Settings.h; path = classes/Settings.h; sourceTree = "<group>"; };
@@ -169,8 +176,9 @@
 		01F9FB791480FB6300745398 /* CoreGraphics.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		01F9FB7D1480FB6300745398 /* klaxpont-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "klaxpont-Info.plist"; sourceTree = "<group>"; };
 		01F9FB811480FB6300745398 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		01F9FB831480FB6300745398 /* klaxpont-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "klaxpont-Prefix.pch"; sourceTree = "<group>"; };
+		01F9FB831480FB6300745398 /* klaxpont-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = "klaxpont-Prefix.pch"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		01F9FB951481039300745398 /* MobileCoreServices.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		01FF309A162373A2001A034C /* black_sample@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "black_sample@2x.png"; sourceTree = "<group>"; };
 		2C7479E7F40D4897AA2A637E /* Pods-klaxpont_test.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-klaxpont_test.xcconfig"; path = "Pods/Pods-klaxpont_test.xcconfig"; sourceTree = SOURCE_ROOT; };
 		35A79BD71B80400792626D83 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		4645E7F9B9114146AFFD7069 /* libPods-klaxpont_test.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-klaxpont_test.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -254,8 +262,12 @@
 		01B0424015F3FDF6004FDE1D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				01428B40161B752800E314A0 /* DailymotionTokenRequest.h */,
+				01428B41161B752800E314A0 /* DailymotionTokenRequest.m */,
 				01B0428715F40502004FDE1D /* Video.h */,
 				01B0428815F40502004FDE1D /* Video.m */,
+				01428B39161B661C00E314A0 /* RegisterRequest.h */,
+				01428B3A161B661C00E314A0 /* RegisterRequest.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -311,9 +323,10 @@
 			isa = PBXGroup;
 			children = (
 				0150A3F31607D92B0026B553 /* 37x-Checkmark.png */,
+				010D787D161C52DF00166017 /* gribouillis-reverse.fw.png */,
+				01FF309A162373A2001A034C /* black_sample@2x.png */,
 				01B0426715F40480004FDE1D /* default_thumbnail.jpg */,
 				01C119E516150A96000937AE /* klaxpont_logo.png */,
-				01B0426815F40480004FDE1D /* klaxon.png */,
 			);
 			path = images;
 			sourceTree = "<group>";
@@ -554,7 +567,6 @@
 				01045B8214CF90DB00970E6C /* Settings.plist in Resources */,
 				019E021E1534C461002BC4F2 /* InfoPlist.strings in Resources */,
 				01B0426915F40480004FDE1D /* default_thumbnail.jpg in Resources */,
-				01B0426A15F40480004FDE1D /* klaxon.png in Resources */,
 				01B0429515F40503004FDE1D /* AccountViewController.xib in Resources */,
 				01B0429915F40503004FDE1D /* DisclaimerViewController.xib in Resources */,
 				01B0429B15F40503004FDE1D /* EditViewController.xib in Resources */,
@@ -568,6 +580,8 @@
 				0150A3F41607D92B0026B553 /* 37x-Checkmark.png in Resources */,
 				01C119E2161501F0000937AE /* README in Resources */,
 				01C119E616150A96000937AE /* klaxpont_logo.png in Resources */,
+				010D787E161C52DF00166017 /* gribouillis-reverse.fw.png in Resources */,
+				01FF309B162373A2001A034C /* black_sample@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -655,6 +669,8 @@
 				017A970E1600CD8500B4C422 /* KlaxAlertView.m in Sources */,
 				011FD66D1605173F003BC6A4 /* BaseTabBarViewController.m in Sources */,
 				0150A3F9160A972C0026B553 /* Model.xcdatamodeld in Sources */,
+				01428B3B161B661C00E314A0 /* RegisterRequest.m in Sources */,
+				01428B42161B752900E314A0 /* DailymotionTokenRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

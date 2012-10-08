@@ -15,10 +15,17 @@
 #import "AppDelegate.h"
 #import "Reachability.h"
 
+#import "RegisterRequest.h"
+#import "DailymotionTokenRequest.h"
+
+
 @interface NetworkManager()
 {
     Video *_currentVideo;
+    NSOperationQueue* networkQueue;
 }
+
+- (void) queueRequest:(NSMutableURLRequest*)request;
 @end
 
 @implementation NetworkManager
@@ -45,6 +52,16 @@ static NSString *knetworkManager = @"networkManager";
     }
     return self;
 }
+
+- (void) queueRequest:(NSMutableURLRequest*)request
+{
+    NSURLConnection *connection = [NSURLConnection connectionWithRequest:request  delegate:self];
+    if (connection) {
+        [connection setDelegateQueue:networkQueue];
+        [connection start];
+    }
+}
+
 #pragma mark - Reachability
 
 - (BOOL) isNetworkAvailable
@@ -64,50 +81,56 @@ static NSString *knetworkManager = @"networkManager";
 
 -(UIImage*) downloadImage:(NSString*)imageUrl
 {
-
+    NSData *data = nil;
     NSURL *url = [NSURL URLWithString:imageUrl];
-    NSData *data = [NSData dataWithContentsOfURL:url];
+
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
+    NSString *cachePath = [paths objectAtIndex:0];
+    
+    NSString *filePath =  [cachePath stringByAppendingPathComponent:[url lastPathComponent]];
+
+    data = [NSData dataWithContentsOfFile:filePath];
     if(data){
         return [UIImage imageWithData:data];
+    }else{
+        data = [NSData dataWithContentsOfURL:url];
+        if(data){
+            NSError *error = nil;
+            if(![data writeToFile:filePath options:NSDataWritingAtomic error:&error])
+                NSLog(@"NetworkManager -  downloadImage: write error %@", error);
+            return [UIImage imageWithData:data];
+        }
     }
-    return [UIImage imageNamed:@"default_thumbnail.jpg"];
+    
+
+    return [UIImage imageNamed:DEFAULT_THUMBNAIL];
 }
 
 #pragma mark User
 
 -(void) register
 {
-    if(![self isNetworkAvailable])
-        return;
+    if(![self isNetworkAvailable]) return;
     
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[[NSURL alloc] initWithString:SERVER_URL_FOR(USER_PATH)]];
-    [request setHTTPMethod:@"POST"];
-   
-    NSData *data = [[NSString stringWithFormat:@"facebook_id=%@", [UserHelper default].facebookId] dataUsingEncoding:NSUTF8StringEncoding];
-    [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
-
-    [request setHTTPBody:data];
-    
-    NSURLConnection *connection = [NSURLConnection connectionWithRequest:request  delegate:self];
-    if (connection) {
-        [connection start];
-    }
+//    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[[NSURL alloc] initWithString:SERVER_URL_FOR(USER_PATH)]];
+//    [request setHTTPMethod:@"POST"];
+//   
+//    NSData *data = [[NSString stringWithFormat:@"facebook_id=%@", [UserHelper default].facebookId] dataUsingEncoding:NSUTF8StringEncoding];
+//    [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
+//
+//    [request setHTTPBody:data];
+    RegisterRequest *request = RegisterRequest.new;
+    [self queueRequest:request];
 }
 
 #pragma mark Dailymotion
 
 - (void) requestDailymotionToken
 {
-    if(![self isNetworkAvailable])
-        return;
+    if(![self isNetworkAvailable]) return;
 
-    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[[NSURL alloc] initWithString:SERVER_URL_FOR(DAILYMOTION_API_TOKEN_PATH)]];
-    [request setValue:@"application/json" forHTTPHeaderField:@"content-type"];
-
-    NSURLConnection *connection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
-    if (connection) {
-        [connection start];
-    }
+    DailymotionTokenRequest *request = DailymotionTokenRequest.new;
+    [self queueRequest:request];
 }
 
 
@@ -136,20 +159,46 @@ static NSString *knetworkManager = @"networkManager";
     if(response){
         NSDictionary *result = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
         if(error){
-//            dispatch_async(dispatch_get_main_queue(), ^{
+           dispatch_async(dispatch_get_main_queue(), ^{
                 NSDictionary *errorResponse = @{@"code":@0, @"message":[error localizedDescription]};
                 [[NSNotificationCenter defaultCenter] postNotificationName:ERROR_NOTIFICATION object:nil userInfo:errorResponse];
                 
                 
-//            });
+            });
 
             return nil;
         }
-        return [result objectForKey:SERVER_JSON_RESPONSE];
+        
+        NSMutableArray *videosList = NSMutableArray.new;
+        for (NSDictionary *video in [result objectForKey:SERVER_JSON_RESPONSE]) {
+            NSMutableDictionary *infos = [[NSMutableDictionary alloc] initWithDictionary:video];
+            UIImage *image = [self downloadThumbnailFor:[video objectForKey:@"thumbnail_url"]];
+
+            
+            [infos setObject:image forKey:@"thumbnail"];
+            [videosList addObject:infos];
+        }
+        return videosList;
     }
     return nil;
 }
+- (UIImage*)downloadThumbnailFor:(NSString*)thumbnailUrl{
+        __block UIImage *image = nil;
 
+        if(thumbnailUrl != [NSNull null])
+        {
+            // TODO make it dispatch
+            //dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+
+                image = [[NetworkManager sharedManager] downloadImage:thumbnailUrl];
+            //});
+
+            return image;
+        }else
+           return [UIImage imageNamed:DEFAULT_THUMBNAIL];
+
+
+}
 -(void) uploadVideo:(Video*)video
 {
     if(![self isNetworkAvailable])
@@ -251,39 +300,55 @@ static NSString *knetworkManager = @"networkManager";
 
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
 {
-    NSString *url = [connection.originalRequest.URL absoluteString];
-
-    NSLog(@"didReceiveData: data from klaxpont %@", data );
     NSError* error;
     NSDictionary *result = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
-    
+
     if(error){
         // handle parsing error
         [[NSNotificationCenter defaultCenter] postNotificationName:ERROR_NOTIFICATION object:nil userInfo:@{@"message": [error localizedDescription]}];
         NSLog(@"error data from klaxpont %@",error );
     }else{
         NSLog(@"didReceiveData: json parsed %@", result);
-
-        // handle error from server
-        NSDictionary *errorResponse = [result objectForKey:SERVER_JSON_ERROR];
-        if (errorResponse) {
-            [[NSNotificationCenter defaultCenter] postNotificationName:ERROR_NOTIFICATION object:self userInfo:errorResponse];
+        NSURLRequest *request = connection.originalRequest;
+        if ([request respondsToSelector:@selector(processDataResponse:)]) {
+            [request performSelector:@selector(processDataResponse:) withObject:result];
             return;
         }
-        
-        NSDictionary *dataResponse = [result objectForKey:SERVER_JSON_RESPONSE];
-        // switch
-        if([url hasSuffix:VIDEO_PATH] && [[connection.originalRequest HTTPMethod] isEqualToString:@"POST"]){
-            [self handlePublishVideoResponse:dataResponse];
-        }
-        else if([url hasSuffix:DAILYMOTION_API_TOKEN_PATH]){
-            [self handleDailymotionTokenResponse:dataResponse];
-        }
-        else if([url hasSuffix:USER_PATH]){
-            /////////////////////register
-            [self handleUserRegistrationResponse:dataResponse];
-        }
     }
+    
+//    NSString *url = [connection.originalRequest.URL absoluteString];
+//
+//    NSLog(@"didReceiveData: data from klaxpont %@", data );
+//    NSError* error;
+//    NSDictionary *result = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+//    
+//    if(error){
+//        // handle parsing error
+//        [[NSNotificationCenter defaultCenter] postNotificationName:ERROR_NOTIFICATION object:nil userInfo:@{@"message": [error localizedDescription]}];
+//        NSLog(@"error data from klaxpont %@",error );
+//    }else{
+//        NSLog(@"didReceiveData: json parsed %@", result);
+//
+//        // handle error from server
+//        NSDictionary *errorResponse = [result objectForKey:SERVER_JSON_ERROR];
+//        if (errorResponse) {
+//            [[NSNotificationCenter defaultCenter] postNotificationName:ERROR_NOTIFICATION object:self userInfo:errorResponse];
+//            return;
+//        }
+//        
+//        NSDictionary *dataResponse = [result objectForKey:SERVER_JSON_RESPONSE];
+//        // switch
+//        if([url hasSuffix:VIDEO_PATH] && [[connection.originalRequest HTTPMethod] isEqualToString:@"POST"]){
+//            [self handlePublishVideoResponse:dataResponse];
+//        }
+//        else if([url hasSuffix:DAILYMOTION_API_TOKEN_PATH]){
+//            [self handleDailymotionTokenResponse:dataResponse];
+//        }
+//        else if([url hasSuffix:USER_PATH]){
+//            /////////////////////register
+//            [self handleUserRegistrationResponse:dataResponse];
+//        }
+//    }
 }
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error

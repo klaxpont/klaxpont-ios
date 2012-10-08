@@ -12,6 +12,7 @@
 @interface TopVideosViewController : UITableViewController<EGORefreshTableHeaderDelegate>
 {
     NSArray *_videos;
+    NSMutableDictionary *_videoThumbnails;
     NSIndexPath *selectedPath;
     
     EGORefreshTableHeaderView *_refreshHeaderView;

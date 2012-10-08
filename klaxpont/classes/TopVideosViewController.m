@@ -12,6 +12,8 @@
 #import "VideoCell.h"
 #import "VideoPlayerController.h"
 
+#define VIDEO_CELL_IDENTIFIER @"VideoCellIdentifier"
+
 @interface TopVideosViewController ()
 {
     VideoPlayerController *controller;
@@ -40,16 +42,13 @@
     [super viewDidLoad];
 
     // custom table cell
-    NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"VideoCell" owner:self options:nil];
-    UITableViewCell *cell = [nib objectAtIndex:0];
-    self.tableView.rowHeight = cell.frame.size.height;
+    UINib *videoCellNib = [UINib nibWithNibName:@"VideoCell" bundle:nil];
+    [self.tableView registerNib:videoCellNib forCellReuseIdentifier:VIDEO_CELL_IDENTIFIER];
+//    self.tableView.rowHeight = (UITableViewCell*)videoCellNib..frame.size.height;
 	self.tableView.layer.cornerRadius = 5.0;
-
-//    [self.tableView setSeparatorColor:[UIColor blackColor]];
 
     [self.tableView setBackgroundView:nil];
     [self.tableView setBackgroundColor:[UIColor whiteColor]];
- 
 
     if (_refreshHeaderView == nil) {
 		
@@ -64,6 +63,7 @@
 	//  update the last update date
 	[_refreshHeaderView refreshLastUpdatedDate];
     [self egoRefreshScrollViewDataSourceStartManualLoading:self.tableView];
+    _videoThumbnails = [[NSMutableDictionary alloc] init];
     [self reloadTableViewDataSource];
 
     
@@ -86,38 +86,10 @@
 
 -(void) configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"%d", [indexPath row]);
-
-    
     NSDictionary *video = [_videos objectAtIndex:[indexPath row]];
     if(video){
-        //NSLog(@"%@",video);
         [[(VideoCell*)cell titleLabel] setText:[video objectForKey:@"title"]];
-
-        
-        if([video objectForKey:@"thumbnail_url"] != [NSNull null])
-        {
-            NSString *thumbnailUrl = [video objectForKey:@"thumbnail_url"];
-            NSLog(@"thumbnail url %@", thumbnailUrl);
-
-            
-            __block UIImage *image = nil;
-            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-
-                image = [[NetworkManager sharedManager] downloadImage:thumbnailUrl];
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    //ici, on est dans le main thread.
-                    [[(VideoCell*)cell thumbnailView] setImage:image];
-                });
-            });
-        }else
-            [[(VideoCell*)cell  thumbnailView] setImage:[UIImage imageNamed:@"default_thumbnail.jpg"]];
-//        [cell.layer setFrame:CGRectMake(10, 10, 10, 10)];
-//        cell.layer.borderColor = (__bridge CGColorRef)([UIColor grayColor]);
-//        [cell.layer setBorderColor:[UIColor clearColor].CGColor];
-//        cell.layer.borderWidth = 10.0;
-//        [cell.contentView setBackgroundColor:[UIColor whiteColor]];
-//        [cell setBackgroundColor:[UIColor whiteColor]];
+        [[(VideoCell*)cell thumbnailView] setImage:[video objectForKey:@"thumbnail"]];
         [(VideoCell*)cell setAccessoryType:UITableViewCellAccessoryNone];
     }
 }
@@ -136,22 +108,17 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"VideoCellIdentifier";
-    VideoCell *cell = (VideoCell*)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    static NSString *cellIdentifier = VIDEO_CELL_IDENTIFIER;
+    VideoCell *cell = (VideoCell*)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
-    // have to do this because of not using storyboard or xib, or is it something else?
-    if (cell == nil) {
-        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"VideoCell" owner:self options:nil];
-        cell = [nib objectAtIndex:0];
-        UIFont *font = [[[UILabel appearance] font] fontWithSize:16.0];
-        [[cell titleLabel] setFont:font];
-    }
-
     // Configure the cell.
+    UIFont *font = [[[UILabel appearance] font] fontWithSize:16.0];
+    [[cell titleLabel] setFont:font];
+
     [self configureCell:cell atIndexPath:indexPath];
+    
     return cell;
 }
-
 
 
 #pragma mark - Table view delegate
@@ -172,6 +139,7 @@
 {
     if (selectedPath && indexPath.row == selectedPath.row)
         selectedPath = nil;
+   // self.tapp
 //    if(controller)
 //        //[controller.view removeFromSuperview];
 
@@ -221,6 +189,8 @@
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         _reloading = YES;
         _videos = [[NetworkManager sharedManager] retrieveVideos];
+
+
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.tableView reloadData];           
             [self doneLoadingTableViewData];
