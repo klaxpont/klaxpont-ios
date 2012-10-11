@@ -21,6 +21,7 @@
 
 - (UIImage*) thumbnail;
 - (NSURL*) url;
+- (NSString*) imageFilename;
 - (BOOL) published;
 - (BOOL) uploaded;
 @end

@@ -8,7 +8,6 @@
 
 #import "MyVideosViewController.h"
 #import "Video.h"
-#import "VideoCell.h"
 #import "VideoPickerController.h"
 #import "DatabaseHelper.h"
 #import "EditViewController.h"
@@ -46,15 +45,9 @@
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addVideo)];
     [[self navigationItem] setRightBarButtonItem:addButton];
     
-    
-    // 
     _videoPickerController = [[VideoPickerController alloc] init];
-
-    // custom table cell
-    NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"VideoCell" owner:self options:nil];
-    UITableViewCell *cell = [nib objectAtIndex:0];
-    self.tableView.rowHeight = cell.frame.size.height;
     
+    self.tableView.rowHeight = 60;
     // populate table
     NSError *error;
     if (![[self fetchedResultsController] performFetch:&error]) {
@@ -91,6 +84,18 @@
 
 }
 
+- (void)editVideo:(id)sender event:(id)event
+{
+    NSSet *touches = [event allTouches];
+    UITouch *touch = [touches anyObject];
+    CGPoint currentTouchPosition = [touch locationInView:self.tableView];
+    NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint: currentTouchPosition];
+    
+    if (indexPath != nil)
+    {
+        [self tableView: self.tableView accessoryButtonTappedForRowWithIndexPath: indexPath];
+    }
+}
 #pragma mark - Application's documents directory
 
 /**
@@ -160,21 +165,24 @@
 -(void) configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
     Video *video = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    [[(VideoCell*)cell titleLabel] setText:video.title];
-    [[(VideoCell*)cell thumbnailView] setImage:[video thumbnail]];
-    [[(VideoCell*)cell editButton] addTarget:self action:@selector(edit) forControlEvents:UIControlEventTouchUpInside];
+    [[cell textLabel] setText:(([NSString isStringEmpty:video.title]) ? @"-" : video.title)];
+    [[cell imageView] setFrame:CGRectMake(10, 10, 40, 40)];
+    [cell.imageView setContentMode:UIViewContentModeScaleAspectFill];
+    [[cell imageView] setImage:[video thumbnail]];
+
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"VideoCellIdentifier";
-    VideoCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    
-    // have to do this because of not using storyboard or xib, or is it something else?
+    static NSString *CellIdentifier = @"MyVideoCellIdentifier";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"VideoCell" owner:self options:nil];
-        cell = [nib objectAtIndex:0];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell.accessoryView = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 50, self.tableView.rowHeight)];
+        [((UIButton*)cell.accessoryView) setTitle:@"edit" forState:UIControlStateNormal];
+        [((UIButton*)cell.accessoryView) setTitle:@"piaf" forState:UIControlStateHighlighted];
+        [((UIButton*)cell.accessoryView) addTarget:self action:@selector(editVideo:event:) forControlEvents:UIControlEventTouchUpInside];
     }
     
     // Configure the cell.

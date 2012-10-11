@@ -7,7 +7,7 @@
 //
 #import <AVFoundation/AVFoundation.h>
 #import "Video.h"
-#import "NSString+Additions.h"
+
 
 @implementation Video
 
@@ -32,6 +32,11 @@
 
 - (UIImage*) thumbnail
 {
+
+    if ([[NSFileManager defaultManager] fileExistsAtPath:self.imageFilename]) {
+        return [[UIImage alloc] initWithContentsOfFile:self.imageFilename];
+    }
+    
     UIImage *thumbnailImage = [self loadImage];
     if(thumbnailImage == nil)
         thumbnailImage = [UIImage imageNamed:@"klaxon.png"];
@@ -39,6 +44,15 @@
     return thumbnailImage;
 }
 
+- (NSString*)imageFilename
+{
+   NSArray *paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
+   NSString *cachePath = [paths objectAtIndex:0];
+   // assuming the last part of the uri iis unique otherwise you're f**k
+    //TODO create md5 string from uri
+   NSString *filePath =  [cachePath stringByAppendingPathComponent:[[self objectID] URIRepresentation].lastPathComponent];
+   return [NSString stringWithFormat:@"%@_generated_image", filePath];
+}
 
 - (UIImage*)loadImage
 {
@@ -58,6 +72,15 @@
         NSLog(@"err==%@, imageRef==%@", err, imgRef);
         return nil;
     }
+    UIImage *image = [[UIImage alloc] initWithCGImage:imgRef];
+    if(image){
+        NSError *error;
+        [UIImagePNGRepresentation(image) writeToFile:self.imageFilename options:NSDataWritingAtomic error:&error];
+        if(error){
+            NSLog(@"%@", [error description]);
+        }
+    }
+        
     return [[UIImage alloc] initWithCGImage:imgRef];
 }
 
