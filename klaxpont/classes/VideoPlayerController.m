@@ -25,19 +25,18 @@
     }
     return self;
 }
-
-- (void) loadView
+- (void) viewDidLoad
 {
-    [super loadView];
+    [super viewDidLoad];
     _playerController = [[DailymotionPlayerViewController alloc] initWithVideo:_videoId];
     _playerController.delegate = self;
-
+    
     [_playerController.view setAutoresizingMask:UIViewAutoresizingFlexibleWidth];
     
-//    [_playerController setFullscreen:NO];
-    self.view = _playerController.view;
-
-
+    //    [_playerController setFullscreen:NO];
+    [self.view addSubview:_playerController.view];
+    
+    
 }
 
 - (void)viewDidUnload

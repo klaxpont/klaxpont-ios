@@ -11,11 +11,7 @@
 @interface VideoCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UIImageView *thumbnailView;
-@property (weak, nonatomic) IBOutlet UIView *videoPlaceholder;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *spinner;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
-
-
-@property (weak, nonatomic) IBOutlet UIButton *editButton;
-
 
 @end

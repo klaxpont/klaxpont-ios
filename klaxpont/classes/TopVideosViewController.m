@@ -90,7 +90,6 @@
     if(video){
         [[(VideoCell*)cell titleLabel] setText:[video objectForKey:@"title"]];
         [[(VideoCell*)cell thumbnailView] setImage:[video objectForKey:@"thumbnail"]];
-        [(VideoCell*)cell setAccessoryType:UITableViewCellAccessoryNone];
     }
 }
 
@@ -128,10 +127,6 @@
     NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"VideoCell" owner:self options:nil];
     UITableViewCell *cell = [nib objectAtIndex:0];
     NSUInteger height = cell.frame.size.height;
-    if(selectedPath && indexPath.row == selectedPath.row){
-        return height + 200 + 10;
-    }
-
     return height;
 }
 
@@ -146,40 +141,29 @@
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (selectedPath && indexPath.row == selectedPath.row){
-        selectedPath = nil;
-        [tableView beginUpdates];
-        [tableView endUpdates];
-        return;
-    }
+    selectedPath = indexPath;
+    
     NSDictionary *video = [_videos objectAtIndex:indexPath.row];
     NSString *videoId = [video objectForKey:@"dailymotion_video_id"];
 
+    VideoCell* cell = (VideoCell*)[tableView cellForRowAtIndexPath:indexPath];
+
+
+
     if (controller == nil) {
         controller = [[VideoPlayerController alloc] initWithDailymotionVideo:videoId];
+        [self.view addSubview:controller.view];      
+        [controller.view setHidden:YES];
     }else{
-        [controller setVideoId:videoId];//[controller load:videoId];
+        if(![controller.videoId isEqualToString:videoId])
+            [controller setVideoId:videoId];
     }
-    
-    selectedPath = indexPath;
+    // TODO see when to stop it, delegate of videoplayer...
+    [[cell spinner] startAnimating];
 
-    [tableView beginUpdates];    
-    VideoCell* cell = (VideoCell*)[tableView cellForRowAtIndexPath:indexPath];
-    if (cell) {
-        if (selectedPath && indexPath.row == selectedPath.row && controller) {
-//            [self presentModalViewController:controller animated:YES];
-//            [controller.view setFrame:CGRectMake(0, 72, WIDTH(controller.view), HEIGHT(controller.view))];
-//            
-//            [cell.contentView addSubview:controller.view];
-        }
-    }
-
-    [tableView endUpdates];
-
-//    if (controller) {
-//        [controller play];
-//    }
+    [controller play];
 }
+
 
 #pragma mark -
 #pragma mark Data Source Loading / Reloading Methods

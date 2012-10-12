@@ -12,8 +12,7 @@
 @implementation VideoCell
 @synthesize thumbnailView;
 @synthesize titleLabel;
-@synthesize editButton;
-@synthesize videoPlaceholder;
+@synthesize spinner;
 
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
@@ -21,7 +20,6 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         // Initialization code
-        [videoPlaceholder setHidden:YES];
     }
     return self;
 }
@@ -31,7 +29,9 @@
 {
     [super setSelected:selected animated:animated];
 
-    // Configure the view for the selected state
+    self.backgroundColor = selected ? SELECTED_BACKGROUND_COLOR : BACKGROUND_COLOR;
+    [[self titleLabel] setTextColor: (selected ? SELECTED_COLOR : DEFAULT_COLOR)];
+
 }
 
 
