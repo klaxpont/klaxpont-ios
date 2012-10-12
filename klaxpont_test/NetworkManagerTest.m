@@ -40,7 +40,7 @@ describe(@"downloading an Image", ^{
     });
 
     it(@"should return default image in case of error", ^{
-        UIImage *defaultImage = [UIImage imageNamed:@"default_thumbnail.jpg"];
+        UIImage *defaultImage = [UIImage imageNamed:DEFAULT_THUMBNAIL];
         
         __block UIImage *image = nil;
         // faking the url request
@@ -56,7 +56,7 @@ describe(@"downloading an Image", ^{
     });
 
     it(@"should return requested image", ^{
-        UIImage *defaultImage = [UIImage imageNamed:@"default_thumbnail.jpg"];
+        UIImage *defaultImage = [UIImage imageNamed:DEFAULT_THUMBNAIL];
         UIImage *expectedImage = [UIImage imageNamed:@"klaxon.png"];
 
         __block UIImage *image = nil;
@@ -73,6 +73,24 @@ describe(@"downloading an Image", ^{
         expect(UIImagePNGRepresentation(image)).equal(UIImagePNGRepresentation(expectedImage));
     });
     
+    it(@"should store the image with its filename", ^{
+        UIImage *expectedImage = [UIImage imageNamed:@"klaxon.png"];
+        
+        __block UIImage *image = nil;
+        // faking the url request
+        [self swizzleMethod:@selector(dataWithContentsOfURL:)     inClass:[NSData class]
+                 withMethod:@selector(fakeDataWithContentsOfURL:) fromClass:[NetworkManagerTest class]
+               executeBlock:^{
+                   image = [manager downloadImage:@"klaxon.png"];
+               }];
+        ;
+        
+        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
+        NSString *cachePath = [paths objectAtIndex:0];
+        
+        NSString *filePath =  [cachePath stringByAppendingPathComponent:@"klaxon.png"];
+        expect([[NSFileManager defaultManager] fileExistsAtPath:filePath]).beTruthy();
+    });
 });
 
 

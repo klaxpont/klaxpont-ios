@@ -56,6 +56,7 @@
 		01C6287A15FE9F78009D03D5 /* Oregano-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 01C6287415FE9F78009D03D5 /* Oregano-Regular.ttf */; };
 		01C6287C15FE9F78009D03D5 /* Satisfy-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 01C6287715FE9F78009D03D5 /* Satisfy-Regular.ttf */; };
 		01C6287F15FEB866009D03D5 /* KlaxAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = 01C6287E15FEB866009D03D5 /* KlaxAppearance.m */; };
+		01CD20701628251700E9191F /* klaxon.png in Resources */ = {isa = PBXBuildFile; fileRef = 01CD206F1628251700E9191F /* klaxon.png */; };
 		01F52606160BD63E00E241B5 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01F52605160BD63E00E241B5 /* SenTestingKit.framework */; };
 		01F52607160BD63E00E241B5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01F9FB751480FB6300745398 /* UIKit.framework */; };
 		01F52608160BD63E00E241B5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01F9FB771480FB6300745398 /* Foundation.framework */; };
@@ -164,6 +165,7 @@
 		01C6287715FE9F78009D03D5 /* Satisfy-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Satisfy-Regular.ttf"; sourceTree = "<group>"; };
 		01C6287D15FEB866009D03D5 /* KlaxAppearance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KlaxAppearance.h; path = classes/KlaxAppearance.h; sourceTree = "<group>"; };
 		01C6287E15FEB866009D03D5 /* KlaxAppearance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KlaxAppearance.m; path = classes/KlaxAppearance.m; sourceTree = "<group>"; };
+		01CD206F1628251700E9191F /* klaxon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = klaxon.png; sourceTree = "<group>"; };
 		01F52604160BD63E00E241B5 /* klaxpont_test.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = klaxpont_test.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		01F52605160BD63E00E241B5 /* SenTestingKit.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		01F5260B160BD63E00E241B5 /* klaxpont_test-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "klaxpont_test-Info.plist"; sourceTree = "<group>"; };
@@ -322,6 +324,7 @@
 		01B0426615F40480004FDE1D /* images */ = {
 			isa = PBXGroup;
 			children = (
+				01CD206F1628251700E9191F /* klaxon.png */,
 				0150A3F31607D92B0026B553 /* 37x-Checkmark.png */,
 				010D787D161C52DF00166017 /* gribouillis-reverse.fw.png */,
 				01FF309A162373A2001A034C /* black_sample@2x.png */,
@@ -582,6 +585,7 @@
 				01C119E616150A96000937AE /* klaxpont_logo.png in Resources */,
 				010D787E161C52DF00166017 /* gribouillis-reverse.fw.png in Resources */,
 				01FF309B162373A2001A034C /* black_sample@2x.png in Resources */,
+				01CD20701628251700E9191F /* klaxon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
