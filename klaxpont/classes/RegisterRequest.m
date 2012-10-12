@@ -30,6 +30,7 @@
 
 -(void) processDataResponse:(NSDictionary*)data
 {
+    
     NSLog(@"handleUserRegistrationResponse %@", data);
     [[UserHelper default] setKlaxpontId:[data objectForKey:@"user_id"]];
     [[NSNotificationCenter defaultCenter] postNotificationName:USER_REGISTERED_NOTIFICATION object:nil];

@@ -39,7 +39,7 @@
     
     UIImage *thumbnailImage = [self loadImage];
     if(thumbnailImage == nil)
-        thumbnailImage = [UIImage imageNamed:@"klaxon.png"];
+        thumbnailImage = [UIImage imageNamed:DEFAULT_THUMBNAIL];
     
     return thumbnailImage;
 }

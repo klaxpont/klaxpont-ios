@@ -270,14 +270,6 @@ static NSString *knetworkManager = @"networkManager";
     }
 }
 
-
--(void) handleUserRegistrationResponse:(NSDictionary*) data
-{
-    NSLog(@"handleUserRegistrationResponse %@", data);
-    [[UserHelper default] setKlaxpontId:[data objectForKey:@"user_id"]];
-    [[NSNotificationCenter defaultCenter] postNotificationName:USER_REGISTERED_NOTIFICATION object:nil];
-}
-
 -(void) handlePublishVideoResponse:(NSDictionary*)data
 {
     NSLog(@"handlePublishVideoResponse %@", data);
@@ -315,47 +307,19 @@ static NSString *knetworkManager = @"networkManager";
         [[NSNotificationCenter defaultCenter] postNotificationName:ERROR_NOTIFICATION object:nil userInfo:@{@"message": [error localizedDescription]}];
         NSLog(@"error data from klaxpont %@",error );
     }else{
+        
         NSLog(@"didReceiveData: json parsed %@", result);
         NSURLRequest *request = connection.originalRequest;
+        NSDictionary *response = [result objectForKey:@"response"];
+        NSDictionary *error = [result objectForKey:@"error"];
         if ([request respondsToSelector:@selector(processDataResponse:)]) {
-            [request performSelector:@selector(processDataResponse:) withObject:result];
-            return;
+            [request performSelector:@selector(processDataResponse:) withObject:response];
+        }
+        if ([request respondsToSelector:@selector(processDataError:)]) {
+            [request performSelector:@selector(processDataError:) withObject:error];
         }
     }
-    
-//    NSString *url = [connection.originalRequest.URL absoluteString];
-//
-//    NSLog(@"didReceiveData: data from klaxpont %@", data );
-//    NSError* error;
-//    NSDictionary *result = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
-//    
-//    if(error){
-//        // handle parsing error
-//        [[NSNotificationCenter defaultCenter] postNotificationName:ERROR_NOTIFICATION object:nil userInfo:@{@"message": [error localizedDescription]}];
-//        NSLog(@"error data from klaxpont %@",error );
-//    }else{
-//        NSLog(@"didReceiveData: json parsed %@", result);
-//
-//        // handle error from server
-//        NSDictionary *errorResponse = [result objectForKey:SERVER_JSON_ERROR];
-//        if (errorResponse) {
-//            [[NSNotificationCenter defaultCenter] postNotificationName:ERROR_NOTIFICATION object:self userInfo:errorResponse];
-//            return;
-//        }
-//        
-//        NSDictionary *dataResponse = [result objectForKey:SERVER_JSON_RESPONSE];
-//        // switch
-//        if([url hasSuffix:VIDEO_PATH] && [[connection.originalRequest HTTPMethod] isEqualToString:@"POST"]){
-//            [self handlePublishVideoResponse:dataResponse];
-//        }
-//        else if([url hasSuffix:DAILYMOTION_API_TOKEN_PATH]){
-//            [self handleDailymotionTokenResponse:dataResponse];
-//        }
-//        else if([url hasSuffix:USER_PATH]){
-//            /////////////////////register
-//            [self handleUserRegistrationResponse:dataResponse];
-//        }
-//    }
+
 }
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
