@@ -65,6 +65,9 @@
     [self egoRefreshScrollViewDataSourceStartManualLoading:self.tableView];
     _videoThumbnails = [[NSMutableDictionary alloc] init];
     [self reloadTableViewDataSource];
+    
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(refreshRowFromNotification:) name:DOWNLOAD_IMAGE_NOTIFICATION object:nil];
 
     
 }
@@ -92,7 +95,16 @@
         [[(VideoCell*)cell thumbnailView] setImage:[video objectForKey:@"thumbnail"]];
     }
 }
-
+-(void) refreshRowFromNotification:(NSNotification*) notification
+{
+    //refresh  the cell for incomming image
+    NSDictionary *dict = [notification userInfo];
+    NSNumber *row = [dict objectForKey:@"index"];
+ 
+    NSIndexPath *rowIndex = [NSIndexPath indexPathForRow:row.integerValue inSection:0];
+    NSArray *rows = [NSArray arrayWithObject:rowIndex];
+    [self.tableView reloadRowsAtIndexPaths:rows withRowAnimation:UITableViewRowAnimationNone];
+}
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -134,10 +146,6 @@
 {
     if (selectedPath && indexPath.row == selectedPath.row)
         selectedPath = nil;
-   // self.tapp
-//    if(controller)
-//        //[controller.view removeFromSuperview];
-
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {

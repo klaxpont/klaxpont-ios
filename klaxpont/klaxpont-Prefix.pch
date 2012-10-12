@@ -47,6 +47,8 @@
 #define ERROR_NOTIFICATION @"ErrorNotification"
 #define ERROR_NOTIFICATION_WITH_ON_COMPLETE_BLOCK @"ErrorNotificationWithCompletionBlock"
 #define USER_REGISTERED_NOTIFICATION @"UserRegistered"
+#define DOWNLOAD_IMAGE_NOTIFICATION @"DownloadVideoImage"
+
 // Server Responses
 #define SERVER_JSON_RESPONSE @"response"
 #define SERVER_JSON_ERROR @"error"

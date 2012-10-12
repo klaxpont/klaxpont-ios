@@ -168,14 +168,26 @@ static NSString *knetworkManager = @"networkManager";
 
             return nil;
         }
+        dispatch_queue_attr_t download_images_queue = dispatch_queue_create("com.klaxpont.download_images",0);
         
         NSMutableArray *videosList = NSMutableArray.new;
         for (NSDictionary *video in [result objectForKey:SERVER_JSON_RESPONSE]) {
+            NSNumber *indexOfVideo = [NSNumber numberWithInt:[videosList count]];
+
             NSMutableDictionary *infos = [[NSMutableDictionary alloc] initWithDictionary:video];
-            UIImage *image = [self downloadThumbnailFor:[video objectForKey:@"thumbnail_url"]];
+            dispatch_async(download_images_queue, ^{
+
+                UIImage *image = [self downloadThumbnailFor:[video objectForKey:@"thumbnail_url"]];
 
             
-            [infos setObject:image forKey:@"thumbnail"];
+                [infos setObject:image forKey:@"thumbnail"];
+
+                dispatch_async(dispatch_get_main_queue(), ^{
+                
+                    [[NSNotificationCenter defaultCenter] postNotificationName:DOWNLOAD_IMAGE_NOTIFICATION object:nil userInfo:@{@"index":indexOfVideo}];
+                });
+            });
+                
             [videosList addObject:infos];
         }
         return videosList;
@@ -183,16 +195,11 @@ static NSString *knetworkManager = @"networkManager";
     return nil;
 }
 - (UIImage*)downloadThumbnailFor:(NSString*)thumbnailUrl{
-        __block UIImage *image = nil;
+        UIImage *image = nil;
 
         if(thumbnailUrl != [NSNull null])
         {
-            // TODO make it dispatch
-            //dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-
-                image = [[NetworkManager sharedManager] downloadImage:thumbnailUrl];
-            //});
-
+            image = [[NetworkManager sharedManager] downloadImage:thumbnailUrl];
             return image;
         }else
            return [UIImage imageNamed:DEFAULT_THUMBNAIL];
