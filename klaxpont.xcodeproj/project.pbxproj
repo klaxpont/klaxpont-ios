@@ -57,6 +57,8 @@
 		01C6287C15FE9F78009D03D5 /* Satisfy-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 01C6287715FE9F78009D03D5 /* Satisfy-Regular.ttf */; };
 		01C6287F15FEB866009D03D5 /* KlaxAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = 01C6287E15FEB866009D03D5 /* KlaxAppearance.m */; };
 		01CD20701628251700E9191F /* klaxon.png in Resources */ = {isa = PBXBuildFile; fileRef = 01CD206F1628251700E9191F /* klaxon.png */; };
+		01D3C37F1629866A00860A76 /* KlaxEventView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01D3C37E1629866A00860A76 /* KlaxEventView.xib */; };
+		01D3C383162988E400860A76 /* KlaxEventView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01D3C382162988E400860A76 /* KlaxEventView.m */; };
 		01F52606160BD63E00E241B5 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01F52605160BD63E00E241B5 /* SenTestingKit.framework */; };
 		01F52607160BD63E00E241B5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01F9FB751480FB6300745398 /* UIKit.framework */; };
 		01F52608160BD63E00E241B5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01F9FB771480FB6300745398 /* Foundation.framework */; };
@@ -166,6 +168,9 @@
 		01C6287D15FEB866009D03D5 /* KlaxAppearance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KlaxAppearance.h; path = classes/KlaxAppearance.h; sourceTree = "<group>"; };
 		01C6287E15FEB866009D03D5 /* KlaxAppearance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KlaxAppearance.m; path = classes/KlaxAppearance.m; sourceTree = "<group>"; };
 		01CD206F1628251700E9191F /* klaxon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = klaxon.png; sourceTree = "<group>"; };
+		01D3C37E1629866A00860A76 /* KlaxEventView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = KlaxEventView.xib; path = classes/KlaxEventView.xib; sourceTree = "<group>"; };
+		01D3C381162988E400860A76 /* KlaxEventView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KlaxEventView.h; path = classes/KlaxEventView.h; sourceTree = "<group>"; };
+		01D3C382162988E400860A76 /* KlaxEventView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KlaxEventView.m; path = classes/KlaxEventView.m; sourceTree = "<group>"; };
 		01F52604160BD63E00E241B5 /* klaxpont_test.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = klaxpont_test.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		01F52605160BD63E00E241B5 /* SenTestingKit.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		01F5260B160BD63E00E241B5 /* klaxpont_test-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "klaxpont_test-Info.plist"; sourceTree = "<group>"; };
@@ -282,6 +287,9 @@
 				01B0428B15F40503004FDE1D /* VideoCell.xib */,
 				017A970C1600CD8500B4C422 /* KlaxAlertView.h */,
 				017A970D1600CD8500B4C422 /* KlaxAlertView.m */,
+				01D3C381162988E400860A76 /* KlaxEventView.h */,
+				01D3C382162988E400860A76 /* KlaxEventView.m */,
+				01D3C37E1629866A00860A76 /* KlaxEventView.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -586,6 +594,7 @@
 				010D787E161C52DF00166017 /* gribouillis-reverse.fw.png in Resources */,
 				01FF309B162373A2001A034C /* black_sample@2x.png in Resources */,
 				01CD20701628251700E9191F /* klaxon.png in Resources */,
+				01D3C37F1629866A00860A76 /* KlaxEventView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -675,6 +684,7 @@
 				0150A3F9160A972C0026B553 /* Model.xcdatamodeld in Sources */,
 				01428B3B161B661C00E314A0 /* RegisterRequest.m in Sources */,
 				01428B42161B752900E314A0 /* DailymotionTokenRequest.m in Sources */,
+				01D3C383162988E400860A76 /* KlaxEventView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

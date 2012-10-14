@@ -8,10 +8,10 @@
 
 #import "BaseTabBarViewController.h"
 #import "KlaxAlertView.h"
-
+#import "KlaxEventView.h"
 @interface BaseTabBarViewController()
 {
-    KlaxAlertView *_alert;
+    KlaxEventView *_alert;
 }
 
 @end
@@ -37,23 +37,29 @@
 
 #pragma mark - Alert
 
+
 -(void)showAlert:(NSNotification*)notification
 {
-    // TODO refactor this to execute block while alert displayed
     NSLog(@"notification for alert: %@", [notification userInfo]);
     if (_alert == nil) {
-        _alert = [[KlaxAlertView alloc] initWithError:[[notification userInfo] objectForKey:@"message"]];
-        // take the whole screen to take all the touch events
-        [_alert setFrame:self.view.frame];
-        [_alert setCenter:self.view.center];
-        
-    }else{
-        [_alert setDetailsLabelText:[[notification userInfo] objectForKey:@"message"]];
+        _alert = KlaxEventView.new;
     }
-    if(![_alert isDescendantOfView:self.view]){
-        [self.view addSubview:_alert];
-        [_alert show:YES];
+    _alert.title.text = @"Error";
+    _alert.message.text = [[notification userInfo] objectForKey:@"message"];
+    
+    [UIView beginAnimations:@"switch_main_views" context:nil];
+    [UIView setAnimationDuration:1.0];
+    [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+    
+    [UIView setAnimationTransition: UIViewAnimationTransitionFlipFromRight
+                           forView:self.selectedViewController.view cache:NO];
+    [UIView commitAnimations];
+    [UIView animateWithDuration:0.5 animations:^{
+        [self.selectedViewController.view addSubview:_alert];
     }
+                     completion:^(BOOL complete){
+                     }];
+
 }
 
 -(void)showTimedAlert:(NSNotification*)notification
@@ -61,7 +67,7 @@
     [self showAlert:notification];
 
 
-    [_alert hide:YES afterDelay:1];
+//    [_alert hide:YES afterDelay:1];
     if ([notification object]) {
         [self performSelector:@selector(executeBlock:) withObject:[notification object] afterDelay:1];
     }

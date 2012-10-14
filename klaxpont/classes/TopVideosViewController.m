@@ -126,6 +126,9 @@
     UIFont *font = [[[UILabel appearance] font] fontWithSize:16.0];
     [[cell titleLabel] setFont:font];
 
+    cell.thumbnailView.layer.borderColor = [UIColor colorWithWhite:1.0f alpha:1.0f].CGColor;
+    cell.thumbnailView.layer.borderWidth = 1.0f; //make border 1px thick
+
     [self configureCell:cell atIndexPath:indexPath];
     
     return cell;

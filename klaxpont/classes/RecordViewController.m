@@ -14,6 +14,7 @@
 #import "EditViewController.h"
 #import "KlaxAlertView.h"
 #import "KlaxAppearance.h"
+#import "KlaxEventView.h"
 
 @interface RecordViewController ()
 {
@@ -58,11 +59,8 @@
     [goRecordButton setCenter:CGPointMake(self.view.frame.size.width/2, (self.view.frame.size.height - image.size.height)/2 + 44)];
     [goRecordButton addTarget:self action:@selector(showRecorder) forControlEvents:UIControlEventTouchUpInside];
     
-//    [goRecordButton setTitle:@"RECORD" forState:UIControlStateNormal];
-    [self.view addSubview:goRecordButton];
 
-    
-    
+    [self.view addSubview:goRecordButton];
     
     if(![[UserHelper default] acceptedDisclaimer]){
         _disclaimerViewController = DisclaimerViewController.new;
@@ -85,7 +83,6 @@
     if(_disclaimerViewController != nil && ![[UserHelper default] acceptedDisclaimer]){
         [self presentModalViewController:_disclaimerViewController animated:YES];
     }
-
 }
 
 - (void)viewDidUnload
@@ -116,36 +113,7 @@
         [self presentModalViewController:_videoPickerController animated:YES];
     }else{
         // TODO display error message in case device has no camera video
-//        MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-//        hud.mode = MBProgressHUDModeAnnularDeterminate;
-//        hud.labelText = @"Loading";
-//        [self doSomethingInBackgroundWithProgressCallback:^(float progress) {
-//            hud.progress = progress;
-//        } completionCallback:^{
-//            [MBProgressHUD hideHUDForView:self.view animated:YES];
-//        }];
-        
-//        HUD = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
-//        [self.navigationController.view addSubview:HUD];
-//        
-//        // The sample image is based on the work by http://www.pixelpressicons.com, http://creativecommons.org/licenses/by/2.5/ca/
-//        // Make the customViews 37 by 37 pixels for best results (those are the bounds of the build-in progress indicators)
-//        HUD.customView = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"37x-Checkmark.png"]] autorelease];
-//        
-//        // Set custom view mode
-//        HUD.mode = MBProgressHUDModeCustomView;
-//        
-//        HUD.delegate = self;
-//        HUD.labelText = @"Completed";
-//        
-//        [HUD show:YES];
-//        [HUD hide:YES afterDelay:3];
-        KlaxAlertView *alert = [[KlaxAlertView alloc] initWithView:self.view];
-        alert.mode = MBProgressHUDModeCustomView;
-        [self.view addSubview:alert];
-        alert.labelText = NSLocalizedString(@"VIDEO_CAMERA_UNAVAILABLE",nil);
-        [alert show:YES];
-        
+        [[NSNotificationCenter defaultCenter] postNotificationName:ERROR_NOTIFICATION object:nil userInfo:@{@"message": NSLocalizedString(@"VIDEO_CAMERA_UNAVAILABLE",nil)}];
     }
 
 }
@@ -186,9 +154,7 @@
 }
 - (void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
     // show Alert
-    KlaxAlertView *alert = [[KlaxAlertView alloc] initWithView:self.view];
-    alert.mode = MBProgressHUDModeCustomView;
-    [self.view addSubview:alert];
+    [NSNotificationCenter defaultCenter] postNotificationName:INF object:<#(id)#> userInfo:<#(NSDictionary *)#>
     alert.labelText = NSLocalizedString(@"SAVING_VIDEO",nil);
     [alert show:YES];
 

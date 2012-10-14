@@ -21,20 +21,13 @@
     return self;
 }
 
-
--(id)initWithError:(NSString*)errorMessage
+-(id)initWithMessage:(NSString*)message
 {
-    self = [self initWithFrame:CGRectZero];
+
+    self = [self initWithFrame:CGRectMake(0, 44, 320, HEIGHT(self.window) - (44 + 49))];
     if (self) {
-        // TODO custom image
-        UIImageView *errorView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"37x-Checkmark.png"]];
-
-
-        [self setCustomView:errorView];
         self.dimBackground = YES;
-        // TODO custom title
-        self.labelText = @"Error";
-        self.detailsLabelText = errorMessage;
+        self.detailsLabelText = message;
         // the following will refresh display: needDisplay
         self.mode = MBProgressHUDModeCustomView;
     }
@@ -42,11 +35,44 @@
 }
 
 
+-(id)initWithError:(NSString*)errorMessage
+{
+    self = [self initWithMessage:errorMessage];
+    if (self) {
+        // TODO custom image
+        UIImageView *errorView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"37x-Checkmark.png"]];
+        [self setCustomView:errorView];
+        self.labelText = @"Error";
+    }
+    return self;
+}
+
+
+
+-(id)initWithInformation:(NSString*)infoMessage
+{
+    self = [self initWithMessage:infoMessage];
+    if (self) {
+        [self setCustomView:[self randomInformationView]];
+        self.labelText = @"Info";
+    }
+    return self;
+}
 
 -(void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
     [self setDelegate:nil];
     [self hide:YES];
+}
+
+-(UIView*) randomErrorView
+{
+    return [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"37x-Checkmark.png"]];
+}
+
+-(UIView*) randomInformationView
+{
+    return [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"37x-Checkmark.png"]];
 }
 
 
